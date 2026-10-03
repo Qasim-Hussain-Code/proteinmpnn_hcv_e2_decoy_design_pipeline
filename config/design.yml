@@ -51,3 +51,4 @@ notes: Distance, coverage, ambiguity, neutral-score and WT tolerances are arbitr
   engineering thresholds, not experimentally calibrated biological criteria. Clash
   and composition are descriptors. Sequence filters and strategy definitions are fixed
   before held-out scoring.
+scoring_workers: 2

@@ -7,6 +7,8 @@ from pathlib import Path
 import re
 import shutil
 import time
+from collections import Counter
+from scipy.stats import binomtest
 from Bio.SeqUtils import seq1
 from .common import ROOT, config, failure, now, read_tsv, run_command, sha256, write_json, write_tsv
 from .structures import interface, read_structure, save_pdb, sequence
@@ -37,6 +39,9 @@ def evo(command,pdb,work=None,extra=()):
 def repair(pdb,destination):
     destination=Path(destination)
     if destination.exists():
+        model=read_structure(destination)
+        if not list(model.get_atoms()) or any('CA' not in r for chain in model[0] for r in chain if r.id[0]==' '):
+            raise RuntimeError(f'Incomplete repaired model cache: {destination}')
         return destination
     work=ROOT/'data/work/repair'/str(os.getpid()); work.mkdir(parents=True,exist_ok=True)
     evo('RepairStructure',pdb,work)
@@ -56,6 +61,10 @@ def mutation_syntax(wild_type,chain,position,new,reference):
 def mutate(pdb,mutations,destination):
     destination=Path(destination)
     if destination.exists():
+        check=read_structure(destination)
+        for chain,pos,wt,new in mutations:
+            if seq1(check[0][chain][(' ',int(pos),' ')].resname)!=new:
+                raise RuntimeError(f'Cached mutation identity mismatch: {destination}')
         return destination
     if not mutations:
         shutil.copyfile(pdb,destination); return destination
@@ -168,8 +177,14 @@ def benchmark():
     correct=sum(r['concordant']=='true' for r in directional)
     positive=any(r['mutation']=='T163A' and r['concordant']=='true' for r in directional)
     passed=bool(directional) and correct/len(directional)>0.5 and positive
+    counts=Counter(r['experimental_direction'] for r in directional)
+    ci=binomtest(correct,len(directional)).proportion_ci(method='exact') if directional else None
     write_json(ROOT/'results/benchmark_summary.json',dict(assay_rows=len(rows),unique_mutations=len(cache),
                classifiable_binding_controls=len(unique),directional_binding_controls=len(directional),concordant_directional=correct,
                positive_control_recovered=positive,benchmark_passed=passed,
+               concordance_ci95=[ci.low,ci.high] if ci else [],
+               concordance_interval_method='Clopper-Pearson exact; distinct mutation-direction controls; assay dependence remains',
+               experimental_direction_counts=dict(counts),
+               majority_direction_baseline_correct=max(counts.values(),default=0),majority_direction_baseline_total=len(directional),
                warning='Model outputs only; categorical validation does not establish quantitative affinity' if passed else 'Interface scoring failed directional/positive-control gate; no improved-binding interpretation allowed',
                quantitative_correlation='Not calculated: qualitative observations; incompatible assays not pooled'))

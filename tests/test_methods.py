@@ -165,3 +165,12 @@ def test_schema_missing_fields():
     validate_schema([dict(sequence='ACD',seed=4)],['sequence','seed'])
     with pytest.raises(ValueError,match='seed'):
         validate_schema([dict(sequence='ACD')],['sequence','seed'])
+
+def test_atomic_table_failure_retains_valid_output(tmp_path):
+    path=tmp_path/'scores.tsv.gz'
+    write_tsv(path,[dict(candidate='a',score=1)])
+    original=path.read_bytes()
+    with pytest.raises(ValueError):
+        write_tsv(path,[dict(candidate='b',unexpected=4)],fields=['candidate','score'])
+    assert path.read_bytes()==original and read_tsv(path)[0]['candidate']=='a'
+    assert not list(tmp_path.glob('*.tmp'))

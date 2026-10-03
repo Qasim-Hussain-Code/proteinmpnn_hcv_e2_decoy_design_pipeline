@@ -9,7 +9,7 @@ import sys
 from .common import ROOT, MeasuredStage, budget, config, now, write_json
 
 STAGES = ['sources', 'structures', 'humanize', 'ground_truth', 'sequences',
-          'diversity', 'states', 'benchmark', 'pilot', 'design', 'discovery',
+          'diversity', 'annotations', 'states', 'benchmark', 'pilot', 'design', 'discovery',
           'freeze', 'heldout', 'sensitivity', 'figures', 'report', 'verify', 'smoke']
 
 def main():
@@ -20,9 +20,18 @@ def main():
     parser.add_argument('--disk', type=float, default=13)
     parser.add_argument('--seed', type=int, default=20261004)
     parser.add_argument('--yes', action='store_true')
+    parser.add_argument('--parallel', action='store_true', help='Use the configured CPU thread count as scoring workers after a successful memory pilot; default is serial')
     args = parser.parse_args()
     os.chdir(ROOT)
     if args.stage == 'configure':
+        if (ROOT/'results/candidate_freeze.tsv').exists():
+            from .selection import require_freeze
+            require_freeze()
+            cfg=config()
+            if (args.threads,args.ram*1e9,args.seed)!=(cfg['threads'],cfg['ram_bytes'],cfg['master_seed']):
+                raise RuntimeError('Configuration is frozen; change run parameters in a fresh directory')
+            print('Existing frozen configuration validated and retained.')
+            return
         free = shutil.disk_usage(ROOT).free
         resolved = dict(threads=args.threads, ram_bytes=int(args.ram*1e9), seed=args.seed,
                         current_free_bytes=free, effective_disk_budget=budget(args.disk*1e9, free),
@@ -37,7 +46,8 @@ def main():
                                           f'PYTHON="{sys.executable.replace(chr(92), chr(47))}"\n', encoding='utf-8')
         import yaml
         cfg = config()
-        cfg.update(threads=args.threads, ram_bytes=resolved['ram_bytes'], master_seed=args.seed)
+        cfg.update(threads=args.threads, ram_bytes=resolved['ram_bytes'], master_seed=args.seed,
+                   scoring_workers=args.threads if args.parallel else 1)
         (ROOT / 'config/design.yml').write_text(yaml.safe_dump(cfg, sort_keys=False), encoding='utf-8')
         print(json.dumps(resolved, indent=2))
         return
@@ -45,7 +55,7 @@ def main():
     for stage in stages:
         module_name = {'sources':'sources','structures':'structures','humanize':'structures',
                        'ground_truth':'literature','sequences':'diversity','diversity':'diversity',
-                       'states':'scoring','benchmark':'scoring','pilot':'design','design':'design',
+                       'annotations':'annotations','states':'scoring','benchmark':'scoring','pilot':'design','design':'design',
                        'discovery':'selection','freeze':'selection','heldout':'selection',
                        'sensitivity':'selection','figures':'reporting','report':'reporting',
                        'verify':'verification','smoke':'verification'}[stage]

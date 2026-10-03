@@ -11,6 +11,7 @@ import shutil
 import subprocess
 import threading
 import time
+import uuid
 from datetime import datetime, timezone
 from urllib.request import Request, urlopen
 
@@ -39,12 +40,21 @@ def write_tsv(path, rows, fields=None):
         raise ValueError(f'Refuse decorative empty table: {path}')
     fields = fields or list(dict.fromkeys(k for row in rows for k in row))
     opener = gzip.open if str(path).endswith('.gz') else open
-    with opener(path, 'wt', encoding='utf-8', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=fields, delimiter='\t', extrasaction='raise')
-        w.writeheader()
-        for row in rows:
-            w.writerow({k: json.dumps(v, sort_keys=True) if isinstance(v, (dict, list)) else v
-                        for k, v in row.items()})
+    temporary=path.with_name(path.name+'.'+uuid.uuid4().hex+'.tmp')
+    try:
+        with opener(temporary, 'wt', encoding='utf-8', newline='') as f:
+            w = csv.DictWriter(f, fieldnames=fields, delimiter='\t', extrasaction='raise')
+            w.writeheader()
+            for row in rows:
+                w.writerow({k: json.dumps(v, sort_keys=True) if isinstance(v, (dict, list)) else v
+                            for k, v in row.items()})
+        with opener(temporary,'rt',encoding='utf-8',newline='') as f:
+            reader=csv.DictReader(f,delimiter='\t')
+            if reader.fieldnames!=fields or sum(1 for _ in reader)!=len(rows):
+                raise ValueError(f'Incomplete table refused: {path}')
+        temporary.replace(path)
+    finally:
+        temporary.unlink(missing_ok=True)
 
 def append_tsv(path, row):
     path = Path(path)
@@ -66,7 +76,13 @@ def append_tsv(path, row):
 def write_json(path, data):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+    temporary=path.with_name(path.name+'.'+uuid.uuid4().hex+'.tmp')
+    try:
+        temporary.write_text(json.dumps(data, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+        json.loads(temporary.read_text(encoding='utf-8'))
+        temporary.replace(path)
+    finally:
+        temporary.unlink(missing_ok=True)
 
 def validate_schema(rows,required):
     if not rows:
@@ -120,14 +136,23 @@ def failure(stage, command, error, resolution='unresolved', exit_status=1):
 def fetch(url, destination, identifier='', version=''):
     destination = Path(destination)
     destination.parent.mkdir(parents=True, exist_ok=True)
+    manifest = ROOT / 'results/download_manifest.tsv'
+    rows = read_tsv(manifest) if manifest.exists() else []
+    prior=next((r for r in rows if r['resource']==str(destination.relative_to(ROOT))),None)
+    if destination.exists() and prior and sha256(destination)!=prior['sha256']:
+        raise RuntimeError(f'Cached source checksum mismatch: {destination}')
     if not destination.exists():
         check_resources(20_000_000, 1, 'download_count')
         request = Request(url, headers={'User-Agent': 'CD81ReproducibleBenchmark/0.1'})
-        with urlopen(request, timeout=90) as response, destination.with_suffix(destination.suffix+'.tmp').open('wb') as f:
-            shutil.copyfileobj(response, f)
-        destination.with_suffix(destination.suffix+'.tmp').replace(destination)
-    manifest = ROOT / 'results/download_manifest.tsv'
-    rows = read_tsv(manifest) if manifest.exists() else []
+        temporary=destination.with_suffix(destination.suffix+'.tmp')
+        try:
+            with urlopen(request, timeout=90) as response, temporary.open('wb') as f:
+                shutil.copyfileobj(response, f)
+            if temporary.stat().st_size==0 or (prior and sha256(temporary)!=prior['sha256']):
+                raise RuntimeError(f'Retrieved source differs from frozen snapshot: {destination}; use a new run directory')
+            temporary.replace(destination)
+        finally:
+            temporary.unlink(missing_ok=True)
     record = dict(resource=str(destination.relative_to(ROOT)), identifier=identifier,
                   source_url=url, download_timestamp=now(), size_bytes=destination.stat().st_size,
                   sha256=sha256(destination), version=version, notes='Original bytes retained; cache timestamp retained on rerun')

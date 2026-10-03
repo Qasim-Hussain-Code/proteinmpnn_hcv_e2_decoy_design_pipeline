@@ -2,6 +2,9 @@
 import importlib.metadata
 import json
 import platform
+import shutil
+import sys
+import zipfile
 from .common import ROOT, fetch, now, run_command, sha256, write_json, write_tsv
 
 def sources():
@@ -24,6 +27,29 @@ def sources():
     rows.append(dict(tool='Python',purpose='runtime',version=platform.python_version(),source_url='https://www.python.org/',
                      git_commit='',release_or_tag=platform.python_version(),license='PSF',license_url='https://docs.python.org/3/license.html',
                      model_or_weight_file='',weight_hash='',date_checked=now(),local_or_remote='pre-existing',redistributable='yes',notes='Host installation'))
+    for name,command,url,terms in [
+        ('Git',['git','--version'],'https://git-scm.com/about.html','GPL-2.0'),
+        ('Bash',['C:/Program Files/Git/bin/bash.exe' if sys.platform=='win32' else 'bash','--version'],'https://www.gnu.org/software/bash/','GPL-3.0-or-later'),
+        ('GCC',['g++','--version'],'https://gcc.gnu.org/','GPL-3.0-or-later; runtime library exception 3.1')]:
+        version=run_command(command).splitlines()[0]
+        rows.append(dict(tool=name,purpose='Local execution and source compilation',version=version,source_url=url,
+                         git_commit='',release_or_tag=version,license=terms,license_url=url,model_or_weight_file='',weight_hash='',
+                         date_checked=now(),local_or_remote='pre-existing',redistributable='not redistributed',notes='Host command version recorded; no system tool downloaded'))
+    shellcheck=ROOT/'vendor/shellcheck/shellcheck.exe'
+    if sys.platform=='win32' and not shellcheck.exists():
+        archive=fetch('https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.zip',
+                      ROOT/'data/raw/shellcheck-v0.11.0.zip','shellcheck','v0.11.0')
+        with zipfile.ZipFile(archive) as bundle:
+            executable=next(n for n in bundle.namelist() if n.endswith('shellcheck.exe'))
+            shellcheck.parent.mkdir(parents=True,exist_ok=True)
+            shellcheck.write_bytes(bundle.read(executable))
+    binary=str(shellcheck) if shellcheck.exists() else shutil.which('shellcheck')
+    if binary:
+        rows.append(dict(tool='ShellCheck',purpose='Bash static analysis',version=run_command([binary,'--version']).split('version: ')[-1].splitlines()[0],
+                         source_url='https://github.com/koalaman/shellcheck',git_commit='',release_or_tag='v0.11.0' if shellcheck.exists() else 'host installation',
+                         license='GPL-3.0-or-later',license_url='https://github.com/koalaman/shellcheck/blob/v0.11.0/LICENSE',
+                         model_or_weight_file=str(shellcheck.relative_to(ROOT)) if shellcheck.exists() else '',weight_hash=sha256(shellcheck) if shellcheck.exists() else '',
+                         date_checked=now(),local_or_remote='local ignored',redistributable='not redistributed',notes='Official release or host installation; static analysis only'))
     for name in ['ProteinMPNN','EvoEF2']:
         folder = ROOT / 'vendor' / name
         commit = run_command(['git','rev-parse','HEAD'],cwd=folder).strip()

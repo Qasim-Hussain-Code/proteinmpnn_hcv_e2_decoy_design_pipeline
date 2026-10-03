@@ -3,6 +3,7 @@ vendor/
 .cache/
 data/raw/
 data/work/
+data/processed/hcv_polyproteins.json
 __pycache__/
 .pytest_cache/
 *.pyc

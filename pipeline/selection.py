@@ -30,6 +30,9 @@ def require_freeze(root=ROOT):
     for name,expected in data.get('method_file_hashes',{}).items():
         if sha256(Path(root)/name)!=expected:
             raise RuntimeError(f'Frozen scientific implementation changed: {name}')
+    for name,expected in data.get('input_file_hashes',{}).items():
+        if sha256(Path(root)/name)!=expected:
+            raise RuntimeError(f'Frozen selection input changed: {name}')
     return data
 
 def heldout_read(path,root=ROOT):
@@ -80,7 +83,7 @@ def score_pool(candidates,discovery_state_files,split='discovery',_serial=False)
         from concurrent.futures import ProcessPoolExecutor
         output=[]; bios=[]
         checkpoint=ROOT/f'data/work/{split}_score_checkpoint.tsv.gz'
-        with ProcessPoolExecutor(max_workers=config()['threads']) as executor:
+        with ProcessPoolExecutor(max_workers=config().get('scoring_workers',1)) as executor:
             tasks=[(candidate,discovery_state_files,split) for candidate in candidates]
             for n,(rows,bio) in enumerate(executor.map(score_one_task,tasks)):
                 output.extend(rows); bios.extend(bio)
@@ -140,6 +143,13 @@ def discovery():
     install_visibility_guard()
     output=ROOT/'results/discovery_scores.tsv.gz'
     if output.exists():
+        cached=read_tsv(output)
+        pool=[r for r in read_tsv(ROOT/'results/generated_sequences.tsv.gz') if r['filter_status']=='passed' and r['duplicate']=='false']
+        states=[r for r in read_tsv(ROOT/'results/e2_state_manifest.tsv') if r['split']=='discovery']
+        keys={(r['candidate_id'],r['haplotype_id']) for r in cached}
+        expected={(c['candidate_id'],s['haplotype_id']) for c in [wt_candidate()]+pool for s in states}
+        if len(cached)!=len(expected) or keys!=expected or not (ROOT/'results/candidate_biophysics.tsv').exists() or not (ROOT/'results/model_comparison.tsv').exists():
+            raise RuntimeError('Incomplete discovery artifacts; refuse silent cache skip')
         return
     pool=[r for r in read_tsv(ROOT/'results/generated_sequences.tsv.gz') if r['filter_status']=='passed' and r['duplicate']=='false']
     states=[r for r in read_tsv(ROOT/'results/e2_state_manifest.tsv') if r['split']=='discovery']
@@ -222,6 +232,9 @@ def freeze():
                candidate_ids=sorted(selected),selection_timestamp=timestamp,config_hash=cfg_hash,software_manifest_hash=sw_hash,
                discovery_inputs={'scores':sha256(ROOT/'results/discovery_scores.tsv.gz'),'states':sha256(ROOT/'data/processed/discovery_panel.tsv')},
                method_file_hashes={f'pipeline/{name}.py':sha256(ROOT/f'pipeline/{name}.py') for name in ['common','structures','diversity','scoring','design','selection']},
+               input_file_hashes={name:sha256(ROOT/name) for name in ['results/discovery_scores.tsv.gz','data/processed/discovery_panel.tsv',
+                   'results/generated_sequences.tsv.gz','results/candidate_biophysics.tsv','config/fixed_positions.tsv','config/split_manifest.tsv',
+                   'config/cd81_mutation_ground_truth.tsv','results/benchmark_summary.json','data/processed/humanized_repaired.pdb']},
                rule='Same unique candidate pool: reference interaction-score ascending; escape maximum paired WT delta ascending, then median paired delta, then neutral identifier. Pareto annotated separately; not an extra selection gate.',
                heldout_opened=False))
     funnel=read_tsv(ROOT/'results/design_filter_funnel.tsv')
@@ -232,6 +245,12 @@ def freeze():
 def heldout():
     require_freeze()
     if (ROOT/'results/heldout_metrics.tsv').exists():
+        expected=['heldout_scores.tsv','heldout_summary.json','final_computational_priorities.tsv']
+        if not all((ROOT/'results'/name).exists() for name in expected):
+            raise RuntimeError('Incomplete held-out artifacts; refuse silent cache skip')
+        completed=read_tsv(ROOT/'results/heldout_metrics.tsv')
+        if {r['candidate_id'] for r in completed}!={r['candidate_id'] for r in read_tsv(ROOT/'results/candidate_freeze.tsv')}:
+            raise RuntimeError('Incomplete held-out candidate evaluation')
         return
     from .diversity import panel
     rows=heldout_read(ROOT/'data/processed/quarantine/heldout_sequences.json')

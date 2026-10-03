@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
+if [[ "${1:-}" == --help || "${1:-}" == -h ]]; then
+    echo 'Usage: bash scripts/02_install.sh; installs locked CPU dependencies and compiles pinned EvoEF2'; exit 0
+fi
 source project.conf
 mkdir -p vendor .cache
 export PIP_CACHE_DIR="$PWD/.cache/pip"
 export TMPDIR="$PWD/.cache/tmp"
+export TEMP="$TMPDIR"
+export TMP="$TMPDIR"
 mkdir -p "$TMPDIR"
 "$PYTHON" -m pip install --no-cache-dir -r requirements.lock.txt --extra-index-url https://download.pytorch.org/whl/cpu
 if [[ ! -d vendor/ProteinMPNN/.git ]]; then

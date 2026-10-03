@@ -99,6 +99,9 @@ def generate(arm,model,seed,temp,count,tag):
 
 def pilot():
     if (ROOT/'results/mpnn_pilot.json').exists():
+        pilotdata=json.loads((ROOT/'results/mpnn_pilot.json').read_text())
+        if len(read_tsv(ROOT/'results/pilot_sequences.tsv.gz'))!=pilotdata['count'] or pilotdata['chosen_count_per_cell']!=config()['full_count_per_cell']:
+            raise RuntimeError('Pilot cache incomplete or generation budget changed')
         return
     fixed_policy(); before=footprint(); t0=time.monotonic()
     rows=generate('A','standard',config()['generation_seeds'][0],0.1,config()['pilot_count'],'pilot')
@@ -120,6 +123,16 @@ def pilot():
 
 def design():
     if (ROOT/'results/generated_sequences.tsv.gz').exists():
+        rows=read_tsv(ROOT/'results/generated_sequences.tsv.gz')
+        expected=2*2*len(config()['generation_seeds'])*len(config()['temperatures'])*config()['full_count_per_cell']
+        if len(rows)!=expected or not (ROOT/'results/design_filter_funnel.tsv').exists() or not (ROOT/'results/seed_variance.tsv').exists():
+            raise RuntimeError('Incomplete generation outputs; refuse silent cache skip')
+        policy=read_tsv(ROOT/'config/fixed_positions.tsv')
+        wt=json.loads((ROOT/'data/processed/humanization.json').read_text())
+        for row in rows:
+            fixed=[int(r['sequence_index'])-1 for r in policy if r['design_arm']==row['design_arm'] and r['designable']=='false']
+            if constraints(row['sequence'],wt['human_sequence'],wt['human_positions'],fixed,config()['disulfide_positions'])!=row['filter_status']:
+                raise RuntimeError('Cached generation violates independent constraints')
         return
     if config()['full_count_per_cell'] is None:
         raise RuntimeError('Pilot must precede full budget selection')
