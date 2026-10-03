@@ -1,0 +1,179 @@
+position	sequence_index	wild_type	designable	design_arm	reason	source	structural_distance_to_e2	experimental_evidence	notes
+113	1	F	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	25.19827605169488		Policy computed without natural-sequence conservation or held-out scores
+114	2	V	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	22.15971986992256		Policy computed without natural-sequence conservation or held-out scores
+115	3	N	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	18.839908478071198		Policy computed without natural-sequence conservation or held-out scores
+116	4	K	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	15.480156833504957		Policy computed without natural-sequence conservation or held-out scores
+117	5	D	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.434294144539422		Policy computed without natural-sequence conservation or held-out scores
+118	6	Q	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	16.805071873143824		Policy computed without natural-sequence conservation or held-out scores
+119	7	I	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	16.659075304080876		Policy computed without natural-sequence conservation or held-out scores
+120	8	A	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.163084046336165		Policy computed without natural-sequence conservation or held-out scores
+121	9	K	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.88590300058224		Policy computed without natural-sequence conservation or held-out scores
+122	10	D	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	15.886905846383936		Policy computed without natural-sequence conservation or held-out scores
+123	11	V	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.484847514659863		Policy computed without natural-sequence conservation or held-out scores
+124	12	K	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	8.908841099342908		Policy computed without natural-sequence conservation or held-out scores
+125	13	Q	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.10763747918166		Policy computed without natural-sequence conservation or held-out scores
+126	14	F	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.97296808305205		Policy computed without natural-sequence conservation or held-out scores
+127	15	Y	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	6.9042221180852446		Policy computed without natural-sequence conservation or held-out scores
+128	16	D	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	8.222046612866679		Policy computed without natural-sequence conservation or held-out scores
+129	17	Q	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	12.564689225275789		Policy computed without natural-sequence conservation or held-out scores
+130	18	A	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	12.746620127771381		Policy computed without natural-sequence conservation or held-out scores
+131	19	L	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	6.609822509578014		Policy computed without natural-sequence conservation or held-out scores
+132	20	Q	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	10.977304526251308		Policy computed without natural-sequence conservation or held-out scores
+133	21	Q	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.888748268518256		Policy computed without natural-sequence conservation or held-out scores
+134	22	A	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.33179816494937		Policy computed without natural-sequence conservation or held-out scores
+135	23	V	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	10.530617151099106		Policy computed without natural-sequence conservation or held-out scores
+136	24	V	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.024116123594544		Policy computed without natural-sequence conservation or held-out scores
+137	25	D	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	15.270315526317235		Policy computed without natural-sequence conservation or held-out scores
+138	26	D	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.895339463602888		Policy computed without natural-sequence conservation or held-out scores
+139	27	D	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	15.834275311658692		Policy computed without natural-sequence conservation or held-out scores
+140	28	A	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	16.23867329345483		Policy computed without natural-sequence conservation or held-out scores
+141	29	N	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.738760042543952		Policy computed without natural-sequence conservation or held-out scores
+142	30	N	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	18.382001079660075		Policy computed without natural-sequence conservation or held-out scores
+143	31	A	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	15.162702434023405		Policy computed without natural-sequence conservation or held-out scores
+144	32	K	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	12.000502934736454		Policy computed without natural-sequence conservation or held-out scores
+145	33	A	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	16.252516378947604		Policy computed without natural-sequence conservation or held-out scores
+146	34	V	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.6398149546128		Policy computed without natural-sequence conservation or held-out scores
+147	35	V	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.714632605194632		Policy computed without natural-sequence conservation or held-out scores
+148	36	K	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.79395248591857		Policy computed without natural-sequence conservation or held-out scores
+149	37	T	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.997577667112648		Policy computed without natural-sequence conservation or held-out scores
+150	38	F	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	12.295016809339407		Policy computed without natural-sequence conservation or held-out scores
+151	39	H	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	8.152593869418663		Policy computed without natural-sequence conservation or held-out scores
+152	40	E	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.18206273185405		Policy computed without natural-sequence conservation or held-out scores
+153	41	T	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.673837296194174		Policy computed without natural-sequence conservation or held-out scores
+154	42	L	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	10.851471957885487		Policy computed without natural-sequence conservation or held-out scores
+155	43	D	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	9.006721195131657		Policy computed without natural-sequence conservation or held-out scores
+156	44	C	false	A	disulfide	Primary ground truth plus experimental coordinates	7.387750155559102		Policy computed without natural-sequence conservation or held-out scores
+157	45	C	false	A	disulfide	Primary ground truth plus experimental coordinates	3.455329119349314		Policy computed without natural-sequence conservation or held-out scores
+158	46	G	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	3.711951956857732		Policy computed without natural-sequence conservation or held-out scores
+159	47	S	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	2.103160350953824		Policy computed without natural-sequence conservation or held-out scores
+160	48	S	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	3.133302965893689		Policy computed without natural-sequence conservation or held-out scores
+161	49	T	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	5.007576504007008		Policy computed without natural-sequence conservation or held-out scores
+162	50	L	false	A	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	4.164140194459516	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+163	51	T	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	1.5139915060968325		Policy computed without natural-sequence conservation or held-out scores
+164	52	A	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	2.351118280375227		Policy computed without natural-sequence conservation or held-out scores
+165	53	L	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	4.648438541695922		Policy computed without natural-sequence conservation or held-out scores
+166	54	T	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	1.9464096594380766		Policy computed without natural-sequence conservation or held-out scores
+167	55	T	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	1.177365527982969		Policy computed without natural-sequence conservation or held-out scores
+168	56	S	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	5.106688711463858		Policy computed without natural-sequence conservation or held-out scores
+169	57	V	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.09106358913568		Policy computed without natural-sequence conservation or held-out scores
+170	58	L	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	5.517934248803411		Policy computed without natural-sequence conservation or held-out scores
+171	59	K	false	A	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	5.0744469817039315	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+172	60	N	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	8.013172544116523		Policy computed without natural-sequence conservation or held-out scores
+173	61	N	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	5.543113520408394		Policy computed without natural-sequence conservation or held-out scores
+174	62	L	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	9.772023748930799		Policy computed without natural-sequence conservation or held-out scores
+175	63	C	false	A	disulfide	Primary ground truth plus experimental coordinates	8.011155330381056		Policy computed without natural-sequence conservation or held-out scores
+176	64	P	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.269455849784103		Policy computed without natural-sequence conservation or held-out scores
+177	65	S	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	10.0785814845588		Policy computed without natural-sequence conservation or held-out scores
+178	66	G	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.45201189067868		Policy computed without natural-sequence conservation or held-out scores
+179	67	S	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	6.524754706799305		Policy computed without natural-sequence conservation or held-out scores
+180	68	N	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	3.769975203421135		Policy computed without natural-sequence conservation or held-out scores
+181	69	I	false	A	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	3.4739103811874164	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+182	70	I	false	A	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	1.530210064528318	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+183	71	S	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	6.04449075028538		Policy computed without natural-sequence conservation or held-out scores
+184	72	N	false	A	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	3.8514484536401365	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+185	73	L	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	0.49650109985152674		Policy computed without natural-sequence conservation or held-out scores
+186	74	F	false	A	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	3.0140717214936603	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+187	75	K	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	3.604275181920751		Policy computed without natural-sequence conservation or held-out scores
+188	76	E	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	1.6263445199470516		Policy computed without natural-sequence conservation or held-out scores
+189	77	D	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	3.2423460405550877		Policy computed without natural-sequence conservation or held-out scores
+190	78	C	false	A	disulfide	Primary ground truth plus experimental coordinates	5.610628025377005		Policy computed without natural-sequence conservation or held-out scores
+191	79	H	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.043125543918817		Policy computed without natural-sequence conservation or held-out scores
+192	80	Q	false	A	Arm A preserves geometric interface	Primary ground truth plus experimental coordinates	3.040745622559199		Policy computed without natural-sequence conservation or held-out scores
+193	81	K	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.749190035124551		Policy computed without natural-sequence conservation or held-out scores
+194	82	I	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	10.359199156647826		Policy computed without natural-sequence conservation or held-out scores
+195	83	D	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.163350608811969		Policy computed without natural-sequence conservation or held-out scores
+196	84	D	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.706959508413774		Policy computed without natural-sequence conservation or held-out scores
+197	85	L	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	12.343888397176045		Policy computed without natural-sequence conservation or held-out scores
+198	86	F	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.799484312643541		Policy computed without natural-sequence conservation or held-out scores
+199	87	S	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.361817090210813		Policy computed without natural-sequence conservation or held-out scores
+200	88	G	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.44112587130531		Policy computed without natural-sequence conservation or held-out scores
+201	89	K	true	A	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.544713798546255		Policy computed without natural-sequence conservation or held-out scores
+113	1	F	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	25.19827605169488		Policy computed without natural-sequence conservation or held-out scores
+114	2	V	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	22.15971986992256		Policy computed without natural-sequence conservation or held-out scores
+115	3	N	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	18.839908478071198		Policy computed without natural-sequence conservation or held-out scores
+116	4	K	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	15.480156833504957		Policy computed without natural-sequence conservation or held-out scores
+117	5	D	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.434294144539422		Policy computed without natural-sequence conservation or held-out scores
+118	6	Q	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	16.805071873143824		Policy computed without natural-sequence conservation or held-out scores
+119	7	I	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	16.659075304080876		Policy computed without natural-sequence conservation or held-out scores
+120	8	A	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.163084046336165		Policy computed without natural-sequence conservation or held-out scores
+121	9	K	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.88590300058224		Policy computed without natural-sequence conservation or held-out scores
+122	10	D	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	15.886905846383936		Policy computed without natural-sequence conservation or held-out scores
+123	11	V	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.484847514659863		Policy computed without natural-sequence conservation or held-out scores
+124	12	K	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	8.908841099342908		Policy computed without natural-sequence conservation or held-out scores
+125	13	Q	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.10763747918166		Policy computed without natural-sequence conservation or held-out scores
+126	14	F	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.97296808305205		Policy computed without natural-sequence conservation or held-out scores
+127	15	Y	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	6.9042221180852446		Policy computed without natural-sequence conservation or held-out scores
+128	16	D	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	8.222046612866679		Policy computed without natural-sequence conservation or held-out scores
+129	17	Q	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	12.564689225275789		Policy computed without natural-sequence conservation or held-out scores
+130	18	A	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	12.746620127771381		Policy computed without natural-sequence conservation or held-out scores
+131	19	L	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	6.609822509578014		Policy computed without natural-sequence conservation or held-out scores
+132	20	Q	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	10.977304526251308		Policy computed without natural-sequence conservation or held-out scores
+133	21	Q	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.888748268518256		Policy computed without natural-sequence conservation or held-out scores
+134	22	A	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.33179816494937		Policy computed without natural-sequence conservation or held-out scores
+135	23	V	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	10.530617151099106		Policy computed without natural-sequence conservation or held-out scores
+136	24	V	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.024116123594544		Policy computed without natural-sequence conservation or held-out scores
+137	25	D	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	15.270315526317235		Policy computed without natural-sequence conservation or held-out scores
+138	26	D	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.895339463602888		Policy computed without natural-sequence conservation or held-out scores
+139	27	D	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	15.834275311658692		Policy computed without natural-sequence conservation or held-out scores
+140	28	A	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	16.23867329345483		Policy computed without natural-sequence conservation or held-out scores
+141	29	N	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.738760042543952		Policy computed without natural-sequence conservation or held-out scores
+142	30	N	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	18.382001079660075		Policy computed without natural-sequence conservation or held-out scores
+143	31	A	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	15.162702434023405		Policy computed without natural-sequence conservation or held-out scores
+144	32	K	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	12.000502934736454		Policy computed without natural-sequence conservation or held-out scores
+145	33	A	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	16.252516378947604		Policy computed without natural-sequence conservation or held-out scores
+146	34	V	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.6398149546128		Policy computed without natural-sequence conservation or held-out scores
+147	35	V	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.714632605194632		Policy computed without natural-sequence conservation or held-out scores
+148	36	K	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.79395248591857		Policy computed without natural-sequence conservation or held-out scores
+149	37	T	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.997577667112648		Policy computed without natural-sequence conservation or held-out scores
+150	38	F	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	12.295016809339407		Policy computed without natural-sequence conservation or held-out scores
+151	39	H	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	8.152593869418663		Policy computed without natural-sequence conservation or held-out scores
+152	40	E	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.18206273185405		Policy computed without natural-sequence conservation or held-out scores
+153	41	T	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.673837296194174		Policy computed without natural-sequence conservation or held-out scores
+154	42	L	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	10.851471957885487		Policy computed without natural-sequence conservation or held-out scores
+155	43	D	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	9.006721195131657		Policy computed without natural-sequence conservation or held-out scores
+156	44	C	false	B	disulfide	Primary ground truth plus experimental coordinates	7.387750155559102		Policy computed without natural-sequence conservation or held-out scores
+157	45	C	false	B	disulfide	Primary ground truth plus experimental coordinates	3.455329119349314		Policy computed without natural-sequence conservation or held-out scores
+158	46	G	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	3.711951956857732		Policy computed without natural-sequence conservation or held-out scores
+159	47	S	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	2.103160350953824		Policy computed without natural-sequence conservation or held-out scores
+160	48	S	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	3.133302965893689		Policy computed without natural-sequence conservation or held-out scores
+161	49	T	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	5.007576504007008		Policy computed without natural-sequence conservation or held-out scores
+162	50	L	false	B	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	4.164140194459516	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+163	51	T	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	1.5139915060968325		Policy computed without natural-sequence conservation or held-out scores
+164	52	A	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	2.351118280375227		Policy computed without natural-sequence conservation or held-out scores
+165	53	L	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	4.648438541695922		Policy computed without natural-sequence conservation or held-out scores
+166	54	T	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	1.9464096594380766		Policy computed without natural-sequence conservation or held-out scores
+167	55	T	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	1.177365527982969		Policy computed without natural-sequence conservation or held-out scores
+168	56	S	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	5.106688711463858		Policy computed without natural-sequence conservation or held-out scores
+169	57	V	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.09106358913568		Policy computed without natural-sequence conservation or held-out scores
+170	58	L	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	5.517934248803411		Policy computed without natural-sequence conservation or held-out scores
+171	59	K	false	B	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	5.0744469817039315	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+172	60	N	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	8.013172544116523		Policy computed without natural-sequence conservation or held-out scores
+173	61	N	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	5.543113520408394		Policy computed without natural-sequence conservation or held-out scores
+174	62	L	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	9.772023748930799		Policy computed without natural-sequence conservation or held-out scores
+175	63	C	false	B	disulfide	Primary ground truth plus experimental coordinates	8.011155330381056		Policy computed without natural-sequence conservation or held-out scores
+176	64	P	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.269455849784103		Policy computed without natural-sequence conservation or held-out scores
+177	65	S	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	10.0785814845588		Policy computed without natural-sequence conservation or held-out scores
+178	66	G	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.45201189067868		Policy computed without natural-sequence conservation or held-out scores
+179	67	S	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	6.524754706799305		Policy computed without natural-sequence conservation or held-out scores
+180	68	N	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	3.769975203421135		Policy computed without natural-sequence conservation or held-out scores
+181	69	I	false	B	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	3.4739103811874164	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+182	70	I	false	B	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	1.530210064528318	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+183	71	S	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	6.04449075028538		Policy computed without natural-sequence conservation or held-out scores
+184	72	N	false	B	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	3.8514484536401365	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+185	73	L	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	0.49650109985152674		Policy computed without natural-sequence conservation or held-out scores
+186	74	F	false	B	experimental_recognition_constraint	Primary ground truth plus experimental coordinates	3.0140717214936603	Conservative preservation across assay disagreement	Policy computed without natural-sequence conservation or held-out scores
+187	75	K	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	3.604275181920751		Policy computed without natural-sequence conservation or held-out scores
+188	76	E	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	1.6263445199470516		Policy computed without natural-sequence conservation or held-out scores
+189	77	D	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	3.2423460405550877		Policy computed without natural-sequence conservation or held-out scores
+190	78	C	false	B	disulfide	Primary ground truth plus experimental coordinates	5.610628025377005		Policy computed without natural-sequence conservation or held-out scores
+191	79	H	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.043125543918817		Policy computed without natural-sequence conservation or held-out scores
+192	80	Q	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	3.040745622559199		Policy computed without natural-sequence conservation or held-out scores
+193	81	K	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.749190035124551		Policy computed without natural-sequence conservation or held-out scores
+194	82	I	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	10.359199156647826		Policy computed without natural-sequence conservation or held-out scores
+195	83	D	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.163350608811969		Policy computed without natural-sequence conservation or held-out scores
+196	84	D	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	7.706959508413774		Policy computed without natural-sequence conservation or held-out scores
+197	85	L	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	12.343888397176045		Policy computed without natural-sequence conservation or held-out scores
+198	86	F	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	13.799484312643541		Policy computed without natural-sequence conservation or held-out scores
+199	87	S	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.361817090210813		Policy computed without natural-sequence conservation or held-out scores
+200	88	G	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	14.44112587130531		Policy computed without natural-sequence conservation or held-out scores
+201	89	K	true	B	predeclared sequence redesign	Primary ground truth plus experimental coordinates	11.544713798546255		Policy computed without natural-sequence conservation or held-out scores

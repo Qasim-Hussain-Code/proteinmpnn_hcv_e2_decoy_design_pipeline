@@ -1,0 +1,232 @@
+{
+  "assemblies": {
+    "_pdbx_struct_assembly.details": [
+      "author_defined_assembly",
+      "author_defined_assembly"
+    ],
+    "_pdbx_struct_assembly.id": [
+      "1",
+      "2"
+    ],
+    "_pdbx_struct_assembly.method_details": [
+      "?",
+      "?"
+    ],
+    "_pdbx_struct_assembly.oligomeric_count": [
+      "4",
+      "4"
+    ],
+    "_pdbx_struct_assembly.oligomeric_details": [
+      "tetrameric",
+      "tetrameric"
+    ],
+    "_pdbx_struct_assembly_auth_evidence.assembly_id": [
+      "1"
+    ],
+    "_pdbx_struct_assembly_auth_evidence.details": [
+      "?"
+    ],
+    "_pdbx_struct_assembly_auth_evidence.experimental_support": [
+      "gel filtration"
+    ],
+    "_pdbx_struct_assembly_auth_evidence.id": [
+      "1"
+    ],
+    "_pdbx_struct_assembly_gen.assembly_id": [
+      "1",
+      "2"
+    ],
+    "_pdbx_struct_assembly_gen.asym_id_list": [
+      "A,C,D,E,I,K,L",
+      "B,F,G,H,J,M"
+    ],
+    "_pdbx_struct_assembly_gen.oper_expression": [
+      "1",
+      "1"
+    ]
+  },
+  "author_chains": {
+    "A": [
+      "C"
+    ],
+    "B": [
+      "G"
+    ],
+    "C": [
+      "A"
+    ],
+    "D": [
+      "B"
+    ],
+    "E": [
+      "D"
+    ],
+    "F": [
+      "E"
+    ],
+    "G": [
+      "F"
+    ],
+    "H": [
+      "H"
+    ],
+    "I": [
+      "I"
+    ],
+    "J": [
+      "J"
+    ],
+    "K": [
+      "C"
+    ],
+    "L": [
+      "C"
+    ],
+    "M": [
+      "G"
+    ]
+  },
+  "citation": {
+    "_citation.abstract": [
+      "?"
+    ],
+    "_citation.abstract_id_CAS": [
+      "?"
+    ],
+    "_citation.book_id_ISBN": [
+      "?"
+    ],
+    "_citation.book_publisher": [
+      "?"
+    ],
+    "_citation.book_publisher_city": [
+      "?"
+    ],
+    "_citation.book_title": [
+      "?"
+    ],
+    "_citation.coordinate_linkage": [
+      "?"
+    ],
+    "_citation.country": [
+      "UK"
+    ],
+    "_citation.database_id_CSD": [
+      "?"
+    ],
+    "_citation.database_id_Medline": [
+      "?"
+    ],
+    "_citation.details": [
+      "?"
+    ],
+    "_citation.id": [
+      "primary"
+    ],
+    "_citation.journal_abbrev": [
+      "Nature"
+    ],
+    "_citation.journal_full": [
+      "?"
+    ],
+    "_citation.journal_id_ASTM": [
+      "NATUAS"
+    ],
+    "_citation.journal_id_CSD": [
+      "0006"
+    ],
+    "_citation.journal_id_ISSN": [
+      "1476-4687"
+    ],
+    "_citation.journal_issue": [
+      "?"
+    ],
+    "_citation.journal_volume": [
+      "598"
+    ],
+    "_citation.language": [
+      "?"
+    ],
+    "_citation.page_first": [
+      "521"
+    ],
+    "_citation.page_last": [
+      "525"
+    ],
+    "_citation.pdbx_database_id_DOI": [
+      "10.1038/s41586-021-03913-5"
+    ],
+    "_citation.pdbx_database_id_PubMed": [
+      "34526719"
+    ],
+    "_citation.pdbx_database_id_patent": [
+      "?"
+    ],
+    "_citation.title": [
+      "Structural insights into hepatitis C virus receptor binding and entry."
+    ],
+    "_citation.unpublished_flag": [
+      "?"
+    ],
+    "_citation.year": [
+      "2021"
+    ]
+  },
+  "entities": {
+    "1": {
+      "chains": [
+        "A",
+        "B"
+      ],
+      "description": "Core protein precursor eE2",
+      "organism": "Hepacivirus C"
+    },
+    "2": {
+      "chains": [
+        "C",
+        "F"
+      ],
+      "description": "2A12 Fab Heavy Chain",
+      "organism": "Mus musculus"
+    },
+    "3": {
+      "chains": [
+        "D",
+        "G"
+      ],
+      "description": "2A12 Fab Light Chain",
+      "organism": "Mus musculus"
+    },
+    "4": {
+      "chains": [
+        "E",
+        "H"
+      ],
+      "description": "CD81 protein",
+      "organism": "Saguinus oedipus"
+    },
+    "5": {
+      "chains": [
+        "I"
+      ],
+      "description": "beta-D-mannopyranose-(1-4)-2-acetamido-2-deoxy-beta-D-glucopyranose-(1-4)-2-acetamido-2-deoxy-beta-D-glucopyranose",
+      "organism": "unknown"
+    },
+    "6": {
+      "chains": [
+        "J"
+      ],
+      "description": "2-acetamido-2-deoxy-beta-D-glucopyranose-(1-4)-2-acetamido-2-deoxy-beta-D-glucopyranose",
+      "organism": "unknown"
+    },
+    "7": {
+      "chains": [
+        "K",
+        "L",
+        "M"
+      ],
+      "description": "2-acetamido-2-deoxy-beta-D-glucopyranose",
+      "organism": "unknown"
+    }
+  }
+}

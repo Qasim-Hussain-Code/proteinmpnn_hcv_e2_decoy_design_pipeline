@@ -1,0 +1,370 @@
+############################################################################################
+                                    EvoEF2                                                  
+  A framework for macromolecular modeling, e.g.,protein design, protein side-chain packing, 
+protein structure energy minimization, add and optimize hydrogen bonds, build mutant model, 
+calculate protein folding stability, calculate protein-protein binding free energy, etc     
+
+
+  Copyright (c) Xiaoqiang Huang (xiaoqiah@umich.edu; tommyhuangthu@foxmail.com)
+  Dept. of Computational Medicine & Bioinformatics
+  Medical School
+  University of Michigan
+############################################################################################
+command RepairStructure works
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E428ASN is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom OD1 on residue E428ASN is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom ND2 on residue E428ASN is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E430ASN is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom OD1 on residue E430ASN is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom ND2 on residue E430ASN is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E431ASP is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom OD1 on residue E431ASP is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom OD2 on residue E431ASP is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E434HSD is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom ND1 on residue E434HSD is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CD2 on residue E434HSD is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom NE2 on residue E434HSD is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CE1 on residue E434HSD is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E494ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CD on residue E494ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom NE on residue E494ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CZ on residue E494ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom NH1 on residue E494ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom NH2 on residue E494ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E495GLN is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CD on residue E495GLN is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom OE1 on residue E495GLN is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom NE2 on residue E495GLN is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E502LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CD on residue E502LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CE on residue E502LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom NZ on residue E502LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E562TYR is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CD1 on residue E562TYR is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CD2 on residue E562TYR is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CE1 on residue E562TYR is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CE2 on residue E562TYR is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CZ on residue E562TYR is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom OH on residue E562TYR is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E564LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CD on residue E564LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CE on residue E564LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom NZ on residue E564LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E600LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CD on residue E600LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CE on residue E600LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom NZ on residue E600LYS is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E610ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CD on residue E610ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom NE on residue E610ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CZ on residue E610ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom NH1 on residue E610ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom NH2 on residue E610ARG is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CG on residue E650PHE is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CD1 on residue E650PHE is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CD2 on residue E650PHE is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CE1 on residue E650PHE is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CE2 on residue E650PHE is invalid
+Warning: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Residue.cpp function ResidueCheckAtomCoordinateValidity line 799, the coordinate of sidechain atom CZ on residue E650PHE is invalid
+EvoEF Repairing PDB: optimization cycle 1 ... 
+We will rotate hydroxyl group of residue E419S to optimize hbond
+We optimize side chain of residue E419S
+We optimize side chain of residue E420W
+We will flip residue E421H to optimize hbond
+We optimize side chain of residue E421H
+We optimize side chain of residue E422I
+We will flip residue E423N to optimize hbond
+We optimize side chain of residue E423N
+We optimize side chain of residue E424R
+We will rotate hydroxyl group of residue E425T to optimize hbond
+We optimize side chain of residue E425T
+We optimize side chain of residue E427L
+We will flip residue E428N to optimize hbond
+We optimize side chain of residue E428N
+We will flip residue E430N to optimize hbond
+We optimize side chain of residue E430N
+We optimize side chain of residue E431D
+We will rotate hydroxyl group of residue E432S to optimize hbond
+We optimize side chain of residue E432S
+We optimize side chain of residue E433L
+We will flip residue E434H to optimize hbond
+We optimize side chain of residue E434H
+We will rotate hydroxyl group of residue E435T to optimize hbond
+We optimize side chain of residue E435T
+We optimize side chain of residue E437F
+We optimize side chain of residue E438I
+We will rotate hydroxyl group of residue E440S to optimize hbond
+We optimize side chain of residue E440S
+We optimize side chain of residue E441L
+We optimize side chain of residue E442F
+We will rotate hydroxyl group of residue E443Y to optimize hbond
+We optimize side chain of residue E443Y
+We will rotate hydroxyl group of residue E444T to optimize hbond
+We optimize side chain of residue E444T
+We will flip residue E445H to optimize hbond
+We optimize side chain of residue E445H
+We will rotate hydroxyl group of residue E446S to optimize hbond
+We optimize side chain of residue E446S
+We optimize side chain of residue E447F
+We will flip residue E448N to optimize hbond
+We optimize side chain of residue E448N
+We will rotate hydroxyl group of residue E449S to optimize hbond
+We optimize side chain of residue E449S
+We will rotate hydroxyl group of residue E450S to optimize hbond
+We optimize side chain of residue E450S
+We optimize side chain of residue E453P
+We will flip residue E490H to optimize hbond
+We optimize side chain of residue E490H
+We will rotate hydroxyl group of residue E491Y to optimize hbond
+We optimize side chain of residue E491Y
+We optimize side chain of residue E492P
+We optimize side chain of residue E493P
+We optimize side chain of residue E494R
+We will flip residue E495Q to optimize hbond
+We optimize side chain of residue E495Q
+We optimize side chain of residue E498V
+We optimize side chain of residue E499V
+We will rotate hydroxyl group of residue E500S to optimize hbond
+We optimize side chain of residue E500S
+We optimize side chain of residue E502K
+We will rotate hydroxyl group of residue E503T to optimize hbond
+We optimize side chain of residue E503T
+We optimize side chain of residue E504V
+We optimize side chain of residue E507P
+We optimize side chain of residue E508V
+We will rotate hydroxyl group of residue E509Y to optimize hbond
+We optimize side chain of residue E509Y
+We optimize side chain of residue E511F
+We will rotate hydroxyl group of residue E512T to optimize hbond
+We optimize side chain of residue E512T
+We optimize side chain of residue E513P
+We will rotate hydroxyl group of residue E514S to optimize hbond
+We optimize side chain of residue E514S
+We optimize side chain of residue E515P
+We optimize side chain of residue E516V
+We optimize side chain of residue E517V
+We optimize side chain of residue E518V
+We will rotate hydroxyl group of residue E520T to optimize hbond
+We optimize side chain of residue E520T
+We will rotate hydroxyl group of residue E521T to optimize hbond
+We optimize side chain of residue E521T
+We optimize side chain of residue E522D
+We optimize side chain of residue E523R
+We optimize side chain of residue E524L
+We optimize side chain of residue E527P
+We will rotate hydroxyl group of residue E528T to optimize hbond
+We optimize side chain of residue E528T
+We will rotate hydroxyl group of residue E529Y to optimize hbond
+We optimize side chain of residue E529Y
+We will rotate hydroxyl group of residue E530T to optimize hbond
+We optimize side chain of residue E530T
+We optimize side chain of residue E531W
+We optimize side chain of residue E533E
+We will flip residue E534N to optimize hbond
+We optimize side chain of residue E534N
+We optimize side chain of residue E535E
+We will rotate hydroxyl group of residue E536T to optimize hbond
+We optimize side chain of residue E536T
+We optimize side chain of residue E537D
+We optimize side chain of residue E538V
+We optimize side chain of residue E539F
+We optimize side chain of residue E540L
+We optimize side chain of residue E541L
+We will flip residue E542N to optimize hbond
+We optimize side chain of residue E542N
+We will rotate hydroxyl group of residue E543S to optimize hbond
+We optimize side chain of residue E543S
+We will rotate hydroxyl group of residue E544T to optimize hbond
+We optimize side chain of residue E544T
+We optimize side chain of residue E545R
+We optimize side chain of residue E546P
+We optimize side chain of residue E547P
+We optimize side chain of residue E548L
+We will rotate hydroxyl group of residue E550S to optimize hbond
+We optimize side chain of residue E550S
+We optimize side chain of residue E551W
+We optimize side chain of residue E552F
+We will rotate hydroxyl group of residue E555T to optimize hbond
+We optimize side chain of residue E555T
+We optimize side chain of residue E556W
+We optimize side chain of residue E557M
+We will flip residue E558N to optimize hbond
+We optimize side chain of residue E558N
+We will rotate hydroxyl group of residue E559S to optimize hbond
+We optimize side chain of residue E559S
+We will rotate hydroxyl group of residue E560S to optimize hbond
+We optimize side chain of residue E560S
+We will rotate hydroxyl group of residue E562Y to optimize hbond
+We optimize side chain of residue E562Y
+We will rotate hydroxyl group of residue E563T to optimize hbond
+We optimize side chain of residue E563T
+We optimize side chain of residue E564K
+We will rotate hydroxyl group of residue E565T to optimize hbond
+We optimize side chain of residue E565T
+We optimize side chain of residue E569P
+We optimize side chain of residue E570P
+We will rotate hydroxyl group of residue E597T to optimize hbond
+We optimize side chain of residue E597T
+We will rotate hydroxyl group of residue E598Y to optimize hbond
+We optimize side chain of residue E598Y
+We optimize side chain of residue E599L
+We optimize side chain of residue E600K
+We will rotate hydroxyl group of residue E603S to optimize hbond
+We optimize side chain of residue E603S
+We optimize side chain of residue E605P
+We optimize side chain of residue E606W
+We optimize side chain of residue E607L
+We will rotate hydroxyl group of residue E608T to optimize hbond
+We optimize side chain of residue E608T
+We optimize side chain of residue E609P
+We optimize side chain of residue E610R
+We optimize side chain of residue E612L
+We optimize side chain of residue E613I
+We optimize side chain of residue E614D
+We will rotate hydroxyl group of residue E615Y to optimize hbond
+We optimize side chain of residue E615Y
+We optimize side chain of residue E616P
+We will rotate hydroxyl group of residue E617Y to optimize hbond
+We optimize side chain of residue E617Y
+We optimize side chain of residue E618R
+We optimize side chain of residue E619L
+We optimize side chain of residue E620W
+We will flip residue E621H to optimize hbond
+We optimize side chain of residue E621H
+We will rotate hydroxyl group of residue E622Y to optimize hbond
+We optimize side chain of residue E622Y
+We optimize side chain of residue E623P
+We will rotate hydroxyl group of residue E625T to optimize hbond
+We optimize side chain of residue E625T
+We optimize side chain of residue E626V
+We will flip residue E627N to optimize hbond
+We optimize side chain of residue E627N
+We will rotate hydroxyl group of residue E628Y to optimize hbond
+We optimize side chain of residue E628Y
+We will rotate hydroxyl group of residue E629T to optimize hbond
+We optimize side chain of residue E629T
+We optimize side chain of residue E630I
+We optimize side chain of residue E631F
+We optimize side chain of residue E632K
+We optimize side chain of residue E633I
+We optimize side chain of residue E634R
+We optimize side chain of residue E635M
+We will rotate hydroxyl group of residue E636Y to optimize hbond
+We optimize side chain of residue E636Y
+We optimize side chain of residue E637V
+We optimize side chain of residue E640V
+We optimize side chain of residue E641E
+We will flip residue E642H to optimize hbond
+We optimize side chain of residue E642H
+We optimize side chain of residue E643R
+We optimize side chain of residue E644L
+We will rotate hydroxyl group of residue E645T to optimize hbond
+We optimize side chain of residue E645T
+We will flip residue E649N to optimize hbond
+We optimize side chain of residue E649N
+We optimize side chain of residue E650F
+We optimize side chain of residue R113F
+We optimize side chain of residue R114V
+We will flip residue R115N to optimize hbond
+We optimize side chain of residue R115N
+We optimize side chain of residue R116K
+We optimize side chain of residue R117D
+We will flip residue R118Q to optimize hbond
+We optimize side chain of residue R118Q
+We optimize side chain of residue R119I
+We optimize side chain of residue R121K
+We optimize side chain of residue R122D
+We optimize side chain of residue R123V
+We optimize side chain of residue R124K
+We will flip residue R125Q to optimize hbond
+We optimize side chain of residue R125Q
+We optimize side chain of residue R126F
+We will rotate hydroxyl group of residue R127Y to optimize hbond
+We optimize side chain of residue R127Y
+We optimize side chain of residue R128D
+We will flip residue R129Q to optimize hbond
+We optimize side chain of residue R129Q
+We optimize side chain of residue R131L
+We will flip residue R132Q to optimize hbond
+We optimize side chain of residue R132Q
+We will flip residue R133Q to optimize hbond
+We optimize side chain of residue R133Q
+We optimize side chain of residue R135V
+We optimize side chain of residue R136V
+We optimize side chain of residue R137D
+We optimize side chain of residue R138D
+We optimize side chain of residue R139D
+We will flip residue R141N to optimize hbond
+We optimize side chain of residue R141N
+We will flip residue R142N to optimize hbond
+We optimize side chain of residue R142N
+We optimize side chain of residue R144K
+We optimize side chain of residue R146V
+We optimize side chain of residue R147V
+We optimize side chain of residue R148K
+We will rotate hydroxyl group of residue R149T to optimize hbond
+We optimize side chain of residue R149T
+We optimize side chain of residue R150F
+We will flip residue R151H to optimize hbond
+We optimize side chain of residue R151H
+We optimize side chain of residue R152E
+We will rotate hydroxyl group of residue R153T to optimize hbond
+We optimize side chain of residue R153T
+We optimize side chain of residue R154L
+We optimize side chain of residue R155D
+We will rotate hydroxyl group of residue R159S to optimize hbond
+We optimize side chain of residue R159S
+We will rotate hydroxyl group of residue R160S to optimize hbond
+We optimize side chain of residue R160S
+We will rotate hydroxyl group of residue R161T to optimize hbond
+We optimize side chain of residue R161T
+We optimize side chain of residue R162L
+We will rotate hydroxyl group of residue R163T to optimize hbond
+We optimize side chain of residue R163T
+We optimize side chain of residue R165L
+We will rotate hydroxyl group of residue R166T to optimize hbond
+We optimize side chain of residue R166T
+We will rotate hydroxyl group of residue R167T to optimize hbond
+We optimize side chain of residue R167T
+We will rotate hydroxyl group of residue R168S to optimize hbond
+We optimize side chain of residue R168S
+We optimize side chain of residue R169V
+We optimize side chain of residue R170L
+We optimize side chain of residue R171K
+We will flip residue R172N to optimize hbond
+We optimize side chain of residue R172N
+We will flip residue R173N to optimize hbond
+We optimize side chain of residue R173N
+We optimize side chain of residue R174L
+We optimize side chain of residue R176P
+We will rotate hydroxyl group of residue R177S to optimize hbond
+We optimize side chain of residue R177S
+We will rotate hydroxyl group of residue R179S to optimize hbond
+We optimize side chain of residue R179S
+We will flip residue R180N to optimize hbond
+We optimize side chain of residue R180N
+We optimize side chain of residue R181I
+We optimize side chain of residue R182I
+We will rotate hydroxyl group of residue R183S to optimize hbond
+We optimize side chain of residue R183S
+We will flip residue R184N to optimize hbond
+We optimize side chain of residue R184N
+We optimize side chain of residue R185L
+We optimize side chain of residue R186F
+We optimize side chain of residue R187K
+We optimize side chain of residue R188E
+We optimize side chain of residue R189D
+We will flip residue R191H to optimize hbond
+We optimize side chain of residue R191H
+We will flip residue R192Q to optimize hbond
+We optimize side chain of residue R192Q
+We optimize side chain of residue R193K
+We optimize side chain of residue R194I
+We optimize side chain of residue R195D
+We optimize side chain of residue R196D
+We optimize side chain of residue R197L
+We optimize side chain of residue R198F
+We will rotate hydroxyl group of residue R199S to optimize hbond
+We optimize side chain of residue R199S
+We optimize side chain of residue R201K
+Time spent: 0.980000

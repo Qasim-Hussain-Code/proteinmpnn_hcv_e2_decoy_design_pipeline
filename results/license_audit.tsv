@@ -1,0 +1,5 @@
+resource	license_source	license	date_checked	redistribution_status
+PDB	https://www.wwpdb.org/about/usage	CC0/public archive usage; original files retrieved, not bulk redistributed	2026-10-03T18:45:16.966647+00:00	derived factual tables only
+GenBank	https://www.ncbi.nlm.nih.gov/home/about/policies/	Public database; submitter rights may apply; raw records not redistributed	2026-10-03T18:45:16.966666+00:00	derived factual tables only
+PMC articles	https://pmc.ncbi.nlm.nih.gov/about/copyright/	Article-specific copyright; original prose and figures not redistributed	2026-10-03T18:45:16.966672+00:00	derived factual tables only
+Original code	LICENSE	MIT; author from existing Git identity	2026-10-03T18:45:16.966675+00:00	MIT

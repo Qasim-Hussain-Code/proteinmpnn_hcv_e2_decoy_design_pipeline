@@ -1,0 +1,9 @@
+{
+  "external_models": false,
+  "fixture": "synthetic geometry and analytical score fixture",
+  "gpu": false,
+  "internet": false,
+  "passed": true,
+  "scientific_outputs": false,
+  "seed": 20261004
+}

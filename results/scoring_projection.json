@@ -1,0 +1,11 @@
+{
+  "full_candidates": 760,
+  "full_states": 25,
+  "note": "Receptor-only reusable models, scored complexes disposable; no state-specific receptor repacking",
+  "pilot_candidates": 2,
+  "pilot_elapsed_seconds": 5.792053299999679,
+  "pilot_growth_bytes": 550703,
+  "pilot_states": 1,
+  "projected_disk_bytes": 247217140.0,
+  "safety_margin": 1.2
+}

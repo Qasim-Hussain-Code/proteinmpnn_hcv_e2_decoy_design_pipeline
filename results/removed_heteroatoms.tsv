@@ -1,0 +1,9 @@
+label_chain	author_chains	residue	position	atoms	reason	near_selected_e2
+I	"[""I""]"	NAG	1	14	Protein-only EvoEF2/ProteinMPNN model	1.4443986415863037
+I	"[""I""]"	NAG	2	14	Protein-only EvoEF2/ProteinMPNN model	6.523040294647217
+I	"[""I""]"	BMA	3	11	Protein-only EvoEF2/ProteinMPNN model	11.180885314941406
+J	"[""J""]"	NAG	1	14	Protein-only EvoEF2/ProteinMPNN model	51.87986755371094
+J	"[""J""]"	NAG	2	14	Protein-only EvoEF2/ProteinMPNN model	54.29671859741211
+K	"[""C""]"	NAG	701	14	Protein-only EvoEF2/ProteinMPNN model	1.4419243335723877
+L	"[""C""]"	NAG	702	14	Protein-only EvoEF2/ProteinMPNN model	1.442187786102295
+M	"[""G""]"	NAG	701	14	Protein-only EvoEF2/ProteinMPNN model	42.832889556884766

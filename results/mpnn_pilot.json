@@ -1,0 +1,13 @@
+{
+  "budget_rule": "Throughput-limited 20 minute MPNN generation engineering cap, 25 per model/arm/seed/temperature cell maximum. Chosen before scores. Pilot excluded from candidate pool.",
+  "chosen_count_per_cell": 19,
+  "count": 100,
+  "disk_growth_bytes": 4986527,
+  "elapsed_seconds": 157.3998722999968,
+  "model_loading_included": true,
+  "output_bytes_per_sequence": 49865.27,
+  "projected_elapsed_seconds": 1196.2390294799757,
+  "projected_generation_count": 760,
+  "threads": 2,
+  "unique": 100
+}

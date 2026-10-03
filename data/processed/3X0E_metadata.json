@@ -1,0 +1,150 @@
+{
+  "assemblies": {
+    "_pdbx_struct_assembly.details": [
+      "author_and_software_defined_assembly"
+    ],
+    "_pdbx_struct_assembly.id": [
+      "1"
+    ],
+    "_pdbx_struct_assembly.method_details": [
+      "PISA"
+    ],
+    "_pdbx_struct_assembly.oligomeric_count": [
+      "2"
+    ],
+    "_pdbx_struct_assembly.oligomeric_details": [
+      "dimeric"
+    ],
+    "_pdbx_struct_assembly_gen.assembly_id": [
+      "1"
+    ],
+    "_pdbx_struct_assembly_gen.asym_id_list": [
+      "A,B,C,D,E,F,G,H,I"
+    ],
+    "_pdbx_struct_assembly_gen.oper_expression": [
+      "1"
+    ],
+    "_pdbx_struct_assembly_prop.biol_id": [
+      "1",
+      "1",
+      "1"
+    ],
+    "_pdbx_struct_assembly_prop.details": [
+      "?",
+      "?",
+      "?"
+    ],
+    "_pdbx_struct_assembly_prop.type": [
+      "ABSA (A^2)",
+      "MORE",
+      "SSA (A^2)"
+    ],
+    "_pdbx_struct_assembly_prop.value": [
+      "2360",
+      "-52",
+      "9420"
+    ]
+  },
+  "author_chains": {
+    "A": [
+      "A"
+    ],
+    "B": [
+      "B"
+    ],
+    "C": [
+      "A"
+    ],
+    "D": [
+      "A"
+    ],
+    "E": [
+      "A"
+    ],
+    "F": [
+      "B"
+    ],
+    "G": [
+      "B"
+    ],
+    "H": [
+      "A"
+    ],
+    "I": [
+      "B"
+    ]
+  },
+  "citation": {
+    "_citation.book_publisher": [
+      "?"
+    ],
+    "_citation.country": [
+      "US"
+    ],
+    "_citation.id": [
+      "primary"
+    ],
+    "_citation.journal_abbrev": [
+      "Faseb J."
+    ],
+    "_citation.journal_id_ASTM": [
+      "FAJOEC"
+    ],
+    "_citation.journal_id_CSD": [
+      "2074"
+    ],
+    "_citation.journal_id_ISSN": [
+      "1530-6860"
+    ],
+    "_citation.journal_volume": [
+      "29"
+    ],
+    "_citation.page_first": [
+      "4214"
+    ],
+    "_citation.page_last": [
+      "4226"
+    ],
+    "_citation.pdbx_database_id_DOI": [
+      "10.1096/fj.15-272880"
+    ],
+    "_citation.pdbx_database_id_PubMed": [
+      "26116703"
+    ],
+    "_citation.title": [
+      "An intramolecular bond at cluster of differentiation 81 ectodomain is important for hepatitis C virus entry."
+    ],
+    "_citation.year": [
+      "2015"
+    ]
+  },
+  "entities": {
+    "1": {
+      "chains": [
+        "A",
+        "B"
+      ],
+      "description": "CD81 antigen",
+      "organism": "Homo sapiens"
+    },
+    "2": {
+      "chains": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "description": "MAGNESIUM ION",
+      "organism": "unknown"
+    },
+    "3": {
+      "chains": [
+        "H",
+        "I"
+      ],
+      "description": "water",
+      "organism": "unknown"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+timestamp	stage	command	error_type	exit_status	message	resolution	rerun_id
+2026-10-03T17:24:37.237976+00:00	bootstrap_network	curl files.rcsb.org	RuntimeError	1	Sandbox network refused connection	Retried under authorized network escalation	
+2026-10-03T17:24:37.238582+00:00	bootstrap_configure	pipeline.cli configure	RuntimeError	1	YAML scalar indentation lost	Corrected YAML scalar before structural analysis	
+2026-10-03T17:24:37.255381+00:00	evo_precompiled	EvoEF2.exe	RuntimeError	-1073741515	Exit -1073741515: missing runtime DLL	Built static local executable with pre-existing GCC 4.4.7	
+2026-10-03T17:27:06.646852+00:00	benchmark	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py benchmark	RuntimeError	1	"[WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/vendor/EvoEF2/EvoEF2_local.exe'), '--command=RepairStructure', '--pdb=C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\data\\work\\mutate\\humanized_repaired_Model_0001.pdb']: exit=3221225477
+############################################################################################
+                                    EvoEF2                                                  
+  A framework for macromolecular modeling, e.g.,protein design, protein side-chain packing, 
+protein structure energy minimization, add and optimize hydrogen bonds, build mutant model, 
+calculate protein folding stability, calculate protein-protein binding free energy, etc     
+
+
+  Copyright (c) Xiaoqiang Huang (xiaoqiah@umich.edu; tommyhuangthu@foxmail.com)
+  Dept. of Computational Medicine & Bioinformatics
+  Medical School
+  University of Michigan
+############################################################################################
+command RepairStructure works
+IOError: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Utility.cpp function FileReaderCreate() line 175, when opening:
+C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\data\work\mutate\humanized_repaired_Model_00C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\data\work\mutate
+IOError: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Structure.cpp function StructureConfig() line 153, when opening:
+C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\data\work\mutate\humanized_repaired_Model_00C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\data\work\mutate
+
+"	unresolved	
+2026-10-03T17:34:03.960537+00:00	pilot	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py pilot	RuntimeError	1	"['C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\.venv\\Scripts\\python.exe', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/vendor/ProteinMPNN/protein_mpnn_run.py'), '--pdb_path', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/processed/humanized_unrepaired.pdb'), '--pdb_path_chains', 'R', '--path_to_model_weights', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/vendor/ProteinMPNN/vanilla_model_weights'), '--out_folder', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/work/mpnn/pilot'), '--num_seq_per_target', 100, '--sampling_temp', 0.1, '--seed', 20261005, '--batch_size', 1, '--fixed_positions_jsonl', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/processed/mpnn_fixed_A.jsonl'), '--omit_AAs', 'CX', '--model_name', 'v_48_020', '--save_score', 1]: exit=1
+----------------------------------------
+chain_id_jsonl is NOT loaded
+----------------------------------------
+pssm_jsonl is NOT loaded
+----------------------------------------
+omit_AA_jsonl is NOT loaded
+----------------------------------------
+bias_AA_jsonl is NOT loaded
+----------------------------------------
+tied_positions_jsonl is NOT loaded
+----------------------------------------
+bias by residue dictionary is not loaded, or not provided
+----------------------------------------
+----------------------------------------
+Number of edges: 48
+Training noise level: 0.2A
+
+Traceback (most recent call last):
+  File ""C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\ProteinMPNN\protein_mpnn_run.py"", line 469, in <module>
+    main(args)
+    ~~~~^^^^^^
+  File ""C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\ProteinMPNN\protein_mpnn_run.py"", line 236, in main
+    X, S, mask, lengths, chain_M, chain_encoding_all, chain_list_list, visible_list_list, masked_list_list, masked_chain_length_list_list, chain_M_pos, omit_AA_mask, residue_idx, dihedral_mask, tied_pos_list_of_lists_list, pssm_coef, pssm_bias, pssm_log_odds_all, bias_by_res_all, tied_beta = tied_featurize(batch_clones, device, chain_id_dict, fixed_positions_dict, omit_AA_dict, tied_positions_dict, pssm_dict, bias_by_res_dict, ca_only=args.ca_only)
+                                                                                                                                                                                                                                                                                                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\ProteinMPNN\protein_mpnn_utils.py"", line 308, in tied_featurize
+    fixed_pos_list = fixed_position_dict[b['name']][letter]
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\data\\processed\\humanized_unrepaired'
+"	unresolved	
+2026-10-03T18:17:07.702411+00:00	discovery	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py discovery	BrokenProcessPool	1	A process in the process pool was terminated abruptly while the future was running or pending.	unresolved	
+2026-10-03T18:17:12.076072+00:00	freeze	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py freeze	FileNotFoundError	1	[Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\results\\discovery_scores.tsv.gz'	unresolved	
+2026-10-03T18:17:16.124244+00:00	heldout	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py heldout	RuntimeError	1	Leakage refusal: held-out data inaccessible before candidate freeze	unresolved	
+2026-10-03T18:17:20.456950+00:00	sensitivity	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py sensitivity	RuntimeError	1	Leakage refusal: held-out data inaccessible before candidate freeze	unresolved	
+2026-10-03T18:17:27.277289+00:00	figures	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py figures	FileNotFoundError	1	[Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\results\\discovery_metrics.tsv'	unresolved	
+2026-10-03T18:17:31.039952+00:00	report	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py report	FileNotFoundError	1	[Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\results\\heldout_summary.json'	unresolved	
+2026-10-03T18:17:48.012877+00:00	scoring_optimization	replace parsing/copy overhead	RuntimeError	1	Discovery workers deliberately stopped before freeze to load equivalent faster coordinate assembly	All 25 reference comparisons identical; resume full discovery with retained candidate models	
+2026-10-03T18:47:46.898313+00:00	pytest	python -m pytest -q	PermissionError	1	Six fixture setup errors: access denied to host pytest temporary directory	Use project-local pytest scratch; 32 tests subsequently passed	

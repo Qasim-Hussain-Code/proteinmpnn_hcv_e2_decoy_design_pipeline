@@ -47,7 +47,8 @@ def main():
         import yaml
         cfg = config()
         cfg.update(threads=args.threads, ram_bytes=resolved['ram_bytes'], master_seed=args.seed,
-                   scoring_workers=args.threads if args.parallel else 1)
+                   scoring_workers=args.threads if args.parallel else 1,
+                   generation_seeds=[args.seed+i for i in range(1,6)],bootstrap_seed=args.seed+6)
         (ROOT / 'config/design.yml').write_text(yaml.safe_dump(cfg, sort_keys=False), encoding='utf-8')
         print(json.dumps(resolved, indent=2))
         return
@@ -64,6 +65,10 @@ def main():
             if stage in {'structures','humanize','ground_truth','sequences','diversity','states','benchmark'} and (ROOT/'results/candidate_freeze.tsv').exists():
                 from .selection import require_freeze
                 require_freeze()
+                if stage=='structures':
+                    from .common import fetch
+                    for identifier in ['7MWX','3X0E']:
+                        fetch(f'https://files.rcsb.org/download/{identifier}.cif',ROOT/f'data/raw/{identifier}.cif',identifier)
                 print('Frozen scientific inputs retained; use a fresh checkout for a new run.',flush=True)
             else:
                 getattr(importlib.import_module('pipeline.'+module_name), stage)()

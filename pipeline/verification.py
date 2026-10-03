@@ -74,6 +74,9 @@ def verify():
     for path in [ROOT/'README.md',*list((ROOT/'docs').glob('*.md'))]:
         errors=language_errors(path.read_text(encoding='utf-8')); check('language_'+path.name,not errors,';'.join(errors))
     require_freeze(); check('freeze_integrity',True)
+    freeze=json.loads((ROOT/'results/candidate_freeze_manifest.json').read_text())
+    successful_heldout=[r for r in read_tsv(ROOT/'logs/resource_usage.tsv') if r['stage']=='heldout' and r['exit_status']=='0']
+    check('freeze_precedes_successful_heldout',bool(successful_heldout) and all(r['start_time']>freeze['selection_timestamp'] for r in successful_heldout))
     for row in read_tsv(ROOT/'results/leakage_audit.tsv'):
         check(row['check'],row['passed'].lower()=='true',row['value'])
     for pdb in ['7MWX','3X0E']:
@@ -106,12 +109,36 @@ def verify():
     check('tracked_size_limit',all((ROOT/f).stat().st_size<=50_000_000 for f in files if (ROOT/f).exists()))
     check('ignored_bulk_files',not any(f.startswith(('.venv/','vendor/','data/raw/','data/work/','.cache/')) for f in files))
     generated=read_tsv(ROOT/'results/generated_sequences.tsv.gz')
+    from .design import constraints
+    policy=read_tsv(ROOT/'config/fixed_positions.tsv'); scaffold=json.loads((ROOT/'data/processed/humanization.json').read_text())
+    check('independent_sequence_constraints',all(constraints(r['sequence'],scaffold['human_sequence'],scaffold['human_positions'],
+        [int(p['sequence_index'])-1 for p in policy if p['design_arm']==r['design_arm'] and p['designable']=='false'],config()['disulfide_positions'])==r['filter_status'] for r in generated))
     from .common import validate_schema
     validate_schema(generated,['candidate_id','sequence','seed','effective_seed','ProteinMPNN_model','filter_status'])
     validate_schema(read_tsv(ROOT/'results/candidate_freeze.tsv'),['candidate_id','sequence','config_hash','software_manifest_hash','selection_timestamp'])
     validate_schema(read_tsv(ROOT/'results/score_dictionary.tsv'),['score_name','tool','version','mathematical_or_algorithmic_definition','direction','units_or_unitless','what_it_can_support','what_it_cannot_support'])
     check('required_schemas',True)
     check('effective_seeds',all(r['seed']==r['effective_seed'] and int(r['seed'])!=0 for r in generated))
+    cells={(r['design_arm'],r['ProteinMPNN_model'],r['seed'],r['temperature']) for r in generated}
+    check('matched_generation_budget',len(cells)==40 and all(sum((r['design_arm'],r['ProteinMPNN_model'],r['seed'],r['temperature'])==cell for r in generated)==config()['full_count_per_cell'] for cell in cells))
+    for name in ['discovery_scores.tsv.gz','heldout_scores.tsv']:
+        scores=read_tsv(ROOT/'results'/name)
+        expected_ids={r['haplotype_id'] for r in scores}
+        wt=[r for r in scores if r['candidate_id']=='wild_type' and r['score_status']=='passed']
+        check('wild_type_comparator_'+name,{r['haplotype_id'] for r in wt}==expected_ids and len(wt)==len(expected_ids))
+    from .structures import read_structure
+    from Bio.SeqUtils import seq1
+    base=read_structure(ROOT/'data/processed/humanized_repaired.pdb')
+    state_mutations_valid=True
+    for row in states:
+        model=read_structure(ROOT/row['path'])
+        for mutation in row['mutations_from_reference'].split(',') if row['mutations_from_reference'] else []:
+            wt,pos,new=mutation[0],int(mutation[1:-1]),mutation[-1]
+            state_mutations_valid &= seq1(base[0]['E'][(' ',pos,' ')].resname)==wt and seq1(model[0]['E'][(' ',pos,' ')].resname)==new
+    check('state_mutation_reference_and_identity',bool(state_mutations_valid))
+    software=read_tsv(ROOT/'results/software_manifest.tsv')
+    check('software_model_hashes',all(not r['weight_hash'] or sha256(ROOT/r['model_or_weight_file'])==r['weight_hash'] for r in software))
+    check('downloaded_source_hashes',all(not (ROOT/r['resource']).exists() or sha256(ROOT/r['resource'])==r['sha256'] for r in read_tsv(ROOT/'results/download_manifest.tsv')))
     check('fixed_positions',all(r['filter_status'] not in {'fixed_position_violation','disulfide_violation'} for r in generated))
     check('benchmark_warning_propagates',all('failed' in r['warning'].lower() for r in read_tsv(ROOT/'results/final_computational_priorities.tsv')))
     required=['structure_provenance','humanization_metrics','software_manifest','download_manifest','cd81_mutation_benchmark','hcv_sequence_manifest',

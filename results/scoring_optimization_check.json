@@ -1,0 +1,6 @@
+{
+  "change": "Reuse state parsing; preserve exact ATOM coordinate records; receptor copy detaches parents",
+  "elapsed_seconds": 6.393983599999046,
+  "maximum_score_difference": 0.0,
+  "states_compared": 25
+}

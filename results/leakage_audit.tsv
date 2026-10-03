@@ -1,0 +1,4 @@
+check	value	passed
+interface_haplotype_overlap	0	True
+near_interface_haplotype_overlap	0	True
+duplicate_E2_sequence_overlap	0	True

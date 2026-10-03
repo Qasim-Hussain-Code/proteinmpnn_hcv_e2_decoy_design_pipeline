@@ -1,0 +1,22 @@
+{
+  "assay_rows": 29,
+  "benchmark_passed": false,
+  "classifiable_binding_controls": 12,
+  "concordance_ci95": [
+    0.16748809406370715,
+    0.7662064023406548
+  ],
+  "concordance_interval_method": "Clopper-Pearson exact; distinct mutation-direction controls; assay dependence remains",
+  "concordant_directional": 5,
+  "directional_binding_controls": 11,
+  "experimental_direction_counts": {
+    "enhanced": 1,
+    "reduced": 10
+  },
+  "majority_direction_baseline_correct": 10,
+  "majority_direction_baseline_total": 11,
+  "positive_control_recovered": true,
+  "quantitative_correlation": "Not calculated: qualitative observations; incompatible assays not pooled",
+  "unique_mutations": 15,
+  "warning": "Interface scoring failed directional/positive-control gate; no improved-binding interpretation allowed"
+}

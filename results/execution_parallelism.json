@@ -1,0 +1,7 @@
+{
+  "default_for_fresh_runs": "serial; --parallel opts in",
+  "native_threads_per_worker": 1,
+  "scoring_workers": 2,
+  "selection": "Two workers after measured scoring pilot; prior configured CPU thread count was two",
+  "timestamp": "2026-10-03T18:43:09.803308+00:00"
+}

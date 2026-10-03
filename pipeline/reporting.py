@@ -7,6 +7,62 @@ import re
 import numpy as np
 from .common import ROOT, config, now, read_tsv, sha256, write_json, write_tsv
 
+def candidate_reporting():
+    """Readable joins and seed-level comparisons, without changing the freeze."""
+    frozen=read_tsv(ROOT/'results/candidate_freeze.tsv')
+    held={r['candidate_id']:r for r in read_tsv(ROOT/'results/heldout_metrics.tsv')}
+    interface={int(r['position']) for r in read_tsv(ROOT/'config/fixed_positions.tsv') if float(r['structural_distance_to_e2'])<=config()['interface_cutoff']}
+    flat=[]; generalization=[]
+    for candidate in frozen:
+        discovery=json.loads(candidate['discovery_metrics']); bio=json.loads(candidate['biophysics']); h=held[candidate['candidate_id']]
+        columns={k:v for k,v in candidate.items() if k not in {'discovery_metrics','biophysics'}}
+        mutations=candidate['mutation_list'].split(',') if candidate['mutation_list'] else []
+        ninterface=sum(int(m[1:-1]) in interface for m in mutations)
+        columns.update(interface_mutation_count=ninterface,scaffold_mutation_count=len(mutations)-ninterface,
+                       selection_rationale=candidate['selection_rule'],**bio)
+        for prefix,values in [('discovery',discovery),('heldout',h)]:
+            columns.update({prefix+'_'+k:v for k,v in values.items() if k not in {'candidate_id','selection_rule','genotype_stratified'}})
+        columns['warning']=json.loads((ROOT/'results/benchmark_summary.json').read_text())['warning']
+        flat.append(columns)
+        generalization.append(dict(candidate_id=candidate['candidate_id'],selection_rule=candidate['selection_rule'],
+            discovery_worst_delta_wt=discovery['worst_delta_wt'],heldout_worst_delta_wt=h['worst_delta_wt'],
+            worst_delta_change=float(h['worst_delta_wt'])-float(discovery['worst_delta_wt']),
+            discovery_median_delta_wt=discovery['median_delta_wt'],heldout_median_delta_wt=h['median_delta_wt'],
+            median_delta_change=float(h['median_delta_wt'])-float(discovery['median_delta_wt']),
+            interpretation='Different state panels; descriptive generalization change, not a biological effect'))
+    write_tsv(ROOT/'results/candidate_summary.tsv',flat)
+    write_tsv(ROOT/'results/strategy_generalization.tsv',generalization)
+    comparisons=[]
+    for strategy in ['single_state','escape_aware']:
+        rows=[r for r in held.values() if strategy in r['selection_rule']]
+        comparisons.append(dict(strategy=strategy,number_candidates=len(rows),
+            mean_candidate_worst_delta_wt=np.mean([float(r['worst_delta_wt']) for r in rows]),
+            mean_candidate_median_delta_wt=np.mean([float(r['median_delta_wt']) for r in rows]),
+            largest_candidate_worst_delta_wt=max(float(r['worst_delta_wt']) for r in rows),
+            mean_fraction_better_wt=np.mean([float(r['fraction_better_wt']) for r in rows]),
+            mean_fraction_within_wt_tolerance=np.mean([float(r['fraction_within_wt_tolerance']) for r in rows]),
+            interpretation='Equal frozen candidates and held-out states; overlapping selections retained'))
+    write_tsv(ROOT/'results/heldout_strategy_comparison.tsv',comparisons)
+    model=read_tsv(ROOT/'results/model_comparison.tsv'); seeds=read_tsv(ROOT/'results/seed_variance.tsv')
+    effects=[]
+    for arm in ['A','B']:
+        for source,metrics in [(model,['mean_hydrophobic_sasa_fraction','mean_hydrophobic_patch_proxy','mean_stability_score','mean_charge','mean_pI']),
+                               (seeds,['mean_hydrophobic_fraction','mean_identity','mean_nll'])]:
+            for metric in metrics:
+                standard={r['seed']:float(r[metric]) for r in source if r['design_arm']==arm and r['model']=='standard'}
+                soluble={r['seed']:float(r[metric]) for r in source if r['design_arm']==arm and r['model']=='soluble'}
+                paired=sorted(standard.keys()&soluble.keys()); delta=np.array([soluble[s]-standard[s] for s in paired])
+                rng=np.random.default_rng(config()['bootstrap_seed'])
+                boots=delta[rng.integers(0,len(delta),(config()['bootstrap_replicates'],len(delta)))].mean(axis=1)
+                low,high=np.quantile(boots,[.025,.975])
+                effects.append(dict(design_arm=arm,metric=metric,seeds=','.join(paired),number_paired_seeds=len(paired),
+                    standard_seed_mean=np.mean([standard[s] for s in paired]),soluble_seed_mean=np.mean([soluble[s] for s in paired]),
+                    soluble_minus_standard=float(delta.mean()),ci95_low=float(low),ci95_high=float(high),
+                    bootstrap_unit='matched generation seed within arm; temperatures pooled within seed',
+                    bootstrap_replicates=config()['bootstrap_replicates'],bootstrap_seed=config()['bootstrap_seed'],
+                    caveat='Small seed sample; descriptors on one scaffold; not expression or solubility measurements'))
+    write_tsv(ROOT/'results/model_comparison_effects.tsv',effects)
+
 def score_dictionary():
     import Bio
     sw=read_tsv(ROOT/'results/software_manifest.tsv')
@@ -74,9 +130,21 @@ def figures():
     ax.bar(['Original tamarin contacts','Hybrid contacts','Repaired contacts'],[int(human['contacts_before']),int(human['contacts_after']),int(repair['contacts_after'])],color=['#547aa5','#bb6b48','#839788'])
     ax.set(ylabel='Heavy atom pairs at 5 A',title=f'CA RMSD {float(human["ca_rmsd_angstrom"]):.2f} A; initial clashes {human["initial_steric_clashes"]}')
     save(fig,1,'Humanization and interface audit','Substantial conformation mismatch and residual repaired clashes limit interpretation.')
-    con=[r for r in read_tsv(ROOT/'results/e2_position_conservation.tsv') if r['is_interface']=='True']; fig,ax=plt.subplots(figsize=(10,3))
+    con=[r for r in read_tsv(ROOT/'results/e2_position_conservation.tsv') if r['is_interface']=='True']; fig,(ax,axg)=plt.subplots(2,1,figsize=(10,6))
     ax.bar(range(len(con)),[float(r['shannon_entropy']) for r in con],color='#547aa5'); ax.set_xticks(range(len(con)),[r['h77_position'] for r in con],rotation=60)
     ax.set(xlabel='H77 E2 position (discovery only)',ylabel='Shannon entropy (bits)',title='Geometric interface diversity in a convenience sample')
+    genotypes=sorted(json.loads(con[0]['genotype_specific_frequencies']))
+    matrix=[]; labels=[]
+    for genotype in genotypes:
+        counts=[json.loads(r['genotype_specific_frequencies'])[genotype] for r in con]
+        values=[]
+        for count in counts:
+            total=sum(v for aa,v in count.items() if aa in 'ACDEFGHIKLMNPQRSTVWY')
+            values.append(-sum((v/total)*np.log2(v/total) for aa,v in count.items() if aa in 'ACDEFGHIKLMNPQRSTVWY') if total else 0)
+        matrix.append(values); labels.append(genotype+' (n='+str(sum(counts[0].values()))+')')
+    im=axg.imshow(matrix,aspect='auto',cmap='viridis',vmin=0)
+    axg.set_yticks(range(len(labels)),labels); axg.set_xticks(range(len(con)),[r['h77_position'] for r in con],rotation=60)
+    axg.set(xlabel='H77 position',ylabel='Annotated genotype',title='Within-genotype entropy; unknown annotations retained'); fig.colorbar(im,ax=axg,label='Bits')
     save(fig,2,'Discovery E2 interface conservation','Some interface positions vary in the retrieved discovery sequences; frequencies are sampling-dependent.')
     bench=read_tsv(ROOT/'results/cd81_mutation_benchmark.tsv'); unique={}
     for r in bench:
@@ -94,6 +162,12 @@ def figures():
         rows=[r for r in metrics if generated[r['candidate_id']]['design_arm']==arm]
         ax.scatter([float(r['reference_score']) for r in rows],[float(r['worst_delta_wt']) for r in rows],s=10,alpha=.6,c=color,label='Arm '+arm)
     ax.set(xlabel='Reference-state interaction score',ylabel='Worst discovery candidate minus WT score'); ax.legend()
+    frozen=read_tsv(ROOT/'results/candidate_freeze.tsv')
+    for strategy,marker,color in [('single_state','o','#16365c'),('escape_aware','s','#267858')]:
+        selected={r['candidate_id'] for r in frozen if strategy in r['selection_rule']}
+        rows=[r for r in metrics if r['candidate_id'] in selected]
+        ax.scatter([float(r['reference_score']) for r in rows],[float(r['worst_delta_wt']) for r in rows],s=70,facecolors='none',edgecolors=color,marker=marker,label=strategy.replace('_',' '))
+    ax.legend(fontsize=8)
     save(fig,4,'Single-state and multi-state discovery tradeoff','Single-state score and worst paired delta measure different model properties.')
     frozen=read_tsv(ROOT/'results/candidate_freeze.tsv'); scores=read_tsv(ROOT/'results/discovery_scores.tsv.gz')
     ids=['wild_type']+[r['candidate_id'] for r in frozen]; stateids=sorted({r['haplotype_id'] for r in scores}); lookup={(r['candidate_id'],r['haplotype_id']):float(r['interaction_score']) for r in scores if r['score_status']=='passed'}
@@ -127,6 +201,7 @@ def report():
     benchmark=json.loads((ROOT/'results/benchmark_summary.json').read_text()); diversity=json.loads((ROOT/'results/diversity_summary.json').read_text()); held=json.loads((ROOT/'results/heldout_summary.json').read_text())
     human=read_tsv(ROOT/'results/humanization_metrics.tsv')[0]; pilot=json.loads((ROOT/'results/mpnn_pilot.json').read_text()); resources=read_tsv(ROOT/'logs/resource_usage.tsv')
     generated=read_tsv(ROOT/'results/generated_sequences.tsv.gz'); funnel=read_tsv(ROOT/'results/design_filter_funnel.tsv'); panel=read_tsv(ROOT/'data/processed/discovery_panel.tsv')
+    candidate_reporting()
     peakram=max(int(r['peak_rss_bytes']) for r in resources); peakdisk=max(int(r['disk_peak_bytes']) for r in resources); runtime=sum(float(r['elapsed_seconds']) for r in resources if r['exit_status']=='0' and r['stage'] not in {'scoring_pilot'})
     summary=dict(benchmark=benchmark,diversity=diversity,heldout=held,humanization_rmsd=float(human['ca_rmsd_angstrom']),generated=len(generated),
                  unique_passed=next(int(r['count']) for r in funnel if r['transition']=='unique_passed'),peak_rss_bytes=peakram,peak_project_bytes=peakdisk,
@@ -156,6 +231,15 @@ def report():
     ci=number('Held-out percentile interval',f'[{held["ci95"][0]:.2f}, {held["ci95"][1]:.2f}]','results/heldout_summary.json','ci95')
     baseline=number('Majority-direction baseline controls',benchmark['majority_direction_baseline_correct'],'results/benchmark_summary.json','majority_direction_baseline_correct')
     direction_ci=number('Directional concordance interval',f'[{benchmark["concordance_ci95"][0]:.3f}, {benchmark["concordance_ci95"][1]:.3f}]','results/benchmark_summary.json','concordance_ci95')
+    interpretation='Escape-aware selection lowered the held-out worst paired model score.' if held['worst_delta_effect_escape_minus_single']<0 else 'Escape-aware selection did not lower the held-out worst paired model score.'
+    model_effects=read_tsv(ROOT/'results/model_comparison_effects.tsv')
+    model_text=[]
+    for arm in ['A','B']:
+        item=next(r for r in model_effects if r['design_arm']==arm and r['metric']=='mean_hydrophobic_sasa_fraction')
+        delta=number('Arm '+arm+' soluble-minus-standard exposure difference',f'{float(item["soluble_minus_standard"]):.4f}','results/model_comparison_effects.tsv','soluble_minus_standard; arm='+arm+'; metric=mean_hydrophobic_sasa_fraction')
+        interval=number('Arm '+arm+' exposure seed-bootstrap interval',f'[{float(item["ci95_low"]):.4f}, {float(item["ci95_high"]):.4f}]','results/model_comparison_effects.tsv','ci95_low/ci95_high; arm='+arm)
+        model_text.append(f'Arm {arm}: {delta}, paired seed-bootstrap interval {interval}.')
+    model_sentence=' '.join(model_text)
     hstates=number('Held-out E2 states',held['states'],'results/heldout_summary.json','states')
     coverage=number('Achieved discovery coverage percent',f'{summary["discovery_panel_coverage"]*100:.1f}','results/run_summary.json','discovery_panel_coverage')
     dseq=number('Discovery accessions',diversity['discovery'],'results/diversity_summary.json','discovery')
@@ -180,7 +264,7 @@ def report():
 
 The interface scoring procedure recovered {correct} of {controls} distinct directional soluble-E2 mutation controls. The curated evidence contains {rows} assay observations. This failed the predeclared directional validation gate, so every designed sequence remains a computational candidate and all structural scores are model outputs.
 
-The run retrieved {natural} GenBank records and retained {eligible}. Official standard and soluble ProteinMPNN generated {ndesign} sequences on the experimental human CD81 scaffold; {nunique} unique sequences passed sequence constraints. Escape-aware selection changed the mean candidate worst paired score by {effect} EvoEF2 score units relative to single-state selection across {hstates} held-out E2 states. The paired state-bootstrap interval was {ci}. Lower scores are favored within this model. The score benchmark failure prevents interpreting this effect as better binding.
+The run retrieved {natural} GenBank records and retained {eligible}. Official standard and soluble ProteinMPNN generated {ndesign} sequences on the experimental human CD81 scaffold; {nunique} unique sequences passed sequence constraints. Escape-aware selection changed the mean candidate worst paired score by {effect} EvoEF2 score units relative to single-state selection across {hstates} held-out E2 states. The paired state-bootstrap interval was {ci}. {interpretation} Lower scores are favored within this model. The score benchmark failure prevents interpreting this effect as better binding.
 
 ## Background
 
@@ -207,7 +291,7 @@ Scoring builds each receptor on the reference complex once and recombines it wit
 ```bash
 bash scripts/00_configure.sh --threads 2 --ram 14 --disk 13 --seed 20261004 --yes
 bash scripts/02_install.sh
-bash run_all.sh
+bash run_all.sh --mode core --parallel
 bash scripts/19_verify.sh
 ```
 
@@ -233,11 +317,11 @@ The frozen heatmap includes WT as a paired zero comparator in every state. Score
 
 ![Frozen discovery states](figures/figure_5.png)
 
-Held-out candidates were evaluated only after the candidate table and its manifest were written. The effect estimate is {effect}, with interval {ci}. Each point is a viral structural state. The small test sample and correlated haplotype components limit inference. The final table carries the failed-benchmark warning next to every computational candidate.
+Held-out candidates were evaluated only after the candidate table and its manifest were written. The effect estimate is {effect}, with interval {ci}. {interpretation} Each point is a viral structural state. The small test sample and correlated haplotype components limit inference. The final table carries the failed-benchmark warning next to every computational candidate. [Strategy comparisons](results/heldout_strategy_comparison.tsv) retain both median and worst-case paired deltas, and [generalization changes](results/strategy_generalization.tsv) retain discovery-to-test differences for each frozen computational candidate.
 
 ![Held-out evaluation](figures/figure_6.png)
 
-Standard-versus-soluble exposure and composition differences are descriptors. Lower hydrophobic exposure cannot demonstrate expression, folding or solubility.
+The measured soluble-minus-standard hydrophobic SASA fraction differences were {model_sentence} These compare matched generation seeds within each arm. [Model comparisons](results/model_comparison_effects.tsv) retain seed-level uncertainty for exposure, patch size, composition, charge and total monomer energy. Lower hydrophobic exposure cannot demonstrate expression, folding or solubility. The [candidate summary](results/candidate_summary.tsv) places sequences, mutation lists, geometric metrics and discovery/test statistics in flat columns for inspection.
 
 ![Sequence exposure tradeoff](figures/figure_7.png)
 
@@ -262,6 +346,8 @@ python -m venv .venv
 ```
 
 For the scientific run, use Git Bash and the installation command above. The resource guard measures current free disk and protects a non-project reserve. Installed environments, model weights, caches and generated files are counted. The measured footprint was {disk} GB. The original bootstrap preceded instrumentation, so its peak cannot be reconstructed. A canonical locked installation was reproduced in a disposable environment with telemetry and wheel hashes. Independent stages have resource records. Exact environment versions and model hashes are in the manifests.
+
+Git, Bash and a C++ compiler are host prerequisites. Scientific entry points provide `--help`. `--mode smoke` runs bundled analytical fixtures, while `--from heldout` resumes from the immutable freeze. Fresh runs score serially; `--parallel` opts into the configured worker count after the scoring memory pilot. Core and full both honor the pilot-approved compact budget, so full cannot expand past the measured ceiling. Existing outputs are checked before reuse. Atomic table writes preserve completed outputs if a later write fails.
 
 ## Limitations
 

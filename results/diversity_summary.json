@@ -1,0 +1,40 @@
+{
+  "alignment_command": "python -m pipeline.cli diversity",
+  "caveat": "Not population prevalence. First 40 per genotype-enriched query. Unknown metadata remain unknown.",
+  "clusters": 44,
+  "discovery": 213,
+  "discovery_haplotypes": 139,
+  "discovery_states": 24,
+  "excluded": 83,
+  "held_out": 13,
+  "heldout_haplotypes": 11,
+  "included": 226,
+  "interface_positions": [
+    422,
+    423,
+    424,
+    426,
+    427,
+    429,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    505,
+    515,
+    612,
+    613
+  ],
+  "retrieved": 309,
+  "split_rule": "Connected components at interface Hamming distance <=1, stratify modal genotype/subtype if >=5 clusters; small strata pooled deterministic fallback",
+  "unique_e2_sequences": 207,
+  "versions": {
+    "biopython": "1.88"
+  }
+}

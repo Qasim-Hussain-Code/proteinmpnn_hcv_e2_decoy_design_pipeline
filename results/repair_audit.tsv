@@ -1,0 +1,2 @@
+input	output	clashes_after	contacts_after	sha256	num_of_runs	method
+humanized_unrepaired.pdb	humanized_repaired.pdb	2	482	6acbc194983985496582a95b47c05232228c54d304af9bca56c19ff0889976db	1	EvoEF2 verified source default; no backbone minimization

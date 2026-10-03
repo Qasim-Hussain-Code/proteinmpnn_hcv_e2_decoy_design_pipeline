@@ -39,6 +39,8 @@ def main():
                        download_timestamp=now(),size_bytes=wheel.stat().st_size,sha256=sha256(wheel),version=wheel.name.split('-')[1],
                        notes='Canonical locked binary-wheel installation reproduced with telemetry; exact file hash retained; disposable wheel removed after validation'))
         write_tsv(ROOT/'results/wheel_manifest.tsv',rows)
+        from .wheel_sources import wheel_sources
+        wheel_sources()
         from .common import write_json
         write_json(ROOT/'results/installation_validation_complete.json',dict(project_local_temp=True,cpu_only=True,wheel_count=len(rows),timestamp=now()))
     # All disposable targets are absolute and proven project-local before deletion.

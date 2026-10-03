@@ -1,0 +1,80 @@
+############################################################################################
+                                    EvoEF2                                                  
+  A framework for macromolecular modeling, e.g.,protein design, protein side-chain packing, 
+protein structure energy minimization, add and optimize hydrogen bonds, build mutant model, 
+calculate protein folding stability, calculate protein-protein binding free energy, etc     
+
+
+  Copyright (c) Xiaoqiang Huang (xiaoqiah@umich.edu; tommyhuangthu@foxmail.com)
+  Dept. of Computational Medicine & Bioinformatics
+  Medical School
+  University of Michigan
+############################################################################################
+command ComputeStability works
+
+Structure energy details:
+reference_ALA         =               -5.71
+reference_CYS         =               -0.44
+reference_ASP         =               -4.01
+reference_GLU         =               -4.90
+reference_PHE         =                1.36
+reference_GLY         =              -12.56
+reference_HIS         =               -0.00
+reference_ILE         =               16.31
+reference_LYS         =              -15.00
+reference_LEU         =               12.90
+reference_MET         =                0.00
+reference_ASN         =              -10.77
+reference_PRO         =               -3.24
+reference_GLN         =               -1.94
+reference_ARG         =               -0.00
+reference_SER         =              -13.85
+reference_THR         =               -2.08
+reference_VAL         =                3.40
+reference_TRP         =                0.00
+reference_TYR         =                1.40
+intraR_vdwatt         =              -13.89
+intraR_vdwrep         =                3.22
+intraR_electr         =               -0.13
+intraR_deslvP         =                0.00
+intraR_deslvH         =               -1.64
+intraR_hbscbb_dis     =               -0.24
+intraR_hbscbb_the     =               -0.01
+intraR_hbscbb_phi     =               -0.00
+aapropensity          =              -12.58
+ramachandran          =              148.05
+dunbrack              =               29.63
+interS_vdwatt         =             -467.94
+interS_vdwrep         =               70.37
+interS_electr         =              -33.33
+interS_deslvP         =              297.84
+interS_deslvH         =             -208.61
+interS_ssbond         =              -19.98
+interS_hbbbbb_dis     =              -58.30
+interS_hbbbbb_the     =              -43.75
+interS_hbbbbb_phi     =              -58.80
+interS_hbscbb_dis     =               -7.16
+interS_hbscbb_the     =               -5.11
+interS_hbscbb_phi     =               -1.59
+interS_hbscsc_dis     =               -3.65
+interS_hbscsc_the     =               -1.15
+interS_hbscsc_phi     =               -0.00
+interD_vdwatt         =                0.00
+interD_vdwrep         =                0.00
+interD_electr         =                0.00
+interD_deslvP         =                0.00
+interD_deslvH         =                0.00
+interD_ssbond         =                0.00
+interD_hbbbbb_dis     =                0.00
+interD_hbbbbb_the     =                0.00
+interD_hbbbbb_phi     =                0.00
+interD_hbscbb_dis     =                0.00
+interD_hbscbb_the     =                0.00
+interD_hbscbb_phi     =                0.00
+interD_hbscsc_dis     =                0.00
+interD_hbscsc_the     =                0.00
+interD_hbscsc_phi     =                0.00
+----------------------------------------------------
+Total                 =             -427.85
+
+Time spent: 1.251000
