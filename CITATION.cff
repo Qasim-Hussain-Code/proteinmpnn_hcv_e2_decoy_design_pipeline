@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this implementation or its results, cite the repository version and the primary experimental and software papers listed in README.md."
+title: "CPU escape-aware human CD81 sequence-design benchmark with failed directional-score validation"
+type: software
+version: 0.1.0
+authors:
+  - given-names: Qasim
+    family-names: Hussain
+license: MIT
+date-released: 2026-10-04

@@ -13,6 +13,13 @@ def candidate_reporting():
     held={r['candidate_id']:r for r in read_tsv(ROOT/'results/heldout_metrics.tsv')}
     interface={int(r['position']) for r in read_tsv(ROOT/'config/fixed_positions.tsv') if float(r['structural_distance_to_e2'])<=config()['interface_cutoff']}
     flat=[]; generalization=[]
+    generated_annotations=[]
+    for candidate in read_tsv(ROOT/'results/generated_sequences.tsv.gz'):
+        mutations=candidate['mutation_list'].split(',') if candidate['mutation_list'] else []
+        ninterface=sum(int(m[1:-1]) in interface for m in mutations)
+        generated_annotations.append(dict(candidate_id=candidate['candidate_id'],interface_mutation_count=ninterface,
+                                          scaffold_mutation_count=len(mutations)-ninterface,definition='Unrepaired hybrid heavy-atom 5 A receptor interface'))
+    write_tsv(ROOT/'results/generated_sequence_annotations.tsv.gz',generated_annotations)
     for candidate in frozen:
         discovery=json.loads(candidate['discovery_metrics']); bio=json.loads(candidate['biophysics']); h=held[candidate['candidate_id']]
         columns={k:v for k,v in candidate.items() if k not in {'discovery_metrics','biophysics'}}
@@ -195,6 +202,10 @@ def figures():
         scale=1 if column=='elapsed_seconds' else 1e9; ax.barh(range(len(names)),[float(r[column])/scale for r in resources],color='#547aa5'); ax.set_yticks(range(len(names)),names,fontsize=7); ax.set_xlabel(label)
     save(fig,8,'Measured resource profile','Scientific stages and a fresh locked CPU installation are measured; original bootstrap telemetry remains unavailable.')
     write_tsv(ROOT/'results/figure_manifest.tsv',manifest)
+    captions=['# Scripted figures','', 'Regenerate with `python -m pipeline.cli figures` after held-out evaluation. PNG files support README viewing; PDF files support export.','']
+    for row in manifest:
+        captions.extend(['## Figure '+str(row['figure'])+'. '+row['title'],'',row['finding'],'',f'![{row["title"]}](figure_{row["figure"]}.png)',''])
+    (folder/'README.md').write_text('\n'.join(captions),encoding='utf-8')
 
 def report():
     score_dictionary()
@@ -203,15 +214,19 @@ def report():
     generated=read_tsv(ROOT/'results/generated_sequences.tsv.gz'); funnel=read_tsv(ROOT/'results/design_filter_funnel.tsv'); panel=read_tsv(ROOT/'data/processed/discovery_panel.tsv')
     candidate_reporting()
     peakram=max(int(r['peak_rss_bytes']) for r in resources); peakdisk=max(int(r['disk_peak_bytes']) for r in resources); runtime=sum(float(r['elapsed_seconds']) for r in resources if r['exit_status']=='0' and r['stage'] not in {'scoring_pilot'})
+    design_time=float([r for r in resources if r['stage']=='design' and r['exit_status']=='0'][0]['elapsed_seconds'])
     summary=dict(benchmark=benchmark,diversity=diversity,heldout=held,humanization_rmsd=float(human['ca_rmsd_angstrom']),generated=len(generated),
                  unique_passed=next(int(r['count']) for r in funnel if r['transition']=='unique_passed'),peak_rss_bytes=peakram,peak_project_bytes=peakdisk,
                  stage_elapsed_sum_seconds=runtime,discovery_panel_coverage=float(panel[0]['achieved_coverage']),failure_count=len(read_tsv(ROOT/'logs/failures.tsv')))
+    summary.update(generation_elapsed_seconds=design_time,generation_projection_error_percent=100*(design_time/pilot['projected_elapsed_seconds']-1))
     write_json(ROOT/'results/run_summary.json',summary)
     issues=[dict(issue='Experimental directional scoring gate failed',evidence=f'{benchmark["concordant_directional"]}/{benchmark["directional_binding_controls"]} unique directional controls; F186L effectively neutral',
                  why_it_matters='Known receptor effects are not reliably recovered',effect_on_claims='All candidate results are model outputs; no improved-binding interpretation'),
             dict(issue='Humanization conformation mismatch',evidence=f'CA RMSD {human["ca_rmsd_angstrom"]} A; initial clashes {human["initial_steric_clashes"]}',why_it_matters='Scoring may reflect scaffold placement artifacts',effect_on_claims='Fixed hybrid comparison only'),
             dict(issue='Compact discovery panel misses target',evidence=f'{summary["discovery_panel_coverage"]} achieved at 24 states versus target 0.9',why_it_matters='Rare observed haplotypes are underrepresented',effect_on_claims='No broad population coverage claim'),
             dict(issue='Cluster split observation imbalance',evidence=f'{diversity["held_out"]}/{diversity["included"]} held-out observations',why_it_matters='Near-haplotype clusters have unequal size',effect_on_claims='Nominal cluster split is not an 80/20 accession split'),
+            dict(issue='Generation timing projection underestimated actual duration',evidence=f'Projected {pilot["projected_elapsed_seconds"]} s; observed {design_time} s',
+                 why_it_matters='Repeated model loads and concurrent installation may contribute; effects were not isolated',effect_on_claims='Report actual duration; throughput cap was projected, not a guaranteed wall-clock bound'),
             dict(issue='Bootstrap installation resource telemetry gap',evidence='Initial bootstrap preceded instrumentation; canonical locked fresh installation later reproduced with process-tree and project telemetry',why_it_matters='Original bootstrap peak cannot be reconstructed',effect_on_claims='Claims use measured scientific stages and canonical reproduced installation, not an invented original peak')]
     write_tsv(ROOT/'results/scientific_discomfort.tsv',issues)
     trace=[]
@@ -248,6 +263,8 @@ def report():
     ram=number('Measured scientific-stage RSS GB',f'{peakram/1e9:.3f}','results/run_summary.json','peak_rss_bytes')
     disk=number('Measured peak project GB',f'{peakdisk/1e9:.3f}','results/run_summary.json','peak_project_bytes')
     seconds=number('Summed successful stage time seconds',f'{runtime:.1f}','results/run_summary.json','stage_elapsed_sum_seconds')
+    generation_seconds=number('Observed generation duration',f'{design_time:.1f}','results/run_summary.json','generation_elapsed_seconds')
+    projected_generation=number('Projected generation duration',f'{pilot["projected_elapsed_seconds"]:.1f}','results/mpnn_pilot.json','projected_elapsed_seconds')
     allvalues={'Pilot count':(pilot['count'],'results/mpnn_pilot.json','count'),'Pilot seconds':(round(pilot['elapsed_seconds'],1),'results/mpnn_pilot.json','elapsed_seconds'),
                'Discovery state limit':(24,'results/diversity_summary.json','discovery_states'),'Master seed':(config()['master_seed'],'results/smoke_test.json','seed'),
                'Primary interface cutoff':(config()['interface_cutoff'],'results/e2_interface_residues.tsv','cutoff_angstrom'),
@@ -284,7 +301,7 @@ The bounded GenBank sample excluded {excluded} records for translation, ambiguit
 
 Each stage is independently callable through the CLI. Retrieval stores original bytes and checksums. Humanization uses sequence matching and rigid CA superposition, followed by lightweight sidechain repair. Natural sequences are aligned to H77 using Biopython affine-gap alignment; observed structure residues are mapped separately. This avoids installing a second aligner. Conservation uses discovery sequences only. The split builder quarantines test sequences before design. A file-open audit guard and explicit discovery-only function inputs enforce the boundary.
 
-ProteinMPNN fixes the E2 sequence and designs only receptor chain R. Arm A preserves the geometric interface and experimental recognition constraints. Arm B permits the remaining reliable contacts to vary. Both preserve native disulfide cysteines and reject additional cysteines. Standard and soluble models receive matched seeds, temperatures and budgets. Effective seeds are verified from upstream output headers. The pilot generated {pilot['count']} sequences in {pilot['elapsed_seconds']:.1f} seconds; its sequences are excluded from the comparison pool. The full budget was fixed from pilot throughput before structural candidate scores.
+ProteinMPNN fixes the E2 sequence and designs only receptor chain R. Arm A preserves the geometric interface and experimental recognition constraints. Arm B permits the remaining reliable contacts to vary. Both preserve native disulfide cysteines and reject additional cysteines. Standard and soluble models receive matched seeds, temperatures and budgets. Effective seeds are verified from upstream output headers. The pilot generated {pilot['count']} sequences in {pilot['elapsed_seconds']:.1f} seconds; its sequences are excluded from the comparison pool. The full budget was fixed from pilot throughput before structural candidate scores. The projection was {projected_generation} seconds, while generation took {generation_seconds} seconds. Repeated loading and concurrent installation may explain part of this difference; their effects were not isolated.
 
 Scoring builds each receptor on the reference complex once and recombines it with separately modeled E2 sidechains. State-specific receptor repacking is omitted. This makes the cross-state conformational assumption explicit. Candidate freeze hashes bind sequences, configuration, software and discovery inputs before held-out evaluation. Pareto exposure/score tradeoffs are annotated separately. The clash tolerance is arbitrary. The freeze retains each strategy's selections, including overlap.
 

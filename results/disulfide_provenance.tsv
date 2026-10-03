@@ -1,0 +1,3 @@
+source_pdb	label_chain	position_1	position_2	experimental_sg_distance_angstrom	evidence
+3X0E	A	156	190	2.0399110317230225	Experimental mmCIF _struct_conn disulf record; native cysteine pair preserved
+3X0E	A	157	175	2.0110533237457275	Experimental mmCIF _struct_conn disulf record; native cysteine pair preserved

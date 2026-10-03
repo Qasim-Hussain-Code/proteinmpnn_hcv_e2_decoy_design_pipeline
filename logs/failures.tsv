@@ -21,7 +21,7 @@ C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipel
 IOError: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Structure.cpp function StructureConfig() line 153, when opening:
 C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\data\work\mutate\humanized_repaired_Model_00C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\data\work\mutate
 
-"	unresolved	
+"	Execution resolved by short local PDB paths and verified source-default options; successful rerun retained scientific gate failure	benchmark 2026-10-03T18:41:34.047694+00:00
 2026-10-03T17:34:03.960537+00:00	pilot	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py pilot	RuntimeError	1	"['C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\.venv\\Scripts\\python.exe', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/vendor/ProteinMPNN/protein_mpnn_run.py'), '--pdb_path', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/processed/humanized_unrepaired.pdb'), '--pdb_path_chains', 'R', '--path_to_model_weights', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/vendor/ProteinMPNN/vanilla_model_weights'), '--out_folder', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/work/mpnn/pilot'), '--num_seq_per_target', 100, '--sampling_temp', 0.1, '--seed', 20261005, '--batch_size', 1, '--fixed_positions_jsonl', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/processed/mpnn_fixed_A.jsonl'), '--omit_AAs', 'CX', '--model_name', 'v_48_020', '--save_score', 1]: exit=1
 ----------------------------------------
 chain_id_jsonl is NOT loaded
@@ -51,7 +51,7 @@ Traceback (most recent call last):
     fixed_pos_list = fixed_position_dict[b['name']][letter]
                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
 KeyError: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\data\\processed\\humanized_unrepaired'
-"	unresolved	
+"	Converted Windows path arguments to forward slashes; official output seed and constraints verified on rerun	results/mpnn_pilot.json
 2026-10-03T18:17:07.702411+00:00	discovery	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py discovery	BrokenProcessPool	1	A process in the process pool was terminated abruptly while the future was running or pending.	unresolved	
 2026-10-03T18:17:12.076072+00:00	freeze	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py freeze	FileNotFoundError	1	[Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\results\\discovery_scores.tsv.gz'	unresolved	
 2026-10-03T18:17:16.124244+00:00	heldout	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py heldout	RuntimeError	1	Leakage refusal: held-out data inaccessible before candidate freeze	unresolved	
