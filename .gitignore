@@ -10,4 +10,5 @@ __pycache__/
 *.egg-info/
 project.conf
 logs/console/
+logs/evo/
 *.tmp
