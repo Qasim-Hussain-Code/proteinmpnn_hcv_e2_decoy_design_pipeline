@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import defaultdict
 import hashlib
 import json
+import os
 from pathlib import Path
 import shutil
 import sys
@@ -54,15 +55,34 @@ def summarize(scores,wt):
                 fraction_better_wt=float(np.mean(delta<0)),fraction_within_wt_tolerance=float(np.mean(delta<=config()['wt_tolerance'])),
                 worst_delta_wt=float(delta.max()),median_delta_wt=float(np.median(delta)))
 
-def score_pool(candidates,discovery_state_files,split='discovery'):
+def score_one_task(task):
+    candidate,states,split=task
+    if split=='discovery':
+        install_visibility_guard()
+    os.environ['OMP_NUM_THREADS']='1'; os.environ['MKL_NUM_THREADS']='1'
+    return score_pool([candidate],states,split,_serial=True)
+
+def score_pool(candidates,discovery_state_files,split='discovery',_serial=False):
     """Caller must pass explicit state records. No test files read in selection."""
     if split!='discovery':
         require_freeze()
     if split=='discovery' and any(r['split']!='discovery' for r in discovery_state_files):
         raise RuntimeError('Held-out state passed to discovery selection')
+    if len(candidates)>2 and not _serial:
+        from concurrent.futures import ProcessPoolExecutor
+        output=[]; bios=[]
+        checkpoint=ROOT/f'data/work/{split}_score_checkpoint.tsv.gz'
+        with ProcessPoolExecutor(max_workers=config()['threads']) as executor:
+            tasks=[(candidate,discovery_state_files,split) for candidate in candidates]
+            for n,(rows,bio) in enumerate(executor.map(score_one_task,tasks)):
+                output.extend(rows); bios.extend(bio)
+                if n%10==0:
+                    print(f'Scored {n+1}/{len(candidates)} {split} candidates',flush=True)
+                    write_tsv(checkpoint,output)
+        return output,bios
     base=ROOT/'data/processed/humanized_repaired.pdb'
     wt=read_structure(base)[0]['R']; positions=[r.id[1] for r in wt]; wild=sequence(wt)
-    work=ROOT/'data/work/scoring'; work.mkdir(parents=True,exist_ok=True)
+    work=ROOT/'data/work/scoring'/str(os.getpid()); work.mkdir(parents=True,exist_ok=True)
     output=[]; bios=[]
     receptor_models=ROOT/'data/work/receptor_models'; receptor_models.mkdir(parents=True,exist_ok=True)
     for n,candidate in enumerate(candidates):
@@ -101,7 +121,7 @@ def score_pool(candidates,discovery_state_files,split='discovery'):
             for state in discovery_state_files:
                 output.append(dict(candidate_id=candidate_id,haplotype_id=state['haplotype_id'],split=split,interaction_score='',
                                    genotype=state['genotype'],number_of_sequences=state['number_of_sequences'],clash_count='',contact_count='',score_status='failed',failure=str(exc)))
-        if n%10==0:
+        if n%10==0 and not _serial:
             print(f'Scored {n+1}/{len(candidates)} {split} candidates',flush=True)
     return output,bios
 

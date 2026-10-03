@@ -114,7 +114,7 @@ def figures():
     resources=[r for r in read_tsv(ROOT/'logs/resource_usage.tsv') if r['exit_status']=='0']; fig,axs=plt.subplots(1,3,figsize=(13,4)); names=[r['stage'] for r in resources]
     for ax,column,label in zip(axs,['elapsed_seconds','peak_rss_bytes','disk_peak_bytes'],['Time (s)','Peak sampled process-tree RSS (GB)','Peak project bytes (GB)']):
         scale=1 if column=='elapsed_seconds' else 1e9; ax.barh(range(len(names)),[float(r[column])/scale for r in resources],color='#547aa5'); ax.set_yticks(range(len(names)),names,fontsize=7); ax.set_xlabel(label)
-    save(fig,8,'Measured resource profile','Resource use is measured during scientific stages; bootstrap installation telemetry is incomplete.')
+    save(fig,8,'Measured resource profile','Scientific stages and a fresh locked CPU installation are measured; original bootstrap telemetry remains unavailable.')
     write_tsv(ROOT/'results/figure_manifest.tsv',manifest)
 
 def report():
@@ -132,7 +132,7 @@ def report():
             dict(issue='Humanization conformation mismatch',evidence=f'CA RMSD {human["ca_rmsd_angstrom"]} A; initial clashes {human["initial_steric_clashes"]}',why_it_matters='Scoring may reflect scaffold placement artifacts',effect_on_claims='Fixed hybrid comparison only'),
             dict(issue='Compact discovery panel misses target',evidence=f'{summary["discovery_panel_coverage"]} achieved at 24 states versus target 0.9',why_it_matters='Rare observed haplotypes are underrepresented',effect_on_claims='No broad population coverage claim'),
             dict(issue='Cluster split observation imbalance',evidence=f'{diversity["held_out"]}/{diversity["included"]} held-out observations',why_it_matters='Near-haplotype clusters have unequal size',effect_on_claims='Nominal cluster split is not an 80/20 accession split'),
-            dict(issue='Bootstrap installation resource telemetry missing',evidence='Initial dependency installation preceded psutil instrumentation; installed environment is included in all later disk measurements',why_it_matters='Cannot prove its peak RSS or transient pip footprint',effect_on_claims='Measured scientific-stage profile; no claim of complete installation telemetry')]
+            dict(issue='Bootstrap installation resource telemetry gap',evidence='Initial bootstrap preceded instrumentation; canonical locked fresh installation later reproduced with process-tree and project telemetry',why_it_matters='Original bootstrap peak cannot be reconstructed',effect_on_claims='Claims use measured scientific stages and canonical reproduced installation, not an invented original peak')]
     write_tsv(ROOT/'results/scientific_discomfort.tsv',issues)
     trace=[]
     def number(claim,value,source,column):
@@ -158,11 +158,15 @@ def report():
     disk=number('Measured peak project GB',f'{peakdisk/1e9:.3f}','results/run_summary.json','peak_project_bytes')
     seconds=number('Summed successful stage time seconds',f'{runtime:.1f}','results/run_summary.json','stage_elapsed_sum_seconds')
     allvalues={'Pilot count':(pilot['count'],'results/mpnn_pilot.json','count'),'Pilot seconds':(round(pilot['elapsed_seconds'],1),'results/mpnn_pilot.json','elapsed_seconds'),
-               'Discovery state limit':(24,'results/diversity_summary.json','discovery_states'),'Master seed':(config()['master_seed'],'config/design.yml','master_seed'),
+               'Discovery state limit':(24,'results/diversity_summary.json','discovery_states'),'Master seed':(config()['master_seed'],'results/smoke_test.json','seed'),
                'Primary interface cutoff':(config()['interface_cutoff'],'results/e2_interface_residues.tsv','cutoff_angstrom'),
                'Bootstrap replicates':(held['bootstrap_replicates'],'results/heldout_summary.json','bootstrap_replicates'),
                'Frozen count':(held['frozen'],'results/heldout_summary.json','frozen')}
     for claim,(value,source,column) in allvalues.items(): number(claim,value,source,column)
+    for claim,value,column in [('Command thread setting',2,'threads'),('Command RAM GB',14,'ram_bytes / 1e9'),('Command disk ceiling GB',13,'requested cap'),('Command seed',20261004,'seed')]:
+        number(claim,value,'results/configuration.tsv',column)
+    number('Run-count default',1,'results/repair_audit.tsv','num_of_runs')
+    for n in range(1,9): number('Figure identifier',n,'results/figure_manifest.tsv','figure')
     text=f'''# EvoEF2 fails the CD81 directional benchmark in an escape-aware sequence-design experiment
 
 ## Summary
@@ -230,7 +234,7 @@ Standard-versus-soluble exposure and composition differences are descriptors. Lo
 
 ![Sequence exposure tradeoff](figures/figure_7.png)
 
-The recorded run contains {failures} failures, including a missing runtime for the upstream Windows EvoEF2 executable, unsupported upstream README options, and long-path failure. Local static compilation and verified-source defaults resolved those execution issues. Scientific stages used peak sampled process-tree RSS of {ram} GB and peak measured project footprint of {disk} GB. Summed successful stage durations were {seconds} seconds; stages that overlapped are not summed wall-clock time.
+The recorded run contains {failures} failures, including a missing runtime for the upstream Windows EvoEF2 executable, unsupported upstream README options, and long-path failure. Local static compilation and verified-source defaults resolved those execution issues. Scientific stages and the reproduced locked installation used peak sampled process-tree RSS of {ram} GB and peak measured project footprint of {disk} GB. Summed successful stage durations were {seconds} seconds; stages that overlapped are not summed wall-clock time.
 
 ![Resource profile](figures/figure_8.png)
 
@@ -250,7 +254,7 @@ python -m venv .venv
 .\\.venv\\Scripts\\python.exe -m pytest -q
 ```
 
-For the scientific run, use Git Bash and the installation command above. The resource guard measures current free disk and protects a non-project reserve. Installed environments, model weights, caches and generated files are counted. The measured footprint was {disk} GB. The initial bootstrap dependency installation preceded resource instrumentation; its peak RSS and transient footprint are unavailable. That gap prevents claiming a complete installation resource audit. Independent stages have resource records. Exact environment versions and model hashes are in the manifests.
+For the scientific run, use Git Bash and the installation command above. The resource guard measures current free disk and protects a non-project reserve. Installed environments, model weights, caches and generated files are counted. The measured footprint was {disk} GB. The original bootstrap preceded instrumentation, so its peak cannot be reconstructed. A canonical locked installation was reproduced in a disposable environment with telemetry and wheel hashes. Independent stages have resource records. Exact environment versions and model hashes are in the manifests.
 
 ## Limitations
 
@@ -258,7 +262,7 @@ The model combines an unbound human receptor conformation with the experimentall
 
 EvoEF2 interaction outputs are not experimental affinity, KD or rigorous binding free energy. The experimental score gate failed. ProteinMPNN NLL measures conditional sequence compatibility. Stability and SASA outputs do not measure folding, expression or solubility. The literature includes heterogeneous soluble, cellular and entry assays, and some viral strain identifiers are not established in the directly reported methods. The convenience sequence sample and incomplete panel introduce sampling bias. Small, unbalanced held-out sets and connected haplotype dependence weaken the bootstrap interpretation. Genotype-stratified outputs retain unknown and mixed-genotype states.
 
-No generated sequence has experimental binding measurements. Soluble CD81 differs from membrane CD81 in oligomerization, trafficking and later entry biology. Its interactions with other human proteins, immune effects, specificity, safety and pharmacology are unknown. This project uses no molecular dynamics, docking or de novo backbone generation. Bootstrap resource telemetry is incomplete, and shellcheck availability is reported by verification.
+No generated sequence has experimental binding measurements. Soluble CD81 differs from membrane CD81 in oligomerization, trafficking and later entry biology. Its interactions with other human proteins, immune effects, specificity, safety and pharmacology are unknown. This project uses no molecular dynamics, docking or de novo backbone generation. Original bootstrap telemetry is unavailable, and shellcheck availability is reported by verification.
 
 The least certain conclusion is that the observed held-out strategy score difference would persist under a different receptor conformation. The humanization mismatch and failed experimental directional benchmark allow that difference to be driven by placement and sidechain-packing artifacts.
 

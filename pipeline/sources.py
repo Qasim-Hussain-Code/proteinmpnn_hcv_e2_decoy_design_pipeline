@@ -5,6 +5,13 @@ import platform
 from .common import ROOT, fetch, now, run_command, sha256, write_json, write_tsv
 
 def sources():
+    existing=ROOT/'results/software_manifest.tsv'
+    if existing.exists() and (ROOT/'results/candidate_freeze.tsv').exists():
+        from .common import read_tsv
+        for row in read_tsv(existing):
+            if row['weight_hash'] and sha256(ROOT/row['model_or_weight_file'])!=row['weight_hash']:
+                raise RuntimeError('Pinned executable/model hash changed after freeze')
+        return
     rows = []
     for name, purpose in [('numpy','numerical arrays'), ('biopython','mmCIF parsing, sequence alignment and SASA'),
                           ('scipy','distance and statistics'),('matplotlib','figures'),('psutil','resource measurement'),

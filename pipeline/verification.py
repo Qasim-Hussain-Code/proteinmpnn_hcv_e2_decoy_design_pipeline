@@ -92,11 +92,14 @@ def verify():
     check('disk_reserve',shutil.disk_usage(ROOT).free>=config()['reserve_bytes'])
     check('figures',all((ROOT/r['file']).exists() and sha256(ROOT/r['file'])==r['sha256'] for r in read_tsv(ROOT/'results/figure_manifest.tsv')))
     check('traceability_sources',all((ROOT/r['source_file']).exists() for r in read_tsv(ROOT/'results/readme_traceability.tsv')))
-    shellcheck=shutil.which('shellcheck')
+    shellcheck=shutil.which('shellcheck') or (str(ROOT/'vendor/shellcheck/shellcheck.exe') if (ROOT/'vendor/shellcheck/shellcheck.exe').exists() else None)
     check('shellcheck_available',shellcheck is not None,'unavailable: Bash syntax checked; shellcheck not falsely marked passed')
     for path in [ROOT/'run_all.sh',*list((ROOT/'scripts').glob('*.sh'))]:
         result=subprocess.run(['C:/Program Files/Git/bin/bash.exe' if sys.platform=='win32' else 'bash','-n',str(path)],capture_output=True,text=True)
         check('bash_syntax_'+path.name,result.returncode==0,result.stderr)
+        if shellcheck:
+            result=subprocess.run([shellcheck,'-x',str(path)],cwd=ROOT,capture_output=True,text=True)
+            check('shellcheck_'+path.name,result.returncode==0,result.stdout)
     files=run_command(['git','ls-files']).splitlines()
     largest=sorted([(f,(ROOT/f).stat().st_size) for f in files if (ROOT/f).exists()],key=lambda p:-p[1])[:5]
     write_tsv(ROOT/'results/largest_tracked_files.tsv',[dict(path=p,size_bytes=n) for p,n in largest])

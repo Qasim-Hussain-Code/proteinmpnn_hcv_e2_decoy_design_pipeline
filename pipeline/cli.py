@@ -30,6 +30,8 @@ def main():
         if args.threads < 1 or args.ram <= 0 or args.disk <= 0:
             raise ValueError('Threads, RAM and disk must be positive')
         write_json(ROOT / 'config/resolved.json', resolved)
+        from .common import write_tsv
+        write_tsv(ROOT/'results/configuration.tsv',[dict(parameter=k,value=v) for k,v in resolved.items()])
         (ROOT / 'project.conf').write_text(''.join(f'{k.upper()}={json.dumps(v)}\n' for k,v in resolved.items()
                                                  if k not in {'timestamp', 'python'})+
                                           f'PYTHON="{sys.executable.replace(chr(92), chr(47))}"\n', encoding='utf-8')
@@ -49,7 +51,12 @@ def main():
                        'verify':'verification','smoke':'verification'}[stage]
         print(f'START {stage}', flush=True)
         with MeasuredStage(stage, ' '.join(sys.argv)):
-            getattr(importlib.import_module('pipeline.'+module_name), stage)()
+            if stage in {'structures','humanize','ground_truth','sequences','diversity','states','benchmark'} and (ROOT/'results/candidate_freeze.tsv').exists():
+                from .selection import require_freeze
+                require_freeze()
+                print('Frozen scientific inputs retained; use a fresh checkout for a new run.',flush=True)
+            else:
+                getattr(importlib.import_module('pipeline.'+module_name), stage)()
         print(f'DONE {stage}', flush=True)
 
 if __name__ == '__main__':

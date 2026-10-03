@@ -2,6 +2,7 @@
 from __future__ import annotations
 import copy
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -18,7 +19,7 @@ def evo_binary():
     raise RuntimeError('EvoEF2 executable missing; run scripts/02_install.sh')
 
 def evo(command,pdb,work=None,extra=()):
-    work=Path(work or ROOT/'data/work/evo')
+    work=Path(work or ROOT/'data/work/evo'/str(os.getpid()))
     work.mkdir(parents=True,exist_ok=True)
     # Upstream's PDB path buffer is short. Pass a local filename, never a long
     # Windows absolute path; preserve the input bytes in a disposable workspace.
@@ -27,7 +28,7 @@ def evo(command,pdb,work=None,extra=()):
         shutil.copyfile(pdb,local)
     cmd=[evo_binary(),f'--command={command}',f'--pdb={local.name}',*extra]
     output=run_command(cmd,cwd=work)
-    log=ROOT/'logs/evo'/f'{command}_{Path(pdb).stem}.txt'
+    log=ROOT/'logs/evo'/f'{command}_{Path(pdb).stem}_{os.getpid()}.txt'
     log.parent.mkdir(parents=True,exist_ok=True); log.write_text(output,encoding='utf-8')
     if 'invalid' in output.lower() and command.startswith('Compute'):
         raise RuntimeError(f'Refuse scoring incomplete sidechains: {log}')
@@ -37,7 +38,7 @@ def repair(pdb,destination):
     destination=Path(destination)
     if destination.exists():
         return destination
-    work=ROOT/'data/work/repair'; work.mkdir(parents=True,exist_ok=True)
+    work=ROOT/'data/work/repair'/str(os.getpid()); work.mkdir(parents=True,exist_ok=True)
     evo('RepairStructure',pdb,work)
     output=work/(Path(pdb).stem+'_Repair.pdb')
     if not output.exists():
@@ -63,7 +64,7 @@ def mutate(pdb,mutations,destination):
     for chain,pos,wt,new in mutations:
         reference=seq1(structure[0][chain][(' ',int(pos),' ')].resname)
         syntax.append(mutation_syntax(wt,chain,pos,new,reference))
-    work=ROOT/'data/work/mutate'; work.mkdir(parents=True,exist_ok=True)
+    work=ROOT/'data/work/mutate'/str(os.getpid()); work.mkdir(parents=True,exist_ok=True)
     mutation_file=work/'individual_list.txt'; mutation_file.write_text(','.join(syntax)+';\n')
     evo('BuildMutant',pdb,work,extra=[f'--mutant_file={mutation_file.name}'])
     output=work/(Path(pdb).stem+'_Model_0001.pdb')
