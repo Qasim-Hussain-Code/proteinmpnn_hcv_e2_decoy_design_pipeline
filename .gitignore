@@ -1,0 +1,12 @@
+.venv/
+vendor/
+.cache/
+data/raw/
+data/work/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+project.conf
+logs/console/
+*.tmp
