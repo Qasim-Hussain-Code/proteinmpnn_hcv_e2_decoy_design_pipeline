@@ -65,6 +65,10 @@ def figures():
     fig=plt.figure(figsize=(10,4)); ax=fig.add_subplot(121,projection='3d')
     for chain,color,label in [('E','#547aa5','Experimental E2 orientation'),('R','#bb6b48','Aligned human CD81')]:
         xyz=np.array([r['CA'].coord for r in model[0][chain] if 'CA' in r]); ax.plot(*xyz.T,color=color,lw=1,label=label)
+    from Bio.PDB import MMCIFParser
+    metadata=json.loads((ROOT/'data/processed/humanization.json').read_text())
+    source=MMCIFParser(QUIET=True,auth_chains=False).get_structure('7MWX',str(ROOT/'data/raw/7MWX.cif'))
+    xyz=np.array([r['CA'].coord for r in source[0][metadata['tamarin_chain']] if 'CA' in r]); ax.plot(*xyz.T,color='#839788',lw=1,label='Experimental bound tamarin CD81')
     ax.set(xlabel='x (A)',ylabel='y (A)',zlabel='z (A)',title='Modeled hybrid, experimental backbones'); ax.legend(fontsize=7)
     ax=fig.add_subplot(122); human=read_tsv(ROOT/'results/humanization_metrics.tsv')[0]; repair=read_tsv(ROOT/'results/repair_audit.tsv')[0]
     ax.bar(['Original tamarin contacts','Hybrid contacts','Repaired contacts'],[int(human['contacts_before']),int(human['contacts_after']),int(repair['contacts_after'])],color=['#547aa5','#bb6b48','#839788'])
@@ -111,7 +115,8 @@ def figures():
         ax.scatter([float(r['sequence_identity_percent']) for r in rows],[float(bio[r['candidate_id']]['hydrophobic_sasa_fraction']) for r in rows],s=10,alpha=.6,label=mode,c=color)
     ax.set(xlabel='Identity to human scaffold (%)',ylabel='Hydrophobic monomer SASA fraction'); ax.legend()
     save(fig,7,'Sequence and exposure tradeoff','Soluble-model differences are geometric proxies, not expression or solubility measurements.')
-    resources=[r for r in read_tsv(ROOT/'logs/resource_usage.tsv') if r['exit_status']=='0']; fig,axs=plt.subplots(1,3,figsize=(13,4)); names=[r['stage'] for r in resources]
+    latest={r['stage']:r for r in read_tsv(ROOT/'logs/resource_usage.tsv') if r['exit_status']=='0'}
+    resources=list(latest.values()); fig,axs=plt.subplots(1,3,figsize=(13,6)); names=[r['stage'] for r in resources]
     for ax,column,label in zip(axs,['elapsed_seconds','peak_rss_bytes','disk_peak_bytes'],['Time (s)','Peak sampled process-tree RSS (GB)','Peak project bytes (GB)']):
         scale=1 if column=='elapsed_seconds' else 1e9; ax.barh(range(len(names)),[float(r[column])/scale for r in resources],color='#547aa5'); ax.set_yticks(range(len(names)),names,fontsize=7); ax.set_xlabel(label)
     save(fig,8,'Measured resource profile','Scientific stages and a fresh locked CPU installation are measured; original bootstrap telemetry remains unavailable.')
@@ -149,6 +154,8 @@ def report():
     rmsd=number('Humanization CA RMSD',f'{float(human["ca_rmsd_angstrom"]):.2f}','results/humanization_metrics.tsv','ca_rmsd_angstrom')
     effect=number('Held-out worst paired-delta effect',f'{held["worst_delta_effect_escape_minus_single"]:.2f}','results/heldout_summary.json','worst_delta_effect_escape_minus_single')
     ci=number('Held-out percentile interval',f'[{held["ci95"][0]:.2f}, {held["ci95"][1]:.2f}]','results/heldout_summary.json','ci95')
+    baseline=number('Majority-direction baseline controls',benchmark['majority_direction_baseline_correct'],'results/benchmark_summary.json','majority_direction_baseline_correct')
+    direction_ci=number('Directional concordance interval',f'[{benchmark["concordance_ci95"][0]:.3f}, {benchmark["concordance_ci95"][1]:.3f}]','results/benchmark_summary.json','concordance_ci95')
     hstates=number('Held-out E2 states',held['states'],'results/heldout_summary.json','states')
     coverage=number('Achieved discovery coverage percent',f'{summary["discovery_panel_coverage"]*100:.1f}','results/run_summary.json','discovery_panel_coverage')
     dseq=number('Discovery accessions',diversity['discovery'],'results/diversity_summary.json','discovery')
@@ -206,7 +213,7 @@ bash scripts/19_verify.sh
 
 ## Results
 
-Experimental validation comes first. EvoEF2 failed the benchmark despite recovering the enhanced T163A direction. F186L was effectively neutral under the declared score tolerance, contrary to the soluble-E2 observations. Experimental assay units were not pooled and no continuous experimental correlation was claimed.
+Experimental validation comes first. EvoEF2 failed the benchmark despite recovering the enhanced T163A direction. The exact binomial interval for directional concordance is {direction_ci}; related assay backgrounds limit its independence interpretation. An always-reduced direction baseline would recover {baseline} of {controls} controls. F186L was effectively neutral under the declared score tolerance, contrary to the soluble-E2 observations. Experimental assay units were not pooled and no continuous experimental correlation was claimed.
 
 ![Experimental mutation benchmark](figures/figure_3.png)
 

@@ -148,3 +148,20 @@ def test_fixture_end_to_end():
     # Run analytical pieces together; score numbers here are explicitly synthetic.
     from pipeline.verification import smoke
     smoke()
+
+def test_resource_refusal_projection(monkeypatch,tmp_path):
+    import pipeline.common as common
+    monkeypatch.setattr(common,'ROOT',tmp_path)
+    monkeypatch.setattr(common,'config',lambda:dict(disk_bytes=13000,reserve_bytes=1000000000))
+    monkeypatch.setattr(common,'footprint',lambda:5000)
+    from collections import namedtuple
+    Disk=namedtuple('Disk','total used free')
+    monkeypatch.setattr(common.shutil,'disk_usage',lambda path:Disk(2000000000,999999000,1000001000))
+    with pytest.raises(RuntimeError,match='shortfall=200'):
+        common.check_resources(projected=1000,pilot_size=10)
+
+def test_schema_missing_fields():
+    from pipeline.common import validate_schema
+    validate_schema([dict(sequence='ACD',seed=4)],['sequence','seed'])
+    with pytest.raises(ValueError,match='seed'):
+        validate_schema([dict(sequence='ACD')],['sequence','seed'])

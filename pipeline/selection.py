@@ -8,6 +8,7 @@ from pathlib import Path
 import shutil
 import sys
 import time
+from functools import lru_cache
 import numpy as np
 from Bio.PDB.SASA import ShrakeRupley
 from Bio.SeqUtils import seq1
@@ -26,6 +27,9 @@ def require_freeze(root=ROOT):
     for name,key in [('config/design.yml','config_hash'),('results/software_manifest.tsv','software_manifest_hash')]:
         if sha256(Path(root)/name)!=data[key]:
             raise RuntimeError(f'Frozen input changed: {name}')
+    for name,expected in data.get('method_file_hashes',{}).items():
+        if sha256(Path(root)/name)!=expected:
+            raise RuntimeError(f'Frozen scientific implementation changed: {name}')
     return data
 
 def heldout_read(path,root=ROOT):
@@ -62,6 +66,10 @@ def score_one_task(task):
     os.environ['OMP_NUM_THREADS']='1'; os.environ['MKL_NUM_THREADS']='1'
     return score_pool([candidate],states,split,_serial=True)
 
+@lru_cache(maxsize=64)
+def cached_state_structure(path):
+    return read_structure(path)
+
 def score_pool(candidates,discovery_state_files,split='discovery',_serial=False):
     """Caller must pass explicit state records. No test files read in selection."""
     if split!='discovery':
@@ -97,7 +105,7 @@ def score_pool(candidates,discovery_state_files,split='discovery',_serial=False)
             else:
                 mutate(base,mutations,target)
             structural=read_structure(target)
-            monomer=read_structure(target); monomer[0].detach_child('E')
+            monomer=structural.copy(); monomer[0].detach_child('E')
             mono=work/(candidate_id+'_monomer.pdb'); save_pdb(monomer,mono)
             stability=energy(mono,'ComputeStability')
             ShrakeRupley(n_points=100,probe_radius=1.4).compute(monomer,level='R')
@@ -111,7 +119,7 @@ def score_pool(candidates,discovery_state_files,split='discovery',_serial=False)
             mono.unlink()
             for state in discovery_state_files:
                 combined=work/'score_complex.pdb'; combine(target,ROOT/state['path'],combined)
-                model=read_structure(combined); audit=interface(model[0]['E'],model[0]['R'])
+                audit=interface(cached_state_structure(str(ROOT/state['path']))[0]['E'],structural[0]['R'])
                 score=energy(combined)
                 output.append(dict(candidate_id=candidate_id,haplotype_id=state['haplotype_id'],split=split,interaction_score=score,
                                    genotype=state['genotype'],number_of_sequences=state['number_of_sequences'],clash_count=audit['clashes'],
@@ -213,6 +221,7 @@ def freeze():
     write_json(ROOT/'results/candidate_freeze_manifest.json',dict(candidate_table_sha256=sha256(ROOT/'results/candidate_freeze.tsv'),
                candidate_ids=sorted(selected),selection_timestamp=timestamp,config_hash=cfg_hash,software_manifest_hash=sw_hash,
                discovery_inputs={'scores':sha256(ROOT/'results/discovery_scores.tsv.gz'),'states':sha256(ROOT/'data/processed/discovery_panel.tsv')},
+               method_file_hashes={f'pipeline/{name}.py':sha256(ROOT/f'pipeline/{name}.py') for name in ['common','structures','diversity','scoring','design','selection']},
                rule='Same unique candidate pool: reference interaction-score ascending; escape maximum paired WT delta ascending, then median paired delta, then neutral identifier. Pareto annotated separately; not an extra selection gate.',
                heldout_opened=False))
     funnel=read_tsv(ROOT/'results/design_filter_funnel.tsv')

@@ -88,10 +88,11 @@ def energy(pdb,kind='ComputeBinding'):
     return float(values[0])
 
 def combine(receptor_pdb,e2_pdb,destination):
-    structure=read_structure(e2_pdb)
-    structure[0].detach_child('R')
-    structure[0].add(copy.deepcopy(read_structure(receptor_pdb)[0]['R']))
-    save_pdb(structure,destination)
+    # Preserve the exact already-written coordinate records. Entity deepcopy
+    # follows parent links and needlessly copies a whole complex each state.
+    e2lines=[line for line in Path(e2_pdb).read_text().splitlines(True) if line.startswith('ATOM') and line[21]=='E']
+    rlines=[line for line in Path(receptor_pdb).read_text().splitlines(True) if line.startswith('ATOM') and line[21]=='R']
+    Path(destination).write_text(''.join(e2lines)+'TER\n'+''.join(rlines)+'TER\nEND\n')
     return destination
 
 def states():

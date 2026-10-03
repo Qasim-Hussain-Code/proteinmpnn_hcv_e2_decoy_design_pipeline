@@ -106,6 +106,11 @@ def verify():
     check('tracked_size_limit',all((ROOT/f).stat().st_size<=50_000_000 for f in files if (ROOT/f).exists()))
     check('ignored_bulk_files',not any(f.startswith(('.venv/','vendor/','data/raw/','data/work/','.cache/')) for f in files))
     generated=read_tsv(ROOT/'results/generated_sequences.tsv.gz')
+    from .common import validate_schema
+    validate_schema(generated,['candidate_id','sequence','seed','effective_seed','ProteinMPNN_model','filter_status'])
+    validate_schema(read_tsv(ROOT/'results/candidate_freeze.tsv'),['candidate_id','sequence','config_hash','software_manifest_hash','selection_timestamp'])
+    validate_schema(read_tsv(ROOT/'results/score_dictionary.tsv'),['score_name','tool','version','mathematical_or_algorithmic_definition','direction','units_or_unitless','what_it_can_support','what_it_cannot_support'])
+    check('required_schemas',True)
     check('effective_seeds',all(r['seed']==r['effective_seed'] and int(r['seed'])!=0 for r in generated))
     check('fixed_positions',all(r['filter_status'] not in {'fixed_position_violation','disulfide_violation'} for r in generated))
     check('benchmark_warning_propagates',all('failed' in r['warning'].lower() for r in read_tsv(ROOT/'results/final_computational_priorities.tsv')))

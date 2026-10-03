@@ -53,6 +53,8 @@ def metadata(record,stratum):
                 geography=';'.join(q.get('geo_loc_name',q.get('country',[]))),collection_date=';'.join(q.get('collection_date',[])))
 
 def sequences():
+    prior_path=ROOT/'results/hcv_sequence_manifest.tsv'
+    prior={r['accession']:r for r in read_tsv(prior_path)} if prior_path.exists() else {}
     rows=[]; dataset=[]; seen=set(); proteins=[]
     reference=fetch(EUTIL+'efetch.fcgi?'+urlencode(dict(db='nuccore',id='AF009606.1',rettype='gb',retmode='text')),
                     ROOT/'data/raw/H77.gb','AF009606.1')
@@ -87,6 +89,9 @@ def sequences():
             row=dict(accession=record.id,sequence_length=len(record.seq),protein_length=len(protein or ''),
                      **meta,inclusion_status='excluded' if reason else 'pending_mapping',exclusion_reason=reason,
                      accession_multiplicity=1,download_date=now(),description=record.description)
+            if not reason and record.id in prior and prior[record.id]['inclusion_status'] in {'included','excluded'}:
+                for key in ['inclusion_status','exclusion_reason','accession_multiplicity']:
+                    row[key]=prior[record.id][key]
             rows.append(row)
             if protein and not reason:
                 proteins.append(dict(accession=record.id,protein=protein,**meta))

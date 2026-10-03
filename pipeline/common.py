@@ -68,6 +68,14 @@ def write_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, indent=2, sort_keys=True) + '\n', encoding='utf-8')
 
+def validate_schema(rows,required):
+    if not rows:
+        raise ValueError('Schema requires at least one observation')
+    for index,row in enumerate(rows):
+        missing=set(required)-set(row)
+        if missing:
+            raise ValueError(f'Schema row {index} missing fields: {sorted(missing)}')
+
 def config():
     import yaml
     return yaml.safe_load((ROOT / 'config/design.yml').read_text())

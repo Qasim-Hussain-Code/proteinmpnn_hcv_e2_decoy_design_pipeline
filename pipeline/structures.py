@@ -146,6 +146,7 @@ def humanize():
     write_tsv(ROOT/'results/humanization_metrics.tsv',[dict(alignment_method='Global sequence alignment then least-squares C-alpha Kabsch; all mapped observed CA atoms',
                atoms_used=len(matched),matched_residues=[(a.id[1],hnumber[hr.index(b)]) for a,b in matched],sequence_identity=identity,
                ca_rmsd_angstrom=float(sup.rms),excluded_tamarin_residues=excluded,
+               excluded_human_alignment_positions=[hnumber[i] for i,r in enumerate(hr) if r not in [b for a,b in matched]],
                missing_human_positions=[p for p in range(min(hnumber.values()),max(hnumber.values())+1) if p not in hnumber.values()],
                e2_label_chain=eid,tamarin_label_chain=cid,human_label_chain=hc.id,
                e2_author_chain=cmeta['author_chains'][eid],tamarin_author_chain=cmeta['author_chains'][cid],
