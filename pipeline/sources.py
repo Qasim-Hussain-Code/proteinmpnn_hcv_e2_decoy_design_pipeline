@@ -22,13 +22,13 @@ def sources():
         commit = run_command(['git','rev-parse','HEAD'],cwd=folder).strip()
         source_url = 'https://github.com/'+('dauparas/ProteinMPNN' if name == 'ProteinMPNN' else 'tommyhuangthu/EvoEF2')
         version = (folder/'VERSION').read_text().strip() if (folder/'VERSION').exists() else commit
-        weights = list(folder.glob('*model_weights/v_48_020.pt')) if name == 'ProteinMPNN' else [folder/'EvoEF2.exe']
+        weights = list(folder.glob('*model_weights/v_48_020.pt')) if name == 'ProteinMPNN' else [folder/('EvoEF2_local.exe' if (folder/'EvoEF2_local.exe').exists() else 'EvoEF2.exe')]
         for weight in weights:
             rows.append(dict(tool=name,purpose='fixed-backbone inverse folding' if name=='ProteinMPNN' else 'sidechain modeling and physical scoring',
                              version=version,source_url=source_url,git_commit=commit,release_or_tag='HEAD verified on retrieval',license='MIT' if name=='ProteinMPNN' else 'MIT LICENSE conflicts with academic-use README',
                              license_url=source_url+'/blob/'+commit+'/LICENSE',model_or_weight_file=str(weight.relative_to(ROOT)),weight_hash=sha256(weight),date_checked=now(),
                              local_or_remote='local, ignored',redistributable='not redistributed',
-                             notes='Weights bundled in official MIT repository; no separate weight license found; do not infer separate grant' if name=='ProteinMPNN' else 'Local academic computation; binary/code excluded from repository due to ambiguity'))
+                             notes='Weights bundled in official MIT repository; no separate weight license found; do not infer separate grant' if name=='ProteinMPNN' else 'Local academic computation; static compilation: g++ -O3 -static -o EvoEF2_local.exe src/*.cpp; binary/code excluded due to terms ambiguity'))
         for path in [folder/'LICENSE',folder/'README.md']+weights:
             from .common import append_tsv
             append_tsv(ROOT/'results/download_manifest.tsv',dict(resource=str(path.relative_to(ROOT)),identifier=name,
@@ -45,3 +45,12 @@ def sources():
                ('PMC articles','https://pmc.ncbi.nlm.nih.gov/about/copyright/','Article-specific copyright; original prose and figures not redistributed'),
                ('Original code','LICENSE','MIT; author from existing Git identity')]
     write_tsv(ROOT/'results/license_audit.tsv',[dict(resource=n,license_source=u,license=l,date_checked=now(),redistribution_status='derived factual tables only' if n!='Original code' else 'MIT') for n,u,l in resources])
+    tree=[]
+    for name in ['ProteinMPNN','EvoEF2']:
+        folder=ROOT/'vendor'/name
+        commit=run_command(['git','rev-parse','HEAD'],cwd=folder).strip()
+        for path in sorted(folder.rglob('*')):
+            if path.is_file() and '.git' not in path.parts:
+                tree.append(dict(repository=name,git_commit=commit,relative_path=str(path.relative_to(folder)),size_bytes=path.stat().st_size,sha256=sha256(path),
+                                 origin='locally compiled' if path.name=='EvoEF2_local.exe' else 'upstream Git checkout'))
+    write_tsv(ROOT/'results/upstream_file_manifest.tsv',tree)

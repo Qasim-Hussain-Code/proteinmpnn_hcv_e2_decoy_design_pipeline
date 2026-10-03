@@ -45,7 +45,7 @@ def ground_truth():
             add('bertaux2006',mut,'reduced','full-length human CD81 in HepG2',assay,'source E1E2/soluble E2 construct; see methods',
                 'significantly decreased','Figure 3; triplicate independent experiments','Figure 3A-B; biochemical and entry outcomes kept separate')
     for mut in ['N184A','E188A','D196A']:
-        for assay in ['cell-surface soluble E2 binding','HCVpp entry']:
+        for assay in ['HCVpp entry']:
             add('bertaux2006',mut,'approximately_neutral','full-length human CD81 in HepG2',assay,'source E1E2/soluble E2 construct; see methods',
                 'no major receptor phenotype','Figure 3; see source','Results and discussion; neutral is qualitative')
     for mut in ['I182F','N184Y','F186S']:

@@ -14,6 +14,9 @@ disulfide_positions:
 - 175
 - 190
 indispensable_positions:
+- 162
+- 171
+- 181
 - 182
 - 184
 - 186
@@ -27,7 +30,7 @@ generation_seeds:
 - 20261008
 - 20261009
 pilot_count: 100
-full_count_per_cell: null
+full_count_per_cell: 19
 max_discovery_states: 24
 max_heldout_states: 24
 coverage_target: 0.9
@@ -43,6 +46,7 @@ freeze_per_strategy: 5
 bootstrap_replicates: 2000
 bootstrap_seed: 20261010
 allow_extra_cysteine: false
+max_excess_clashes: 5
 notes: Distance, coverage, ambiguity, neutral-score and WT tolerances are arbitrary
   engineering thresholds, not experimentally calibrated biological criteria. Clash
   and composition are descriptors. Sequence filters and strategy definitions are fixed

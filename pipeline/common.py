@@ -48,8 +48,20 @@ def write_tsv(path, rows, fields=None):
 
 def append_tsv(path, row):
     path = Path(path)
-    rows = read_tsv(path) if path.exists() else []
-    write_tsv(path, rows + [row])
+    path.parent.mkdir(parents=True, exist_ok=True)
+    lock=path.with_suffix(path.suffix+'.lock')
+    for attempt in range(200):
+        try:
+            handle=lock.open('x'); break
+        except FileExistsError:
+            time.sleep(.05)
+    else:
+        raise RuntimeError(f'Audit-table lock timeout: {path}')
+    try:
+        rows = read_tsv(path) if path.exists() else []
+        write_tsv(path, rows + [row])
+    finally:
+        handle.close(); lock.unlink()
 
 def write_json(path, data):
     path = Path(path)
@@ -139,7 +151,7 @@ class MeasuredStage:
             for process in procs:
                 try:
                     info = process.memory_info()
-                    rss += max(info.rss, getattr(info, 'peak_wset', 0))
+                    rss += info.rss
                 except psutil.Error:
                     pass
             self.peak_rss = max(self.peak_rss, rss)
@@ -177,7 +189,7 @@ class MeasuredStage:
                       peak_rss_bytes=self.peak_rss, disk_before_bytes=self.before,
                       disk_peak_bytes=self.peak_disk, disk_after_bytes=footprint(),
                       threads=config()['threads'], host_class=platform.platform(),
-                      notes='1-second process-tree RSS sampling; Windows peak working-set counters; 1-second logical project bytes')
+                      notes='1-second simultaneous process-tree RSS and logical project-byte sampling; transients between samples may be missed')
         append_tsv(ROOT / 'logs/resource_usage.tsv', record)
         write_tsv(ROOT / 'results/resource_summary.tsv', read_tsv(ROOT / 'logs/resource_usage.tsv'))
         if error:
