@@ -1,0 +1,49 @@
+master_seed: 20261004
+threads: 2
+ram_bytes: 14000000000
+disk_bytes: 13000000000
+reserve_bytes: 1000000000
+interface_cutoff: 5.0
+interface_sensitivity:
+- 4.0
+- 6.0
+clash_distance: 2.0
+disulfide_positions:
+- 156
+- 157
+- 175
+- 190
+indispensable_positions:
+- 182
+- 184
+- 186
+temperatures:
+- 0.1
+- 0.2
+generation_seeds:
+- 20261005
+- 20261006
+- 20261007
+- 20261008
+- 20261009
+pilot_count: 100
+full_count_per_cell: null
+max_discovery_states: 24
+max_heldout_states: 24
+coverage_target: 0.9
+coverage_sensitivity:
+- 0.8
+- 0.95
+heldout_fraction: 0.2
+near_haplotype_hamming: 1
+max_ambiguous_fraction: 0.01
+score_neutral_tolerance: 0.5
+wt_tolerance: 0.5
+freeze_per_strategy: 5
+bootstrap_replicates: 2000
+bootstrap_seed: 20261010
+allow_extra_cysteine: false
+notes: Distance, coverage, ambiguity, neutral-score and WT tolerances are arbitrary
+  engineering thresholds, not experimentally calibrated biological criteria. Clash
+  and composition are descriptors. Sequence filters and strategy definitions are fixed
+  before held-out scoring.

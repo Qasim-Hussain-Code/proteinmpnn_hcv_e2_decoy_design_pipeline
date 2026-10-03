@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cd81-decoy-benchmark"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["numpy", "biopython", "scipy", "matplotlib", "psutil", "pyyaml"]
+
+[project.scripts]
+cd81-pipeline = "pipeline.cli:main"
+
+[tool.setuptools]
+packages = ["pipeline"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
