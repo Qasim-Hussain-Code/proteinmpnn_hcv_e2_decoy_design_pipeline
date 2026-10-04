@@ -1,7 +1,7 @@
 {
   "check_count": 820,
   "failed": [],
-  "history_blobs_scanned": 955,
+  "history_blobs_scanned": 1208,
   "largest_tracked_files": [
     [
       "results/discovery_metrics.tsv",
@@ -27,5 +27,5 @@
   "passed": true,
   "resource_note": "Historical unmeasured follow-up peaks are not claimed.",
   "scientific_interpretation": "Reproducible computational results; failed biological benchmark",
-  "timestamp": "2026-10-04T14:17:58.982723+00:00"
+  "timestamp": "2026-10-04T14:41:05.128541+00:00"
 }

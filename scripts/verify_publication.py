@@ -1,5 +1,6 @@
 """Audit the retained publication tree without requiring ignored model caches."""
 from pathlib import Path
+import argparse
 from collections import Counter
 import hashlib
 import json
@@ -16,6 +17,9 @@ from pipeline.verification import language_errors,species_errors
 
 def git(*args):return subprocess.check_output(['git',*args],cwd=ROOT,text=True).splitlines()
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--check-only',action='store_true',help='Print the audit without rewriting the retained report')
+    args=parser.parse_args()
     checks=[]
     def check(name,value,detail=None):checks.append(dict(check=name,passed=bool(value),detail=detail))
     require_freeze();snapshot();check('original_scientific_freeze_and_archive',True)
@@ -56,7 +60,8 @@ def main():
     check('negative_benchmark_visible','Scoring remains unreliable' in (ROOT/'README.md').read_text())
     check('original_and_data_licenses',(ROOT/'LICENSE').read_text().startswith('MIT License') and len(read_tsv(ROOT/'publication/data_licenses.tsv'))==5)
     report=dict(timestamp=now(),passed=all(r['passed'] for r in checks),check_count=len(checks),failed=[r for r in checks if not r['passed']],largest_tracked_files=largest,history_blobs_scanned=len(blobs),scientific_interpretation='Reproducible computational results; failed biological benchmark',resource_note='Historical unmeasured follow-up peaks are not claimed.')
-    write_json(ROOT/'publication/publication_checks.json',report)
+    if not args.check_only:
+        write_json(ROOT/'publication/publication_checks.json',report)
     print(json.dumps(report,indent=2))
     if not report['passed']:raise SystemExit(1)
 
