@@ -1,2 +1,2 @@
-commit	smoke_passed	pytest_passed	pytest_count	network_used	gpu_used	environment	timestamp
-1fd4c87e7c2293306ba3564a8db23114fbbac18c	True	True	35	False	False	Existing locked CPU Python environment; fresh clean local clone of completed scientific repository	2026-10-04T01:55:13.091896+00:00
+commit	smoke_passed	bash_driver_passed	pytest_passed	pytest_count	network_used	gpu_used	environment	timestamp
+e70034e662d39852a185f22352ef0a07fff0d453	True	True	True	36	False	False	Existing locked CPU Python environment via PYTHON override; fresh clean local source clone	2026-10-04T02:02:32.664697+00:00

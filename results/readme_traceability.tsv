@@ -28,7 +28,7 @@ Held-out accessions	13	results/diversity_summary.json	held_out	report
 Recorded failures	20	results/run_summary.json	failure_count	report
 Measured scientific-stage RSS GB	0.560	results/run_summary.json	peak_rss_bytes	report
 Measured peak project GB	2.401	results/run_summary.json	peak_project_bytes	report
-Summed successful stage time seconds	6990.0	results/run_summary.json	stage_elapsed_sum_seconds	report
+Summed successful stage time seconds	7057.9	results/run_summary.json	stage_elapsed_sum_seconds	report
 Observed generation duration	1649.3	results/run_summary.json	generation_elapsed_seconds	report
 Projected generation duration	1196.2	results/mpnn_pilot.json	projected_elapsed_seconds	report
 Pilot count	100	results/mpnn_pilot.json	count	report
