@@ -6,11 +6,17 @@ import os
 from pathlib import Path
 import shutil
 import sys
-from .common import ROOT, MeasuredStage, budget, config, now, write_json
+from .common import ROOT, MeasuredStage, budget, config, footprint, now, write_json, write_tsv
 
 STAGES = ['sources', 'structures', 'humanize', 'ground_truth', 'sequences',
           'diversity', 'annotations', 'states', 'benchmark', 'pilot', 'design', 'discovery',
           'freeze', 'heldout', 'sensitivity', 'figures', 'report', 'verify', 'smoke']
+
+def write_shell_configuration(resolved):
+    write_json(ROOT/'config/resolved.json',resolved)
+    write_tsv(ROOT/'results/configuration.tsv',[dict(parameter=k,value=v) for k,v in resolved.items()])
+    (ROOT/'project.conf').write_text(''.join(f'{k.upper()}={json.dumps(v)}\n' for k,v in resolved.items()
+        if k not in {'timestamp','python'})+f'PYTHON="{sys.executable.replace(chr(92),chr(47))}"\n',encoding='utf-8',newline='\n')
 
 def main():
     parser = argparse.ArgumentParser(description='CPU fixed-backbone CD81 benchmark')
@@ -24,26 +30,26 @@ def main():
     args = parser.parse_args()
     os.chdir(ROOT)
     if args.stage == 'configure':
+        if args.threads < 1 or args.ram <= 0 or args.disk <= 0:
+            raise ValueError('Threads, RAM and disk must be positive')
         if (ROOT/'results/candidate_freeze.tsv').exists():
             from .selection import require_freeze
             require_freeze()
             cfg=config()
             if (args.threads,args.ram*1e9,args.seed)!=(cfg['threads'],cfg['ram_bytes'],cfg['master_seed']):
                 raise RuntimeError('Configuration is frozen; change run parameters in a fresh directory')
+            if not (ROOT/'project.conf').exists():
+                free=shutil.disk_usage(ROOT).free
+                write_shell_configuration(dict(threads=cfg['threads'],ram_bytes=cfg['ram_bytes'],seed=cfg['master_seed'],
+                    current_free_bytes=free,effective_disk_budget=budget(min(args.disk*1e9,cfg['disk_bytes']),free,used=footprint(ROOT)),
+                    reserve_bytes=cfg['reserve_bytes'],timestamp=now(),python=sys.executable))
             print('Existing frozen configuration validated and retained.')
             return
         free = shutil.disk_usage(ROOT).free
         resolved = dict(threads=args.threads, ram_bytes=int(args.ram*1e9), seed=args.seed,
                         current_free_bytes=free, effective_disk_budget=budget(args.disk*1e9, free),
                         reserve_bytes=1_000_000_000, timestamp=now(), python=sys.executable)
-        if args.threads < 1 or args.ram <= 0 or args.disk <= 0:
-            raise ValueError('Threads, RAM and disk must be positive')
-        write_json(ROOT / 'config/resolved.json', resolved)
-        from .common import write_tsv
-        write_tsv(ROOT/'results/configuration.tsv',[dict(parameter=k,value=v) for k,v in resolved.items()])
-        (ROOT / 'project.conf').write_text(''.join(f'{k.upper()}={json.dumps(v)}\n' for k,v in resolved.items()
-                                                 if k not in {'timestamp', 'python'})+
-                                          f'PYTHON="{sys.executable.replace(chr(92), chr(47))}"\n', encoding='utf-8')
+        write_shell_configuration(resolved)
         import yaml
         cfg = config()
         cfg.update(threads=args.threads, ram_bytes=resolved['ram_bytes'], master_seed=args.seed,

@@ -65,7 +65,7 @@ The measured soluble-minus-standard hydrophobic SASA fraction differences were A
 
 ![Sequence exposure tradeoff](figures/figure_7.png)
 
-The recorded run contains 20 failures, including a missing runtime for the upstream Windows EvoEF2 executable, unsupported upstream README options, and long-path failure. Local static compilation and verified-source defaults resolved those execution issues. Scientific stages and the reproduced locked installation used peak sampled process-tree RSS of 0.560 GB and peak measured project footprint of 2.401 GB. Summed successful stage durations were 6868.1 seconds; stages that overlapped are not summed wall-clock time.
+The recorded run contains 20 failures, including a missing runtime for the upstream Windows EvoEF2 executable, unsupported upstream README options, and long-path failure. Local static compilation and verified-source defaults resolved those execution issues. Scientific stages and the reproduced locked installation used peak sampled process-tree RSS of 0.560 GB and peak measured project footprint of 2.401 GB. Summed successful stage durations were 6990.0 seconds; stages that overlapped are not summed wall-clock time.
 
 ![Resource profile](figures/figure_8.png)
 

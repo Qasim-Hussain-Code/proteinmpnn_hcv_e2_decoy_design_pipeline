@@ -222,3 +222,21 @@ def test_cleanup_preserves_retained_copy_and_is_idempotent(monkeypatch,tmp_path)
     summary=json.loads((tmp_path/'results/cleanup_summary.json').read_text())
     assert not model.exists() and retained.read_text()=='identical verified coordinates'
     assert summary['deleted_files_total']==1 and summary['deleted_files_this_run']==0
+
+
+def test_frozen_checkout_recreates_local_bash_configuration(monkeypatch,tmp_path):
+    import pipeline.cli as cli
+    import pipeline.selection as selection
+    import sys
+    cfg=dict(threads=2,ram_bytes=14_000_000_000,master_seed=20261004,disk_bytes=13_000_000_000,reserve_bytes=1_000_000_000)
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(cli,'ROOT',tmp_path)
+    monkeypatch.setattr(cli,'config',lambda: cfg.copy())
+    monkeypatch.setattr(selection,'require_freeze',lambda: {})
+    monkeypatch.setattr(sys,'argv',['pipeline.cli','configure','--yes'])
+    frozen=tmp_path/'results/candidate_freeze.tsv';frozen.parent.mkdir();frozen.write_text('immutable snapshot')
+    cli.main()
+    assert (tmp_path/'project.conf').is_file()
+    assert b'\r' not in (tmp_path/'project.conf').read_bytes()
+    assert 'PYTHON="' in (tmp_path/'project.conf').read_text()
+    assert frozen.read_text()=='immutable snapshot'

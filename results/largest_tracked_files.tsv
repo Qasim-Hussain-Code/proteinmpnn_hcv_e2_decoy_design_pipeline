@@ -1,6 +1,6 @@
 path	size_bytes
+results/discovery_metrics.tsv	1585036
 results/installation_report.json	515083
+results/disposable_model_manifest.tsv	324488
+figures/figure_1.png	273337
 data/processed/humanized_unrepaired.pdb	219524
-data/processed/states/discovery/hap_401a6ee3e281.pdb	199125
-data/processed/states/discovery/hap_fdbfe77dbf7f.pdb	198965
-data/processed/states/discovery/hap_e357f7e13d39.pdb	198885

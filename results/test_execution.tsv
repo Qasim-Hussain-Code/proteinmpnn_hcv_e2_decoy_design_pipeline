@@ -1,2 +1,2 @@
 timestamp	command	passed	failed	errors	scratch	internet	gpu
-2026-10-04T01:53:10.640778+00:00	bash scripts/19_verify.sh	35	0	0	.pytest_scratch	False	False
+2026-10-04T02:01:57.985745+00:00	.venv/Scripts/python.exe -m pytest -q	36	0	0	.pytest_scratch	False	False
