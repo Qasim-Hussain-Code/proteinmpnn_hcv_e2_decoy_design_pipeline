@@ -1,0 +1,93 @@
+{
+  "code_sha256": {
+    "pipeline/__init__.py": "3762da476d3df4033ab5eb65b6894fe2cb5e933b466ff3c80fa3ea957fd00f7c",
+    "pipeline/annotations.py": "91c063d2427e7a85d9fc97091e92e424e2312da8823efb7b8ae620d588094de1",
+    "pipeline/cleanup.py": "85c221d114591f40306a3027d56bafab3bed6bcc5f8529fdacf97f55822a779c",
+    "pipeline/cli.py": "d69b7906da48f31d8ffe1d0c1d56e7da1d4845bbe5ef89db72439366c12c2205",
+    "pipeline/common.py": "d46364f655481bf8ccd7e39fa973a3a9c6361c268257eee6fe0f7d2e82a5faf0",
+    "pipeline/design.py": "845303053743221f6f99a8430d80850e9834cb18d44e7a10159f9c113d694b53",
+    "pipeline/diversity.py": "f13fe37fe55b8ccbb4d805b2fe9ef3e5542497f033d8e453a47512a7839fa73a",
+    "pipeline/followup.py": "f8d13264994bc0aab62532d427c50c0e4b8aa8f42902f3bd4c820f1263a80d92",
+    "pipeline/followup_diversity.py": "fcbd09be2d2c61c3902563e4b5571f981e560277ca8f173cc19641009aa489a2",
+    "pipeline/followup_report.py": "f89baaa0f241104d96d720894439f881d518b12b8febdaba08d1f56a423b6cb6",
+    "pipeline/installation_audit.py": "9c46089a313a4115c80995714f9dce41098e8d9d9a9b1575b74d587cc6a0c28d",
+    "pipeline/literature.py": "ce9da40f1c0877d7472b2b63f5739bcc022dc15433896e64fb7088952bf0dc65",
+    "pipeline/new_run.py": "707f8c4892f20b3ee0f52c7561afdd7ed31cbfc550003e4e242c380d367b0c48",
+    "pipeline/preparation_sensitivity.py": "f409c382bcae577ab0dfbe9d8a09e97033e1f20e49f89688d9a990c03a6e8ca6",
+    "pipeline/reporting.py": "43759f3fe93b72c70798db0190e17f64c93ade4a49839cced3633d0574fd74c7",
+    "pipeline/scoring.py": "987c9db5f213bce5affea2bbdbbdd3d730ecfc23a823cb70aa0ff4f79275f817",
+    "pipeline/selection.py": "f13cdabf4e425d9b93d91d64a6fdea04c1c061fd2700fe14e36743801bb04d7c",
+    "pipeline/sources.py": "2036c8dfe6add277b84962306e94072c379d79c83d3bdcf6d20d7cead798d66b",
+    "pipeline/structures.py": "d126ceff318b611c5deeac3996f4a56f5dff9a81e4b3b575eb5ca6b209ce356c",
+    "pipeline/verification.py": "15932ad0fe2961738bf81be16fda8953d93b8c34980ba645f65cd29890f9829a",
+    "pipeline/wheel_sources.py": "d15af430a3227c26b74b1f93927fb6028b88f0859adcc4e06ef11496e8216df3",
+    "run_all.sh": "bf8275326afc8c622fe4004edc0da06eba4cfa994d5e9010a3e5898ca79abb8a",
+    "scripts/00_configure.sh": "f9067a87b0f15a1bad9239af638af8891fdac5afb0f4ddc9665bf504f7f07d01",
+    "scripts/02_install.sh": "0d173bbf5c0ca2e296c618b8ef1deea4430527a08ea50a816f310f748a2f15eb",
+    "scripts/19_verify.sh": "588d5502de94afb76cefbec77f0a20bc4ede73e1c99b465de7f4016115160add",
+    "scripts/finish.sh": "161888554806ae1edb68c8611c10f58b41184d3cebc6d19a6438c5dc91a28310",
+    "scripts/reverify_science.py": "1c721420b2c6373123da9dc2a018e538fffe8b0a6c03c3ab9bbbf2bccd7b5863",
+    "scripts/stage.sh": "58d025b7dd0cb88727ab74d930fb23739052da27b93649f7f00a83afd7717c5d",
+    "scripts/verify_publication.py": "03dcbba9d991741014b055bb79c64f167606f1991379bc0a9d7f0024ed454f64",
+    "tests/test_followup.py": "436ccff2baf740e875bba18d2b39b3ac1e79b115bd0407074f58b80411d440b2",
+    "tests/test_methods.py": "b74dd2f9f0a032c4e73e87631c94b9e8d731a2621843d23f1cb6ed5fe3deb71f"
+  },
+  "external_inputs_absent": {
+    ".venv": true,
+    "data/raw": true,
+    "followup/states": true,
+    "vendor": true
+  },
+  "offline_smoke": {
+    "elapsed_seconds": 16.6330277,
+    "exit_code": 0,
+    "external_model_weights": false,
+    "network": false,
+    "source_commit": "b7453a7b5becd811af1768aee26ea9282a4f7499",
+    "stage": "offline_smoke"
+  },
+  "passed": true,
+  "platform": "Windows with Git Bash",
+  "publication_audit": {
+    "check_count": 820,
+    "failed": [],
+    "history_blobs_scanned": 1210,
+    "largest_tracked_files": [
+      [
+        "results/discovery_metrics.tsv",
+        1585036
+      ],
+      [
+        "results/installation_report.json",
+        515083
+      ],
+      [
+        "followup/development_sequences.json",
+        373715
+      ],
+      [
+        "followup/reproduction_manifest.tsv",
+        331438
+      ],
+      [
+        "results/disposable_model_manifest.tsv",
+        324488
+      ]
+    ],
+    "passed": true,
+    "resource_note": "Historical unmeasured follow-up peaks are not claimed.",
+    "scientific_interpretation": "Reproducible computational results; failed biological benchmark",
+    "timestamp": "2026-10-04T14:50:55.815432+00:00"
+  },
+  "pytest_passed": 43,
+  "python": "3.14, existing locked CPU environment",
+  "scope": "Offline fixtures and published provenance, tables and history; full scientific rerun recorded separately",
+  "shellcheck": {
+    "elapsed_seconds": 0.4939937,
+    "exit_code": 0,
+    "script_count": 6,
+    "source_commit": "b7453a7b5becd811af1768aee26ea9282a4f7499",
+    "stage": "bash_and_shellcheck"
+  },
+  "tested_commit": "b7453a7b5becd811af1768aee26ea9282a4f7499"
+}
