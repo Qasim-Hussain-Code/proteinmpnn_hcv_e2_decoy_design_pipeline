@@ -1,0 +1,17 @@
+model	mode	one_repair_wt	two_repair_wt	wt_shift	correct_with_second_wt	total	interpretation
+archive	repacked	34.81	34.84	0.030000000000001137	5	11	Additional preparation control, not a new validation gate
+archive	fixed_e2	34.81	34.81	0.0	5	11	Additional preparation control, not a new validation gate
+x0e_b	repacked	322.93	311.37	-11.560000000000002	3	11	Additional preparation control, not a new validation gate
+x0e_b	fixed_e2	322.93	315.15	-7.78000000000003	3	11	Additional preparation control, not a new validation gate
+x0e_core	repacked	361.89	353.62	-8.269999999999982	3	11	Additional preparation control, not a new validation gate
+x0e_core	fixed_e2	361.89	361.67	-0.21999999999997044	4	11	Additional preparation control, not a new validation gate
+g8q_a	repacked	56.78	48.43	-8.350000000000001	7	11	Additional preparation control, not a new validation gate
+g8q_a	fixed_e2	56.78	56.39	-0.39000000000000057	5	11	Additional preparation control, not a new validation gate
+g8q_b	repacked	315.11	313.92	-1.1899999999999977	4	11	Additional preparation control, not a new validation gate
+g8q_b	fixed_e2	315.11	316.51	1.3999999999999773	4	11	Additional preparation control, not a new validation gate
+tcx_a	repacked	285.19	273.74	-11.449999999999989	5	11	Additional preparation control, not a new validation gate
+tcx_a	fixed_e2	285.19	285.19	0.0	6	11	Additional preparation control, not a new validation gate
+bound_ae	repacked	-38.93	-38.88	0.04999999999999716	8	11	Additional preparation control, not a new validation gate
+bound_ae	fixed_e2	-38.93	-38.93	0.0	8	11	Additional preparation control, not a new validation gate
+bound_bh	repacked	-30.17	-30.03	0.14000000000000057	3	11	Additional preparation control, not a new validation gate
+bound_bh	fixed_e2	-30.17	-30.03	0.14000000000000057	3	11	Additional preparation control, not a new validation gate

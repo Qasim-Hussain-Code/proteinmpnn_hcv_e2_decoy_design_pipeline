@@ -1,0 +1,307 @@
+haplotype_id	count	genotypes	mutation_count	mutations	unmodeled_h77_positions	clashes	sha256	path
+hap_4b16b6db166d	8	1,unknown	4	"[""I438L"", ""S440A"", ""T444A"", ""S446K""]"	[415, 416, 417]	4	ab04c4f57e565d080fa35d3d2c7bf6d91e2e7e20d02f737f60728e04881a222b	followup/states/hap_4b16b6db166d.pdb
+hap_e4468363bdc5	34	2,4	4	"[""I438L"", ""T444V"", ""H445R"", ""S446N""]"	[415, 416, 417]	4	716f09f3b9b6a4b226f9c433aab9d57cda99f9418db1cdc7d2b7dca1ebb9afbe	followup/states/hap_e4468363bdc5.pdb
+hap_3fb55fbfc879	7	3	4	"[""S440G"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	66c0191e010caf988f3b3b56691666c27b7e3b26f9e7fb9ee7f1637bc32178ba	followup/states/hap_3fb55fbfc879.pdb
+hap_735e5e511348	5	4	2	"[""I438L"", ""S446K""]"	[415, 416, 417]	4	9ea9d89e1c7eecd1b90fa5a639b8f770cefcf12cf81eeece2b6cd15644d7a1b0	followup/states/hap_735e5e511348.pdb
+hap_71f411ba2df4	6	5,unknown	5	"[""I438V"", ""S440G"", ""F442L"", ""T444Y"", ""S446K""]"	[415, 416, 417]	2	aeffa6da543342930aa4b76f5d00dfb428e1feb7dd54780ebf52e5cc7ada8a85	followup/states/hap_71f411ba2df4.pdb
+hap_015f1d250ec9	4	6	2	"[""S446R"", ""R523K""]"	[415, 416, 417]	2	90d1cb376e0b740a618f9f09aa073579d661f1c24798a88e51e5adb480a7e4dd	followup/states/hap_015f1d250ec9.pdb
+hap_1039a12113f4	4	1,7	2	"[""S440A"", ""S446R""]"	[415, 416, 417]	2	32763ef514f9720d6feaeafc6088055696de28973bbaa4637fb9d3eaddfe5f85	followup/states/hap_1039a12113f4.pdb
+hap_317d74d43535	4	1,unknown	3	"[""I438L"", ""S440A"", ""S446R""]"	[415, 416, 417]	4	bad40a9ad704d9d925177f471e7a96de34ca9aa0a4a18743f77afc4dd0dea8ec	followup/states/hap_317d74d43535.pdb
+hap_184fb710e202	6	1,unknown	3	"[""I438L"", ""S440A"", ""S446K""]"	[415, 416, 417]	4	19bde22a6fd62c3c0ae7a541c6f4f41b0ccc6a564ec6ff1fc64a376df7dd526b	followup/states/hap_184fb710e202.pdb
+hap_c5853d6f20a0	33	2	0	[]	[415, 416, 417]	2	6acbc194983985496582a95b47c05232228c54d304af9bca56c19ff0889976db	followup/states/hap_c5853d6f20a0.pdb
+hap_e6697cbeb526	5	3,unknown	6	"[""R424S"", ""D431E"", ""S440G"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	ac6ace19ae88ca27c8837cdaf2fbd2150a8157cadf971919fa0e0648f1c24d8a	followup/states/hap_e6697cbeb526.pdb
+hap_bfbafc50c0b3	3	4	3	"[""I438L"", ""S446K"", ""R523H""]"	[415, 416, 417]	4	22c2d83e6c805591cab3678606a685e74266878686cc691d68e2c5da81619ab3	followup/states/hap_bfbafc50c0b3.pdb
+hap_5bc6649c2e00	2	5	4	"[""S440G"", ""F442I"", ""T444H"", ""S446R""]"	[415, 416, 417]	2	857d2804f2fc696dce40c60bd4b88222ca7199c858ceb255d148cea0fe4174aa	followup/states/hap_5bc6649c2e00.pdb
+hap_b744357aed4e	3	6	5	"[""A439S"", ""S440A"", ""T444S"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	fafde25db0838cf675a58c00d6c1a5551945524b5d3cb69f25713f0f86b05548	followup/states/hap_b744357aed4e.pdb
+hap_432a43a096e9	1	7	5	"[""S440A"", ""F442L"", ""T444K"", ""H445N"", ""S446K""]"	[415, 416, 417]	2	aae87554b20adcc599310201855e7be2cbbcaaa52036cefa4463df436b16b39d	followup/states/hap_432a43a096e9.pdb
+hap_dba1df4a76ca	2	unknown	2	"[""S440A"", ""S446Q""]"	[415, 416, 417]	2	433ecd4e262e8e81f2e10bdb262825cdb6cafcfe311a07dcd71eb453a85e33af	followup/states/hap_dba1df4a76ca.pdb
+hap_3c71439e8158	4	1,6	3	"[""S440A"", ""T444A"", ""S446R""]"	[415, 416, 417]	2	6cce3f5596fb9b6553ccdf24b457c704396e775ba3f6911a0ca16eafc2753b95	followup/states/hap_3c71439e8158.pdb
+hap_162617aaac7d	18	2	4	"[""I438L"", ""T444V"", ""H445G"", ""S446N""]"	[415, 416, 417]	4	5686b4bedfc43e405c72ec1f0d1b076f8a1f6a3f6cec1c0c652191f2ae7a90b1	followup/states/hap_162617aaac7d.pdb
+hap_89246cea44b7	2	3	4	"[""S440G"", ""T444Y"", ""S446K"", ""R523V""]"	[415, 416, 417]	2	0f42c9476ec329f7095f1c86fe7283aca66b852e2ede0cdea6dfe22a7a23701c	followup/states/hap_89246cea44b7.pdb
+hap_e9ac6e36ccb4	3	4	3	"[""I438L"", ""H445R"", ""S446K""]"	[415, 416, 417]	4	c79aa71ee4671621f9c4591f9c4b65104e570febaae92c6fffcfbe9f03492e0c	followup/states/hap_e9ac6e36ccb4.pdb
+hap_411dfd16bdb0	2	5	5	"[""R424S"", ""S440G"", ""F442M"", ""T444A"", ""S446K""]"	[415, 416, 417]	2	a3226b3a00d7abbf718fc9c62dc7955ee70da7fda4bbbf6839f86fc1c6ae8f23	followup/states/hap_411dfd16bdb0.pdb
+hap_39dfe851747f	3	6	3	"[""I438V"", ""T444A"", ""S446K""]"	[415, 416, 417]	2	fb9c5dc552bf96a3b053a84aaf0d74f7001547aa036bc7a4cc25b952425a88fb	followup/states/hap_39dfe851747f.pdb
+hap_d014d08298ca	1	7	8	"[""R424S"", ""I438L"", ""A439K"", ""S440A"", ""T444S"", ""H445R"", ""S446H"", ""Y529F""]"	[415, 416, 417]	4	9a70744bce1187beaa66f71e496d244bb2ff89c3c706d5cd590414e7bbaff53a	followup/states/hap_d014d08298ca.pdb
+hap_3652626d878e	3	1,unknown	4	"[""I438L"", ""S440A"", ""T444A"", ""S446R""]"	[415, 416, 417]	4	47b13bd4c3052f6ff4e019060ff19b946eb0c1d349e8f8f16524f2cda4fd2978	followup/states/hap_3652626d878e.pdb
+hap_da854ad07173	2	1	7	"[""D431A"", ""F437W"", ""I438V"", ""S440G"", ""T444Y"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	4da18b9022a155d6dac17c21c67e00e824924287cc2fcea02689fe5b5f7b7aaa	followup/states/hap_da854ad07173.pdb
+hap_3003d3454ecb	6	2	4	"[""I438L"", ""S440A"", ""H445N"", ""S446R""]"	[415, 416, 417]	4	a841594ba67f8a5e4a1648dff66f586ab1655d7976ccf54cd25a9ae227b6ecf5	followup/states/hap_3003d3454ecb.pdb
+hap_a7d236aecfbf	2	3	5	"[""I438V"", ""S440G"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	279f6bc141098668a5a49411b85dc2735e807815156bf7899bbbd67fa955b5da	followup/states/hap_a7d236aecfbf.pdb
+hap_9154fd414e7f	3	4,6	2	"[""I438L"", ""S446K""]"	[415, 416, 417]	4	9ea9d89e1c7eecd1b90fa5a639b8f770cefcf12cf81eeece2b6cd15644d7a1b0	followup/states/hap_9154fd414e7f.pdb
+hap_e7d098770935	2	3,5	4	"[""S440G"", ""F442L"", ""T444Y"", ""S446K""]"	[415, 416, 417]	2	1ae7bdd610d822047e3504cae9ee5f4f6aa1eb807f8dc5cb6dd6e1c3e84fbc7d	followup/states/hap_e7d098770935.pdb
+hap_d14d8e4f3af5	2	6	1	"[""S446T""]"	[415, 416, 417]	2	226b28b68c548cadd665730f72f9e1e13f1f10551a81d93dbe475a0dce27b101	followup/states/hap_d14d8e4f3af5.pdb
+hap_0c191bc5aa85	2	1,unknown	3	"[""I438L"", ""S440A"", ""S446R""]"	[415, 416, 417]	4	bad40a9ad704d9d925177f471e7a96de34ca9aa0a4a18743f77afc4dd0dea8ec	followup/states/hap_0c191bc5aa85.pdb
+hap_b5315ce38283	2	1	7	"[""D431A"", ""F437W"", ""I438V"", ""S440G"", ""T444Y"", ""S446R"", ""R523K""]"	[415, 416, 417]	2	435e44009b1bd7c159d456d7e57ebe37ec1fc4065e01e45691f71380a86cf58c	followup/states/hap_b5315ce38283.pdb
+hap_8154f5479934	5	2	3	"[""T444A"", ""H445N"", ""S446N""]"	[415, 416, 417]	2	61a3e50b37f0f319c217fd3405ada6cf9d40f89eee8ccbf66c946a1e94b18446	followup/states/hap_8154f5479934.pdb
+hap_8d2d9896766a	2	3	5	"[""D431E"", ""S440G"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	a7a2caf1449fb41c44d00f0c11da0f8cf868cb4096f356d50dc277e1433aa52e	followup/states/hap_8d2d9896766a.pdb
+hap_59653cee8171	2	4	4	"[""T444V"", ""H445R"", ""S446K"", ""R523H""]"	[415, 416, 417]	2	05d69ce61d945298e2d31456b8c9a5827a8405633c849086ea2ce9635af1e413	followup/states/hap_59653cee8171.pdb
+hap_6fbc3ef98f43	1	5	5	"[""D431E"", ""S440G"", ""T444V"", ""H445N"", ""S446K""]"	[415, 416, 417]	2	5789627fa0844ce3f833d054b3f216fc76962afa19594b267c8b55cb34821e08	followup/states/hap_6fbc3ef98f43.pdb
+hap_0eac97d69ee3	2	6	4	"[""S440G"", ""F442L"", ""T444H"", ""S446K""]"	[415, 416, 417]	2	dd379650fa9a06074cebb9226624a787b4df1741f36b76931440f796dbde2b0b	followup/states/hap_0eac97d69ee3.pdb
+hap_d682dd37ff08	2	1,unknown	4	"[""I438L"", ""S440A"", ""T444V"", ""S446R""]"	[415, 416, 417]	4	67ba1e8fdbadff699286877fe46119186f4e758af4122a8dae8e1d8116f45e35	followup/states/hap_d682dd37ff08.pdb
+hap_25f6dcb72cd8	2	1	4	"[""I438F"", ""S440A"", ""T444A"", ""S446K""]"	[415, 416, 417]	2	cef579c4c150a39c12079f5770f237b33c0f3d4fdfe59a8dd44b762960cd0b70	followup/states/hap_25f6dcb72cd8.pdb
+hap_96879b936173	3	2	4	"[""S440A"", ""H445N"", ""S446R"", ""R523K""]"	[415, 416, 417]	2	3fafb17a3f561cf96363b037950a63b5ac67986347361f15f40e73fc9696c51b	followup/states/hap_96879b936173.pdb
+hap_d1691e7e7f31	2	3	6	"[""D431E"", ""I438L"", ""S440G"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	4	541d2f3d13230fb08c56aa0ee5bc7845f5d8f1e6c410150ae42e04a853149838	followup/states/hap_d1691e7e7f31.pdb
+hap_511aaedccb55	2	4	2	"[""I438L"", ""S446R""]"	[415, 416, 417]	4	d5b0ee715f372965eea2aba70046dd11f41e095636142ceb5a189c65fd4555f4	followup/states/hap_511aaedccb55.pdb
+hap_bb3c71c392da	1	5	4	"[""S440G"", ""F442I"", ""T444A"", ""S446K""]"	[415, 416, 417]	2	c2897a8700d91f5842aa5679d9209967869f87934de1fde11bb9fd1a0a8cef01	followup/states/hap_bb3c71c392da.pdb
+hap_29e4d7667b0e	2	6	2	"[""T444A"", ""S446K""]"	[415, 416, 417]	2	3f8c5164bd3e8d5c0f68925cdbdc741cd5e07d8d86248970f52926247c3a5d4e	followup/states/hap_29e4d7667b0e.pdb
+hap_9d26adf2d5b1	1	unknown	3	"[""S440A"", ""T444K"", ""S446K""]"	[415, 416, 417]	2	d9a8f9662bd7cac3342b64e7adc573cfde2f768223d8e767132f0a13ac41bf75	followup/states/hap_9d26adf2d5b1.pdb
+hap_f9787bf70f26	2	1	3	"[""S440A"", ""T444A"", ""S446K""]"	[415, 416, 417]	2	91a6f3d9670307d41a0be127c2cd36ce055f3a7ce09f3dd975854e30a4ff313f	followup/states/hap_f9787bf70f26.pdb
+hap_02e0a3f348b6	3	2,6	2	"[""S446R"", ""R523K""]"	[415, 416, 417]	2	90d1cb376e0b740a618f9f09aa073579d661f1c24798a88e51e5adb480a7e4dd	followup/states/hap_02e0a3f348b6.pdb
+hap_45927aba2c77	1	3	7	"[""R424S"", ""S440G"", ""Y443N"", ""T444Y"", ""S446K"", ""R523S"", ""Y529F""]"	[415, 416, 417]	2	7a45939b09d5df6fbe838acfbdd11a7c655fbccbeb3be222240079b3c82530b4	followup/states/hap_45927aba2c77.pdb
+hap_37ee04cf1ef0	2	4	5	"[""I438L"", ""A439V"", ""S440N"", ""H445N"", ""S446K""]"	[415, 416, 417]	4	14d5142f6f28a5e32fb104601473b0b2c091349b839df6835b29226f893f86f2	followup/states/hap_37ee04cf1ef0.pdb
+hap_92c3097346fc	1	5	5	"[""S440G"", ""F442I"", ""T444F"", ""S446K"", ""R523H""]"	[415, 416, 417]	2	dd63e7c75c715d2234fc39628a9bba9574a46e6f2ff3bd23da7e1b9b7c99cf7f	followup/states/hap_92c3097346fc.pdb
+hap_99baf9719198	2	6	2	"[""S446K"", ""R523K""]"	[415, 416, 417]	2	68f1875b31a4ef7f629166913149a3e1be5a372ef71647eb7fac17a07ed45800	followup/states/hap_99baf9719198.pdb
+hap_f7c83fd950a1	1	unknown	5	"[""I438L"", ""S440A"", ""T444K"", ""H445Y"", ""S446K""]"	[415, 416, 417]	4	d8e1cd5e0932b0a5a88b497331e5613c8304a02818f80d5a24869b17ea819ed0	followup/states/hap_f7c83fd950a1.pdb
+hap_5df69fa343ae	2	1	3	"[""I438L"", ""S440A"", ""H445R""]"	[415, 416, 417]	4	1563c1b53f1a70ba35f0c7db735ae60fb3e19a14f51228cd70c24d96538e818e	followup/states/hap_5df69fa343ae.pdb
+hap_1eb3dbcc8605	3	2,4	2	"[""I438L"", ""S446R""]"	[415, 416, 417]	4	d5b0ee715f372965eea2aba70046dd11f41e095636142ceb5a189c65fd4555f4	followup/states/hap_1eb3dbcc8605.pdb
+hap_1a2ce9924cc0	1	3	5	"[""S440G"", ""F442I"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	51bd393b3df8b632396cf9f0949f6465e0c39a01cafe407830d0166ea060b8dc	followup/states/hap_1a2ce9924cc0.pdb
+hap_f2f027250752	2	2,4	3	"[""I438L"", ""H445N"", ""S446R""]"	[415, 416, 417]	4	5cf6feeaf52467f3ff743d6d9ce9b13aed973779feae05cc255fdbf72c54935e	followup/states/hap_f2f027250752.pdb
+hap_0ee521f63021	1	5	4	"[""S440G"", ""F442M"", ""T444V"", ""S446K""]"	[415, 416, 417]	2	f298565e7149637aef65b682559806c9be0a65deecebec3550f823884ea79160	followup/states/hap_0ee521f63021.pdb
+hap_0337ec679859	2	6	2	"[""H445N"", ""S446K""]"	[415, 416, 417]	2	1d22b871afa1b7d1f8d1267db9caedd332f62c644ee42f784089a889d905aabb	followup/states/hap_0337ec679859.pdb
+hap_9367709f2d6e	1	unknown	8	"[""D431A"", ""F437W"", ""I438L"", ""A439V"", ""S440G"", ""T444Y"", ""H445N"", ""S446K""]"	[415, 416, 417]	4	ff748c605dc8a97216ec6f5ba4139d319f882caf0dc2421d9f807a555c4513cf	followup/states/hap_9367709f2d6e.pdb
+hap_c902b492d646	2	1	4	"[""I438L"", ""S440A"", ""T444V"", ""H445R""]"	[415, 416, 417]	4	30c8a0bf9b9046ce3ae95de4ff856155f195bb5abc6115388323122fcca5b482	followup/states/hap_c902b492d646.pdb
+hap_f97b4af25396	2	2	4	"[""I422V"", ""H445K"", ""S446N"", ""R523T""]"	[415, 416, 417]	2	6b8f3943af2ce8fd47095ae4ad3baca7da9057e8d4f5c5b362c2a228bdf36a9a	followup/states/hap_f97b4af25396.pdb
+hap_6ddd97008ec3	1	3	5	"[""D431E"", ""S440G"", ""T444Y"", ""H445N"", ""S446N""]"	[415, 416, 417]	2	d8ac7dd3f57d9d618cb99d72d4f0d6f1ddf109a2ef3fe15ea2ce3de83aa34497	followup/states/hap_6ddd97008ec3.pdb
+hap_08c53a3e81c9	2	2,4	1	"[""S446R""]"	[415, 416, 417]	2	64eb1993e2f5aca4ac446f97ecaa0e27201eb61b2f2331f7c581e87b6a9d6cf2	followup/states/hap_08c53a3e81c9.pdb
+hap_1fddebe43917	1	5	5	"[""S440G"", ""F442M"", ""T444Y"", ""H445Q"", ""S446R""]"	[415, 416, 417]	2	1f5f130505fb32afab774c5f96002e0be73f6479ae0ee37c42ef0247bd07db76	followup/states/hap_1fddebe43917.pdb
+hap_46a29bc1aacd	2	6	5	"[""A439T"", ""T444A"", ""H445K"", ""S446N"", ""R523K""]"	[415, 416, 417]	2	4f0d34901bd0c7c3cff1f4d75478f92a72e4577024460776b6485fc0b346bc6b	followup/states/hap_46a29bc1aacd.pdb
+hap_f4275aaebbf2	1	unknown	4	"[""S440A"", ""T444V"", ""H445R"", ""S446K""]"	[415, 416, 417]	2	b4bce8cd545e59e1bb7e8ee06254ba72c7050e4fe74c4d6eee5c8ff1fb9dc517	followup/states/hap_f4275aaebbf2.pdb
+hap_98713707e6b5	2	1	4	"[""F437W"", ""S440G"", ""T444H"", ""S446K""]"	[415, 416, 417]	2	0860f9c5c9f0a4323597b30f4f4d7b3c6edf0b89f073d7bba0be2a970560fdf0	followup/states/hap_98713707e6b5.pdb
+hap_d3f86e1683ba	2	2	1	"[""I438L""]"	[415, 416, 417]	4	ee14b0dcabbe724b42ba9dfd7ee6858ea2426fcd2c85ecac131f15863777c353	followup/states/hap_d3f86e1683ba.pdb
+hap_d3e8e81d345f	1	3	6	"[""D431A"", ""S440G"", ""F442I"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	e3a775685d959a6be20d94aafa7c6495e9dd1f9fc8d8345b53491fa69311c07d	followup/states/hap_d3e8e81d345f.pdb
+hap_f1da9d8ef954	1	4	4	"[""T444A"", ""H445S"", ""S446N"", ""R523H""]"	[415, 416, 417]	2	a1fb27f408c6e0c0531c7cc4ee7e853e45723825340d4cb28e41a45ae884fc14	followup/states/hap_f1da9d8ef954.pdb
+hap_3d704e6f823c	1	5	5	"[""S440G"", ""F442V"", ""T444Y"", ""H445N"", ""S446K""]"	[415, 416, 417]	2	b49df7610f4119130325952e40218be0c3edba597c8765e3f0f9cc80224552c0	followup/states/hap_3d704e6f823c.pdb
+hap_2e02c360ca30	2	6	6	"[""I438V"", ""S440A"", ""T444V"", ""H445N"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	14fa5f541d668dd450740fadf88185e4b2a47b041b91b87a0064d849a50467be	followup/states/hap_2e02c360ca30.pdb
+hap_15cd94431f50	1	unknown	4	"[""I438L"", ""S440A"", ""S446K"", ""R523H""]"	[415, 416, 417]	4	e456c6d15f01d3ea8aeb5611a7c444d32de02c1f1fb6af25375313b5787d27ca	followup/states/hap_15cd94431f50.pdb
+hap_584feb728774	2	1	4	"[""F437W"", ""S440G"", ""T444H"", ""S446R""]"	[415, 416, 417]	2	c82a9691e2714813846b37e54abc9dcc6fbff5761f8df849b9b5f0d0a5902385	followup/states/hap_584feb728774.pdb
+hap_3d18fd593769	2	2	4	"[""S440A"", ""T444N"", ""H445K"", ""S446N""]"	[415, 416, 417]	2	336be4a7bacf1a00daa972d8c6ca0fed2fde7018127ea33317a08f7ac9396aa5	followup/states/hap_3d18fd593769.pdb
+hap_7368ca86163f	1	3	4	"[""S440G"", ""T444H"", ""S446K"", ""T528S""]"	[415, 416, 417]	2	940fdc85b0d2e897ff8a693c6fad699f822587ab602cf0975adb32adecb0e952	followup/states/hap_7368ca86163f.pdb
+hap_0a055ab6f5ff	1	4	4	"[""I438L"", ""S440G"", ""T444A"", ""S446K""]"	[415, 416, 417]	4	b25e895efbad353f42c194cb6909933b2f9813b84ec0b7d47fc00f8d8340388b	followup/states/hap_0a055ab6f5ff.pdb
+hap_a872cabfc74a	1	5	4	"[""I438L"", ""S440G"", ""T444A"", ""S446R""]"	[415, 416, 417]	4	3e0184310b9509b3e9c54e4a3e45409c7c1632577d3abe4045390ba0569e8168	followup/states/hap_a872cabfc74a.pdb
+hap_0a7e4a472c40	2	6	5	"[""A439T"", ""T444A"", ""H445K"", ""S446N"", ""R523K""]"	[415, 416, 417]	2	4f0d34901bd0c7c3cff1f4d75478f92a72e4577024460776b6485fc0b346bc6b	followup/states/hap_0a7e4a472c40.pdb
+hap_9e22918d3221	1	unknown	5	"[""I438L"", ""S440A"", ""H445N"", ""S446K"", ""R523H""]"	[415, 416, 417]	4	a2e170ddb0fd1de8f208de7fd6f25bfe0331a3fa1ed6aac89f633ec1444d2333	followup/states/hap_9e22918d3221.pdb
+hap_6c649e9c878e	2	1	6	"[""F437W"", ""S440G"", ""T444H"", ""H445N"", ""S446R"", ""V517A""]"	[415, 416, 417]	2	a9ce29df887a5716925a6a90915ed488bbdd4387ca32912d09fafa02fb3561ed	followup/states/hap_6c649e9c878e.pdb
+hap_4b3d684fe126	2	1,2	3	"[""S440A"", ""H445R"", ""S446K""]"	[415, 416, 417]	2	564489a800cdf0ae070aedb5f9ffece8500291ceae2ae3a32335a10941d39be3	followup/states/hap_4b3d684fe126.pdb
+hap_a91182865572	1	3	4	"[""S440G"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	66c0191e010caf988f3b3b56691666c27b7e3b26f9e7fb9ee7f1637bc32178ba	followup/states/hap_a91182865572.pdb
+hap_92be989dc654	1	4	3	"[""I438F"", ""H445N"", ""S446K""]"	[415, 416, 417]	2	18a9cda1b0bc8cc6475fbe49720ea2d10b3ac14c6443a5c1afb0722595c52530	followup/states/hap_92be989dc654.pdb
+hap_885fea8e6b12	1	5	5	"[""I438L"", ""S440G"", ""T444F"", ""H445R"", ""S446K""]"	[415, 416, 417]	4	457241089fb461abbe258c3d2dd32e9fd4521e547acdd2d94ca11612db9a45e6	followup/states/hap_885fea8e6b12.pdb
+hap_f06dcf2b7141	2	1,6	3	"[""I438L"", ""T444A"", ""S446R""]"	[415, 416, 417]	4	db6c34f516000d964ca48cadfa02f4617423bc093840bbca5baabf00aafbe892	followup/states/hap_f06dcf2b7141.pdb
+hap_e38cd1591377	1	unknown	7	"[""R424S"", ""D431E"", ""F437W"", ""I438L"", ""S440G"", ""T444Q"", ""S446K""]"	[415, 416, 417]	4	3ed7cf69223707a634a11e81f2bd1637ad6be81b3cb17c06f837128bd8bec79f	followup/states/hap_e38cd1591377.pdb
+hap_2edf53b94d14	2	1	6	"[""D431E"", ""F437W"", ""I438V"", ""S440G"", ""T444H"", ""S446R""]"	[415, 416, 417]	2	b92a1b6ceabfa97f2b5c20150b2e0f3b8540e78256943fc0c053aefb357ef16b	followup/states/hap_2edf53b94d14.pdb
+hap_37dd47bd3d7b	1	2	1	"[""S446R""]"	[415, 416, 417]	2	64eb1993e2f5aca4ac446f97ecaa0e27201eb61b2f2331f7c581e87b6a9d6cf2	followup/states/hap_37dd47bd3d7b.pdb
+hap_920a60f9511d	1	3	3	"[""S440G"", ""T444Y"", ""S446K""]"	[415, 416, 417]	2	ca7144539e5d858d4db15985a3027fce38293f8c0dc0448621eae81dc73a46c8	followup/states/hap_920a60f9511d.pdb
+hap_ccfb98715c00	1	4	4	"[""S440G"", ""T444H"", ""H445R"", ""S446R""]"	[415, 416, 417]	2	bfe52e8a917db73add46f38f73e8e912f0eda70a0ee50d460474f04b6937a028	followup/states/hap_ccfb98715c00.pdb
+hap_135666d2f605	1	5	5	"[""I438L"", ""S440G"", ""F442L"", ""T444V"", ""S446R""]"	[415, 416, 417]	4	24264e866467d7417f91bed2cb061e2d4e43eee67d569e025c190782003e69f0	followup/states/hap_135666d2f605.pdb
+hap_b913d13ad747	1	6	3	"[""T444A"", ""H445R"", ""R523K""]"	[415, 416, 417]	2	ba9f7a72c856dd787ffe28dd49f40d36e9e941d0b0e5c133b685185fcced19b3	followup/states/hap_b913d13ad747.pdb
+hap_cc59749a2d68	1	unknown	1	"[""H445R""]"	[415, 416, 417]	2	81e2c9c4a0f434c3856185eee3fb7c0adac0e829ca63e0810706f52d5f8e4eaf	followup/states/hap_cc59749a2d68.pdb
+hap_0171867bda2e	1	1	11	"[""R424S"", ""D431T"", ""F437W"", ""I438L"", ""S440G"", ""F442L"", ""T444Y"", ""H445N"", ""S446K"", ""R523K"", ""P616A""]"	[415, 416, 417]	4	0f05b931b2f62da2f58fbd94451ec4db767e1bf9c382c431045a08c4db0be5ad	followup/states/hap_0171867bda2e.pdb
+hap_b97d15733d95	1	2	4	"[""I438L"", ""S440A"", ""H445N"", ""S446R""]"	[415, 416, 417]	4	a841594ba67f8a5e4a1648dff66f586ab1655d7976ccf54cd25a9ae227b6ecf5	followup/states/hap_b97d15733d95.pdb
+hap_9cff58245a37	1	3	5	"[""S440G"", ""T444Y"", ""H445K"", ""S446N"", ""R523A""]"	[415, 416, 417]	2	f323f8e69533d90d3ae3df7b3ea85759505bf1678dd75608b2a56d77636b2971	followup/states/hap_9cff58245a37.pdb
+hap_c71869741d99	1	4	4	"[""I438L"", ""S440A"", ""H445N"", ""S446R""]"	[415, 416, 417]	4	a841594ba67f8a5e4a1648dff66f586ab1655d7976ccf54cd25a9ae227b6ecf5	followup/states/hap_c71869741d99.pdb
+hap_46212cc7809d	1	6	5	"[""A439T"", ""S440A"", ""T444A"", ""H445G"", ""S446T""]"	[415, 416, 417]	2	8e2dd8f0d1a16aeaaf2abea768028f0a7b909dba6c8e776b2e66ef5baa6d3270	followup/states/hap_46212cc7809d.pdb
+hap_670bf769ffec	1	1	4	"[""I438L"", ""S440A"", ""T444A"", ""S446K""]"	[415, 416, 417]	4	ab04c4f57e565d080fa35d3d2c7bf6d91e2e7e20d02f737f60728e04881a222b	followup/states/hap_670bf769ffec.pdb
+hap_f7e22fb9d333	1	2	3	"[""T444V"", ""H445N"", ""S446N""]"	[415, 416, 417]	2	9f73a63ccfa24a2de1e6a0bbe668f2f4b4d6c1b868f12a6f0765eb3f06293a46	followup/states/hap_f7e22fb9d333.pdb
+hap_8420593665c6	1	3	5	"[""S440G"", ""T444Y"", ""H445N"", ""S446N"", ""R523A""]"	[415, 416, 417]	2	4d15b9093b1349ccbab7a39087ea2bf08fd69ce8b4b5f56121b9ce7898433409	followup/states/hap_8420593665c6.pdb
+hap_8bfcf278bc44	1	4	4	"[""I438L"", ""S440G"", ""T444A"", ""S446K""]"	[415, 416, 417]	4	b25e895efbad353f42c194cb6909933b2f9813b84ec0b7d47fc00f8d8340388b	followup/states/hap_8bfcf278bc44.pdb
+hap_55506b955efc	1	6	4	"[""R424S"", ""T444A"", ""H445N"", ""S446K""]"	[415, 416, 417]	2	f0cf1326c61244025ba47eef55fe6ac08c732937cdb1f767bee272d287d58a73	followup/states/hap_55506b955efc.pdb
+hap_69a384a8c283	1	1	6	"[""D431A"", ""F437W"", ""I438V"", ""S440G"", ""T444Y"", ""S446K""]"	[415, 416, 417]	2	7ea378e884f9be3ee5cfe7e97deb95507fa3c558ef5cabe53b3e191a7c72ed41	followup/states/hap_69a384a8c283.pdb
+hap_e7774cd16514	1	2	4	"[""A439H"", ""H445Y"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	a827ffcb4605806f35532df35b1b41e031925e62212cc7f7c3e0e9e0e0ada15c	followup/states/hap_e7774cd16514.pdb
+hap_b49e3e5835c0	1	3	5	"[""S440G"", ""T444Y"", ""H445Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	17b8abdfe8c5c5e3d2c497b5bd88e95bf6db124aae1a807e825f14d9ff6cd62f	followup/states/hap_b49e3e5835c0.pdb
+hap_ecb9935b6c57	1	4	5	"[""I438L"", ""S440G"", ""T444A"", ""H445Y"", ""S446K""]"	[415, 416, 417]	4	2c75406d6c520db40d7d16074041d48f8beb7361314a242fb0f53ba817a958a1	followup/states/hap_ecb9935b6c57.pdb
+hap_82f9ba89f0cf	1	6	2	"[""T444M"", ""S446R""]"	[415, 416, 417]	2	42ffb95694fb34d241aa21fbec986570c5020d79cdd9867d30e3ddded6f39eb9	followup/states/hap_82f9ba89f0cf.pdb
+hap_493f9b4facb3	1	1	8	"[""D431A"", ""F437W"", ""I438L"", ""S440G"", ""F442M"", ""T444H"", ""S446K"", ""P616S""]"	[415, 416, 417]	4	112fdfddf1e221efdbeca715e409df96b0e1afe143e236fce685a4c7a527dfb3	followup/states/hap_493f9b4facb3.pdb
+hap_156754018508	1	2	3	"[""T444H"", ""H445R"", ""S446R""]"	[415, 416, 417]	2	0fd5f281cc74a1ac21e5868dd37a6f2cc3066b5507e6e78e477318b9f289c351	followup/states/hap_156754018508.pdb
+hap_1095b9216a5a	1	3	5	"[""R424S"", ""S440G"", ""T444Y"", ""S446K"", ""R523S""]"	[415, 416, 417]	2	9428678244a678f87fed400e533832a4eb95ee46d473c4515d61d9b1012e7e47	followup/states/hap_1095b9216a5a.pdb
+hap_2296bad20f62	1	4	3	"[""I438L"", ""T444A"", ""S446K""]"	[415, 416, 417]	4	8c76cb82d7aebefb36b6b31aae971edeef8e645afb3f5ab3406a98abb0049ba6	followup/states/hap_2296bad20f62.pdb
+hap_61e9f17dd089	1	6	2	"[""A439T"", ""S446R""]"	[415, 416, 417]	2	909ea593ebca5b51d6ae8748d52848c5a401b7882c7c04e6c95b611f334fb649	followup/states/hap_61e9f17dd089.pdb
+hap_4344fa276439	1	1	7	"[""D431A"", ""F437W"", ""I438V"", ""S440G"", ""F442I"", ""T444H"", ""S446K""]"	[415, 416, 417]	2	2387796a186a18dd619849207e6a3fc5fe2e571bc7c20aafd58932c47ef4727a	followup/states/hap_4344fa276439.pdb
+hap_2dd0404622aa	1	2	6	"[""R424S"", ""T444A"", ""H445K"", ""S446N"", ""R523K"", ""G525E""]"	[415, 416, 417]	2	8200f40475f8b76fd0ff5be8fec9b2392875477d04fd2565c0720db4d0e70789	followup/states/hap_2dd0404622aa.pdb
+hap_a6fefb6b65e8	1	3	5	"[""R424S"", ""S440G"", ""T444Y"", ""S446R"", ""R523V""]"	[415, 416, 417]	2	f2edf24e468bcad69fc6689cb5176a12cf7e1d747bcbb5f3caf47477842ec65d	followup/states/hap_a6fefb6b65e8.pdb
+hap_404a8a70326a	1	4	3	"[""I438L"", ""T444S"", ""S446K""]"	[415, 416, 417]	4	ff6e6eee779b179474014567957948b14c76afaf29ae124df9a751f040fb9f20	followup/states/hap_404a8a70326a.pdb
+hap_c404c593dff9	1	6	6	"[""I438V"", ""S440A"", ""T444A"", ""H445R"", ""S446R"", ""R523K""]"	[415, 416, 417]	2	dee004cc84d381e840db4c1e3ed2ff8149deb1b20c4f6e3024b935a3ddfddc5c	followup/states/hap_c404c593dff9.pdb
+hap_81ad2aa172af	1	1	8	"[""D431A"", ""F437W"", ""I438V"", ""S440G"", ""F442L"", ""T444H"", ""S446K"", ""R523E""]"	[415, 416, 417]	2	09dafd0c785d451d6259f86dc219a2bc92953d84cf58b437f5f7606bb2f523c7	followup/states/hap_81ad2aa172af.pdb
+hap_be32c5e5e38a	1	2	5	"[""S440A"", ""T444A"", ""H445N"", ""S446R"", ""R523K""]"	[415, 416, 417]	2	5e3721330955a693c4d6186f7b72a01ae9b3f5eff444ddc83e636a602aeeb7c6	followup/states/hap_be32c5e5e38a.pdb
+hap_d97b45a27a12	1	3	6	"[""D431E"", ""S440G"", ""T444R"", ""H445Y"", ""S446K"", ""R523T""]"	[415, 416, 417]	4	a1f841e3bd0f0bfb463a1f2d050d11124f91f2f33f752ffc46ac2bd7c67c0ec3	followup/states/hap_d97b45a27a12.pdb
+hap_bca15fb7b932	1	4	3	"[""I438L"", ""S446K"", ""P616S""]"	[415, 416, 417]	4	f2e300e6302106f8e3e24d8dc55867941d7313f61969579d4bd706eba8a444da	followup/states/hap_bca15fb7b932.pdb
+hap_a0888fe0888d	1	6	1	"[""S446T""]"	[415, 416, 417]	2	226b28b68c548cadd665730f72f9e1e13f1f10551a81d93dbe475a0dce27b101	followup/states/hap_a0888fe0888d.pdb
+hap_2a77da40433d	1	1	3	"[""S440A"", ""T444A"", ""S446R""]"	[415, 416, 417]	2	6cce3f5596fb9b6553ccdf24b457c704396e775ba3f6911a0ca16eafc2753b95	followup/states/hap_2a77da40433d.pdb
+hap_ee76ec85d4ef	1	2	3	"[""S440A"", ""T444S"", ""H445R""]"	[415, 416, 417]	2	b01f4959e8aed26e66930d655a12fc27f8b72105b8e923368d16521dfa1a82e1	followup/states/hap_ee76ec85d4ef.pdb
+hap_162a84017f8a	1	3	5	"[""S440G"", ""Y443H"", ""T444Y"", ""S446M"", ""R523A""]"	[415, 416, 417]	2	d580381199ee505783b83ff3bba37eac32cbad2a4762b8fd7f6b71cd052eb41c	followup/states/hap_162a84017f8a.pdb
+hap_c891c4d9f927	1	4	1	"[""I438L""]"	[415, 416, 417]	4	ee14b0dcabbe724b42ba9dfd7ee6858ea2426fcd2c85ecac131f15863777c353	followup/states/hap_c891c4d9f927.pdb
+hap_62b35f9a2705	1	6	3	"[""T444R"", ""H445Y"", ""S446N""]"	[415, 416, 417]	4	bcbb7e6bf1094e862cda783c24280adbf9ebf6c00d86fe5d01402695cfed209c	followup/states/hap_62b35f9a2705.pdb
+hap_9b94fbd4ba4e	1	1	4	"[""S440A"", ""F442V"", ""T444A"", ""S446K""]"	[415, 416, 417]	2	3bae84d3d6ec7ae11f4d06dde749c3aad7a4858c6e2e492beae3779649571b48	followup/states/hap_9b94fbd4ba4e.pdb
+hap_ba6b7469afca	1	2	4	"[""S440A"", ""H445N"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	d0b2e09949aae6c5721c73fa00e1fcebb80ea482df9d1241f9de347af4ef6c01	followup/states/hap_ba6b7469afca.pdb
+hap_307af495f212	1	3	5	"[""S440G"", ""Y443N"", ""T444Y"", ""S446K"", ""R523T""]"	[415, 416, 417]	2	6fe4c59c35961e829d3747dafeafe824f8c43ea62faf225e1cb258fb6eab3821	followup/states/hap_307af495f212.pdb
+hap_a2b2d3739e0b	1	4	4	"[""I438L"", ""H445S"", ""S446R"", ""R523H""]"	[415, 416, 417]	4	304cb79e893a3c015c90349c15ac26ceba02c809179cd8058fbe30b2119b3d73	followup/states/hap_a2b2d3739e0b.pdb
+hap_305dedc4b17e	1	6	0	[]	[415, 416, 417]	2	6acbc194983985496582a95b47c05232228c54d304af9bca56c19ff0889976db	followup/states/hap_305dedc4b17e.pdb
+hap_4f033de7dc99	1	1	6	"[""S440G"", ""T444R"", ""H445Y"", ""S446Q"", ""V517A"", ""R523K""]"	[415, 416, 417]	4	488f44656bf387c4e2a2267dd974b0fa05a25d40daebe68d66fc3c4c5d9c524d	followup/states/hap_4f033de7dc99.pdb
+hap_466f19877222	1	2	1	"[""S446R""]"	[415, 416, 417]	2	64eb1993e2f5aca4ac446f97ecaa0e27201eb61b2f2331f7c581e87b6a9d6cf2	followup/states/hap_466f19877222.pdb
+hap_f83bca2627d4	1	3	6	"[""S440G"", ""Y443N"", ""T444Y"", ""H445Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	651384ecb3d859c9777f923c2f1ca2c1c67e7faf28cb322e83a65929d14d5512	followup/states/hap_f83bca2627d4.pdb
+hap_019655bb4aa0	1	4	3	"[""I438L"", ""T444V"", ""S446K""]"	[415, 416, 417]	4	a5385444e311f34e024e2c8c56127b7461ec5d3707a43159b2edb6f82b2cce9d	followup/states/hap_019655bb4aa0.pdb
+hap_9a703a9c38f7	1	6	7	"[""D431A"", ""A439T"", ""S440A"", ""T444N"", ""H445R"", ""S446P"", ""R523K""]"	[415, 416, 417]	2	08b811a601984585732490fd43e7bdfe70d47da6ac2e7065225925aa370161dc	followup/states/hap_9a703a9c38f7.pdb
+hap_e62119a3fa82	1	1	4	"[""I438L"", ""S440A"", ""T444V"", ""S446K""]"	[415, 416, 417]	4	b2c6409ad16a4bf9f2da5981cf765a7a636ce42d53ec65c28e7e4cad8396008c	followup/states/hap_e62119a3fa82.pdb
+hap_53a37587f815	1	2	2	"[""H445Y"", ""S446R""]"	[415, 416, 417]	2	dbe47f555f6f65f6973d9b59a47d32631165d0e05dbea9a56042105563d91f8e	followup/states/hap_53a37587f815.pdb
+hap_0da9d6534d57	1	3	4	"[""S440G"", ""T444F"", ""S446K"", ""R523V""]"	[415, 416, 417]	2	cae44d58de9a57d2d266328c227540bfe13fadf2401d4231c7e2ede9d34f679e	followup/states/hap_0da9d6534d57.pdb
+hap_3b2d4479c9fa	1	4	5	"[""I438L"", ""T444V"", ""H445N"", ""S446K"", ""R523H""]"	[415, 416, 417]	4	f4e11e3feddc075892f6962ede41102b25d0909f18cfe2cf235b62eb11ed6eb9	followup/states/hap_3b2d4479c9fa.pdb
+hap_24fd72def865	1	6	4	"[""S440A"", ""H445R"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	bf82ffc3411474a5d2e92d09dc13c1f2b945ca6ed2ad7540008fd57183973264	followup/states/hap_24fd72def865.pdb
+hap_8706106685c2	1	1	6	"[""F437W"", ""S440G"", ""T444H"", ""S446N"", ""V517A"", ""R523K""]"	[415, 416, 417]	2	6b87c772c90a49d47b4fac4eae6b55c089cb2a3c7a4ead45e4c0e22196bf0ece	followup/states/hap_8706106685c2.pdb
+hap_bf228144e65a	1	2	2	"[""T444V"", ""H445R""]"	[415, 416, 417]	2	6eaf55704133f80801dd662b0f8ac2cb2b6e8c9af14021913c438dcd190c6054	followup/states/hap_bf228144e65a.pdb
+hap_6adbf58ac80f	1	3	3	"[""S440G"", ""T444Y"", ""S446K""]"	[415, 416, 417]	2	ca7144539e5d858d4db15985a3027fce38293f8c0dc0448621eae81dc73a46c8	followup/states/hap_6adbf58ac80f.pdb
+hap_b948ec63031f	1	4	3	"[""I438M"", ""S446R"", ""R523H""]"	[415, 416, 417]	1	4d539fc0daf9c639cca4156e1b410d70dde17868504af59557e9b6424c7167d2	followup/states/hap_b948ec63031f.pdb
+hap_5822c8a3bc94	1	6	2	"[""S446K"", ""R523K""]"	[415, 416, 417]	2	68f1875b31a4ef7f629166913149a3e1be5a372ef71647eb7fac17a07ed45800	followup/states/hap_5822c8a3bc94.pdb
+hap_3e1b63085c0a	1	1	6	"[""F437W"", ""S440G"", ""F442M"", ""T444H"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	b98ed432f20154f8938f756060e05e5583927f8eef65219c4d9394870bc904b5	followup/states/hap_3e1b63085c0a.pdb
+hap_bf24099aaa71	1	2	4	"[""I438L"", ""S440A"", ""H445R"", ""S446R""]"	[415, 416, 417]	4	bd1f08a261837c3afbfc1f4ac96da67d532d647c523f70ee4ca808900d435759	followup/states/hap_bf24099aaa71.pdb
+hap_e960332232aa	1	3	4	"[""S440G"", ""T444Y"", ""S446K"", ""R523S""]"	[415, 416, 417]	2	715f3bb001fc2a9b124b4b24500551c44d2ee5b65f621f9efd597276c0311ba6	followup/states/hap_e960332232aa.pdb
+hap_5e410bfd0819	1	4	5	"[""I438V"", ""S440G"", ""T444H"", ""S446R"", ""R523H""]"	[415, 416, 417]	2	611d8d928c9ef2ad85904a6a0a685e142344f34fa5478de31c877e9072c30953	followup/states/hap_5e410bfd0819.pdb
+hap_30e4a3addd06	1	6	6	"[""I438V"", ""A439T"", ""S440A"", ""T444A"", ""S446R"", ""R523K""]"	[415, 416, 417]	2	7e464ef15d4a8270c11ee765ffdde3a975e7729aa705536ca899f0c6089ade2c	followup/states/hap_30e4a3addd06.pdb
+hap_3bc2c720d56e	1	1	6	"[""F437W"", ""I438V"", ""S440G"", ""T444Y"", ""H445R"", ""S446K""]"	[415, 416, 417]	2	e45de05b37536fdfc5b66987e05736f5594a612f1b07154d9fd862bf354190fd	followup/states/hap_3bc2c720d56e.pdb
+hap_965aeffb9e39	1	2	6	"[""I438L"", ""S440A"", ""T444V"", ""H445N"", ""S446K"", ""R523E""]"	[415, 416, 417]	4	5c2ba8f40c5cf6b117d028203f1f808964f244d82bd9bda8614f157797ac1621	followup/states/hap_965aeffb9e39.pdb
+hap_8cf626565ba3	1	3	4	"[""S440G"", ""T444Y"", ""S446R"", ""R523A""]"	[415, 416, 417]	2	1a0d9d62db4d0f4f2c84b4679e4d83b8198f08bcd9c529e3634f3e1d247d4dd6	followup/states/hap_8cf626565ba3.pdb
+hap_d06c7ab9df97	1	4	4	"[""D431E"", ""I438L"", ""S440G"", ""T444A""]"	[415, 416, 417]	4	2f23ab402e1ca98094bb9834b2a2cdc70e95f6fd5e6e4cb12fa7d075ec9fe8b4	followup/states/hap_d06c7ab9df97.pdb
+hap_987614c108e7	1	6	4	"[""R424S"", ""S440A"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	328a251d8ae2f0424718a90060596ee336ab434b99d01cec213cad5ed563e573	followup/states/hap_987614c108e7.pdb
+hap_ec18e7951789	1	1	5	"[""D431E"", ""F437W"", ""I438L"", ""S440A"", ""S446R""]"	[415, 416, 417]	4	4de3874172c4b1ad6da0bb5d10edb3141139fa2879d4f0b95d2b99db98ea6cf7	followup/states/hap_ec18e7951789.pdb
+hap_a9e58d6e36a6	1	2	4	"[""I438L"", ""S440A"", ""T444V"", ""H445R""]"	[415, 416, 417]	4	30c8a0bf9b9046ce3ae95de4ff856155f195bb5abc6115388323122fcca5b482	followup/states/hap_a9e58d6e36a6.pdb
+hap_9a0e1b52593b	1	3	4	"[""S440G"", ""T444Y"", ""S446R"", ""R523M""]"	[415, 416, 417]	2	4465e3d39a54dea4d2bf461d97bbb13ed8a3abbd69918a4a8e5e1182d2b8f3ba	followup/states/hap_9a0e1b52593b.pdb
+hap_ab853a26725c	1	4	6	"[""I422V"", ""I438L"", ""S440G"", ""T444R"", ""H445Y"", ""S446K""]"	[415, 416, 417]	6	896005677474a9f17048be421801db59c91ec3b7c20c471b222ae0837fc89f18	followup/states/hap_ab853a26725c.pdb
+hap_e6f0bf51b5fc	1	6	2	"[""T444A"", ""S446K""]"	[415, 416, 417]	2	3f8c5164bd3e8d5c0f68925cdbdc741cd5e07d8d86248970f52926247c3a5d4e	followup/states/hap_e6f0bf51b5fc.pdb
+hap_69ec916b7e08	1	1	9	"[""D431E"", ""F437W"", ""I438L"", ""S440G"", ""T444H"", ""H445N"", ""S446R"", ""R523K"", ""W531F""]"	[415, 416, 417]	4	087e2f25441484c1b6c7373a831251c44a1e2b4af2c51393dc72fa47e19d5d44	followup/states/hap_69ec916b7e08.pdb
+hap_f99b9e75fdf0	1	2	2	"[""I438L"", ""R523K""]"	[415, 416, 417]	4	9b6a123dc86d0f90a639abaa87aaf4a11a5c48ea8ca7000bb8bf5759fc26c05c	followup/states/hap_f99b9e75fdf0.pdb
+hap_583f63261532	1	3	2	"[""S440G"", ""T444Y""]"	[415, 416, 417]	2	ade95d71dd84f28a0124fc686b8035100b90d8a4a324093335a2422f4604b1fb	followup/states/hap_583f63261532.pdb
+hap_4147cce1739f	1	4	4	"[""I422V"", ""I438L"", ""H445N"", ""S446R""]"	[415, 416, 417]	4	30dee049fdadc536a829df2133f009053aaae51690a1a6b0407e3452bf8716a7	followup/states/hap_4147cce1739f.pdb
+hap_3afab5ff5c75	1	6	2	"[""W420R"", ""S446K""]"	[415, 416, 417]	2	1abaf09d5bebbb8385438525cd1ec5d644e9c5d8c9166234f671f26ed192ce64	followup/states/hap_3afab5ff5c75.pdb
+hap_5d07b1068e52	1	1	8	"[""D431E"", ""F437W"", ""I438L"", ""S440G"", ""T444H"", ""H445Q"", ""S446R"", ""R523K""]"	[415, 416, 417]	4	3215ebb07013443d60e9b7aa1ee2fe612c99554de1b1bee01eb22eeb6c6a576b	followup/states/hap_5d07b1068e52.pdb
+hap_5066665c951d	1	2	5	"[""I438L"", ""T444V"", ""H445R"", ""S446H"", ""R523K""]"	[415, 416, 417]	4	47d945eef04b5d902ea38d3bb82dfec744cc1f03a637e25c64089b81123405e1	followup/states/hap_5066665c951d.pdb
+hap_e3985f585840	1	3	5	"[""S440G"", ""F442I"", ""T444Y"", ""S446K"", ""R523V""]"	[415, 416, 417]	2	bfcc700321f838b2a81e0e44940393b9156aa9e1c5e743d1fa83f83b45a8fcb7	followup/states/hap_e3985f585840.pdb
+hap_5afae1a06687	1	4	6	"[""F437W"", ""I438F"", ""S440A"", ""T444A"", ""H445R"", ""S446K""]"	[415, 416, 417]	2	4a3755a35f18965d88b23ca61aa676a1b152f70cb96266013f0ffe90f72bc38e	followup/states/hap_5afae1a06687.pdb
+hap_5e028ba93623	1	6	5	"[""S440A"", ""T444A"", ""H445N"", ""S446R"", ""R523M""]"	[415, 416, 417]	2	2b7d1f65a03651d6fee9862670fc4a77a4c6e263c96ad2261af0bd2a4691db8a	followup/states/hap_5e028ba93623.pdb
+hap_add571d7773d	1	1	8	"[""D431E"", ""F437W"", ""I438L"", ""S440G"", ""F442L"", ""T444R"", ""H445Y"", ""S446K""]"	[415, 416, 417]	6	9bebbbf2370686d4a7eef69c39d692b87ca05a707b38af7a62ddf5379af562e1	followup/states/hap_add571d7773d.pdb
+hap_2ce9501e7d65	1	2	10	"[""F437K"", ""I438Q"", ""A439G"", ""S440R"", ""L441D"", ""F442K"", ""Y443T"", ""T444S"", ""H445V"", ""S446E""]"	[415, 416, 417]	1	c399314cc6733b6a83fab5f98b26ba2e4bf67137bbb9990a007c88aa58e7355d	followup/states/hap_2ce9501e7d65.pdb
+hap_bb3cf6a73dac	1	3	5	"[""S440G"", ""F442I"", ""T444Y"", ""S446R"", ""R523A""]"	[415, 416, 417]	2	64ddff58afb0ecd88f4b21ca36de37898b3b2c3212a87271afe6e877f50c8ffd	followup/states/hap_bb3cf6a73dac.pdb
+hap_8865542e4624	1	4	5	"[""F437W"", ""I438L"", ""T444A"", ""S446K"", ""P616A""]"	[415, 416, 417]	4	7d614012cf1b396a7da1de555460d31de4f05293e03ad01a96f6a56100d40401	followup/states/hap_8865542e4624.pdb
+hap_42239d23b30a	1	6	5	"[""S440A"", ""T444R"", ""H445N"", ""S446K"", ""R523K""]"	[415, 416, 417]	4	974acd4c6ee35232fd2892d8f7e2201cf0f885986e41b12279c1747796570942	followup/states/hap_42239d23b30a.pdb
+hap_320b6dd53a14	1	1	8	"[""R424S"", ""D431E"", ""F437W"", ""I438L"", ""S440G"", ""T444R"", ""H445Y"", ""S446K""]"	[415, 416, 417]	6	f46da2343f60ddbf864d7ae780861190f60fbd1e5774fe70f9d5dac54cc87ed1	followup/states/hap_320b6dd53a14.pdb
+hap_5dbb97ffd050	1	2	2	"[""A439T"", ""S446R""]"	[415, 416, 417]	2	909ea593ebca5b51d6ae8748d52848c5a401b7882c7c04e6c95b611f334fb649	followup/states/hap_5dbb97ffd050.pdb
+hap_467994f08e96	1	3	6	"[""S440G"", ""F442I"", ""T444Y"", ""H445N"", ""S446N"", ""R523A""]"	[415, 416, 417]	2	b2eb782967000763b793d84941f06cdd3934497923f7e69d7ce50f401f791d85	followup/states/hap_467994f08e96.pdb
+hap_5600f5d61a96	1	4	5	"[""A426S"", ""I438L"", ""S446R"", ""R523H"", ""P616A""]"	[415, 416, 417]	4	c1af41b8949e6aa52a0ba851f0eeafb586795a123a8a3c067c9d3e66b4f74e40	followup/states/hap_5600f5d61a96.pdb
+hap_b69adf54331c	1	6	3	"[""S440A"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	1d0c435b13ed1472ea79558dd7a9862d68f536c02c8b5e152ce20a95452b8634	followup/states/hap_b69adf54331c.pdb
+hap_15ef7b09f39a	1	1	6	"[""D431A"", ""F437W"", ""S440G"", ""T444Y"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	b60ef416bca260edea3c632f96caf5db378182563afa3ab61ebf1e781fbf6d99	followup/states/hap_15ef7b09f39a.pdb
+hap_37926fff34cd	1	2	5	"[""I438F"", ""A439T"", ""S440A"", ""T444I"", ""S446K""]"	[415, 416, 417]	2	93df390a516724098d79f6751256fd7e748efcae59a95c8984c6b2de3076e37d	followup/states/hap_37926fff34cd.pdb
+hap_e8c0027c60fe	1	3	5	"[""S440G"", ""F442M"", ""T444Y"", ""S446K"", ""R523N""]"	[415, 416, 417]	2	029ee9d2d8793b2af7e7525b97f2dd4ba8d6a85b1ad1fcbd5724c7f3283eca25	followup/states/hap_e8c0027c60fe.pdb
+hap_67d71b084702	1	4	6	"[""A426S"", ""F437W"", ""I438L"", ""T444A"", ""S446K"", ""R523H""]"	[415, 416, 417]	4	9324d7230d48709f925d1e5b315a3e92b4fb779022d92b3b400caee6dcf8fb01	followup/states/hap_67d71b084702.pdb
+hap_75c4cf280887	1	6	4	"[""S440A"", ""T444V"", ""H445R"", ""S446N""]"	[415, 416, 417]	2	4f0716fed2903b465d4b052e331cf32333359d0695e799bb9f90399c0285ec7a	followup/states/hap_75c4cf280887.pdb
+hap_ab9aea98deca	1	1	7	"[""D431A"", ""F437W"", ""S440G"", ""T444Y"", ""H445N"", ""S446N"", ""R523K""]"	[415, 416, 417]	2	1ad6f19bf10ae00877da07a6f926c532e88e882f1a9a6ffb4ffc670c4e56cb1a	followup/states/hap_ab9aea98deca.pdb
+hap_07c25e563b38	1	2	6	"[""S440A"", ""Y443T"", ""T444R"", ""H445N"", ""S446K"", ""R523K""]"	[415, 416, 417]	4	0afba8250f831826de802550aafb0b1d9c84e2717b70139c11c09424561a2b0e	followup/states/hap_07c25e563b38.pdb
+hap_93a6131c06c0	1	3	5	"[""A439T"", ""S440G"", ""T444Y"", ""S446K"", ""R523V""]"	[415, 416, 417]	2	448cf0f86218b7bcf71b6c50ee6c07d435e07e66f9369af56ce8a1e718a1a652	followup/states/hap_93a6131c06c0.pdb
+hap_3d5a755ca407	1	4	9	"[""I422V"", ""A426S"", ""I438L"", ""S440G"", ""T444H"", ""H445Y"", ""S446K"", ""R523S"", ""P616Q""]"	[415, 416, 417]	4	568f716b7980c85b0ba0d7a9800a224fe805163150d30c62f3b1af3b684cadfc	followup/states/hap_3d5a755ca407.pdb
+hap_fd88252c05d4	1	6	4	"[""S440G"", ""T444S"", ""H445N"", ""S446K""]"	[415, 416, 417]	2	5ce5b858cdf18bd467d2ab2dc2fe7880e4bc8947027ef5c5d0a1670b9ef0a9b1	followup/states/hap_fd88252c05d4.pdb
+hap_fef642ff1f53	1	1	7	"[""D431A"", ""F437W"", ""I438L"", ""S440G"", ""T444Y"", ""S446K"", ""P616S""]"	[415, 416, 417]	4	38cc77405ed70aec3bdaac660b354f334e977865452e76018d5dc21251c5ebd7	followup/states/hap_fef642ff1f53.pdb
+hap_71819a9182a7	1	2	4	"[""T444A"", ""H445G"", ""S446N"", ""R523K""]"	[415, 416, 417]	2	ca6e7788c56b106661b338c03428c1ad0f4053f166233c8e4ac9a3bb84724c7a	followup/states/hap_71819a9182a7.pdb
+hap_fd4a58bed74f	1	3	6	"[""I438L"", ""S440G"", ""T444H"", ""H445Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	4	46476fc85ebc30d8a2069323dfd0ecf49e6acd9cb6386b501089a771cf2bbd6d	followup/states/hap_fd4a58bed74f.pdb
+hap_731eff68aa5a	1	6	3	"[""T444A"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	da4acceaae173c3cbf88b77767589a666907f05e5b6ad47b9302697255cd922d	followup/states/hap_731eff68aa5a.pdb
+hap_a2c016d0819d	1	1	9	"[""D431A"", ""F437W"", ""I438L"", ""S440G"", ""T444Y"", ""H445N"", ""S446K"", ""V517A"", ""R523K""]"	[415, 416, 417]	4	49c0e8ce2bd3463ef70ac3eb0c6c18ff4384f347cc0d15a2eb6bde6c6a9f3c4c	followup/states/hap_a2c016d0819d.pdb
+hap_5fbed17afcaa	1	2	3	"[""T444A"", ""S446H"", ""R523K""]"	[415, 416, 417]	2	53867493665127629ea68bddcb1b8ad5547abab7f8ec2969d0df35a49a947aa8	followup/states/hap_5fbed17afcaa.pdb
+hap_8be2b18bc375	1	3	5	"[""I438L"", ""S440G"", ""T444V"", ""S446K"", ""R523F""]"	[415, 416, 417]	4	ec265b57a083f2f1c9c7c2feb41ccb4c5b284bbaeb20d3d22af49b5581c89807	followup/states/hap_8be2b18bc375.pdb
+hap_d5b7e2219320	1	6	2	"[""T444A"", ""S446R""]"	[415, 416, 417]	2	61109b9a29d8ff0c1f80448cbe90f79bf5fcb2f12b7a1d39ac22a4915fc08d45	followup/states/hap_d5b7e2219320.pdb
+hap_15a928b6a7ad	1	1	9	"[""D431A"", ""F437W"", ""I438L"", ""S440G"", ""F442L"", ""T444Y"", ""H445N"", ""S446K"", ""R523K""]"	[415, 416, 417]	4	d8930b9c54e73a8d56ebe05264761cbbf6c2107401894c004959434f823821b5	followup/states/hap_15a928b6a7ad.pdb
+hap_277227ccce57	1	2	4	"[""T444A"", ""H445N"", ""S446R"", ""P527A""]"	[415, 416, 417]	2	2aeae13b0f7c83e51281011363be180df362516416690d93e2d1bf9d2ef52b37	followup/states/hap_277227ccce57.pdb
+hap_217e6e82f5b5	1	3	5	"[""I438L"", ""S440G"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	4	1a589d554f3db2e085ac6ae1c8a783ced0ef3fd8697783b2b036a5017fe41d7d	followup/states/hap_217e6e82f5b5.pdb
+hap_69739a1ac41c	1	6	4	"[""T444A"", ""H445R"", ""S446R"", ""R523K""]"	[415, 416, 417]	2	4a4c546c782734f86582d0421af6aa64b9b186bc09ec0d13f6b50da818ee5751	followup/states/hap_69739a1ac41c.pdb
+hap_74bc39069707	1	1	8	"[""D431A"", ""F437W"", ""I438V"", ""S440G"", ""Y443H"", ""T444Y"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	c19ef51d23cc647ac1f10fb68b61f40f3e5737d8bb5addf682dc8f49002d8534	followup/states/hap_74bc39069707.pdb
+hap_99601c735d40	1	2	3	"[""T444A"", ""H445N"", ""S446R""]"	[415, 416, 417]	2	b5e3416b5dae8a4e3538426dee8f4059e177f2f93ce5ca642078b5aed5bb5098	followup/states/hap_99601c735d40.pdb
+hap_0d832ae33c90	1	3	6	"[""I438L"", ""S440G"", ""T444Y"", ""H445R"", ""S446R"", ""R523D""]"	[415, 416, 417]	4	5d0a7543b84683948349425df52234139b60a501b9c078cd010e1a4434188f10	followup/states/hap_0d832ae33c90.pdb
+hap_5743866bd7c0	1	6	3	"[""T444I"", ""H445N"", ""S446K""]"	[415, 416, 417]	2	9996acda9a315f73e387bfcec4747963a37c9de63b290e07dbafdcfc60e01c22	followup/states/hap_5743866bd7c0.pdb
+hap_2d57b0b5ccf4	1	1	8	"[""D431A"", ""F437W"", ""I438V"", ""S440G"", ""Y443S"", ""T444Y"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	3f1cb1f0c8c85120e0d9810bb5a4372944e4642545cca5a566e573bb7feeeab6	followup/states/hap_2d57b0b5ccf4.pdb
+hap_965616b40115	1	2	3	"[""T444A"", ""H445R"", ""S446Y""]"	[415, 416, 417]	2	b29433f780b6f476beb856cbc4620872f3e73c043dc05f853144acd902b79699	followup/states/hap_965616b40115.pdb
+hap_05b440db95bb	1	3	5	"[""I438M"", ""S440G"", ""T444F"", ""S446K"", ""R523A""]"	[415, 416, 417]	1	851c1c4a97d191c7e40f1cadddff5334d7b467d5d022d888219fbd8eb2796903	followup/states/hap_05b440db95bb.pdb
+hap_632d2e7683c6	1	6	3	"[""T444I"", ""H445T"", ""S446K""]"	[415, 416, 417]	2	7873d2c9577c8b66bb57b7b27f94272404caf9591f715ff9b5dfdc32c6f55198	followup/states/hap_632d2e7683c6.pdb
+hap_9a9bd15870cb	1	1	8	"[""D431A"", ""F437W"", ""I438V"", ""S440G"", ""F442I"", ""T444H"", ""S446K"", ""P616S""]"	[415, 416, 417]	2	df3e0425a06be1a30a9993973cf22104d921945a96aa33844fb5cc3b2c3f7974	followup/states/hap_9a9bd15870cb.pdb
+hap_9223711b6737	1	2	3	"[""T444N"", ""S446R"", ""R523K""]"	[415, 416, 417]	2	005c4a2a0f7af01df2f07a2296ac790a0bfe47fe193bda7041badef5a0282296	followup/states/hap_9223711b6737.pdb
+hap_bfa36b2e3cc5	1	3	6	"[""D431E"", ""S440G"", ""T444F"", ""S446K"", ""R523A"", ""P527E""]"	[415, 416, 417]	2	4c759a559feed979945a898f70c725cf42c4bc8aa4e7f274990e99ed46b4e38c	followup/states/hap_bfa36b2e3cc5.pdb
+hap_038254e41d01	1	6	2	"[""T444S"", ""S446K""]"	[415, 416, 417]	2	0352cb459f64dc37d8be314ac9a4014d0a6aeacc7586fb00bba134f3993a2699	followup/states/hap_038254e41d01.pdb
+hap_760a8f0c548b	1	1	7	"[""D431A"", ""F437W"", ""I438V"", ""S440G"", ""F442I"", ""T444Y"", ""S446K""]"	[415, 416, 417]	2	4ae6154d428f1673f95518fd0c73824562b8faa6fba33a8537568f61e118bd89	followup/states/hap_760a8f0c548b.pdb
+hap_0896b5b0a65d	1	2	3	"[""H445R"", ""S446H"", ""R523K""]"	[415, 416, 417]	2	c29bffec8d310f3a89f5f1c5f09b60ffed7c7a2e811b62252a79446e244d0a27	followup/states/hap_0896b5b0a65d.pdb
+hap_ae7862eaa985	1	3	5	"[""D431E"", ""S440G"", ""T444Y"", ""S446K"", ""R523S""]"	[415, 416, 417]	2	8c2f2520945b95f29eea117c04179a2a19b30818bde030e292f3f38955c7e399	followup/states/hap_ae7862eaa985.pdb
+hap_3aedbca6cab3	1	6	1	"[""S446K""]"	[415, 416, 417]	2	edb26583994c44e1409272a8326c3860a8bec343a070216479397f7fd56c4607	followup/states/hap_3aedbca6cab3.pdb
+hap_30c34a4b0a33	1	1	7	"[""D431A"", ""F437W"", ""I438V"", ""S440G"", ""F442I"", ""T444Y"", ""R523K""]"	[415, 416, 417]	2	2722c1573799c56888c4542dd971dd60e10bfdeb5939ec4497d2bbd42ce90588	followup/states/hap_30c34a4b0a33.pdb
+hap_3fea58c7a95a	1	2	2	"[""H445R"", ""S446H""]"	[415, 416, 417]	2	288be36e8c0f3e39d4bc44221c426884c025e686674fa467a183519b507bba30	followup/states/hap_3fea58c7a95a.pdb
+hap_5a87f0ca2131	1	3	5	"[""D431E"", ""S440G"", ""T444Y"", ""S446Q"", ""R523A""]"	[415, 416, 417]	2	e84c937957f64f00bf80b8d15f28428da8d23e1785d08f01e6bcdf1f33964789	followup/states/hap_5a87f0ca2131.pdb
+hap_401fb7cdaedd	1	6	4	"[""A439S"", ""S440A"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	75f5b28a497fe1b86e6c32852cfdc7caa73439c1e35ff2bf3c023637885d1a25	followup/states/hap_401fb7cdaedd.pdb
+hap_664c3492a9d0	1	1	8	"[""D431A"", ""F437W"", ""I438V"", ""S440G"", ""F442L"", ""T444Y"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	501edf968cdd93bcb8e74c6145399709c9cf0991d8bf9ed6a7aaab7b474c7dfe	followup/states/hap_664c3492a9d0.pdb
+hap_3ac73e571130	1	2	2	"[""H445R"", ""S446N""]"	[415, 416, 417]	2	7e273fff9665555bdf18464daba7385077d3ea7ae48f5b6536c4528e82203954	followup/states/hap_3ac73e571130.pdb
+hap_f4084412c681	1	3	7	"[""D431E"", ""I438V"", ""S440G"", ""F442L"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	63c91ecb8fae884abec776e3f374bc32c9098b6ae0155255a2e74818cc54698d	followup/states/hap_f4084412c681.pdb
+hap_fcb0e6d1fa78	1	6	4	"[""A439S"", ""S440A"", ""S446R"", ""R523K""]"	[415, 416, 417]	2	0524203cfac023d173f419def811bedb16e770d98298ac5ff6c5a318e45a1d5a	followup/states/hap_fcb0e6d1fa78.pdb
+hap_cf282de56148	1	1	6	"[""I438F"", ""S440A"", ""Y443F"", ""T444V"", ""H445S"", ""S446K""]"	[415, 416, 417]	2	91b4bbbd01e8b7b9b19592904abd43208c53e60177c3a95e2c102c849287e658	followup/states/hap_cf282de56148.pdb
+hap_0f301181d0e0	1	2	3	"[""H445T"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	1b5d5982abf1fbbc11d24b2525d2104f52dda29bb6979fb50d728ea4ee320c40	followup/states/hap_0f301181d0e0.pdb
+hap_d5fdc47b630a	1	3	6	"[""R424S"", ""S440G"", ""T444Y"", ""S446K"", ""R523A"", ""Y529F""]"	[415, 416, 417]	2	f7e0da859884e8628f498a38d2285b33df8a1e8e5e5afd14efea116f6302047c	followup/states/hap_d5fdc47b630a.pdb
+hap_5a60509757de	1	6	2	"[""A439T"", ""S446K""]"	[415, 416, 417]	2	1364c1d2f80139ec54033fc93eb5b925f1e34d11fa8a979d00ec244ca69c77da	followup/states/hap_5a60509757de.pdb
+hap_59e92008fed7	1	1	3	"[""S440A"", ""T444A"", ""S446A""]"	[415, 416, 417]	2	c5c7f9a929638c687e6d0120b0f2007d45728023f82737502ed47ea6951de805	followup/states/hap_59e92008fed7.pdb
+hap_61ce86a20475	1	2	4	"[""T444V"", ""H445N"", ""S446K"", ""R523S""]"	[415, 416, 417]	2	f6c1f1ca907f924f3cf8a2bc782c12fe7a74b46cdd73160499f4f2a8360ae472	followup/states/hap_61ce86a20475.pdb
+hap_0e7fb973fce0	1	3	5	"[""R424S"", ""S440G"", ""T444Y"", ""S446R"", ""R523A""]"	[415, 416, 417]	2	43e4c27cc8fb05273479ba1555827b05f4cf2a24bece10d833232f1c45dd6e15	followup/states/hap_0e7fb973fce0.pdb
+hap_f1e765b3df02	1	6	5	"[""I438L"", ""S440A"", ""T444V"", ""S446K"", ""R523K""]"	[415, 416, 417]	4	91e59f187be2de20e234d5fda404e9fb3159a520deed99ca779927f45ca93495	followup/states/hap_f1e765b3df02.pdb
+hap_348decab8437	1	1	4	"[""S440A"", ""T444A"", ""H445N"", ""S446K""]"	[415, 416, 417]	2	2558047a974ec6d7439341f970c34a71791caa61f20bcdf438f3fcee972bb43e	followup/states/hap_348decab8437.pdb
+hap_29b4d0878707	1	2	4	"[""L441M"", ""T444S"", ""H445Y"", ""S446R""]"	[415, 416, 417]	2	c3520beb1704252b215c0cfa58bbc3b567f89b51cacfe58229878bce098120d0	followup/states/hap_29b4d0878707.pdb
+hap_3f24f1199638	1	3	6	"[""R424S"", ""S440G"", ""F442I"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	49dd1905c9da43ce813fb5af581206611ec416ad0eeccb39a44d637ac825f602	followup/states/hap_3f24f1199638.pdb
+hap_fdeed86d7a41	1	6	2	"[""I438L"", ""R523K""]"	[415, 416, 417]	4	9b6a123dc86d0f90a639abaa87aaf4a11a5c48ea8ca7000bb8bf5759fc26c05c	followup/states/hap_fdeed86d7a41.pdb
+hap_eebce1043e06	1	1	3	"[""S440A"", ""H445N"", ""S446K""]"	[415, 416, 417]	2	7411597935d4b2028794bea21d47068cb69440995abe6afc2840e9f15d39ec16	followup/states/hap_eebce1043e06.pdb
+hap_5d809e937235	1	2	7	"[""A439S"", ""S440A"", ""F442I"", ""T444R"", ""H445N"", ""S446R"", ""D537N""]"	[415, 416, 417]	4	b06964e38eac1272822480f215b9cdcb412c7dbdc8d66630029fc20b4f604506	followup/states/hap_5d809e937235.pdb
+hap_7823663f4333	1	3	6	"[""R424S"", ""S440G"", ""F442L"", ""T444Y"", ""S446K"", ""R523A""]"	[415, 416, 417]	2	dc644a157876feb67bded41deb6c82b771a102efe297c849a54c10e535b534ea	followup/states/hap_7823663f4333.pdb
+hap_3215affa9fea	1	6	5	"[""I438M"", ""S440A"", ""T444A"", ""H445N"", ""S446K""]"	[415, 416, 417]	1	eb9f91092a42c6e590c9c33a119cb3304b30e35b892e613b6c577d32015b3988	followup/states/hap_3215affa9fea.pdb
+hap_354bfe7edcf3	1	1	3	"[""S440A"", ""T444V"", ""S446K""]"	[415, 416, 417]	2	3c50571715b2f2913da68789be2f49a0ccd2d476dd161f585fec1e1b3307ed50	followup/states/hap_354bfe7edcf3.pdb
+hap_28e0c1223457	1	2	4	"[""A439T"", ""T444A"", ""H445R"", ""R523K""]"	[415, 416, 417]	2	7094045f189fd882d7a6a23ff4c2dd0cc7282b4937c62bf9dfb01f1bbb3e5d82	followup/states/hap_28e0c1223457.pdb
+hap_51168ee2871b	1	3	7	"[""R424S"", ""S440G"", ""F442M"", ""T444Y"", ""H445N"", ""S446K"", ""R523N""]"	[415, 416, 417]	2	caae7bf08f983c7aea23b12c95893aebc65b4a42b8a2617e9c9fd0ffa04ff7eb	followup/states/hap_51168ee2871b.pdb
+hap_d60f49da16b6	1	6	4	"[""I438M"", ""S440A"", ""S446K"", ""R523K""]"	[415, 416, 417]	1	fb50aee43452e6e5816f8d95f9b8fe9ca17c8d599bcbd8fc41677f7602f7dfab	followup/states/hap_d60f49da16b6.pdb
+hap_f1f6ee28acbf	1	1	3	"[""S440A"", ""T444V"", ""S446R""]"	[415, 416, 417]	2	682e3d2a987961e2be472ae57d7f9feef38fcedbf8e710ec07d37d5d2f15fb07	followup/states/hap_f1f6ee28acbf.pdb
+hap_9950ec537849	1	2	4	"[""A439V"", ""T444A"", ""H445R"", ""S446N""]"	[415, 416, 417]	2	c931be11c43c1aa6919330775f7b1a194575b3cb298cc54c52712f635ad649c4	followup/states/hap_9950ec537849.pdb
+hap_c02a63eedf82	1	3	7	"[""R424S"", ""I438L"", ""S440G"", ""T444Y"", ""S446R"", ""R523T"", ""Y529F""]"	[415, 416, 417]	4	685b9bc058593f2b8891088a9d6844606ccd8c4d97e87155c1ecb168c51aa749	followup/states/hap_c02a63eedf82.pdb
+hap_e24fd649935a	1	6	4	"[""I438V"", ""S440A"", ""T444A"", ""S446K""]"	[415, 416, 417]	2	95e4f472ea22c80f90da095269ecbfa127074df2396f486b4dd590a2e5f19c8e	followup/states/hap_e24fd649935a.pdb
+hap_1a2999f0e1be	1	1	4	"[""S440A"", ""T444V"", ""H445N"", ""S446R""]"	[415, 416, 417]	2	3aec88d0c0a7873b02109f4e812eaee24a3c0f2a6b376fd13d040e51f04ef5c9	followup/states/hap_1a2999f0e1be.pdb
+hap_813659065d21	1	2	5	"[""I438L"", ""S440A"", ""S446K"", ""R523K"", ""P527A""]"	[415, 416, 417]	4	b45e0b5cb00909c969b66daa710549f91dd211e99997b05013a5786d0334698c	followup/states/hap_813659065d21.pdb
+hap_1be64589aa94	1	3	7	"[""R424S"", ""D431E"", ""S440G"", ""Y443H"", ""T444Y"", ""S446R"", ""R523E""]"	[415, 416, 417]	2	3f2d5ce16a89e3c2ee127d5d2e630d02ea8117dfd231fce36b12c2b48fd04864	followup/states/hap_1be64589aa94.pdb
+hap_2c9c73815257	1	6	4	"[""I438V"", ""S440A"", ""T444A"", ""S446R""]"	[415, 416, 417]	2	e452e66e878e8baa8230173cdad699f3f13d45d28f011c9e39213275cf4bb29d	followup/states/hap_2c9c73815257.pdb
+hap_95af83595735	1	1	4	"[""S440A"", ""T444V"", ""H445R"", ""S446R""]"	[415, 416, 417]	2	7fd5e0a3fb849adbd3c5b5a06863e0713a2d778af9696c906083f93b638b10b0	followup/states/hap_95af83595735.pdb
+hap_082d15af7e68	1	2	3	"[""I438L"", ""S440A"", ""R523K""]"	[415, 416, 417]	4	c92b7729577f650efce04fd4cbacdec73fd0a58dab6d1bbc4aa53b9c6653fa95	followup/states/hap_082d15af7e68.pdb
+hap_3eb28b45c9fc	1	3	6	"[""R424S"", ""D431E"", ""S440G"", ""T444Y"", ""S446K"", ""R523I""]"	[415, 416, 417]	2	db3d79f1f1f51a8ff7ec1e7e12f48923e0650711a0d6c3f331e73e8851e26baa	followup/states/hap_3eb28b45c9fc.pdb
+hap_b3c702650aec	1	6	5	"[""I438V"", ""S440A"", ""T444A"", ""H445N"", ""S446K""]"	[415, 416, 417]	2	5d9afe1c246612acbf9508489a8d7dc1c63c44db0f862853627c3f7ded1857ed	followup/states/hap_b3c702650aec.pdb
+hap_e0d5fffcdf8c	1	1	4	"[""S440A"", ""F442V"", ""S446K"", ""Y529F""]"	[415, 416, 417]	2	ff431aae1a69803a3c4444908737fc621cbe0a7a3d17c01e85d37fb5a4de75b5	followup/states/hap_e0d5fffcdf8c.pdb
+hap_49392ac2bca3	1	2	4	"[""I438L"", ""S440A"", ""H445Q"", ""S446R""]"	[415, 416, 417]	4	f319f9b2b0ee0c06e5c4a2c93b8185e938178fcc765ac978276cbb202827a139	followup/states/hap_49392ac2bca3.pdb
+hap_3e0827483f14	1	3	6	"[""R424S"", ""D431E"", ""S440G"", ""T444Y"", ""S446R"", ""R523D""]"	[415, 416, 417]	2	a85961f80091aba176cbb31e7ebd20f669091214c535f2a96a02e1014b180ced	followup/states/hap_3e0827483f14.pdb
+hap_b7730442a7ce	1	6	3	"[""I438V"", ""S440A"", ""S446K""]"	[415, 416, 417]	2	27c789105d145e66753fafe42f64b4f0ae29b2fec9bd9b77b6311647161e6e40	followup/states/hap_b7730442a7ce.pdb
+hap_a6a4f553a129	1	1	3	"[""T444A"", ""S446K"", ""R523S""]"	[415, 416, 417]	2	83722b5226fc50b2f7d5cba23462850a96df437be8c4a8d04a499eae9f60fa58	followup/states/hap_a6a4f553a129.pdb
+hap_eafd9e3d251b	1	2	5	"[""I438L"", ""S440A"", ""H445R"", ""S446K"", ""R523K""]"	[415, 416, 417]	4	ae418edd311fd3562d2315426847fde65c153af02cca534a26a850d20536561f	followup/states/hap_eafd9e3d251b.pdb
+hap_853f1da6332c	1	3	5	"[""D431A"", ""S440G"", ""T444Y"", ""S446K"", ""R523D""]"	[415, 416, 417]	2	65864bae370909a78293fa54a0c635f70feeda1767bcc6669ffd1fcaa68182a0	followup/states/hap_853f1da6332c.pdb
+hap_c688cb7972cd	1	6	5	"[""I438V"", ""S440A"", ""T444V"", ""H445Q"", ""S446K""]"	[415, 416, 417]	2	eb069db360ec62e7dc43d64b2525cc290678a5866f881ad0b71402f029651f72	followup/states/hap_c688cb7972cd.pdb
+hap_21a242ee7910	1	1	4	"[""A439S"", ""S440A"", ""T444A"", ""S446K""]"	[415, 416, 417]	2	e472513464ab2c44ef613ce12f513eb985a5b3474b646b546e44f28d661e3d63	followup/states/hap_21a242ee7910.pdb
+hap_b11367c0f4cd	1	2	5	"[""I438L"", ""S440A"", ""H445Y"", ""S446R"", ""R523K""]"	[415, 416, 417]	4	51e8a9144f683c43ba39020f5ef32011d760d2c9f7aa93e717aa4dcf6908837e	followup/states/hap_b11367c0f4cd.pdb
+hap_1b937b8ffebc	1	3	4	"[""S440G"", ""Y443S"", ""T444Y"", ""S446K""]"	[415, 416, 417]	2	5f5a251b2685732e1d4263acecb53c1e9aaaa75eaf1977e646ee743ad974044f	followup/states/hap_1b937b8ffebc.pdb
+hap_41c833fc1e01	1	6	3	"[""I438V"", ""T444R"", ""S446K""]"	[415, 416, 417]	4	be121dfcbfbe15d81236adaad9bcd6478241240febeb737c29b856e9366ee90d	followup/states/hap_41c833fc1e01.pdb
+hap_8456bda16ceb	1	1	5	"[""I438L"", ""S440A"", ""T444M"", ""H445R"", ""S446K""]"	[415, 416, 417]	4	cebf16d500c0b482283405dca03ee266bc0d3830e4e0fd00cf48c18c7c7baf37	followup/states/hap_8456bda16ceb.pdb
+hap_758ab522b3c0	1	2	3	"[""I438L"", ""S446K"", ""R523K""]"	[415, 416, 417]	4	5d06ff4ab406341dca0d3acdc155f2f96c5a380072cf772d3bab8422d45f92f1	followup/states/hap_758ab522b3c0.pdb
+hap_bb0fdadb385d	1	6	3	"[""I438V"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	99e81a86bf7b6567f0a8a442fd0935ebdd90bd49daa8258358092a8c3d554674	followup/states/hap_bb0fdadb385d.pdb
+hap_44dcced9feaf	1	1	4	"[""I438L"", ""S440A"", ""S446K"", ""R523K""]"	[415, 416, 417]	4	88e67161ecd97455a515dbcfe7184bd5778a1f357ad422111a08049ffe454b1f	followup/states/hap_44dcced9feaf.pdb
+hap_d74dc6941693	1	2	3	"[""I438L"", ""S446R"", ""R523K""]"	[415, 416, 417]	4	af2441a372c4e60de1d3c1bbff501432f69146f75a3086fdf22be46950fb7ef9	followup/states/hap_d74dc6941693.pdb
+hap_12349790872f	1	6	2	"[""I438V"", ""S446R""]"	[415, 416, 417]	2	08e8d65a4834a46413384801ca2cce159394571c68fa711290fd3fdb538046c3	followup/states/hap_12349790872f.pdb
+hap_11784245701e	1	1	3	"[""I438L"", ""S440A"", ""Y529F""]"	[415, 416, 417]	4	c844d343485247044ec38e1abcac6b2e41002374e443e4e183c090448980dc77	followup/states/hap_11784245701e.pdb
+hap_e931be56a305	1	2	3	"[""I438L"", ""H445K"", ""S446N""]"	[415, 416, 417]	4	5f36bcacc7ef1db4cdcb9b9fc6a5aeec6c2abcb9191bc7dd5ea4e6fcd8d7bbdf	followup/states/hap_e931be56a305.pdb
+hap_b8ac2db4a1a8	1	6	3	"[""I438V"", ""T444V"", ""S446K""]"	[415, 416, 417]	2	0ddf21ca09047087ad75b53885b2e4c733eeed5d354a273cb2bb0df5ef20ce55	followup/states/hap_b8ac2db4a1a8.pdb
+hap_5cbb5dcd5a0a	1	1	5	"[""I438L"", ""S440A"", ""T444V"", ""H445R"", ""S446R""]"	[415, 416, 417]	4	54fa13247cb11dd857bef03f6fb03fb679bc6c3ac48cedfdc59d5b037511607b	followup/states/hap_5cbb5dcd5a0a.pdb
+hap_f232b46c41d5	1	1	6	"[""I438L"", ""S440G"", ""T444A"", ""H445R"", ""S446N"", ""R523Q""]"	[415, 416, 417]	4	19b0cc3dd79c46f4637f3f73f9b8d18d0d9c04a1a00f2dda40696e637c1a034a	followup/states/hap_f232b46c41d5.pdb
+hap_bc025c0ed86c	1	1	5	"[""I438L"", ""S440G"", ""T444K"", ""H445Y"", ""S446K""]"	[415, 416, 417]	4	1cc8e241a808c91888a4ccba79da755e8074a7a8201fad838230452fb45ef770	followup/states/hap_bc025c0ed86c.pdb
+hap_0c9290ecdcf7	1	1	4	"[""I438L"", ""T444S"", ""S446K"", ""R523H""]"	[415, 416, 417]	4	5760a420e2af583dad373f4def104cb3155cb3aeefef25cfa7c46241ef918938	followup/states/hap_0c9290ecdcf7.pdb
+hap_bbeeebc778d6	1	1	3	"[""I438L"", ""T444V"", ""S446K""]"	[415, 416, 417]	4	a5385444e311f34e024e2c8c56127b7461ec5d3707a43159b2edb6f82b2cce9d	followup/states/hap_bbeeebc778d6.pdb
+hap_ccf9a28d42ce	1	1	5	"[""F437W"", ""S440G"", ""T444Y"", ""S446K"", ""V517A""]"	[415, 416, 417]	2	30dbd0173e50e7d6a9ad9f26af63792454ed1803474574c5fe0a03c5dbe18b41	followup/states/hap_ccf9a28d42ce.pdb
+hap_d85efad20a73	1	1	6	"[""F437W"", ""S440G"", ""T444Y"", ""H445N"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	02f5105665ae26c16df1f837656727612beeeec09c5677fe77be24fe25c3a00c	followup/states/hap_d85efad20a73.pdb
+hap_85230ef7e282	1	1	6	"[""F437W"", ""S440G"", ""T444Y"", ""H445N"", ""S446R"", ""R523K""]"	[415, 416, 417]	2	cfc1e56cc2d20f52a760aad1d64dbf391a08b727de969adb25a1ce80716207b9	followup/states/hap_85230ef7e282.pdb
+hap_95d9fa4f686a	1	1	7	"[""F437W"", ""S440G"", ""F442I"", ""T444H"", ""S446R"", ""V517A"", ""R523K""]"	[415, 416, 417]	2	054619369d7da2c13842e6d9c431341bcd4e61ad4c8b052e798aa09ee1d91190	followup/states/hap_95d9fa4f686a.pdb
+hap_03dec4e784a6	1	1	6	"[""F437W"", ""S440G"", ""F442L"", ""T444H"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	000d30a5b5247450b6ac322592e580ad837e62e00674c9bc6917de69beeecc6d	followup/states/hap_03dec4e784a6.pdb
+hap_c98c132cce8e	1	1	7	"[""F437W"", ""S440G"", ""F442L"", ""T444Y"", ""H445N"", ""S446K"", ""R523K""]"	[415, 416, 417]	2	bdb1e17506576a8041ff796a4d1ae510b15e82600a316fb5d1f206d3b57f1dee	followup/states/hap_c98c132cce8e.pdb
+hap_4bc627dd1ade	1	1	7	"[""F437W"", ""S440G"", ""F442V"", ""T444Y"", ""H445N"", ""S446K"", ""V517A""]"	[415, 416, 417]	2	348960821b5f2a70d9dc5c94a2627f8f0e30a87d025d6bb552b54fcc9924efe8	followup/states/hap_4bc627dd1ade.pdb
+hap_1515c4909047	1	1	5	"[""F437W"", ""I438L"", ""S440G"", ""T444H"", ""S446R""]"	[415, 416, 417]	4	46c07cffc5b2bca21414714eefb7a6d5f04693b7128c70ac4ef3343a00498788	followup/states/hap_1515c4909047.pdb
+hap_01d88a40d9a9	1	1	5	"[""F437W"", ""I438L"", ""S440G"", ""T444Y"", ""S446K""]"	[415, 416, 417]	4	4ca5fceea9b2e71e0df16a3d93ae38773dec804a294382085251c5ba6ccd76eb	followup/states/hap_01d88a40d9a9.pdb
+hap_457b466be6ca	1	1	6	"[""F437W"", ""I438L"", ""S440G"", ""T444Y"", ""H445N"", ""S446K""]"	[415, 416, 417]	4	789b25783d4650808826b6b4e6ad0cf7160225192c238854e3dbc81304b9aa8e	followup/states/hap_457b466be6ca.pdb
+hap_f04266417d9b	1	1	5	"[""F437W"", ""I438M"", ""S440G"", ""T444H"", ""S446K""]"	[415, 416, 417]	1	920953a72f4268b50a56fa0b5fe2fc5ccd03bc5198c84265befb16a0fb873c74	followup/states/hap_f04266417d9b.pdb
+hap_2923ab642959	1	1	5	"[""F437W"", ""I438V"", ""S440A"", ""T444S"", ""S446R""]"	[415, 416, 417]	2	054b2523bc7802ecfb2b385b05505128b6e879ec8e62ab60113e1d28456d6015	followup/states/hap_2923ab642959.pdb
+hap_580499288866	1	1	5	"[""F437W"", ""I438V"", ""S440G"", ""T444H"", ""S446K""]"	[415, 416, 417]	2	8e0a6bdc87a3358a96e16ff973bed465be15031eb9dddf77316783af1a33b313	followup/states/hap_580499288866.pdb
+hap_c300eb747e09	1	1	6	"[""F437W"", ""I438V"", ""S440G"", ""T444H"", ""H445N"", ""S446R""]"	[415, 416, 417]	2	ca5581e6abde60c3e6ae5d20049948fa52994cc10a155a1a49845d63622efdda	followup/states/hap_c300eb747e09.pdb
+hap_86f9597396f7	1	1	5	"[""F437W"", ""I438V"", ""S440G"", ""S446Q"", ""R523K""]"	[415, 416, 417]	2	286478c455010068635fdd625ec0fe715c3029f6c591dff6089bfee89265c20e	followup/states/hap_86f9597396f7.pdb
+hap_66dd12a519e6	1	1	6	"[""F437W"", ""I438V"", ""S440G"", ""T444Y"", ""S446R"", ""R523K""]"	[415, 416, 417]	2	5498c6d7db03797d933636120e1eebed5b30806b540545d6e11a0c922308cc40	followup/states/hap_66dd12a519e6.pdb
+hap_175bb781c44c	1	1	7	"[""F437W"", ""I438V"", ""S440G"", ""T444Y"", ""H445Y"", ""S446K"", ""V517A""]"	[415, 416, 417]	2	e33a36abb07806a375b26ce5720de965f3d435d35a9d00cd43936717c358bd0a	followup/states/hap_175bb781c44c.pdb
+hap_29a3933ffdd6	1	1	8	"[""F437W"", ""I438V"", ""S440G"", ""F442I"", ""T444R"", ""H445F"", ""S446N"", ""R523K""]"	[415, 416, 417]	4	dc369ba84827304684f601ea82467435677fdb8d4555babd2f0700c2ccaf82e1	followup/states/hap_29a3933ffdd6.pdb

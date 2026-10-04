@@ -1,10 +1,10 @@
 {
-  "current_free_bytes": 7667601408,
-  "effective_disk_budget": 6667601408,
+  "current_free_bytes": 2097680384,
+  "effective_disk_budget": 1530512360,
   "python": "C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\.venv\\Scripts\\python.exe",
   "ram_bytes": 14000000000,
   "reserve_bytes": 1000000000,
   "seed": 20261004,
   "threads": 2,
-  "timestamp": "2026-10-03T17:20:35.508592+00:00"
+  "timestamp": "2026-10-04T14:18:48.209847+00:00"
 }

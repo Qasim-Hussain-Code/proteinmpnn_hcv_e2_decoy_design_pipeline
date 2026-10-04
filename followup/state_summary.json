@@ -1,0 +1,7 @@
+{
+  "bytes": 56272060,
+  "claims": "Coordinates prepared only. No candidate re-ranking or affinity claim; glycans, backbone adaptation and viral indels not modeled.",
+  "model": "Archival experimental human CD81 backbone; fixed E2 backbone",
+  "states": 284,
+  "total_seconds": 844.3037099000067
+}

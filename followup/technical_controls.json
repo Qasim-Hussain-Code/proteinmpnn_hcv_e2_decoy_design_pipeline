@@ -1,0 +1,7 @@
+{
+  "coverage_extension": "Retain global panel and extend to 90% within every included recorded genotype; no score-dependent choice",
+  "posthoc": true,
+  "rationale": "Observed E2 repacking sensitivity and genotype 1 undercoverage",
+  "timestamp": "2026-10-04T10:56:31.445436+00:00",
+  "wt_control": "One additional WT repair, measured both with its repacked E2 and recombined original E2; diagnostic only"
+}

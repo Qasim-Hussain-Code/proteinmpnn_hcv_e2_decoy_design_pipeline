@@ -1,0 +1,8 @@
+model	pdb_id	label_chain	organism	modified_positions	notes
+x0e_b	3X0E	B	Homo sapiens	[]	experimental human backbone, all rigid CA fit
+x0e_core	3X0E	A	Homo sapiens	[]	experimental human backbone, core rigid CA fit
+g8q_a	1G8Q	A	Homo sapiens	[]	experimental human backbone, all rigid CA fit
+g8q_b	1G8Q	B	Homo sapiens	[]	experimental human backbone, all rigid CA fit
+tcx_a	5TCX	A	Homo sapiens	[]	experimental human backbone, all rigid CA fit
+bound_ae	7MWX	E	Saguinus oedipus	[155, 163, 169, 180, 196]	tamarin bound backbone with human sequence; diagnostic, not experimental human coordinates
+bound_bh	7MWX	H	Saguinus oedipus	[155, 163, 169, 180, 196]	tamarin bound backbone with human sequence; diagnostic, not experimental human coordinates

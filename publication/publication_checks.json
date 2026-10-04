@@ -1,0 +1,31 @@
+{
+  "check_count": 820,
+  "failed": [],
+  "history_blobs_scanned": 955,
+  "largest_tracked_files": [
+    [
+      "results/discovery_metrics.tsv",
+      1585036
+    ],
+    [
+      "results/installation_report.json",
+      515083
+    ],
+    [
+      "followup/development_sequences.json",
+      373715
+    ],
+    [
+      "followup/reproduction_manifest.tsv",
+      331438
+    ],
+    [
+      "results/disposable_model_manifest.tsv",
+      324488
+    ]
+  ],
+  "passed": true,
+  "resource_note": "Historical unmeasured follow-up peaks are not claimed.",
+  "scientific_interpretation": "Reproducible computational results; failed biological benchmark",
+  "timestamp": "2026-10-04T14:17:58.982723+00:00"
+}

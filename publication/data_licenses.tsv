@@ -1,0 +1,6 @@
+resource	terms	source	date_checked	redistribution
+PDB 7MWX,3X0E,1G8Q,5TCX coordinates	CC0 1.0 Universal; original structural authors attributed	https://www.wwpdb.org/about/usage-policies	2026-10-04T14:05:03.532091+00:00	Derived necessary controls retained; original source downloads ignored
+GenBank accessions and derived sequence panels	NCBI imposes no use/distribution restriction; submitter IP claims can remain; patent records excluded by explicit QC	https://www.ncbi.nlm.nih.gov/genbank/about/	2026-10-04T14:05:03.532102+00:00	Derived analysis tables and accession identifiers retained; bulk GenBank snapshots ignored
+PubMed abstract and primary literature	Publisher/author rights can apply; facts are paraphrased and primary sources linked	https://www.ncbi.nlm.nih.gov/home/about/policies/	2026-10-04T14:05:03.532104+00:00	Downloaded abstracts/full text not redistributed
+ProteinMPNN models and EvoEF2 software	Pinned versions and separately checked weight terms in original software_manifest; EvoEF2 README/LICENSE conflict recorded	results/software_manifest.tsv	2026-10-04T14:05:03.532106+00:00	Code, binaries, packages and model weights not redistributed
+Original implementation	MIT	LICENSE	2026-10-04T14:05:03.532108+00:00	Original code retained under existing author identity

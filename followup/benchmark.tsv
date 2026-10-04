@@ -1,0 +1,545 @@
+model	mutation	mode	source_id	assay	role	expected	delta	predicted	vdwrep_delta
+archive	T163A	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-6.120000000000001	enhanced	-9.350000000000009
+archive	T163A	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-6.120000000000001	enhanced	-9.350000000000009
+archive	F186L	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-0.4299999999999997	approximately_neutral	-1.8500000000000085
+archive	E188K	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	0.11999999999999744	approximately_neutral	0.0
+archive	D196E	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	0.030000000000001137	approximately_neutral	0.0
+archive	D196E	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	0.030000000000001137	approximately_neutral	0.0
+archive	L162P	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-0.2700000000000031	approximately_neutral	0.0
+archive	I182F	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	12.159999999999997	reduced	15.209999999999994
+archive	I182F	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	12.159999999999997	reduced	15.209999999999994
+archive	N184Y	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	6.93	reduced	9.769999999999996
+archive	N184Y	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	6.93	reduced	9.769999999999996
+archive	F186S	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.21999999999999886	approximately_neutral	-1.8500000000000085
+archive	F186S	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.21999999999999886	approximately_neutral	-1.8500000000000085
+archive	K171A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-0.19000000000000483	approximately_neutral	0.0
+archive	K171A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-0.19000000000000483	approximately_neutral	0.0
+archive	I181A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	5.449999999999996	reduced	-0.010000000000005116
+archive	I181A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	5.449999999999996	reduced	-0.010000000000005116
+archive	I182A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	4.559999999999995	reduced	-0.3300000000000125
+archive	I182A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	4.559999999999995	reduced	-0.3300000000000125
+archive	F186A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	0.21999999999999886	approximately_neutral	-1.8500000000000085
+archive	F186A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	0.21999999999999886	approximately_neutral	-1.8500000000000085
+archive	N184A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-9.090000000000003	enhanced	-7.700000000000003
+archive	E188A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.30999999999999517	approximately_neutral	0.0
+archive	D196A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-0.0800000000000054	approximately_neutral	0.0
+archive	I182F	repacked	flint2006	HCVpp entry	original_evidence	reduced	12.159999999999997	reduced	15.209999999999994
+archive	N184Y	repacked	flint2006	HCVpp entry	original_evidence	reduced	6.93	reduced	9.769999999999996
+archive	F186S	repacked	flint2006	HCVpp entry	original_evidence	reduced	0.21999999999999886	approximately_neutral	-1.8500000000000085
+archive	F186L+E188K	repacked	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-0.3500000000000014	approximately_neutral	-1.8500000000000085
+archive	K124T	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.030000000000001137	approximately_neutral	0.0
+archive	V146E	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.030000000000001137	approximately_neutral	0.0
+archive	F150S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.030000000000001137	approximately_neutral	0.0
+archive	T166I	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	4.969999999999999	reduced	7.469999999999999
+archive	C157S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-8.350000000000001	enhanced	-7.540000000000006
+archive	C190R	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-0.03999999999999915	approximately_neutral	0.0
+archive	T163A	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-6.160000000000004	enhanced	-9.350000000000009
+archive	T163A	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-6.160000000000004	enhanced	-9.350000000000009
+archive	F186L	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-0.46999999999999886	approximately_neutral	-1.8500000000000085
+archive	E188K	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	0.0799999999999983	approximately_neutral	0.0
+archive	D196E	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	0.0	approximately_neutral	0.0
+archive	D196E	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	0.0	approximately_neutral	0.0
+archive	L162P	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-0.3100000000000023	approximately_neutral	0.0
+archive	I182F	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	8.079999999999998	reduced	10.909999999999997
+archive	I182F	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	8.079999999999998	reduced	10.909999999999997
+archive	N184Y	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	6.890000000000001	reduced	9.769999999999996
+archive	N184Y	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	6.890000000000001	reduced	9.769999999999996
+archive	F186S	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.17999999999999972	approximately_neutral	-1.8500000000000085
+archive	F186S	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.17999999999999972	approximately_neutral	-1.8500000000000085
+archive	K171A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-0.23000000000000398	approximately_neutral	0.0
+archive	K171A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-0.23000000000000398	approximately_neutral	0.0
+archive	I181A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	5.43	reduced	-0.010000000000005116
+archive	I181A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	5.43	reduced	-0.010000000000005116
+archive	I182A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	5.169999999999995	reduced	-0.3300000000000125
+archive	I182A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	5.169999999999995	reduced	-0.3300000000000125
+archive	F186A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	0.17999999999999972	approximately_neutral	-1.8500000000000085
+archive	F186A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	0.17999999999999972	approximately_neutral	-1.8500000000000085
+archive	N184A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.14999999999999858	approximately_neutral	0.0
+archive	E188A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.269999999999996	approximately_neutral	0.0
+archive	D196A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-0.12000000000000455	approximately_neutral	0.0
+archive	I182F	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	8.079999999999998	reduced	10.909999999999997
+archive	N184Y	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	6.890000000000001	reduced	9.769999999999996
+archive	F186S	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	0.17999999999999972	approximately_neutral	-1.8500000000000085
+archive	F186L+E188K	fixed_e2	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-0.39000000000000057	approximately_neutral	-1.8500000000000085
+archive	K124T	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.0	approximately_neutral	0.0
+archive	V146E	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.0	approximately_neutral	0.0
+archive	F150S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.0	approximately_neutral	0.0
+archive	T166I	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	4.93	reduced	7.469999999999999
+archive	C157S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.1699999999999946	approximately_neutral	0.0
+archive	C190R	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-0.07000000000000028	approximately_neutral	0.0
+bound_ae	T163A	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-0.759999999999998	enhanced	-3.67
+bound_ae	T163A	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-0.759999999999998	enhanced	-3.67
+bound_ae	F186L	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	0.7700000000000031	reduced	2.3200000000000003
+bound_ae	E188K	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	0.28999999999999915	approximately_neutral	0.0
+bound_ae	D196E	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	0.3999999999999986	approximately_neutral	0.0
+bound_ae	D196E	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	0.3999999999999986	approximately_neutral	0.0
+bound_ae	L162P	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.04999999999999716	approximately_neutral	0.0
+bound_ae	I182F	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	1.1300000000000026	reduced	-0.049999999999998934
+bound_ae	I182F	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	1.1300000000000026	reduced	-0.049999999999998934
+bound_ae	N184Y	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	46.39	reduced	53.010000000000005
+bound_ae	N184Y	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	46.39	reduced	53.010000000000005
+bound_ae	F186S	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	2.1400000000000006	reduced	-1.2400000000000002
+bound_ae	F186S	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	2.1400000000000006	reduced	-1.2400000000000002
+bound_ae	K171A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	0.5600000000000023	reduced	0.0
+bound_ae	K171A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	0.5600000000000023	reduced	0.0
+bound_ae	I181A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	0.0	approximately_neutral	0.0
+bound_ae	I181A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	0.0	approximately_neutral	0.0
+bound_ae	I182A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	1.8800000000000026	reduced	-0.09999999999999964
+bound_ae	I182A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	1.8800000000000026	reduced	-0.09999999999999964
+bound_ae	F186A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	1.8999999999999986	reduced	-1.379999999999999
+bound_ae	F186A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	1.8999999999999986	reduced	-1.379999999999999
+bound_ae	N184A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	1.0399999999999991	reduced	-0.23000000000000043
+bound_ae	E188A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-0.020000000000003126	approximately_neutral	0.0
+bound_ae	D196A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.18999999999999773	approximately_neutral	0.0
+bound_ae	I182F	repacked	flint2006	HCVpp entry	original_evidence	reduced	1.1300000000000026	reduced	-0.049999999999998934
+bound_ae	N184Y	repacked	flint2006	HCVpp entry	original_evidence	reduced	46.39	reduced	53.010000000000005
+bound_ae	F186S	repacked	flint2006	HCVpp entry	original_evidence	reduced	2.1400000000000006	reduced	-1.2400000000000002
+bound_ae	F186L+E188K	repacked	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	1.009999999999998	reduced	2.3200000000000003
+bound_ae	K124T	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.04999999999999716	approximately_neutral	0.0
+bound_ae	V146E	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.04999999999999716	approximately_neutral	0.0
+bound_ae	F150S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.04999999999999716	approximately_neutral	0.0
+bound_ae	T166I	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.14000000000000057	approximately_neutral	1.4900000000000002
+bound_ae	C157S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.060000000000002274	approximately_neutral	0.0
+bound_ae	C190R	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.04999999999999716	approximately_neutral	0.0
+bound_ae	T163A	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-0.8100000000000023	enhanced	-3.67
+bound_ae	T163A	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-0.8100000000000023	enhanced	-3.67
+bound_ae	F186L	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	0.7199999999999989	reduced	2.3200000000000003
+bound_ae	E188K	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	0.22999999999999687	approximately_neutral	0.0
+bound_ae	D196E	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	0.3500000000000014	approximately_neutral	0.0
+bound_ae	D196E	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	0.3500000000000014	approximately_neutral	0.0
+bound_ae	L162P	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.0	approximately_neutral	0.0
+bound_ae	I182F	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	1.0799999999999983	reduced	-0.049999999999998934
+bound_ae	I182F	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	1.0799999999999983	reduced	-0.049999999999998934
+bound_ae	N184Y	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	52.42	reduced	59.81
+bound_ae	N184Y	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	52.42	reduced	59.81
+bound_ae	F186S	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	2.770000000000003	reduced	-1.2400000000000002
+bound_ae	F186S	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	2.770000000000003	reduced	-1.2400000000000002
+bound_ae	K171A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	0.509999999999998	reduced	0.0
+bound_ae	K171A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	0.509999999999998	reduced	0.0
+bound_ae	I181A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-0.04999999999999716	approximately_neutral	0.0
+bound_ae	I181A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-0.04999999999999716	approximately_neutral	0.0
+bound_ae	I182A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	1.8299999999999983	reduced	-0.09999999999999964
+bound_ae	I182A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	1.8299999999999983	reduced	-0.09999999999999964
+bound_ae	F186A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	2.5600000000000023	reduced	-1.379999999999999
+bound_ae	F186A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	2.5600000000000023	reduced	-1.379999999999999
+bound_ae	N184A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.990000000000002	reduced	-0.23000000000000043
+bound_ae	E188A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-0.0799999999999983	approximately_neutral	0.0
+bound_ae	D196A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.14000000000000057	approximately_neutral	0.0
+bound_ae	I182F	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	1.0799999999999983	reduced	-0.049999999999998934
+bound_ae	N184Y	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	52.42	reduced	59.81
+bound_ae	F186S	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	2.770000000000003	reduced	-1.2400000000000002
+bound_ae	F186L+E188K	fixed_e2	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	0.9600000000000009	reduced	2.3200000000000003
+bound_ae	K124T	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.0	approximately_neutral	0.0
+bound_ae	V146E	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.0	approximately_neutral	0.0
+bound_ae	F150S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.0	approximately_neutral	0.0
+bound_ae	T166I	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.0899999999999963	approximately_neutral	1.4900000000000002
+bound_ae	C157S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.00999999999999801	approximately_neutral	0.0
+bound_ae	C190R	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.0	approximately_neutral	0.0
+bound_bh	T163A	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	1.3000000000000007	reduced	-1.3399999999999999
+bound_bh	T163A	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	1.3000000000000007	reduced	-1.3399999999999999
+bound_bh	F186L	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-0.3999999999999986	approximately_neutral	4.390000000000001
+bound_bh	E188K	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	0.21000000000000085	approximately_neutral	0.0
+bound_bh	D196E	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	0.28000000000000114	approximately_neutral	0.0
+bound_bh	D196E	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	0.28000000000000114	approximately_neutral	0.0
+bound_bh	L162P	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.14000000000000057	approximately_neutral	0.0
+bound_bh	I182F	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.25	approximately_neutral	0.0
+bound_bh	I182F	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.25	approximately_neutral	0.0
+bound_bh	N184Y	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.3000000000000007	approximately_neutral	0.0
+bound_bh	N184Y	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.3000000000000007	approximately_neutral	0.0
+bound_bh	F186S	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.8200000000000003	reduced	0.009999999999999787
+bound_bh	F186S	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.8200000000000003	reduced	0.009999999999999787
+bound_bh	K171A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	5.390000000000001	reduced	0.0
+bound_bh	K171A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	5.390000000000001	reduced	0.0
+bound_bh	I181A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	3.7600000000000016	reduced	-0.4800000000000004
+bound_bh	I181A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	3.7600000000000016	reduced	-0.4800000000000004
+bound_bh	I182A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	0.19000000000000128	approximately_neutral	0.0
+bound_bh	I182A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	0.19000000000000128	approximately_neutral	0.0
+bound_bh	F186A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-0.28999999999999915	approximately_neutral	0.0
+bound_bh	F186A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-0.28999999999999915	approximately_neutral	0.0
+bound_bh	N184A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.14000000000000057	approximately_neutral	0.0
+bound_bh	E188A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.14000000000000057	approximately_neutral	0.0
+bound_bh	D196A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-0.03999999999999915	approximately_neutral	0.0
+bound_bh	I182F	repacked	flint2006	HCVpp entry	original_evidence	reduced	0.25	approximately_neutral	0.0
+bound_bh	N184Y	repacked	flint2006	HCVpp entry	original_evidence	reduced	0.3000000000000007	approximately_neutral	0.0
+bound_bh	F186S	repacked	flint2006	HCVpp entry	original_evidence	reduced	0.8200000000000003	reduced	0.009999999999999787
+bound_bh	F186L+E188K	repacked	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-0.31999999999999673	approximately_neutral	4.390000000000001
+bound_bh	K124T	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.14000000000000057	approximately_neutral	0.0
+bound_bh	V146E	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.14000000000000057	approximately_neutral	0.0
+bound_bh	F150S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.14000000000000057	approximately_neutral	0.0
+bound_bh	T166I	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-1.4499999999999993	enhanced	0.0
+bound_bh	C157S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.14000000000000057	approximately_neutral	0.0
+bound_bh	C190R	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.14000000000000057	approximately_neutral	0.0
+bound_bh	T163A	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	1.3000000000000007	reduced	-1.3399999999999999
+bound_bh	T163A	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	1.3000000000000007	reduced	-1.3399999999999999
+bound_bh	F186L	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-0.3999999999999986	approximately_neutral	4.390000000000001
+bound_bh	E188K	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	0.21000000000000085	approximately_neutral	0.0
+bound_bh	D196E	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	0.28000000000000114	approximately_neutral	0.0
+bound_bh	D196E	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	0.28000000000000114	approximately_neutral	0.0
+bound_bh	L162P	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.14000000000000057	approximately_neutral	0.0
+bound_bh	I182F	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.25	approximately_neutral	0.0
+bound_bh	I182F	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.25	approximately_neutral	0.0
+bound_bh	N184Y	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.3000000000000007	approximately_neutral	0.0
+bound_bh	N184Y	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.3000000000000007	approximately_neutral	0.0
+bound_bh	F186S	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.8200000000000003	reduced	0.009999999999999787
+bound_bh	F186S	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.8200000000000003	reduced	0.009999999999999787
+bound_bh	K171A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	3.91	reduced	0.0
+bound_bh	K171A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	3.91	reduced	0.0
+bound_bh	I181A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	3.7600000000000016	reduced	-0.4800000000000004
+bound_bh	I181A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	3.7600000000000016	reduced	-0.4800000000000004
+bound_bh	I182A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	0.19000000000000128	approximately_neutral	0.0
+bound_bh	I182A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	0.19000000000000128	approximately_neutral	0.0
+bound_bh	F186A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-0.28999999999999915	approximately_neutral	0.0
+bound_bh	F186A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-0.28999999999999915	approximately_neutral	0.0
+bound_bh	N184A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.14000000000000057	approximately_neutral	0.0
+bound_bh	E188A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.14000000000000057	approximately_neutral	0.0
+bound_bh	D196A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-0.03999999999999915	approximately_neutral	0.0
+bound_bh	I182F	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	0.25	approximately_neutral	0.0
+bound_bh	N184Y	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	0.3000000000000007	approximately_neutral	0.0
+bound_bh	F186S	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	0.8200000000000003	reduced	0.009999999999999787
+bound_bh	F186L+E188K	fixed_e2	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-0.31999999999999673	approximately_neutral	4.390000000000001
+bound_bh	K124T	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.14000000000000057	approximately_neutral	0.0
+bound_bh	V146E	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.14000000000000057	approximately_neutral	0.0
+bound_bh	F150S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.14000000000000057	approximately_neutral	0.0
+bound_bh	T166I	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-1.4499999999999993	enhanced	0.0
+bound_bh	C157S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.14000000000000057	approximately_neutral	0.0
+bound_bh	C190R	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.14000000000000057	approximately_neutral	0.0
+g8q_a	T163A	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-18.560000000000002	enhanced	-18.210000000000008
+g8q_a	T163A	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-18.560000000000002	enhanced	-18.210000000000008
+g8q_a	F186L	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-8.32	enhanced	-7.430000000000007
+g8q_a	E188K	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	-8.18	enhanced	-6.530000000000001
+g8q_a	D196E	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	-8.350000000000001	enhanced	-6.530000000000001
+g8q_a	D196E	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-8.350000000000001	enhanced	-6.530000000000001
+g8q_a	L162P	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-8.370000000000005	enhanced	-6.530000000000001
+g8q_a	I182F	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-6.759999999999998	enhanced	-7.980000000000004
+g8q_a	I182F	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-6.759999999999998	enhanced	-7.980000000000004
+g8q_a	N184Y	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.3999999999999986	approximately_neutral	4.159999999999997
+g8q_a	N184Y	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.3999999999999986	approximately_neutral	4.159999999999997
+g8q_a	F186S	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-7.270000000000003	enhanced	-7.430000000000007
+g8q_a	F186S	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-7.270000000000003	enhanced	-7.430000000000007
+g8q_a	K171A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-8.740000000000002	enhanced	-6.530000000000001
+g8q_a	K171A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-8.740000000000002	enhanced	-6.530000000000001
+g8q_a	I181A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-3.8299999999999983	enhanced	-6.530000000000001
+g8q_a	I181A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-3.8299999999999983	enhanced	-6.530000000000001
+g8q_a	I182A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-5.579999999999998	enhanced	-9.469999999999999
+g8q_a	I182A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-5.579999999999998	enhanced	-9.469999999999999
+g8q_a	F186A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-7.329999999999998	enhanced	-7.430000000000007
+g8q_a	F186A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-7.329999999999998	enhanced	-7.430000000000007
+g8q_a	N184A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-8.96	enhanced	-7.040000000000006
+g8q_a	E188A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-7.93	enhanced	-6.530000000000001
+g8q_a	D196A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-8.350000000000001	enhanced	-6.530000000000001
+g8q_a	I182F	repacked	flint2006	HCVpp entry	original_evidence	reduced	-6.759999999999998	enhanced	-7.980000000000004
+g8q_a	N184Y	repacked	flint2006	HCVpp entry	original_evidence	reduced	0.3999999999999986	approximately_neutral	4.159999999999997
+g8q_a	F186S	repacked	flint2006	HCVpp entry	original_evidence	reduced	-7.270000000000003	enhanced	-7.430000000000007
+g8q_a	F186L+E188K	repacked	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-8.14	enhanced	-7.430000000000007
+g8q_a	K124T	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-8.350000000000001	enhanced	-6.530000000000001
+g8q_a	V146E	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-8.350000000000001	enhanced	-6.530000000000001
+g8q_a	F150S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-8.350000000000001	enhanced	-6.530000000000001
+g8q_a	T166I	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-11.770000000000003	enhanced	-5.549999999999997
+g8q_a	C157S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-8.0	enhanced	-6.530000000000001
+g8q_a	C190R	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-8.350000000000001	enhanced	-6.530000000000001
+g8q_a	T163A	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-11.660000000000004	enhanced	-13.210000000000008
+g8q_a	T163A	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-11.660000000000004	enhanced	-13.210000000000008
+g8q_a	F186L	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-1.0200000000000031	enhanced	-1.6800000000000068
+g8q_a	E188K	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	-0.21999999999999886	approximately_neutral	0.0
+g8q_a	D196E	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	-0.39000000000000057	approximately_neutral	0.0
+g8q_a	D196E	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-0.39000000000000057	approximately_neutral	0.0
+g8q_a	L162P	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-0.759999999999998	enhanced	0.0
+g8q_a	I182F	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.7999999999999972	reduced	-1.4200000000000017
+g8q_a	I182F	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.7999999999999972	reduced	-1.4200000000000017
+g8q_a	N184Y	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	1.5899999999999963	reduced	4.920000000000002
+g8q_a	N184Y	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	1.5899999999999963	reduced	4.920000000000002
+g8q_a	F186S	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.030000000000001137	approximately_neutral	-1.6800000000000068
+g8q_a	F186S	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.030000000000001137	approximately_neutral	-1.6800000000000068
+g8q_a	K171A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-0.7800000000000011	enhanced	0.0
+g8q_a	K171A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-0.7800000000000011	enhanced	0.0
+g8q_a	I181A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	4.1299999999999955	reduced	0.0
+g8q_a	I181A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	4.1299999999999955	reduced	0.0
+g8q_a	I182A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	2.0	reduced	-2.9099999999999966
+g8q_a	I182A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	2.0	reduced	-2.9099999999999966
+g8q_a	F186A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-0.030000000000001137	approximately_neutral	-1.6800000000000068
+g8q_a	F186A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-0.030000000000001137	approximately_neutral	-1.6800000000000068
+g8q_a	N184A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-0.4200000000000017	approximately_neutral	0.0
+g8q_a	E188A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.04999999999999716	approximately_neutral	0.0
+g8q_a	D196A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-0.39000000000000057	approximately_neutral	0.0
+g8q_a	I182F	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	0.7999999999999972	reduced	-1.4200000000000017
+g8q_a	N184Y	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	1.5899999999999963	reduced	4.920000000000002
+g8q_a	F186S	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	0.030000000000001137	approximately_neutral	-1.6800000000000068
+g8q_a	F186L+E188K	fixed_e2	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-0.8500000000000014	enhanced	-1.6800000000000068
+g8q_a	K124T	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-0.39000000000000057	approximately_neutral	0.0
+g8q_a	V146E	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-0.39000000000000057	approximately_neutral	0.0
+g8q_a	F150S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-0.39000000000000057	approximately_neutral	0.0
+g8q_a	T166I	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	18.150000000000006	reduced	23.22999999999999
+g8q_a	C157S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-0.39000000000000057	approximately_neutral	0.0
+g8q_a	C190R	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-0.39000000000000057	approximately_neutral	0.0
+g8q_b	T163A	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-15.550000000000011	enhanced	-16.400000000000034
+g8q_b	T163A	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-15.550000000000011	enhanced	-16.400000000000034
+g8q_b	F186L	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-42.960000000000036	enhanced	-44.02000000000004
+g8q_b	E188K	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	-1.6000000000000227	enhanced	-1.400000000000034
+g8q_b	D196E	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	-1.3899999999999864	enhanced	-1.4700000000000273
+g8q_b	D196E	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-1.3899999999999864	enhanced	-1.4700000000000273
+g8q_b	L162P	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-0.6100000000000136	enhanced	-1.4800000000000182
+g8q_b	I182F	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-1.160000000000025	enhanced	-1.4800000000000182
+g8q_b	I182F	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-1.160000000000025	enhanced	-1.4800000000000182
+g8q_b	N184Y	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-1.3199999999999932	enhanced	-1.400000000000034
+g8q_b	N184Y	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-1.3199999999999932	enhanced	-1.400000000000034
+g8q_b	F186S	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-72.17000000000002	enhanced	-82.90000000000003
+g8q_b	F186S	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-72.17000000000002	enhanced	-82.90000000000003
+g8q_b	K171A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-0.2400000000000091	approximately_neutral	-1.4800000000000182
+g8q_b	K171A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-0.2400000000000091	approximately_neutral	-1.4800000000000182
+g8q_b	I181A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-0.6399999999999864	enhanced	-1.4800000000000182
+g8q_b	I181A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-0.6399999999999864	enhanced	-1.4800000000000182
+g8q_b	I182A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-1.1899999999999977	enhanced	-1.4800000000000182
+g8q_b	I182A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-1.1899999999999977	enhanced	-1.4800000000000182
+g8q_b	F186A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-89.12	enhanced	-97.17000000000002
+g8q_b	F186A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-89.12	enhanced	-97.17000000000002
+g8q_b	N184A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-1.5300000000000296	enhanced	-1.4800000000000182
+g8q_b	E188A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-1.3899999999999864	enhanced	-1.400000000000034
+g8q_b	D196A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-1.259999999999991	enhanced	-1.4800000000000182
+g8q_b	I182F	repacked	flint2006	HCVpp entry	original_evidence	reduced	-1.160000000000025	enhanced	-1.4800000000000182
+g8q_b	N184Y	repacked	flint2006	HCVpp entry	original_evidence	reduced	-1.3199999999999932	enhanced	-1.400000000000034
+g8q_b	F186S	repacked	flint2006	HCVpp entry	original_evidence	reduced	-72.17000000000002	enhanced	-82.90000000000003
+g8q_b	F186L+E188K	repacked	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-43.370000000000005	enhanced	-43.93000000000001
+g8q_b	K124T	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-1.5699999999999932	enhanced	-1.4800000000000182
+g8q_b	V146E	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-1.1899999999999977	enhanced	-1.4800000000000182
+g8q_b	F150S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-1.1899999999999977	enhanced	-1.4800000000000182
+g8q_b	T166I	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-1.2900000000000205	enhanced	-1.4800000000000182
+g8q_b	C157S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-1.009999999999991	enhanced	-1.4800000000000182
+g8q_b	C190R	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-1.1899999999999977	enhanced	-1.4800000000000182
+g8q_b	T163A	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-12.960000000000036	enhanced	-14.800000000000011
+g8q_b	T163A	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-12.960000000000036	enhanced	-14.800000000000011
+g8q_b	F186L	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-35.03000000000003	enhanced	-36.58000000000004
+g8q_b	E188K	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	-0.2599999999999909	approximately_neutral	0.0
+g8q_b	D196E	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	1.1999999999999886	reduced	0.1199999999999477
+g8q_b	D196E	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	1.1999999999999886	reduced	0.1199999999999477
+g8q_b	L162P	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	1.9799999999999613	reduced	0.1099999999999568
+g8q_b	I182F	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	1.419999999999959	reduced	0.1099999999999568
+g8q_b	I182F	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	1.419999999999959	reduced	0.1099999999999568
+g8q_b	N184Y	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.06999999999999318	approximately_neutral	0.0
+g8q_b	N184Y	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.06999999999999318	approximately_neutral	0.0
+g8q_b	F186S	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-63.620000000000005	enhanced	-75.07000000000005
+g8q_b	F186S	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-63.620000000000005	enhanced	-75.07000000000005
+g8q_b	K171A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	2.349999999999966	reduced	0.1099999999999568
+g8q_b	K171A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	2.349999999999966	reduced	0.1099999999999568
+g8q_b	I181A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	1.9499999999999886	reduced	0.1099999999999568
+g8q_b	I181A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	1.9499999999999886	reduced	0.1099999999999568
+g8q_b	I182A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	1.3999999999999773	reduced	0.1099999999999568
+g8q_b	I182A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	1.3999999999999773	reduced	0.1099999999999568
+g8q_b	F186A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-80.67000000000002	enhanced	-89.29000000000002
+g8q_b	F186A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-80.67000000000002	enhanced	-89.29000000000002
+g8q_b	N184A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	1.1399999999999864	reduced	0.1099999999999568
+g8q_b	E188A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-0.060000000000002274	approximately_neutral	0.0
+g8q_b	D196A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	1.329999999999984	reduced	0.1099999999999568
+g8q_b	I182F	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	1.419999999999959	reduced	0.1099999999999568
+g8q_b	N184Y	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	0.06999999999999318	approximately_neutral	0.0
+g8q_b	F186S	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	-63.620000000000005	enhanced	-75.07000000000005
+g8q_b	F186L+E188K	fixed_e2	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-36.69	enhanced	-36.690000000000055
+g8q_b	K124T	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	1.0199999999999818	reduced	0.1099999999999568
+g8q_b	V146E	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	1.3999999999999773	reduced	0.1099999999999568
+g8q_b	F150S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	1.3999999999999773	reduced	0.1099999999999568
+g8q_b	T166I	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	1.3000000000000114	reduced	0.1099999999999568
+g8q_b	C157S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	1.579999999999984	reduced	0.1099999999999568
+g8q_b	C190R	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	1.3999999999999773	reduced	0.1099999999999568
+tcx_a	T163A	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-11.449999999999989	enhanced	-11.079999999999984
+tcx_a	T163A	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-11.449999999999989	enhanced	-11.079999999999984
+tcx_a	F186L	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-15.180000000000007	enhanced	-11.079999999999984
+tcx_a	E188K	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	-11.71999999999997	enhanced	-10.420000000000016
+tcx_a	D196E	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	-11.310000000000002	enhanced	-11.079999999999984
+tcx_a	D196E	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-11.310000000000002	enhanced	-11.079999999999984
+tcx_a	L162P	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-60.96000000000001	enhanced	-65.61000000000001
+tcx_a	I182F	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	0.18000000000000682	approximately_neutral	1.420000000000016
+tcx_a	I182F	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	0.18000000000000682	approximately_neutral	1.420000000000016
+tcx_a	N184Y	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-9.769999999999982	enhanced	-8.29000000000002
+tcx_a	N184Y	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-9.769999999999982	enhanced	-8.29000000000002
+tcx_a	F186S	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-9.949999999999989	enhanced	-11.079999999999984
+tcx_a	F186S	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-9.949999999999989	enhanced	-11.079999999999984
+tcx_a	K171A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-11.449999999999989	enhanced	-11.079999999999984
+tcx_a	K171A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-11.449999999999989	enhanced	-11.079999999999984
+tcx_a	I181A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-9.529999999999973	enhanced	-12.970000000000027
+tcx_a	I181A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-9.529999999999973	enhanced	-12.970000000000027
+tcx_a	I182A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-11.100000000000023	enhanced	-15.650000000000034
+tcx_a	I182A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-11.100000000000023	enhanced	-15.650000000000034
+tcx_a	F186A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-10.139999999999986	enhanced	-11.079999999999984
+tcx_a	F186A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-10.139999999999986	enhanced	-11.079999999999984
+tcx_a	N184A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-10.949999999999989	enhanced	-10.810000000000002
+tcx_a	E188A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-11.689999999999998	enhanced	-11.079999999999984
+tcx_a	D196A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-11.310000000000002	enhanced	-11.079999999999984
+tcx_a	I182F	repacked	flint2006	HCVpp entry	original_evidence	reduced	0.18000000000000682	approximately_neutral	1.420000000000016
+tcx_a	N184Y	repacked	flint2006	HCVpp entry	original_evidence	reduced	-9.769999999999982	enhanced	-8.29000000000002
+tcx_a	F186S	repacked	flint2006	HCVpp entry	original_evidence	reduced	-9.949999999999989	enhanced	-11.079999999999984
+tcx_a	F186L+E188K	repacked	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-15.45999999999998	enhanced	-10.420000000000016
+tcx_a	K124T	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-11.370000000000005	enhanced	-11.079999999999984
+tcx_a	V146E	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-11.449999999999989	enhanced	-11.079999999999984
+tcx_a	F150S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-11.449999999999989	enhanced	-11.079999999999984
+tcx_a	T166I	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-11.889999999999986	enhanced	-11.079999999999984
+tcx_a	C157S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-11.360000000000014	enhanced	-11.079999999999984
+tcx_a	C190R	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-11.420000000000016	enhanced	-11.079999999999984
+tcx_a	T163A	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-0.06999999999999318	approximately_neutral	0.0
+tcx_a	T163A	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-0.06999999999999318	approximately_neutral	0.0
+tcx_a	F186L	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-3.329999999999984	enhanced	0.0
+tcx_a	E188K	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	5.569999999999993	reduced	5.8700000000000045
+tcx_a	D196E	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	0.0	approximately_neutral	0.0
+tcx_a	D196E	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	0.0	approximately_neutral	0.0
+tcx_a	L162P	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-50.28999999999999	enhanced	-54.53000000000003
+tcx_a	I182F	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	4.7900000000000205	reduced	5.990000000000009
+tcx_a	I182F	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	4.7900000000000205	reduced	5.990000000000009
+tcx_a	N184Y	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	1.6000000000000227	reduced	2.7799999999999727
+tcx_a	N184Y	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	1.6000000000000227	reduced	2.7799999999999727
+tcx_a	F186S	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	1.6100000000000136	reduced	0.0
+tcx_a	F186S	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	1.6100000000000136	reduced	0.0
+tcx_a	K171A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	0.0	approximately_neutral	0.0
+tcx_a	K171A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	0.0	approximately_neutral	0.0
+tcx_a	I181A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	1.8600000000000136	reduced	-1.900000000000034
+tcx_a	I181A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	1.8600000000000136	reduced	-1.900000000000034
+tcx_a	I182A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	3.069999999999993	reduced	-2.430000000000007
+tcx_a	I182A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	3.069999999999993	reduced	-2.430000000000007
+tcx_a	F186A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	1.2900000000000205	reduced	0.0
+tcx_a	F186A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	1.2900000000000205	reduced	0.0
+tcx_a	N184A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	8.360000000000014	reduced	9.099999999999966
+tcx_a	E188A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-0.07999999999998408	approximately_neutral	-0.05000000000001137
+tcx_a	D196A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	0.0	approximately_neutral	0.0
+tcx_a	I182F	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	4.7900000000000205	reduced	5.990000000000009
+tcx_a	N184Y	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	1.6000000000000227	reduced	2.7799999999999727
+tcx_a	F186S	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	1.6100000000000136	reduced	0.0
+tcx_a	F186L+E188K	fixed_e2	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	2.240000000000009	reduced	5.8700000000000045
+tcx_a	K124T	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.07999999999998408	approximately_neutral	0.0
+tcx_a	V146E	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	0.0	approximately_neutral	0.0
+tcx_a	F150S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.0	approximately_neutral	0.0
+tcx_a	T166I	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-0.45999999999997954	approximately_neutral	0.0
+tcx_a	C157S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.06999999999999318	approximately_neutral	0.0
+tcx_a	C190R	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.03000000000002956	approximately_neutral	0.0
+x0e_b	T163A	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-38.20999999999998	enhanced	-40.870000000000005
+x0e_b	T163A	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-38.20999999999998	enhanced	-40.870000000000005
+x0e_b	F186L	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-18.410000000000025	enhanced	-15.5
+x0e_b	E188K	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	-11.689999999999998	enhanced	-12.789999999999964
+x0e_b	D196E	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	-11.490000000000009	enhanced	-12.839999999999975
+x0e_b	D196E	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-11.490000000000009	enhanced	-12.839999999999975
+x0e_b	L162P	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-12.04000000000002	enhanced	-12.839999999999975
+x0e_b	I182F	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-11.5	enhanced	-12.839999999999975
+x0e_b	I182F	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-11.5	enhanced	-12.839999999999975
+x0e_b	N184Y	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-11.75	enhanced	-12.789999999999964
+x0e_b	N184Y	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-11.75	enhanced	-12.789999999999964
+x0e_b	F186S	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-85.22	enhanced	-90.74000000000001
+x0e_b	F186S	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-85.22	enhanced	-90.74000000000001
+x0e_b	K171A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-10.480000000000018	enhanced	-12.870000000000005
+x0e_b	K171A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-10.480000000000018	enhanced	-12.870000000000005
+x0e_b	I181A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-10.879999999999995	enhanced	-12.839999999999975
+x0e_b	I181A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-10.879999999999995	enhanced	-12.839999999999975
+x0e_b	I182A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-11.53000000000003	enhanced	-12.839999999999975
+x0e_b	I182A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-11.53000000000003	enhanced	-12.839999999999975
+x0e_b	F186A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-92.08000000000001	enhanced	-95.25999999999999
+x0e_b	F186A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-92.08000000000001	enhanced	-95.25999999999999
+x0e_b	N184A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-12.050000000000011	enhanced	-12.839999999999975
+x0e_b	E188A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-11.629999999999995	enhanced	-12.789999999999964
+x0e_b	D196A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-11.660000000000025	enhanced	-12.839999999999975
+x0e_b	I182F	repacked	flint2006	HCVpp entry	original_evidence	reduced	-11.5	enhanced	-12.839999999999975
+x0e_b	N184Y	repacked	flint2006	HCVpp entry	original_evidence	reduced	-11.75	enhanced	-12.789999999999964
+x0e_b	F186S	repacked	flint2006	HCVpp entry	original_evidence	reduced	-85.22	enhanced	-90.74000000000001
+x0e_b	F186L+E188K	repacked	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-18.389999999999986	enhanced	-15.439999999999998
+x0e_b	K124T	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-11.54000000000002	enhanced	-12.839999999999975
+x0e_b	V146E	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-11.560000000000002	enhanced	-12.839999999999975
+x0e_b	F150S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-11.560000000000002	enhanced	-12.839999999999975
+x0e_b	T166I	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-11.930000000000007	enhanced	-12.839999999999975
+x0e_b	C157S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-11.430000000000007	enhanced	-12.839999999999975
+x0e_b	C190R	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-11.70999999999998	enhanced	-12.839999999999975
+x0e_b	T163A	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-34.660000000000025	enhanced	-38.80000000000001
+x0e_b	T163A	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-34.660000000000025	enhanced	-38.80000000000001
+x0e_b	F186L	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-14.560000000000002	enhanced	-13.430000000000007
+x0e_b	E188K	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	-8.120000000000005	enhanced	-10.740000000000009
+x0e_b	D196E	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	-7.840000000000032	enhanced	-10.769999999999982
+x0e_b	D196E	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-7.840000000000032	enhanced	-10.769999999999982
+x0e_b	L162P	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-8.400000000000034	enhanced	-10.769999999999982
+x0e_b	I182F	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-7.730000000000018	enhanced	-10.769999999999982
+x0e_b	I182F	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-7.730000000000018	enhanced	-10.769999999999982
+x0e_b	N184Y	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-7.970000000000027	enhanced	-10.740000000000009
+x0e_b	N184Y	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-7.970000000000027	enhanced	-10.740000000000009
+x0e_b	F186S	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-81.44	enhanced	-88.67000000000002
+x0e_b	F186S	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-81.44	enhanced	-88.67000000000002
+x0e_b	K171A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-6.7099999999999795	enhanced	-10.800000000000011
+x0e_b	K171A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-6.7099999999999795	enhanced	-10.800000000000011
+x0e_b	I181A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-7.110000000000014	enhanced	-10.769999999999982
+x0e_b	I181A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-7.110000000000014	enhanced	-10.769999999999982
+x0e_b	I182A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-7.759999999999991	enhanced	-10.769999999999982
+x0e_b	I182A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-7.759999999999991	enhanced	-10.769999999999982
+x0e_b	F186A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-88.21000000000001	enhanced	-93.19
+x0e_b	F186A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-88.21000000000001	enhanced	-93.19
+x0e_b	N184A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-8.060000000000002	enhanced	-10.769999999999982
+x0e_b	E188A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-8.050000000000011	enhanced	-10.740000000000009
+x0e_b	D196A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-7.889999999999986	enhanced	-10.769999999999982
+x0e_b	I182F	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	-7.730000000000018	enhanced	-10.769999999999982
+x0e_b	N184Y	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	-7.970000000000027	enhanced	-10.740000000000009
+x0e_b	F186S	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	-81.44	enhanced	-88.67000000000002
+x0e_b	F186L+E188K	fixed_e2	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-14.740000000000009	enhanced	-13.399999999999977
+x0e_b	K124T	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-7.900000000000034	enhanced	-10.769999999999982
+x0e_b	V146E	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-7.78000000000003	enhanced	-10.769999999999982
+x0e_b	F150S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-7.78000000000003	enhanced	-10.769999999999982
+x0e_b	T166I	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-8.150000000000034	enhanced	-10.769999999999982
+x0e_b	C157S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-7.660000000000025	enhanced	-10.769999999999982
+x0e_b	C190R	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-7.930000000000007	enhanced	-10.769999999999982
+x0e_core	T163A	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	-7.979999999999961	enhanced	-8.289999999999964
+x0e_core	T163A	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	-7.979999999999961	enhanced	-8.289999999999964
+x0e_core	F186L	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-5.139999999999986	enhanced	-5.2099999999999795
+x0e_core	E188K	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	-8.819999999999993	enhanced	-7.199999999999989
+x0e_core	D196E	repacked	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	-8.139999999999986	enhanced	-6.110000000000014
+x0e_core	D196E	repacked	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-8.139999999999986	enhanced	-6.110000000000014
+x0e_core	L162P	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-8.339999999999975	enhanced	-6.110000000000014
+x0e_core	I182F	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-13.539999999999964	enhanced	-8.599999999999966
+x0e_core	I182F	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-13.539999999999964	enhanced	-8.599999999999966
+x0e_core	N184Y	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-29.20999999999998	enhanced	-23.360000000000014
+x0e_core	N184Y	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-29.20999999999998	enhanced	-23.360000000000014
+x0e_core	F186S	repacked	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-29.629999999999995	enhanced	-33.06999999999999
+x0e_core	F186S	repacked	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-29.629999999999995	enhanced	-33.06999999999999
+x0e_core	K171A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-6.060000000000002	enhanced	-6.110000000000014
+x0e_core	K171A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-6.060000000000002	enhanced	-6.110000000000014
+x0e_core	I181A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-2.419999999999959	enhanced	-9.329999999999984
+x0e_core	I181A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-2.419999999999959	enhanced	-9.329999999999984
+x0e_core	I182A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-36.75999999999999	enhanced	-41.05000000000001
+x0e_core	I182A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-36.75999999999999	enhanced	-41.05000000000001
+x0e_core	F186A	repacked	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-29.439999999999998	enhanced	-32.15999999999997
+x0e_core	F186A	repacked	bertaux2006	HCVpp entry	original_evidence	reduced	-29.439999999999998	enhanced	-32.15999999999997
+x0e_core	N184A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-36.90999999999997	enhanced	-32.0
+x0e_core	E188A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-10.829999999999984	enhanced	-9.819999999999993
+x0e_core	D196A	repacked	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-9.550000000000011	enhanced	-6.110000000000014
+x0e_core	I182F	repacked	flint2006	HCVpp entry	original_evidence	reduced	-13.539999999999964	enhanced	-8.599999999999966
+x0e_core	N184Y	repacked	flint2006	HCVpp entry	original_evidence	reduced	-29.20999999999998	enhanced	-23.360000000000014
+x0e_core	F186S	repacked	flint2006	HCVpp entry	original_evidence	reduced	-29.629999999999995	enhanced	-33.06999999999999
+x0e_core	F186L+E188K	repacked	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	-4.860000000000014	enhanced	-5.199999999999989
+x0e_core	K124T	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-8.269999999999982	enhanced	-6.110000000000014
+x0e_core	V146E	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-8.269999999999982	enhanced	-6.110000000000014
+x0e_core	F150S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-8.269999999999982	enhanced	-6.110000000000014
+x0e_core	T166I	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-9.729999999999961	enhanced	1.7900000000000205
+x0e_core	C157S	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-7.409999999999968	enhanced	-6.110000000000014
+x0e_core	C190R	repacked	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-8.269999999999982	enhanced	-6.110000000000014
+x0e_core	T163A	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	enhanced	0.06999999999999318	approximately_neutral	-0.22999999999996135
+x0e_core	T163A	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	enhanced	0.06999999999999318	approximately_neutral	-0.22999999999996135
+x0e_core	F186L	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	3.8000000000000114	reduced	3.9399999999999977
+x0e_core	E188K	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	approximately_neutral	-0.11000000000001364	approximately_neutral	1.9399999999999977
+x0e_core	D196E	fixed_e2	higginbottom2000	soluble E2 binding EIA	original_evidence	reduced	-0.07999999999998408	approximately_neutral	1.9499999999999886
+x0e_core	D196E	fixed_e2	higginbottom2000	cell-surface soluble E2 binding	original_evidence	reduced	-0.07999999999998408	approximately_neutral	1.9499999999999886
+x0e_core	L162P	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-0.2899999999999636	approximately_neutral	1.9499999999999886
+x0e_core	I182F	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	3.170000000000016	reduced	8.079999999999984
+x0e_core	I182F	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	3.170000000000016	reduced	8.079999999999984
+x0e_core	N184Y	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-3.4799999999999613	enhanced	-0.2899999999999636
+x0e_core	N184Y	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-3.4799999999999613	enhanced	-0.2899999999999636
+x0e_core	F186S	fixed_e2	drummer2002	soluble E2 binding EIA	original_evidence	reduced	-20.620000000000005	enhanced	-23.920000000000016
+x0e_core	F186S	fixed_e2	drummer2002	cell-surface soluble E2 binding	original_evidence	reduced	-20.620000000000005	enhanced	-23.920000000000016
+x0e_core	K171A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	2.0	reduced	1.9499999999999886
+x0e_core	K171A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	2.0	reduced	1.9499999999999886
+x0e_core	I181A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	5.699999999999989	reduced	-1.2699999999999818
+x0e_core	I181A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	5.699999999999989	reduced	-1.2699999999999818
+x0e_core	I182A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-36.71999999999997	enhanced	-41.05000000000001
+x0e_core	I182A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-36.71999999999997	enhanced	-41.05000000000001
+x0e_core	F186A	fixed_e2	bertaux2006	cell-surface soluble E2 binding	original_evidence	reduced	-20.579999999999984	enhanced	-23.00999999999999
+x0e_core	F186A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	reduced	-20.579999999999984	enhanced	-23.00999999999999
+x0e_core	N184A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-0.12999999999999545	approximately_neutral	1.5400000000000205
+x0e_core	E188A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-1.1299999999999955	enhanced	0.2300000000000182
+x0e_core	D196A	fixed_e2	bertaux2006	HCVpp entry	original_evidence	approximately_neutral	-1.490000000000009	enhanced	1.9499999999999886
+x0e_core	I182F	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	3.170000000000016	reduced	8.079999999999984
+x0e_core	N184Y	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	-3.4799999999999613	enhanced	-0.2899999999999636
+x0e_core	F186S	fixed_e2	flint2006	HCVpp entry	original_evidence	reduced	-20.620000000000005	enhanced	-23.920000000000016
+x0e_core	F186L+E188K	fixed_e2	higginbottom2000	soluble E2 binding EIA	corrected_double_mutant	reduced	3.900000000000034	reduced	3.930000000000007
+x0e_core	K124T	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-0.21999999999997044	approximately_neutral	1.9499999999999886
+x0e_core	V146E	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	binding_retained_unquantified	-0.21999999999997044	approximately_neutral	1.9499999999999886
+x0e_core	F150S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-0.21999999999997044	approximately_neutral	1.9499999999999886
+x0e_core	T166I	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.35000000000002274	approximately_neutral	9.660000000000025
+x0e_core	C157S	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	0.6399999999999864	reduced	1.9499999999999886
+x0e_core	C190R	fixed_e2	drummer2005	recombinant LEL E2 binding; abstract-level evidence	external_source_challenge	reduced	-0.21999999999997044	approximately_neutral	1.9499999999999886

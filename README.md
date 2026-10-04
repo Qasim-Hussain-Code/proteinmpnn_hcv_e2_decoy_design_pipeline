@@ -1,5 +1,10 @@
 # EvoEF2 fails the CD81 directional benchmark in an escape-aware sequence-design experiment
 
+> **Follow-up and evidence correction:** Scoring remains unreliable after eight structural comparisons. The expanded panel covers 94.3% of eligible sampled development accessions. Read [the current report](followup/README.md), [corrected evidence](followup/ground_truth.tsv), and [publication verification](publication/README.md).
+>
+> The summary below describes the frozen original run. Two soluble-assay rows were misassigned to single mutants; the follow-up corrects them to the reported double mutant. The original 5/11 directional result is unchanged. Original documentation bytes are retained in [the archive](archive/original/README.md).
+
+
 ## Summary
 
 The interface scoring procedure recovered 5 of 11 distinct directional soluble-E2 mutation controls. The curated evidence contains 29 assay observations. This failed the predeclared directional validation gate, so every designed sequence remains a computational candidate and all structural scores are model outputs.

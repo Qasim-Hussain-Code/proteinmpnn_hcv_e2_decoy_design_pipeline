@@ -1,0 +1,67 @@
+h77_position	source	e2_chain	structure_position	modeled_in_archival
+422	archival humanized geometric interface	A		True
+423	archival humanized geometric interface	A		True
+424	archival humanized geometric interface	A		True
+426	archival humanized geometric interface	A		True
+427	archival humanized geometric interface	A		True
+429	archival humanized geometric interface	A		True
+437	archival humanized geometric interface	A		True
+438	archival humanized geometric interface	A		True
+439	archival humanized geometric interface	A		True
+440	archival humanized geometric interface	A		True
+441	archival humanized geometric interface	A		True
+442	archival humanized geometric interface	A		True
+443	archival humanized geometric interface	A		True
+444	archival humanized geometric interface	A		True
+445	archival humanized geometric interface	A		True
+446	archival humanized geometric interface	A		True
+505	archival humanized geometric interface	A		True
+515	archival humanized geometric interface	A		True
+612	archival humanized geometric interface	A		True
+613	archival humanized geometric interface	A		True
+420	experimental tamarin geometric interface	A	420	True
+421	experimental tamarin geometric interface	A	421	True
+422	experimental tamarin geometric interface	A	422	True
+423	experimental tamarin geometric interface	A	423	True
+427	experimental tamarin geometric interface	A	427	True
+431	experimental tamarin geometric interface	A	431	True
+437	experimental tamarin geometric interface	A	437	True
+438	experimental tamarin geometric interface	A	438	True
+440	experimental tamarin geometric interface	A	440	True
+441	experimental tamarin geometric interface	A	441	True
+442	experimental tamarin geometric interface	A	442	True
+443	experimental tamarin geometric interface	A	443	True
+444	experimental tamarin geometric interface	A	444	True
+445	experimental tamarin geometric interface	A	445	True
+446	experimental tamarin geometric interface	A	446	True
+507	experimental tamarin geometric interface	A	509	True
+515	experimental tamarin geometric interface	A	517	True
+526	experimental tamarin geometric interface	A	528	True
+612	experimental tamarin geometric interface	A	616	True
+613	experimental tamarin geometric interface	A	617	True
+415	experimental tamarin geometric interface	B	415	False
+416	experimental tamarin geometric interface	B	416	False
+417	experimental tamarin geometric interface	B	417	False
+418	experimental tamarin geometric interface	B	418	True
+422	experimental tamarin geometric interface	B	422	True
+423	experimental tamarin geometric interface	B	423	True
+424	experimental tamarin geometric interface	B	424	True
+426	experimental tamarin geometric interface	B	426	True
+428	experimental tamarin geometric interface	B	428	True
+438	experimental tamarin geometric interface	B	438	True
+439	experimental tamarin geometric interface	B	439	True
+441	experimental tamarin geometric interface	B	441	True
+442	experimental tamarin geometric interface	B	442	True
+443	experimental tamarin geometric interface	B	443	True
+445	experimental tamarin geometric interface	B	445	True
+505	experimental tamarin geometric interface	B	507	True
+521	experimental tamarin geometric interface	B	523	True
+523	experimental tamarin geometric interface	B	525	True
+525	experimental tamarin geometric interface	B	527	True
+527	experimental tamarin geometric interface	B	529	True
+613	experimental tamarin geometric interface	B	617	True
+420	curated experimental E2 binding annotation			True
+527	curated experimental E2 binding annotation			True
+529	curated experimental E2 binding annotation			True
+530	curated experimental E2 binding annotation			True
+535	curated experimental E2 binding annotation			True

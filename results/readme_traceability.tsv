@@ -38,10 +38,10 @@ Master seed	20261004	results/smoke_test.json	seed	report
 Primary interface cutoff	5.0	results/e2_interface_residues.tsv	cutoff_angstrom	report
 Bootstrap replicates	2000	results/heldout_summary.json	bootstrap_replicates	report
 Frozen count	7	results/heldout_summary.json	frozen	report
-Command thread setting	2	results/configuration.tsv	threads	report
-Command RAM GB	14	results/configuration.tsv	ram_bytes / 1e9	report
-Command disk ceiling GB	13	results/configuration.tsv	requested cap	report
-Command seed	20261004	results/configuration.tsv	seed	report
+Command thread setting	2	archive/original/results/configuration.tsv	threads	report
+Command RAM GB	14	archive/original/results/configuration.tsv	ram_bytes / 1e9	report
+Command disk ceiling GB	13	archive/original/results/configuration.tsv	requested cap	report
+Command seed	20261004	archive/original/results/configuration.tsv	seed	report
 Run-count default	1	results/repair_audit.tsv	num_of_runs	report
 Figure identifier	1	results/figure_manifest.tsv	figure	report
 Figure identifier	2	results/figure_manifest.tsv	figure	report

@@ -1,0 +1,17 @@
+{
+  "cache_policy": "Regenerable states, duplicate coordinate files and raw execution logs remain local.",
+  "followup": {
+    "checks": 4550,
+    "failed": [],
+    "free_disk_bytes": 2144370688,
+    "notes": "Data checks; no biological validation claim",
+    "passed": true,
+    "project_bytes": 1514004526,
+    "timestamp": "2026-10-04T13:57:16.760732+00:00"
+  },
+  "original_checks": 87,
+  "original_passed": true,
+  "scientific_claim": "Runtime and provenance verified. The original biological benchmark remains failed.",
+  "source_checkpoint": "c426da0",
+  "timestamp": "2026-10-04T14:05:03.515453+00:00"
+}

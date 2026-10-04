@@ -1,0 +1,32 @@
+{
+  "study": "Scoring diagnostics, structural sensitivity, and expanded viral coverage",
+  "original_experiment": "Frozen archive; no original candidate selection, scores, ground truth, or scientific source is changed",
+  "model_specs": [
+    {"id": "archive", "kind": "archive"},
+    {"id": "x0e_b", "pdb": "3X0E", "chain": "B", "fit": "all"},
+    {"id": "x0e_core", "pdb": "3X0E", "chain": "A", "fit": "core"},
+    {"id": "g8q_a", "pdb": "1G8Q", "chain": "A", "fit": "all"},
+    {"id": "g8q_b", "pdb": "1G8Q", "chain": "B", "fit": "all"},
+    {"id": "tcx_a", "pdb": "5TCX", "chain": "A", "fit": "all"},
+    {"id": "bound_ae", "kind": "bound_template", "e2": "A", "cd81": "E"},
+    {"id": "bound_bh", "kind": "bound_template", "e2": "B", "cd81": "H"}
+  ],
+  "core_fit_human_positions": [[119, 153], [191, 199]],
+  "core_fit_rationale": "Sensitivity to the variable receptor head; a diagnostic rigid fit, not a claim of the correct binding pose",
+  "preparation": "Verified EvoEF2 BuildMutant default 10 rotamer passes then RepairStructure default 1 pass; fixed backbone; two protein chains only",
+  "fixed_e2_control": "Recombine each mutant receptor with its WT model E2 coordinate records before computing binding",
+  "primary_diagnostic_tolerance": 0.5,
+  "diagnostic_tolerance_grid": [0, 0.1, 0.25, 0.5, 1],
+  "primary_directional_controls": "Corrected original single-mutation soluble-E2 controls; 11 distinct mutation-direction labels. Do not retune the failed gate",
+  "external_source_challenge": "Drummer 2005 PMID 15670777 abstract: F150S,T166I,C157S,C190R reduced; K124T,V146E retained but unquantified. Labels already consulted; exploratory, not blinded validation",
+  "new_sequence_queries": ["1a", "1b", "2a", "2b", "3a", "4a", "5a", "6a", "7", "8"],
+  "maximum_records_per_query": 120,
+  "sampling": "NCBI default-order bounded convenience sample; not prevalence",
+  "coverage_target": 0.9,
+  "expanded_positions": "Union of original geometric positions, both experimental E2/tamarin-CD81 interfaces at 5 A mapped independently to H77, and the five already curated E2 binding positions",
+  "future_reserve": "Seed 20261011; connected Hamming-distance <=1 haplotype components; components with any previously retrieved accession or near previously exposed interface haplotype are development only; reserve 20% of remaining novel components",
+  "reserve_seed": 20261011,
+  "maximum_new_model_bytes": 200000000,
+  "state_model": "Archival human scaffold, specified before new scores; expanded panel does not use the best diagnostic structure",
+  "claims": "No affinity improvement, neutralization, broad viral protection, or experimental validation claim. Do not select a best-scoring structure using these control outcomes"
+}

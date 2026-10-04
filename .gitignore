@@ -13,3 +13,9 @@ project.conf
 logs/console/
 logs/evo/
 *.tmp
+
+# Rebuildable follow-up outputs stay local. Final tables and necessary controls are retained.
+followup/states/
+followup/logs/
+followup/models/*/*_fixed.pdb
+followup/models/*/humanized.pdb

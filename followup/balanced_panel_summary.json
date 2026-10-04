@@ -1,0 +1,7 @@
+{
+  "additional_states": 22,
+  "coverage": 0.9429657794676806,
+  "minimum_genotype_coverage": 0.9016393442622951,
+  "note": "Secondary coverage extension after observing genotype imbalance; no experimental or candidate scores used; genotype 8 structural exclusion persists",
+  "states": 306
+}
