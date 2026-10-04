@@ -43,7 +43,7 @@ def language_errors(text):
         problems.append('em dash')
     banned=['it is worth noting','it is important to note',"in today's rapidly evolving",'plays a crucial role','serves as a testament','paving the way for','in conclusion','delve','seamless','underscores','showcases']
     for phrase in banned:
-        if phrase in text.lower():
+        if re.search(r'\b'+re.escape(phrase)+r'\b',text,re.I):
             problems.append(phrase)
     for line in text.splitlines():
         for term in ['binding energy','binding affinity','free energy','high affinity','binder','neutralizer']:
@@ -75,6 +75,16 @@ def verify():
         errors=language_errors(path.read_text(encoding='utf-8')); check('language_'+path.name,not errors,';'.join(errors))
     require_freeze(); check('freeze_integrity',True)
     freeze=json.loads((ROOT/'results/candidate_freeze_manifest.json').read_text())
+    from .structures import sequence,read_structure
+    frozen_rows=read_tsv(ROOT/'results/candidate_freeze.tsv')
+    check('frozen_model_sequences',all(sequence(read_structure(ROOT/f'data/processed/frozen_candidates/{r["candidate_id"]}.pdb')[0]['R'])==r['sequence'] for r in frozen_rows))
+    if (ROOT/'results/cleanup_summary.json').exists():
+        cleanup=json.loads((ROOT/'results/cleanup_summary.json').read_text())
+        manifest=ROOT/'results/disposable_model_manifest.tsv'
+        check('cleanup_manifest_integrity',sha256(manifest)==cleanup['manifest_sha256'])
+        removed=read_tsv(manifest)
+        check('retained_model_hashes',all(sha256(ROOT/r['retained_model'])==r['sha256'] for r in removed if r['retained_model']))
+        check('disposable_models_removed',all(not (ROOT/r['path']).exists() for r in removed))
     successful_heldout=[r for r in read_tsv(ROOT/'logs/resource_usage.tsv') if r['stage']=='heldout' and r['exit_status']=='0']
     check('freeze_precedes_successful_heldout',bool(successful_heldout) and all(r['start_time']>freeze['selection_timestamp'] for r in successful_heldout))
     for row in read_tsv(ROOT/'results/leakage_audit.tsv'):

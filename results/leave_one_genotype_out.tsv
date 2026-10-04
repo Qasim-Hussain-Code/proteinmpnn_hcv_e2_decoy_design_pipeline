@@ -1,0 +1,7 @@
+excluded_genotype	remaining_states	worst_delta_effect_escape_minus_single	primary_effect	interpretation
+1	7	0.477999999999998	0.477999999999998	Frozen sets retained; leave-one-genotype-out model sensitivity
+2	8	0.07600000000000051	0.477999999999998	Frozen sets retained; leave-one-genotype-out model sensitivity
+3	9	0.5420000000000016	0.477999999999998	Frozen sets retained; leave-one-genotype-out model sensitivity
+4	9	0.477999999999998	0.477999999999998	Frozen sets retained; leave-one-genotype-out model sensitivity
+5	9	0.477999999999998	0.477999999999998	Frozen sets retained; leave-one-genotype-out model sensitivity
+6	8	0.477999999999998	0.477999999999998	Frozen sets retained; leave-one-genotype-out model sensitivity

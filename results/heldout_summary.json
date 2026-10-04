@@ -1,0 +1,20 @@
+{
+  "benchmark_warning": "Interface scoring failed directional/positive-control gate; no improved-binding interpretation allowed",
+  "bootstrap_method": "paired percentile state bootstrap of mean candidate maximum paired WT delta",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261010,
+  "bootstrap_unit": "held-out structural haplotype state, equally weighted; correlated components remain a limitation",
+  "ci95": [
+    0.07600000000000051,
+    0.5420000000000016
+  ],
+  "escape_aware_candidates": 5,
+  "frozen": 7,
+  "no_experimental_binding_measurements": true,
+  "rank_spearman": 0.3214285714285715,
+  "sequences": 13,
+  "shared_candidates": 3,
+  "single_state_candidates": 5,
+  "states": 10,
+  "worst_delta_effect_escape_minus_single": 0.477999999999998
+}

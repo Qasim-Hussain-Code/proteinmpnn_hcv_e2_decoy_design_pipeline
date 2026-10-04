@@ -1,0 +1,53 @@
+readme_claim	value	source_file	source_column_or_metric	generation_stage
+Directional controls recovered	5	results/benchmark_summary.json	concordant_directional	report
+Distinct directional controls	11	results/benchmark_summary.json	directional_binding_controls	report
+Experimental assay observations	29	results/benchmark_summary.json	assay_rows	report
+Retrieved GenBank records	309	results/diversity_summary.json	retrieved	report
+Eligible natural records	226	results/diversity_summary.json	included	report
+Excluded natural records	83	results/diversity_summary.json	excluded	report
+Generated computational candidates	760	results/run_summary.json	generated	report
+Unique passing candidates	759	results/run_summary.json	unique_passed	report
+Humanization CA RMSD	3.69	results/humanization_metrics.tsv	ca_rmsd_angstrom	report
+Held-out worst paired-delta effect	0.48	results/heldout_summary.json	worst_delta_effect_escape_minus_single	report
+Held-out percentile interval	[0.08, 0.54]	results/heldout_summary.json	ci95	report
+Majority-direction baseline controls	10	results/benchmark_summary.json	majority_direction_baseline_correct	report
+Directional concordance interval	[0.167, 0.766]	results/benchmark_summary.json	concordance_ci95	report
+Arm A soluble-minus-standard exposure difference	-0.0188	results/model_comparison_effects.tsv	soluble_minus_standard; arm=A; metric=mean_hydrophobic_sasa_fraction	report
+Arm A exposure seed-bootstrap interval	[-0.0277, -0.0103]	results/model_comparison_effects.tsv	ci95_low/ci95_high; arm=A	report
+Arm B soluble-minus-standard exposure difference	-0.0127	results/model_comparison_effects.tsv	soluble_minus_standard; arm=B; metric=mean_hydrophobic_sasa_fraction	report
+Arm B exposure seed-bootstrap interval	[-0.0212, -0.0043]	results/model_comparison_effects.tsv	ci95_low/ci95_high; arm=B	report
+Arm A soluble-minus-standard patch difference	6.69	results/model_comparison_effects.tsv	soluble_minus_standard; arm=A; metric=mean_hydrophobic_patch_proxy	report
+Largest leave-one-genotype-out effect change	0.08	results/leave_one_genotype_out.tsv	worst_delta_effect_escape_minus_single; excluded_genotype=2	report
+Influential genotype identifier	2	results/leave_one_genotype_out.tsv	excluded_genotype	report
+Extra WT repair maximum held-out score change	0.00	results/wt_preparation_summary.json	maximum_absolute_wt_state_score_change	report
+Deleted disposable model files	1604	results/cleanup_summary.json	deleted_files_total	report
+Held-out E2 states	10	results/heldout_summary.json	states	report
+Achieved discovery coverage percent	39.4	results/run_summary.json	discovery_panel_coverage	report
+Discovery accessions	213	results/diversity_summary.json	discovery	report
+Held-out accessions	13	results/diversity_summary.json	held_out	report
+Recorded failures	20	results/run_summary.json	failure_count	report
+Measured scientific-stage RSS GB	0.560	results/run_summary.json	peak_rss_bytes	report
+Measured peak project GB	2.401	results/run_summary.json	peak_project_bytes	report
+Summed successful stage time seconds	6868.1	results/run_summary.json	stage_elapsed_sum_seconds	report
+Observed generation duration	1649.3	results/run_summary.json	generation_elapsed_seconds	report
+Projected generation duration	1196.2	results/mpnn_pilot.json	projected_elapsed_seconds	report
+Pilot count	100	results/mpnn_pilot.json	count	report
+Pilot seconds	157.4	results/mpnn_pilot.json	elapsed_seconds	report
+Discovery state limit	24	results/diversity_summary.json	discovery_states	report
+Master seed	20261004	results/smoke_test.json	seed	report
+Primary interface cutoff	5.0	results/e2_interface_residues.tsv	cutoff_angstrom	report
+Bootstrap replicates	2000	results/heldout_summary.json	bootstrap_replicates	report
+Frozen count	7	results/heldout_summary.json	frozen	report
+Command thread setting	2	results/configuration.tsv	threads	report
+Command RAM GB	14	results/configuration.tsv	ram_bytes / 1e9	report
+Command disk ceiling GB	13	results/configuration.tsv	requested cap	report
+Command seed	20261004	results/configuration.tsv	seed	report
+Run-count default	1	results/repair_audit.tsv	num_of_runs	report
+Figure identifier	1	results/figure_manifest.tsv	figure	report
+Figure identifier	2	results/figure_manifest.tsv	figure	report
+Figure identifier	3	results/figure_manifest.tsv	figure	report
+Figure identifier	4	results/figure_manifest.tsv	figure	report
+Figure identifier	5	results/figure_manifest.tsv	figure	report
+Figure identifier	6	results/figure_manifest.tsv	figure	report
+Figure identifier	7	results/figure_manifest.tsv	figure	report
+Figure identifier	8	results/figure_manifest.tsv	figure	report

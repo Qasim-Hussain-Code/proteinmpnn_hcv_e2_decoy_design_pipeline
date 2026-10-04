@@ -50,6 +50,25 @@ def candidate_reporting():
             mean_fraction_within_wt_tolerance=np.mean([float(r['fraction_within_wt_tolerance']) for r in rows]),
             interpretation='Equal frozen candidates and held-out states; overlapping selections retained'))
     write_tsv(ROOT/'results/heldout_strategy_comparison.tsv',comparisons)
+    state_scores=read_tsv(ROOT/'results/heldout_scores.tsv')
+    wt={r['haplotype_id']:float(r['interaction_score']) for r in state_scores if r['candidate_id']=='wild_type'}
+    lookup={(r['candidate_id'],r['haplotype_id']):float(r['interaction_score'])-wt[r['haplotype_id']] for r in state_scores}
+    state_genotypes={r['haplotype_id']:r['genotype'].split(',') for r in state_scores}
+    genotypes=sorted({g for values in state_genotypes.values() for g in values}); genotype_rows=[]; leaveout=[]
+    sets={s:[c['candidate_id'] for c in frozen if s in c['selection_rule']] for s in ['single_state','escape_aware']}
+    def effect(stateids):
+        means={s:np.mean([max(lookup[c,h] for h in stateids) for c in candidates]) for s,candidates in sets.items()}
+        return float(means['escape_aware']-means['single_state'])
+    for genotype in genotypes:
+        states=[s for s in wt if genotype in state_genotypes[s]]
+        genotype_rows.append(dict(genotype=genotype,number_states=len(states),worst_delta_effect_escape_minus_single=effect(states),
+                                  interpretation='Descriptive genotype subset; overlapping mixed-genotype states may be counted in multiple strata'))
+        remaining=[s for s in wt if genotype not in state_genotypes[s]]
+        if remaining:
+            leaveout.append(dict(excluded_genotype=genotype,remaining_states=len(remaining),worst_delta_effect_escape_minus_single=effect(remaining),
+                                 primary_effect=effect(list(wt)),interpretation='Frozen sets retained; leave-one-genotype-out model sensitivity'))
+    write_tsv(ROOT/'results/heldout_genotype_strategy_comparison.tsv',genotype_rows)
+    write_tsv(ROOT/'results/leave_one_genotype_out.tsv',leaveout)
     model=read_tsv(ROOT/'results/model_comparison.tsv'); seeds=read_tsv(ROOT/'results/seed_variance.tsv')
     effects=[]
     for arm in ['A','B']:
@@ -196,11 +215,14 @@ def figures():
         ax.scatter([float(r['sequence_identity_percent']) for r in rows],[float(bio[r['candidate_id']]['hydrophobic_sasa_fraction']) for r in rows],s=10,alpha=.6,label=mode,c=color)
     ax.set(xlabel='Identity to human scaffold (%)',ylabel='Hydrophobic monomer SASA fraction'); ax.legend()
     save(fig,7,'Sequence and exposure tradeoff','Soluble-model differences are geometric proxies, not expression or solubility measurements.')
-    latest={r['stage']:r for r in read_tsv(ROOT/'logs/resource_usage.tsv') if r['exit_status']=='0'}
-    resources=list(latest.values()); fig,axs=plt.subplots(1,3,figsize=(13,6)); names=[r['stage'] for r in resources]
+    grouped=defaultdict(list)
+    for row in read_tsv(ROOT/'logs/resource_usage.tsv'):
+        if row['exit_status']=='0': grouped[row['stage']].append(row)
+    resources=[dict(stage=stage,**{metric:max(float(r[metric]) for r in rows) for metric in ['elapsed_seconds','peak_rss_bytes','disk_peak_bytes']}) for stage,rows in grouped.items()]
+    fig,axs=plt.subplots(1,3,figsize=(13,6)); names=[r['stage'] for r in resources]
     for ax,column,label in zip(axs,['elapsed_seconds','peak_rss_bytes','disk_peak_bytes'],['Time (s)','Peak sampled process-tree RSS (GB)','Peak project bytes (GB)']):
         scale=1 if column=='elapsed_seconds' else 1e9; ax.barh(range(len(names)),[float(r[column])/scale for r in resources],color='#547aa5'); ax.set_yticks(range(len(names)),names,fontsize=7); ax.set_xlabel(label)
-    save(fig,8,'Measured resource profile','Scientific stages and a fresh locked CPU installation are measured; original bootstrap telemetry remains unavailable.')
+    save(fig,8,'Measured resource profile','Per-stage maxima across successful executions; cache skips do not replace full computation time. Original bootstrap telemetry remains unavailable.')
     write_tsv(ROOT/'results/figure_manifest.tsv',manifest)
     captions=['# Scripted figures','', 'Regenerate with `python -m pipeline.cli figures` after held-out evaluation. PNG files support README viewing; PDF files support export.','']
     for row in manifest:
@@ -213,6 +235,12 @@ def report():
     human=read_tsv(ROOT/'results/humanization_metrics.tsv')[0]; pilot=json.loads((ROOT/'results/mpnn_pilot.json').read_text()); resources=read_tsv(ROOT/'logs/resource_usage.tsv')
     generated=read_tsv(ROOT/'results/generated_sequences.tsv.gz'); funnel=read_tsv(ROOT/'results/design_filter_funnel.tsv'); panel=read_tsv(ROOT/'data/processed/discovery_panel.tsv')
     candidate_reporting()
+    if not any(r['transition']=='final_computational_priority_set' for r in funnel):
+        funnel.append(dict(transition='final_computational_priority_set',count=len(read_tsv(ROOT/'results/final_computational_priorities.tsv'))))
+    for row in funnel:
+        row['is_selection_gate']=row['transition']!='pareto_eligible'
+        row['notes']='Exposure/score Pareto annotation; does not exclude candidates from either selection rule' if row['transition']=='pareto_eligible' else 'Composition and exposure are descriptors; no unsupported universal composition threshold imposed'
+    write_tsv(ROOT/'results/design_filter_funnel.tsv',funnel)
     peakram=max(int(r['peak_rss_bytes']) for r in resources); peakdisk=max(int(r['disk_peak_bytes']) for r in resources); runtime=sum(float(r['elapsed_seconds']) for r in resources if r['exit_status']=='0' and r['stage'] not in {'scoring_pilot'})
     design_time=float([r for r in resources if r['stage']=='design' and r['exit_status']=='0'][0]['elapsed_seconds'])
     summary=dict(benchmark=benchmark,diversity=diversity,heldout=held,humanization_rmsd=float(human['ca_rmsd_angstrom']),generated=len(generated),
@@ -228,6 +256,10 @@ def report():
             dict(issue='Generation timing projection underestimated actual duration',evidence=f'Projected {pilot["projected_elapsed_seconds"]} s; observed {design_time} s',
                  why_it_matters='Repeated model loads and concurrent installation may contribute; effects were not isolated',effect_on_claims='Report actual duration; throughput cap was projected, not a guaranteed wall-clock bound'),
             dict(issue='Bootstrap installation resource telemetry gap',evidence='Initial bootstrap preceded instrumentation; canonical locked fresh installation later reproduced with process-tree and project telemetry',why_it_matters='Original bootstrap peak cannot be reconstructed',effect_on_claims='Claims use measured scientific stages and canonical reproduced installation, not an invented original peak')]
+    leaveout=read_tsv(ROOT/'results/leave_one_genotype_out.tsv')
+    driver=max(leaveout,key=lambda r:abs(float(r['worst_delta_effect_escape_minus_single'])-held['worst_delta_effect_escape_minus_single']))
+    issues.append(dict(issue='Genotype subset influences strategy comparison',evidence=f'Excluding genotype {driver["excluded_genotype"]} changes effect to {driver["worst_delta_effect_escape_minus_single"]}',
+                       why_it_matters='Small genotype-specific state counts make the headline effect sample-sensitive',effect_on_claims='Do not generalize the convenience panel to population-wide escape behavior'))
     write_tsv(ROOT/'results/scientific_discomfort.tsv',issues)
     trace=[]
     def number(claim,value,source,column):
@@ -255,6 +287,20 @@ def report():
         interval=number('Arm '+arm+' exposure seed-bootstrap interval',f'[{float(item["ci95_low"]):.4f}, {float(item["ci95_high"]):.4f}]','results/model_comparison_effects.tsv','ci95_low/ci95_high; arm='+arm)
         model_text.append(f'Arm {arm}: {delta}, paired seed-bootstrap interval {interval}.')
     model_sentence=' '.join(model_text)
+    patch=next(r for r in model_effects if r['design_arm']=='A' and r['metric']=='mean_hydrophobic_patch_proxy')
+    patch_difference=number('Arm A soluble-minus-standard patch difference',f'{float(patch["soluble_minus_standard"]):.2f}','results/model_comparison_effects.tsv','soluble_minus_standard; arm=A; metric=mean_hydrophobic_patch_proxy')
+    driver_effect=number('Largest leave-one-genotype-out effect change',f'{float(driver["worst_delta_effect_escape_minus_single"]):.2f}','results/leave_one_genotype_out.tsv','worst_delta_effect_escape_minus_single; excluded_genotype='+driver['excluded_genotype'])
+    number('Influential genotype identifier',driver['excluded_genotype'],'results/leave_one_genotype_out.tsv','excluded_genotype')
+    prep=json.loads((ROOT/'results/wt_preparation_summary.json').read_text()) if (ROOT/'results/wt_preparation_summary.json').exists() else None
+    prep_text=''
+    if prep:
+        prep_change=number('Extra WT repair maximum held-out score change',f'{prep["maximum_absolute_wt_state_score_change"]:.2f}','results/wt_preparation_summary.json','maximum_absolute_wt_state_score_change')
+        prep_text=f'An additional native-WT repair pass changed held-out state scores by at most {prep_change} score units and retained the failed directional gate and the strategy effect. This checks the native-versus-mutated optimization-path difference without changing the freeze.'
+    cleanup_text=''
+    if (ROOT/'results/cleanup_summary.json').exists():
+        cleanup_summary=json.loads((ROOT/'results/cleanup_summary.json').read_text())
+        removed=number('Deleted disposable model files',cleanup_summary['deleted_files_total'],'results/cleanup_summary.json','deleted_files_total')
+        cleanup_text=f'After evaluation, {removed} individually hashed disposable PDB files were removed. The [cleanup audit](results/disposable_model_manifest.tsv) records each file and its retained evidence. Frozen models, controls, state structures, checkpoints and original ProteinMPNN outputs remain available.'
     hstates=number('Held-out E2 states',held['states'],'results/heldout_summary.json','states')
     coverage=number('Achieved discovery coverage percent',f'{summary["discovery_panel_coverage"]*100:.1f}','results/run_summary.json','discovery_panel_coverage')
     dseq=number('Discovery accessions',diversity['discovery'],'results/diversity_summary.json','discovery')
@@ -334,11 +380,11 @@ The frozen heatmap includes WT as a paired zero comparator in every state. Score
 
 ![Frozen discovery states](figures/figure_5.png)
 
-Held-out candidates were evaluated only after the candidate table and its manifest were written. The effect estimate is {effect}, with interval {ci}. {interpretation} Each point is a viral structural state. The small test sample and correlated haplotype components limit inference. The final table carries the failed-benchmark warning next to every computational candidate. [Strategy comparisons](results/heldout_strategy_comparison.tsv) retain both median and worst-case paired deltas, and [generalization changes](results/strategy_generalization.tsv) retain discovery-to-test differences for each frozen computational candidate.
+Held-out candidates were evaluated only after the candidate table and its manifest were written. The effect estimate is {effect}, with interval {ci}. {interpretation} Each point is a viral structural state. Excluding genotype {driver['excluded_genotype']} changed the strategy effect to {driver_effect}; this subset accounts for much of the observed difference. The small test sample and correlated haplotype components limit inference. The final table carries the failed-benchmark warning next to every computational candidate. [Strategy comparisons](results/heldout_strategy_comparison.tsv) retain both median and worst-case paired deltas, and [generalization changes](results/strategy_generalization.tsv) retain discovery-to-test differences for each frozen computational candidate. {prep_text}
 
 ![Held-out evaluation](figures/figure_6.png)
 
-The measured soluble-minus-standard hydrophobic SASA fraction differences were {model_sentence} These compare matched generation seeds within each arm. [Model comparisons](results/model_comparison_effects.tsv) retain seed-level uncertainty for exposure, patch size, composition, charge and total monomer energy. Lower hydrophobic exposure cannot demonstrate expression, folding or solubility. The [candidate summary](results/candidate_summary.tsv) places sequences, mutation lists, geometric metrics and discovery/test statistics in flat columns for inspection.
+The measured soluble-minus-standard hydrophobic SASA fraction differences were {model_sentence} These compare matched generation seeds within each arm. Arm A's largest hydrophobic patch proxy increased by {patch_difference} square A despite its lower hydrophobic exposure fraction, so these descriptors do not show a uniform soluble-model advantage. [Model comparisons](results/model_comparison_effects.tsv) retain seed-level uncertainty for exposure, patch size, composition, charge and total monomer energy. Lower hydrophobic exposure cannot demonstrate expression, folding or solubility. The [candidate summary](results/candidate_summary.tsv) places sequences, mutation lists, geometric metrics and discovery/test statistics in flat columns for inspection.
 
 ![Sequence exposure tradeoff](figures/figure_7.png)
 
@@ -349,6 +395,8 @@ The recorded run contains {failures} failures, including a missing runtime for t
 ## Repository structure
 
 `pipeline/` contains the implementation. `scripts/` provides Bash entry points. `config/` records thresholds, ground truth, fixed residues, upstream commits and split assignments. `results/` contains derived tables and freeze hashes. `figures/` contains scripted raster figures and exportable PDFs. `data/processed/` keeps the compact experimental hybrid, states and frozen models. `data/raw/`, `data/work/`, `.venv/` and `vendor/` are ignored. `tests/fixtures/` contains an offline synthetic example. `logs/` records scientific-stage resources and failures. [Score definitions](docs/score_dictionary.md) state what each output can support.
+
+{cleanup_text}
 
 ## Usage
 
@@ -366,11 +414,13 @@ For the scientific run, use Git Bash and the installation command above. The res
 
 Git, Bash and a C++ compiler are host prerequisites. Scientific entry points provide `--help`. `--mode smoke` runs bundled analytical fixtures, while `--from heldout` resumes from the immutable freeze. Fresh runs score serially; `--parallel` opts into the configured worker count after the scoring memory pilot. Core and full both honor the pilot-approved compact budget, so full cannot expand past the measured ceiling. Existing outputs are checked before reuse. Atomic table writes preserve completed outputs if a later write fails.
 
+After a completed frozen evaluation, `python -m pipeline.cleanup --plan` validates the retained outputs and writes the per-file model manifest without deleting anything. `python -m pipeline.cleanup --apply` removes only unchanged files listed in that manifest. It preserves raw sources, checkpoints and generation outputs and refuses paths outside the audited model directories.
+
 To begin an independent scientific analysis, run `python -m pipeline.new_run --destination data/work/new_analysis`. The helper refuses an existing destination, copies code and predeclared settings, and initializes Git with `.gitignore` first. Set up that directory's own environment and follow the scientific commands there. It retrieves contemporary query results and records its own freeze. The archived result tables in this repository belong to the present run. The exact locked environment targets Python 3.14 on Windows; another platform or compiler requires a separate software audit, and an executable hash mismatch is reported rather than silently accepted.
 
 ## Limitations
 
-The model combines an unbound human receptor conformation with the experimentally bound tamarin orientation. The large alignment RMSD is the greatest structural uncertainty. Fixed backbones omit E2 conformational flexibility; only reliably mapped sidechain substitutions are modeled. Coordinates absent from the experiments are not invented. Protein-only scoring removes glycans and other heteroatoms, whose removed identities are recorded. Complete-virion accessibility is not represented.
+The model combines an unbound human receptor conformation with the experimentally bound tamarin orientation. The large alignment RMSD is the greatest structural uncertainty. Fixed backbones omit E2 conformational flexibility; only reliably mapped sidechain substitutions are modeled. Coordinates absent from the experiments are not invented. Native WT uses the repaired reference; mutated sequences require BuildMutant followed by postmutation repair. This creates an optimization-path difference, which the extra WT repair sensitivity checks. Protein-only scoring removes glycans and other heteroatoms, whose removed identities are recorded. Complete-virion accessibility is not represented.
 
 EvoEF2 interaction outputs are not experimental affinity, KD or rigorous binding free energy. The experimental score gate failed. ProteinMPNN NLL measures conditional sequence compatibility. Stability and SASA outputs do not measure folding, expression or solubility. The literature includes heterogeneous soluble, cellular and entry assays, and some viral strain identifiers are not established in the directly reported methods. The convenience sequence sample and incomplete panel introduce sampling bias. Small, unbalanced held-out sets and connected haplotype dependence weaken the bootstrap interpretation. Genotype-stratified outputs retain unknown and mixed-genotype states.
 

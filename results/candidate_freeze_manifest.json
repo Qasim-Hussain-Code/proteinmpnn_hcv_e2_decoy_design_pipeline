@@ -1,0 +1,40 @@
+{
+  "candidate_ids": [
+    "decoy_0386",
+    "decoy_0405",
+    "decoy_0441",
+    "decoy_0476",
+    "decoy_0481",
+    "decoy_0523",
+    "decoy_0552"
+  ],
+  "candidate_table_sha256": "ed2bb58877af2901410c10bcbc1ba16e5d1403227977794e81f0376a3e6bba94",
+  "config_hash": "e81d83ffd50ff619bb34a7631abbb3738ac3657595165d4684d636c62b0fdc90",
+  "discovery_inputs": {
+    "scores": "87ca61f52b0dc76314ee1cd6f4c5ad52995b548baa71e2f2b25ea00dfbb77dee",
+    "states": "78c1b74185702d29f56969997027e114f8343a2ae14a3d91cf2d8c798d71d79d"
+  },
+  "heldout_opened": false,
+  "input_file_hashes": {
+    "config/cd81_mutation_ground_truth.tsv": "2ccb1cabf51bef7b81a2e3a8963082958d356bd000adae4e850f02d6b89467fd",
+    "config/fixed_positions.tsv": "d85b100a9cf47403651d46725826b6dd3b94e77ca8297d73029d3c4827db1b82",
+    "config/split_manifest.tsv": "54278018ffade83c8698af54127d7fb90f4702e929c2f45f45126df2cc9edb76",
+    "data/processed/discovery_panel.tsv": "78c1b74185702d29f56969997027e114f8343a2ae14a3d91cf2d8c798d71d79d",
+    "data/processed/humanized_repaired.pdb": "6acbc194983985496582a95b47c05232228c54d304af9bca56c19ff0889976db",
+    "results/benchmark_summary.json": "652408899ef4e83d42dd2050975a4c86a1a673aff83c75c59e50dfac7bd0ac50",
+    "results/candidate_biophysics.tsv": "7f21ffc1322ae219056b8a5dda3c444f93acfb31c86d632f2f6d754407658862",
+    "results/discovery_scores.tsv.gz": "87ca61f52b0dc76314ee1cd6f4c5ad52995b548baa71e2f2b25ea00dfbb77dee",
+    "results/generated_sequences.tsv.gz": "5c4e804a6d92d721ebfd532f72fb1633e07716bc2488d0648d9f2208bd0eefd1"
+  },
+  "method_file_hashes": {
+    "pipeline/common.py": "d46364f655481bf8ccd7e39fa973a3a9c6361c268257eee6fe0f7d2e82a5faf0",
+    "pipeline/design.py": "845303053743221f6f99a8430d80850e9834cb18d44e7a10159f9c113d694b53",
+    "pipeline/diversity.py": "f13fe37fe55b8ccbb4d805b2fe9ef3e5542497f033d8e453a47512a7839fa73a",
+    "pipeline/scoring.py": "987c9db5f213bce5affea2bbdbbdd3d730ecfc23a823cb70aa0ff4f79275f817",
+    "pipeline/selection.py": "f13cdabf4e425d9b93d91d64a6fdea04c1c061fd2700fe14e36743801bb04d7c",
+    "pipeline/structures.py": "d126ceff318b611c5deeac3996f4a56f5dff9a81e4b3b575eb5ca6b209ce356c"
+  },
+  "rule": "Same unique candidate pool: reference interaction-score ascending; escape maximum paired WT delta ascending, then median paired delta, then neutral identifier. Pareto annotated separately; not an extra selection gate.",
+  "selection_timestamp": "2026-10-04T00:54:09.431973+00:00",
+  "software_manifest_hash": "ec838c42df305b658a6880b58f3284624839f43fb396a79b17147785d138b913"
+}

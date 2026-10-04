@@ -21,7 +21,7 @@ C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipel
 IOError: in file C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\vendor\EvoEF2\src\Structure.cpp function StructureConfig() line 153, when opening:
 C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\data\work\mutate\humanized_repaired_Model_00C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\data\work\mutate
 
-"	Execution resolved by short local PDB paths and verified source-default options; successful rerun retained scientific gate failure	benchmark 2026-10-03T18:41:34.047694+00:00
+"	Execution resolved by short local PDB paths and verified source-default options; successful rerun retained scientific gate failure; later successful stage validated	2026-10-03T18:41:34.047694+00:00
 2026-10-03T17:34:03.960537+00:00	pilot	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py pilot	RuntimeError	1	"['C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\.venv\\Scripts\\python.exe', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/vendor/ProteinMPNN/protein_mpnn_run.py'), '--pdb_path', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/processed/humanized_unrepaired.pdb'), '--pdb_path_chains', 'R', '--path_to_model_weights', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/vendor/ProteinMPNN/vanilla_model_weights'), '--out_folder', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/work/mpnn/pilot'), '--num_seq_per_target', 100, '--sampling_temp', 0.1, '--seed', 20261005, '--batch_size', 1, '--fixed_positions_jsonl', WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/processed/mpnn_fixed_A.jsonl'), '--omit_AAs', 'CX', '--model_name', 'v_48_020', '--save_score', 1]: exit=1
 ----------------------------------------
 chain_id_jsonl is NOT loaded
@@ -51,13 +51,13 @@ Traceback (most recent call last):
     fixed_pos_list = fixed_position_dict[b['name']][letter]
                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
 KeyError: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\data\\processed\\humanized_unrepaired'
-"	Converted Windows path arguments to forward slashes; official output seed and constraints verified on rerun	results/mpnn_pilot.json
-2026-10-03T18:17:07.702411+00:00	discovery	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py discovery	BrokenProcessPool	1	A process in the process pool was terminated abruptly while the future was running or pending.	unresolved	
-2026-10-03T18:17:12.076072+00:00	freeze	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py freeze	FileNotFoundError	1	[Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\results\\discovery_scores.tsv.gz'	unresolved	
-2026-10-03T18:17:16.124244+00:00	heldout	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py heldout	RuntimeError	1	Leakage refusal: held-out data inaccessible before candidate freeze	unresolved	
-2026-10-03T18:17:20.456950+00:00	sensitivity	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py sensitivity	RuntimeError	1	Leakage refusal: held-out data inaccessible before candidate freeze	unresolved	
-2026-10-03T18:17:27.277289+00:00	figures	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py figures	FileNotFoundError	1	[Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\results\\discovery_metrics.tsv'	unresolved	
-2026-10-03T18:17:31.039952+00:00	report	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py report	FileNotFoundError	1	[Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\results\\heldout_summary.json'	unresolved	
+"	Converted Windows path arguments to forward slashes; official output seed and constraints verified on rerun; later successful stage validated	2026-10-03T17:34:34.743929+00:00
+2026-10-03T18:17:07.702411+00:00	discovery	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py discovery	BrokenProcessPool	1	A process in the process pool was terminated abruptly while the future was running or pending.	Resolved by subsequent completed stage; original failure retained	2026-10-04T00:51:07.355470+00:00
+2026-10-03T18:17:12.076072+00:00	freeze	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py freeze	FileNotFoundError	1	[Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\results\\discovery_scores.tsv.gz'	Resolved by subsequent completed stage; original failure retained	2026-10-04T00:51:28.704725+00:00
+2026-10-03T18:17:16.124244+00:00	heldout	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py heldout	RuntimeError	1	Leakage refusal: held-out data inaccessible before candidate freeze	Resolved by subsequent completed stage; original failure retained	2026-10-04T00:54:17.357458+00:00
+2026-10-03T18:17:20.456950+00:00	sensitivity	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py sensitivity	RuntimeError	1	Leakage refusal: held-out data inaccessible before candidate freeze	Resolved by subsequent completed stage; original failure retained	2026-10-04T00:55:06.469374+00:00
+2026-10-03T18:17:27.277289+00:00	figures	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py figures	FileNotFoundError	1	[Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\results\\discovery_metrics.tsv'	Resolved by subsequent completed stage; original failure retained	2026-10-04T00:55:15.522311+00:00
+2026-10-03T18:17:31.039952+00:00	report	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py report	FileNotFoundError	1	[Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\results\\heldout_summary.json'	Resolved by subsequent completed stage; original failure retained	2026-10-04T01:04:14.768532+00:00
 2026-10-03T18:17:48.012877+00:00	scoring_optimization	replace parsing/copy overhead	RuntimeError	1	Discovery workers deliberately stopped before freeze to load equivalent faster coordinate assembly	All 25 reference comparisons identical; resume full discovery with retained candidate models	
 2026-10-03T18:47:46.898313+00:00	pytest	python -m pytest -q	PermissionError	1	Six fixture setup errors: access denied to host pytest temporary directory	Use project-local pytest scratch; 32 tests subsequently passed	
 2026-10-03T19:13:25.878807+00:00	clean_clone_validation	Clean local Git clone; configure; offline synthetic smoke; pytest	RuntimeError	1	"['C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\.venv\\Scripts\\python.exe', '-m', 'pytest', '-q']: exit=1
@@ -171,6 +171,121 @@ ERROR tests/test_methods.py::test_resource_refusal_projection - FileNotFoundE...
 ERROR tests/test_methods.py::test_atomic_table_failure_retains_valid_output
 25 passed, 7 errors in 2.19s
 
-"	unresolved	
-2026-10-04T00:51:02.646080+00:00	stage_wrapper	scripts/finish.sh	RuntimeError	1	Transient unexpected EOF/single-quote parse failure after completed discovery; current wrapper passes bash -n and ShellCheck	Rerun freeze through report after wrapper edits are complete	
-2026-10-04T00:51:02.706544+00:00	clean_clone_validation	pytest -q in clean clone	FileNotFoundError	1	Project-local pytest scratch parent did not exist in clean clone	Use root-level .pytest_scratch whose parent always exists	
+"	Resolved by subsequent completed stage; original failure retained	2026-10-04T00:53:20.036170+00:00
+2026-10-04T00:51:02.646080+00:00	stage_wrapper	scripts/finish.sh	RuntimeError	1	Transient unexpected EOF/single-quote parse failure after completed discovery; current wrapper passes bash -n and ShellCheck	Bash syntax and ShellCheck passed; freeze through report completed on wrapper rerun	scripts/finish.sh successful rerun
+2026-10-04T00:51:02.706544+00:00	clean_clone_validation	pytest -q in clean clone	FileNotFoundError	1	Project-local pytest scratch parent did not exist in clean clone	Use root-level .pytest_scratch whose parent always exists; later successful stage validated	2026-10-04T00:53:20.036170+00:00
+2026-10-04T00:52:28.681383+00:00	clean_clone_validation	Clean local source clone; offline synthetic smoke; pytest after scratch fix	RuntimeError	1	"['C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\.venv\\Scripts\\python.exe', '-m', 'pytest', '-q']: exit=1
+.........E.........E.E.E.E...E.E                                         [100%]
+=================================== ERRORS ====================================
+__________________ ERROR at setup of test_interface_distance __________________
+
+self = WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/work/verification_clone/.cache/pytest_scratch')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """"""
+        Create a new directory at this given path.
+        """"""
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系統找不到指定的路徑。: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\data\\work\\verification_clone\\.cache\\pytest_scratch'
+
+C:\Users\User\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py:1016: FileNotFoundError
+___________ ERROR at setup of test_heldout_invisible_before_freeze ____________
+
+self = WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/work/verification_clone/.cache/pytest_scratch')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """"""
+        Create a new directory at this given path.
+        """"""
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系統找不到指定的路徑。: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\data\\work\\verification_clone\\.cache\\pytest_scratch'
+
+C:\Users\User\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py:1016: FileNotFoundError
+____________________ ERROR at setup of test_freeze_tamper _____________________
+
+self = WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/work/verification_clone/.cache/pytest_scratch')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """"""
+        Create a new directory at this given path.
+        """"""
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系統找不到指定的路徑。: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\data\\work\\verification_clone\\.cache\\pytest_scratch'
+
+C:\Users\User\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py:1016: FileNotFoundError
+_____________________ ERROR at setup of test_hash_schema ______________________
+
+self = WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/work/verification_clone/.cache/pytest_scratch')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """"""
+        Create a new directory at this given path.
+        """"""
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系統找不到指定的路徑。: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\data\\work\\verification_clone\\.cache\\pytest_scratch'
+
+C:\Users\User\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py:1016: FileNotFoundError
+________________ ERROR at setup of test_actual_file_open_guard ________________
+
+self = WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/work/verification_clone/.cache/pytest_scratch')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """"""
+        Create a new directory at this given path.
+        """"""
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系統找不到指定的路徑。: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\data\\work\\verification_clone\\.cache\\pytest_scratch'
+
+C:\Users\User\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py:1016: FileNotFoundError
+_____________ ERROR at setup of test_resource_refusal_projection ______________
+
+self = WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/work/verification_clone/.cache/pytest_scratch')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """"""
+        Create a new directory at this given path.
+        """"""
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系統找不到指定的路徑。: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\data\\work\\verification_clone\\.cache\\pytest_scratch'
+
+C:\Users\User\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py:1016: FileNotFoundError
+______ ERROR at setup of test_atomic_table_failure_retains_valid_output _______
+
+self = WindowsPath('C:/Users/User/Documents/Structural_Biology/proteinmpnn_hcv_e2_decoy_design_pipeline/data/work/verification_clone/.cache/pytest_scratch')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """"""
+        Create a new directory at this given path.
+        """"""
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系統找不到指定的路徑。: 'C:\\Users\\User\\Documents\\Structural_Biology\\proteinmpnn_hcv_e2_decoy_design_pipeline\\data\\work\\verification_clone\\.cache\\pytest_scratch'
+
+C:\Users\User\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py:1016: FileNotFoundError
+=========================== short test summary info ===========================
+ERROR tests/test_methods.py::test_interface_distance - FileNotFoundError: [Wi...
+ERROR tests/test_methods.py::test_heldout_invisible_before_freeze - FileNotFo...
+ERROR tests/test_methods.py::test_freeze_tamper - FileNotFoundError: [WinErro...
+ERROR tests/test_methods.py::test_hash_schema - FileNotFoundError: [WinError ...
+ERROR tests/test_methods.py::test_actual_file_open_guard - FileNotFoundError:...
+ERROR tests/test_methods.py::test_resource_refusal_projection - FileNotFoundE...
+ERROR tests/test_methods.py::test_atomic_table_failure_retains_valid_output
+25 passed, 7 errors in 1.26s
+
+"	Resolved by subsequent completed stage; original failure retained	2026-10-04T00:53:20.036170+00:00
+2026-10-04T00:58:15.038848+00:00	verify	C:\Users\User\Documents\Structural_Biology\proteinmpnn_hcv_e2_decoy_design_pipeline\pipeline\cli.py verify	RuntimeError	1	Verification failed: [{'check': 'language_README.md', 'passed': False, 'details': 'in conclusion'}, {'check': 'language_report.md', 'passed': False, 'details': 'in conclusion'}]	Resolved by subsequent completed stage; original failure retained	2026-10-04T01:07:12.956034+00:00
+2026-10-04T01:49:31.487595+00:00	cleanup_review	Recursive deletion of data/work, .cache, .pytest_scratch and logs/evo	RuntimeError	1	Automatic approval review rejected broad recursive directory deletion: contents had not been demonstrated to be disposable; possible loss of checkpoints or reproducibility artifacts.	Resolved using an inspected per-file manifest: only 1604 individually hashed disposable PDB files removed; checkpoints, sources, generation outputs and logs retained. Targeted cleanup approved and completed.	
+2026-10-04T01:49:59.133619+00:00	resume_check	bash run_all.sh --from discovery	RuntimeError	1	Windows Python stdout used CRLF; Bash mapfile retained carriage returns, causing Unknown resume stage: discovery.	Resolved: Windows carriage returns stripped from the stage list; bash run_all.sh --from discovery completed every stage through final verification after model cleanup.	2026-10-04T01:52:57.479491+00:00

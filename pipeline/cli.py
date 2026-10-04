@@ -72,6 +72,9 @@ def main():
                 print('Frozen scientific inputs retained; use a fresh checkout for a new run.',flush=True)
             else:
                 getattr(importlib.import_module('pipeline.'+module_name), stage)()
+                if stage=='sensitivity':
+                    from .preparation_sensitivity import main as preparation_sensitivity
+                    preparation_sensitivity()
         print(f'DONE {stage}', flush=True)
 
 if __name__ == '__main__':

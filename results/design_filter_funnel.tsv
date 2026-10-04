@@ -1,6 +1,12 @@
-transition	count
-generated	760
-valid_length	760
-fixed_positions_and_disulfides	760
-canonical_and_no_extra_cysteine	760
-unique_passed	759
+transition	count	is_selection_gate	notes
+generated	760	True	Composition and exposure are descriptors; no unsupported universal composition threshold imposed
+valid_length	760	True	Composition and exposure are descriptors; no unsupported universal composition threshold imposed
+fixed_positions_and_disulfides	760	True	Composition and exposure are descriptors; no unsupported universal composition threshold imposed
+canonical_and_no_extra_cysteine	760	True	Composition and exposure are descriptors; no unsupported universal composition threshold imposed
+unique_passed	759	True	Composition and exposure are descriptors; no unsupported universal composition threshold imposed
+scoreable	759	True	Composition and exposure are descriptors; no unsupported universal composition threshold imposed
+no_severe_excess_clash	759	True	Composition and exposure are descriptors; no unsupported universal composition threshold imposed
+pareto_eligible	10	False	Exposure/score Pareto annotation; does not exclude candidates from either selection rule
+discovery_selected_and_frozen	7	True	Composition and exposure are descriptors; no unsupported universal composition threshold imposed
+heldout_evaluated	7	True	Composition and exposure are descriptors; no unsupported universal composition threshold imposed
+final_computational_priority_set	7	True	Composition and exposure are descriptors; no unsupported universal composition threshold imposed

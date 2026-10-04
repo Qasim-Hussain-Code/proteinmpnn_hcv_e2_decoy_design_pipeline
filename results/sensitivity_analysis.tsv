@@ -1,0 +1,8 @@
+parameter	value	number_states	achieved_coverage	interpretation
+discovery_coverage_target	0.8	24	0.39436619718309857	Coverage selection only; candidates remain frozen; no additional structural score inferred
+discovery_coverage_target	0.95	24	0.39436619718309857	Coverage selection only; candidates remain frozen; no additional structural score inferred
+geometric_interface_cutoff	4.0	16		Residue count sensitivity; no retroactive redesign
+geometric_interface_cutoff	6.0	30		Residue count sensitivity; no retroactive redesign
+benchmark_neutral_tolerance	0.0	8	11	Categorical benchmark sensitivity; no threshold tuning
+benchmark_neutral_tolerance	0.5	5	11	Categorical benchmark sensitivity; no threshold tuning
+benchmark_neutral_tolerance	1.0	5	11	Categorical benchmark sensitivity; no threshold tuning

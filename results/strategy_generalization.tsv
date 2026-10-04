@@ -1,0 +1,8 @@
+candidate_id	selection_rule	discovery_worst_delta_wt	heldout_worst_delta_wt	worst_delta_change	discovery_median_delta_wt	heldout_median_delta_wt	median_delta_change	interpretation
+decoy_0386	escape_aware	-30.98	-30.51	0.46999999999999886	-35.5	-36.45	-0.9500000000000028	Different state panels; descriptive generalization change, not a biological effect
+decoy_0405	single_state,escape_aware	-32.55	-32.02	0.529999999999994	-37.03	-38.004999999999995	-0.9749999999999943	Different state panels; descriptive generalization change, not a biological effect
+decoy_0441	single_state,escape_aware	-32.05	-32.86	-0.8100000000000023	-36.870000000000005	-38.42	-1.5499999999999972	Different state panels; descriptive generalization change, not a biological effect
+decoy_0476	escape_aware	-31.2	-30.53	0.6699999999999982	-35.605000000000004	-36.42	-0.8149999999999977	Different state panels; descriptive generalization change, not a biological effect
+decoy_0481	single_state	-30.09	-31.92	-1.8300000000000018	-34.995	-36.605000000000004	-1.6100000000000065	Different state panels; descriptive generalization change, not a biological effect
+decoy_0523	single_state,escape_aware	-31.44	-29.689999999999998	1.7500000000000036	-35.285000000000004	-34.845	0.44000000000000483	Different state panels; descriptive generalization change, not a biological effect
+decoy_0552	single_state	-30.03	-31.51	-1.4800000000000004	-35.230000000000004	-37.58	-2.3499999999999943	Different state panels; descriptive generalization change, not a biological effect

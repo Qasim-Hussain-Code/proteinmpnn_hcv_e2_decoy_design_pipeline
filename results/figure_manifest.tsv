@@ -1,0 +1,9 @@
+figure	file	title	finding	generation_stage	sha256
+1	figures/figure_1.png	Humanization and interface audit	Substantial conformation mismatch and residual repaired clashes limit interpretation.	figures	30d9a4e113a6c501ec3b4e55eca10b71269b2c5cf6ebe4a4d372550ca2034d54
+2	figures/figure_2.png	Discovery E2 interface conservation	Some interface positions vary in the retrieved discovery sequences; frequencies are sampling-dependent.	figures	9aec8647932eb5556779712ffffe1af282193630cdaef5fbf40094d1ec4c1294
+3	figures/figure_3.png	Experimental mutation score benchmark	The interface scoring gate failed; candidate model outputs cannot support improved-binding claims.	figures	a88ec436930321897982462701e9279892c3052b33cc898c602b7ebbfa2f7010
+4	figures/figure_4.png	Single-state and multi-state discovery tradeoff	Single-state score and worst paired delta measure different model properties.	figures	04fc81613431b01343850335f2a2aa400b19749c1fb0ec54a5d768f98899ee0e
+5	figures/figure_5.png	Frozen candidates across discovery E2 states	WT is the zero baseline on every state; positive deltas favor WT in the model.	figures	448858a6cd23f829249490feeb8f7a8dea8acc80112eacf18f8ab62275b831a0
+6	figures/figure_6.png	Frozen held-out evaluation	The headline effect is a model-score comparison under a failed experimental validation gate.	figures	9c6feebceed80b836b6671daafc2a895fe95cc6d98e431a576ef8b32c9448586
+7	figures/figure_7.png	Sequence and exposure tradeoff	Soluble-model differences are geometric proxies, not expression or solubility measurements.	figures	5e2f1ed59ddce7022fb6d6c6199ef35b798f0de130e31314f3c98a9ae8d6a37e
+8	figures/figure_8.png	Measured resource profile	Per-stage maxima across successful executions; cache skips do not replace full computation time. Original bootstrap telemetry remains unavailable.	figures	fce46f3c19d71d93306e8ebb7e42608ba4f4862e58e18edf156c99560d0182bb

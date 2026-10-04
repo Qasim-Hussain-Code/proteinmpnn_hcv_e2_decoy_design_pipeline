@@ -1,0 +1,94 @@
+{
+  "benchmark": {
+    "assay_rows": 29,
+    "benchmark_passed": false,
+    "classifiable_binding_controls": 12,
+    "concordance_ci95": [
+      0.16748809406370715,
+      0.7662064023406548
+    ],
+    "concordance_interval_method": "Clopper-Pearson exact; distinct mutation-direction controls; assay dependence remains",
+    "concordant_directional": 5,
+    "directional_binding_controls": 11,
+    "experimental_direction_counts": {
+      "enhanced": 1,
+      "reduced": 10
+    },
+    "majority_direction_baseline_correct": 10,
+    "majority_direction_baseline_total": 11,
+    "positive_control_recovered": true,
+    "quantitative_correlation": "Not calculated: qualitative observations; incompatible assays not pooled",
+    "unique_mutations": 15,
+    "warning": "Interface scoring failed directional/positive-control gate; no improved-binding interpretation allowed"
+  },
+  "discovery_panel_coverage": 0.39436619718309857,
+  "diversity": {
+    "alignment_command": "python -m pipeline.cli diversity",
+    "caveat": "Not population prevalence. First 40 per genotype-enriched query. Unknown metadata remain unknown.",
+    "clusters": 44,
+    "discovery": 213,
+    "discovery_haplotypes": 139,
+    "discovery_states": 24,
+    "excluded": 83,
+    "held_out": 13,
+    "heldout_haplotypes": 11,
+    "included": 226,
+    "interface_positions": [
+      422,
+      423,
+      424,
+      426,
+      427,
+      429,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      505,
+      515,
+      612,
+      613
+    ],
+    "retrieved": 309,
+    "split_rule": "Connected components at interface Hamming distance <=1, stratify modal genotype/subtype if >=5 clusters; small strata pooled deterministic fallback",
+    "unique_e2_sequences": 207,
+    "versions": {
+      "biopython": "1.88"
+    }
+  },
+  "failure_count": 20,
+  "generated": 760,
+  "generation_elapsed_seconds": 1649.2999,
+  "generation_projection_error_percent": 37.8737743339621,
+  "heldout": {
+    "benchmark_warning": "Interface scoring failed directional/positive-control gate; no improved-binding interpretation allowed",
+    "bootstrap_method": "paired percentile state bootstrap of mean candidate maximum paired WT delta",
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261010,
+    "bootstrap_unit": "held-out structural haplotype state, equally weighted; correlated components remain a limitation",
+    "ci95": [
+      0.07600000000000051,
+      0.5420000000000016
+    ],
+    "escape_aware_candidates": 5,
+    "frozen": 7,
+    "no_experimental_binding_measurements": true,
+    "rank_spearman": 0.3214285714285715,
+    "sequences": 13,
+    "shared_candidates": 3,
+    "single_state_candidates": 5,
+    "states": 10,
+    "worst_delta_effect_escape_minus_single": 0.477999999999998
+  },
+  "humanization_rmsd": 3.6908659805024997,
+  "peak_project_bytes": 2401081522,
+  "peak_rss_bytes": 559603712,
+  "stage_elapsed_sum_seconds": 6868.1414,
+  "unique_passed": 759
+}

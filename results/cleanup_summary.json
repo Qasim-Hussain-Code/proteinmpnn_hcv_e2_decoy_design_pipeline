@@ -1,0 +1,11 @@
+{
+  "audited_files": 1604,
+  "deleted_bytes_this_run": 213054298,
+  "deleted_bytes_total": 213054298,
+  "deleted_files_this_run": 1604,
+  "deleted_files_total": 1604,
+  "manifest_sha256": "8a4ab2d544943f65c8d6505e52b238639bcf9307dd135e3323d7527c6499fc3e",
+  "method": "Nonrecursive unlink of individually hashed generated PDB files; no directory deletion",
+  "retained": "Frozen models, controls, compact states, checkpoints, original FASTA/NPZ, source snapshots and logs",
+  "timestamp": "2026-10-04T01:48:34.043081+00:00"
+}

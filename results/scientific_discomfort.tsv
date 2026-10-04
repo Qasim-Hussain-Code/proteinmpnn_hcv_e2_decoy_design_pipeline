@@ -1,0 +1,8 @@
+issue	evidence	why_it_matters	effect_on_claims
+Experimental directional scoring gate failed	5/11 unique directional controls; F186L effectively neutral	Known receptor effects are not reliably recovered	All candidate results are model outputs; no improved-binding interpretation
+Humanization conformation mismatch	CA RMSD 3.6908659805024997 A; initial clashes 10	Scoring may reflect scaffold placement artifacts	Fixed hybrid comparison only
+Compact discovery panel misses target	0.39436619718309857 achieved at 24 states versus target 0.9	Rare observed haplotypes are underrepresented	No broad population coverage claim
+Cluster split observation imbalance	13/226 held-out observations	Near-haplotype clusters have unequal size	Nominal cluster split is not an 80/20 accession split
+Generation timing projection underestimated actual duration	Projected 1196.2390294799757 s; observed 1649.2999 s	Repeated model loads and concurrent installation may contribute; effects were not isolated	Report actual duration; throughput cap was projected, not a guaranteed wall-clock bound
+Bootstrap installation resource telemetry gap	Initial bootstrap preceded instrumentation; canonical locked fresh installation later reproduced with process-tree and project telemetry	Original bootstrap peak cannot be reconstructed	Claims use measured scientific stages and canonical reproduced installation, not an invented original peak
+Genotype subset influences strategy comparison	Excluding genotype 2 changes effect to 0.07600000000000051	Small genotype-specific state counts make the headline effect sample-sensitive	Do not generalize the convenience panel to population-wide escape behavior

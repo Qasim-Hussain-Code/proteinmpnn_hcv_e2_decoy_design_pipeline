@@ -143,6 +143,8 @@ def test_critical_score_language():
     assert language_errors('The EvoEF2 binding affinity increased.')
     assert not language_errors('An EvoEF2 score is not experimental binding affinity.')
     assert language_errors('A high affinity binder was designed.')
+    assert not language_errors('The least certain conclusion concerns this model.')
+    assert language_errors('In conclusion, the computation is finished.')
 
 def test_fixture_end_to_end():
     # Run analytical pieces together; score numbers here are explicitly synthetic.
@@ -174,3 +176,49 @@ def test_atomic_table_failure_retains_valid_output(tmp_path):
         write_tsv(path,[dict(candidate='b',unexpected=4)],fields=['candidate','score'])
     assert path.read_bytes()==original and read_tsv(path)[0]['candidate']=='a'
     assert not list(tmp_path.glob('*.tmp'))
+
+
+def test_cleanup_refuses_outside_model_directory(monkeypatch,tmp_path):
+    import pipeline.cleanup as cleanup
+    monkeypatch.setattr(cleanup,'ROOT',tmp_path)
+    monkeypatch.setattr(cleanup,'require_freeze',lambda: {})
+    manifest=tmp_path/'results/disposable_model_manifest.tsv'
+    monkeypatch.setattr(cleanup,'MANIFEST',manifest)
+    protected=tmp_path/'data/processed/retained.pdb'
+    protected.parent.mkdir(parents=True); protected.write_text('protected source')
+    write_tsv(manifest,[dict(path='data/processed/retained.pdb',sha256=sha256(protected),size_bytes=protected.stat().st_size,retained_model='')])
+    with pytest.raises(RuntimeError,match='outside audited'):
+        cleanup.cleanup()
+    assert protected.read_text()=='protected source'
+
+
+def test_cleanup_refuses_changed_file(monkeypatch,tmp_path):
+    import pipeline.cleanup as cleanup
+    monkeypatch.setattr(cleanup,'ROOT',tmp_path)
+    monkeypatch.setattr(cleanup,'require_freeze',lambda: {})
+    manifest=tmp_path/'results/disposable_model_manifest.tsv'
+    monkeypatch.setattr(cleanup,'MANIFEST',manifest)
+    model=tmp_path/'data/work/receptor_models/decoy_0001.pdb'
+    model.parent.mkdir(parents=True); model.write_text('original')
+    write_tsv(manifest,[dict(path=model.relative_to(tmp_path).as_posix(),sha256=sha256(model),size_bytes=model.stat().st_size,retained_model='')])
+    model.write_text('changed after audit')
+    with pytest.raises(RuntimeError,match='changed after audit'):
+        cleanup.cleanup()
+    assert model.read_text()=='changed after audit'
+
+
+def test_cleanup_preserves_retained_copy_and_is_idempotent(monkeypatch,tmp_path):
+    import pipeline.cleanup as cleanup
+    monkeypatch.setattr(cleanup,'ROOT',tmp_path)
+    monkeypatch.setattr(cleanup,'require_freeze',lambda: {})
+    manifest=tmp_path/'results/disposable_model_manifest.tsv'
+    monkeypatch.setattr(cleanup,'MANIFEST',manifest)
+    model=tmp_path/'data/work/receptor_models/decoy_0001.pdb'
+    retained=tmp_path/'data/processed/frozen_candidates/decoy_0001.pdb'
+    for path in [model,retained]:
+        path.parent.mkdir(parents=True); path.write_text('identical verified coordinates')
+    write_tsv(manifest,[dict(path=model.relative_to(tmp_path).as_posix(),sha256=sha256(model),size_bytes=model.stat().st_size,retained_model=retained.relative_to(tmp_path).as_posix())])
+    cleanup.cleanup(); cleanup.cleanup()
+    summary=json.loads((tmp_path/'results/cleanup_summary.json').read_text())
+    assert not model.exists() and retained.read_text()=='identical verified coordinates'
+    assert summary['deleted_files_total']==1 and summary['deleted_files_this_run']==0

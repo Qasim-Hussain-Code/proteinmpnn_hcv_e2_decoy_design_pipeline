@@ -65,8 +65,9 @@ def sources():
         for path in [folder/'LICENSE',folder/'README.md']+weights:
             from .common import append_tsv
             append_tsv(ROOT/'results/download_manifest.tsv',dict(resource=str(path.relative_to(ROOT)),identifier=name,
-                       source_url=source_url+'/blob/'+commit+'/'+str(path.relative_to(folder)).replace('\\','/'), download_timestamp=now(),
-                       size_bytes=path.stat().st_size,sha256=sha256(path),version=commit,notes='Retrieved by Git; selective files audited'))
+                       source_url=source_url+('/tree/'+commit if path.name=='EvoEF2_local.exe' else '/blob/'+commit+'/'+str(path.relative_to(folder)).replace('\\','/')), download_timestamp=now(),
+                       size_bytes=path.stat().st_size,sha256=sha256(path),version=commit,
+                       notes='Locally compiled from pinned source; executable was not downloaded; g++ -O3 -static' if path.name=='EvoEF2_local.exe' else 'Retrieved by Git; selective files audited'))
     import torch
     if torch.version.cuda is not None or '+cpu' not in torch.__version__:
         raise RuntimeError('Refuse CUDA or unverified CPU PyTorch build')

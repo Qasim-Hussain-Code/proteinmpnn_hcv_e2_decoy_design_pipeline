@@ -25,7 +25,7 @@ if [[ "$mode" == smoke ]]; then
 fi
 # Core and full use the pilot's largest approved compact CPU budget. The mode
 # label cannot override the measured resource ceiling or an existing freeze.
-mapfile -t stages < <("$PYTHON" -c 'from pipeline.cli import STAGES; print("\n".join(STAGES[:-1]))')
+mapfile -t stages < <("$PYTHON" -c 'from pipeline.cli import STAGES; print("\n".join(STAGES[:-1]))' | tr -d '\r')
 if [[ -n "$from_stage" ]] && [[ ! " ${stages[*]} " == *" $from_stage "* ]]; then
     echo "Unknown resume stage: $from_stage" >&2; exit 2
 fi

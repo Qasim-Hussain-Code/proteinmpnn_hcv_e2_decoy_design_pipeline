@@ -1,0 +1,3 @@
+strategy	number_candidates	mean_candidate_worst_delta_wt	mean_candidate_median_delta_wt	largest_candidate_worst_delta_wt	mean_fraction_better_wt	mean_fraction_within_wt_tolerance	interpretation
+single_state	5	-31.6	-37.090999999999994	-29.689999999999998	1.0	1.0	Equal frozen candidates and held-out states; overlapping selections retained
+escape_aware	5	-31.122000000000003	-36.828	-29.689999999999998	1.0	1.0	Equal frozen candidates and held-out states; overlapping selections retained

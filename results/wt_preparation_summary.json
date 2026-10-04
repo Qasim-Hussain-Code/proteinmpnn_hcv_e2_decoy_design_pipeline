@@ -1,0 +1,11 @@
+{
+  "alternative_directional_concordance": 5,
+  "alternative_worst_effect_escape_minus_single": 0.477999999999998,
+  "directional_controls": 11,
+  "interpretation": "Exploratory preparation sensitivity; cannot rescue failed primary validation or establish experimental binding",
+  "maximum_absolute_wt_state_score_change": 0.0,
+  "native_reference_score_extra_repair": 34.84,
+  "primary_freeze_and_benchmark_unchanged": true,
+  "primary_protocol": "Native WT uses repaired reference; mutated sequences use BuildMutant and additional postmutation RepairStructure",
+  "sensitivity": "One additional native WT repair pass; exact viral-state coordinates and frozen candidate outputs retained"
+}
