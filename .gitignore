@@ -6,6 +6,7 @@ data/work/
 data/processed/hcv_polyproteins.json
 __pycache__/
 .pytest_cache/
+.pytest_scratch/
 *.pyc
 *.egg-info/
 project.conf

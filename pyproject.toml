@@ -17,4 +17,4 @@ packages = ["pipeline"]
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]
-addopts = "--basetemp=.cache/pytest_scratch -p no:cacheprovider"
+addopts = "--basetemp=.pytest_scratch -p no:cacheprovider"
