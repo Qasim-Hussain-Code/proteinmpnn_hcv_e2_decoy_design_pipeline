@@ -58,7 +58,7 @@ def build():
         original_correct=benchmark['concordant_directional'],
         control_total=benchmark['directional_binding_controls'],
         baseline_correct=benchmark['majority_direction_baseline_correct'],
-        corrected_rows=sum(r['followup_role'] != 'external_source_challenge' for r in included),
+        benchmark_assay_rows=sum(r['followup_role'] != 'external_source_challenge' for r in included),
         included_rows=len(included), model_count=len(models),
         best_bound_correct=int(fixed['bound_ae']['original_single_correct']),
         second_bound_correct=int(fixed['bound_bh']['original_single_correct']),
@@ -89,7 +89,7 @@ def build():
         peak_rss_gb=run['peak_rss_bytes']/1e9, peak_project_gb=run['peak_project_bytes']/1e9,
     )
     assert not benchmark['benchmark_passed']
-    assert metrics['included_rows'] == 34 and metrics['corrected_rows'] == 28
+    assert metrics['included_rows'] == 34 and metrics['benchmark_assay_rows'] == 28
     substitutions = {k: str(v) for k, v in metrics.items()}
     for k in ['effect', 'ci_low', 'ci_high', 'rmsd', 'min_contact163', 'min_contact196', 'wt_repulsion']:
         substitutions[k] = f'{metrics[k]:.2f}'

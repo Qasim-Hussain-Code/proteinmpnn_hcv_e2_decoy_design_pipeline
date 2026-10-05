@@ -1,46 +1,46 @@
 readme_claim	value	source_file	source_column_or_metric	generation_stage
-retrieved	878	followup/coverage_summary.json	retrieved	followup and publication audit
-included	532	followup/coverage_summary.json	included	followup and publication audit
-excluded	346	followup/coverage_summary.json	excluded	followup and publication audit
-unique_e2	444	followup/coverage_summary.json	unique_e2	followup and publication audit
-development	526	followup/coverage_summary.json	development	followup and publication audit
-future_reserve	6	followup/coverage_summary.json	future_reserve	followup and publication audit
-states_for_90_percent	284	followup/coverage_summary.json	states_for_90_percent	followup and publication audit
-archival_states_for_90_percent	118	followup/coverage_summary.json	archival_states_for_90_percent	followup and publication audit
-unknown_genotype	22	followup/coverage_summary.json	unknown_genotype	followup and publication audit
-achieved_coverage	0.9011406844106464	followup/coverage_summary.json	achieved_coverage	followup and publication audit
-archival_24_state_coverage	0.39436619718309857	followup/coverage_summary.json	archival_24_state_coverage	followup and publication audit
-balanced_states	306	followup/balanced_panel_summary.json	states	followup and publication audit
-balanced_coverage	0.9429657794676806	followup/balanced_panel_summary.json	coverage	followup and publication audit
-balanced_minimum_genotype_coverage	0.9016393442622951	followup/balanced_panel_summary.json	minimum_genotype_coverage	followup and publication audit
-balanced_additional_states	22	followup/balanced_panel_summary.json	additional_states	followup and publication audit
-expanded positions	37	followup/interface_positions.tsv	distinct h77_position	followup and publication audit
-original positions	20	followup/coverage_summary.json	length(original_interface_positions)	followup and publication audit
-unmodeled positions	415,416,417	followup/coverage_summary.json	unmodeled_interface_positions	followup and publication audit
-archive original_single_correct	5	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: original_single_correct	followup and publication audit
-archive original_single_total	11	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: original_single_total	followup and publication audit
-archive external_reduced_correct	1	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: external_reduced_correct	followup and publication audit
-archive external_reduced_total	4	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: external_reduced_total	followup and publication audit
-archive always_reduced_baseline	10	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: always_reduced_baseline	followup and publication audit
-archive wt_vdwrep	93.15	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: wt_vdwrep	followup and publication audit
-bound_ae original_single_correct	8	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: original_single_correct	followup and publication audit
-bound_ae original_single_total	11	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: original_single_total	followup and publication audit
-bound_ae external_reduced_correct	0	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: external_reduced_correct	followup and publication audit
-bound_ae external_reduced_total	4	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: external_reduced_total	followup and publication audit
-bound_ae always_reduced_baseline	10	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: always_reduced_baseline	followup and publication audit
-bound_ae wt_vdwrep	10.27	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: wt_vdwrep	followup and publication audit
-bound_bh original_single_correct	3	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: original_single_correct	followup and publication audit
-bound_bh original_single_total	11	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: original_single_total	followup and publication audit
-bound_bh external_reduced_correct	0	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: external_reduced_correct	followup and publication audit
-bound_bh external_reduced_total	4	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: external_reduced_total	followup and publication audit
-bound_bh always_reduced_baseline	10	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: always_reduced_baseline	followup and publication audit
-bound_bh wt_vdwrep	13.89	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: wt_vdwrep	followup and publication audit
-minimum contact 163	1.0906006705503302	followup/control_contacts.tsv	model=archive, cd81_position=163: min_distance	followup and publication audit
-minimum contact 196	7.699652693345628	followup/control_contacts.tsv	model=archive, cd81_position=196: min_distance	followup and publication audit
-T163A delta	-6.160000000000004	followup/benchmark.tsv	model=archive, mode=fixed_e2: delta	followup and publication audit
-T163A vdwrep_delta	-9.350000000000009	followup/benchmark.tsv	model=archive, mode=fixed_e2: vdwrep_delta	followup and publication audit
-corrected original assay rows	28	followup/ground_truth.tsv	included=true, exclude source-external challenge	followup and publication audit
-all included assay rows	34	followup/ground_truth.tsv	included=true	followup and publication audit
-models	8	followup/model_audit.tsv	row count	followup and publication audit
-figures	5	followup/figures	five PNG/PDF pairs	followup and publication audit
-genotype1 global panel coverage	0.7213114754098361	followup/genotype_coverage.tsv	genotype=1 coverage	followup and publication audit
+retrieved	878	followup/coverage_summary.json	retrieved	structural and coverage analysis; verification
+included	532	followup/coverage_summary.json	included	structural and coverage analysis; verification
+excluded	346	followup/coverage_summary.json	excluded	structural and coverage analysis; verification
+unique_e2	444	followup/coverage_summary.json	unique_e2	structural and coverage analysis; verification
+development	526	followup/coverage_summary.json	development	structural and coverage analysis; verification
+future_reserve	6	followup/coverage_summary.json	future_reserve	structural and coverage analysis; verification
+states_for_90_percent	284	followup/coverage_summary.json	states_for_90_percent	structural and coverage analysis; verification
+archival_states_for_90_percent	118	followup/coverage_summary.json	archival_states_for_90_percent	structural and coverage analysis; verification
+unknown_genotype	22	followup/coverage_summary.json	unknown_genotype	structural and coverage analysis; verification
+achieved_coverage	0.9011406844106464	followup/coverage_summary.json	achieved_coverage	structural and coverage analysis; verification
+archival_24_state_coverage	0.39436619718309857	followup/coverage_summary.json	archival_24_state_coverage	structural and coverage analysis; verification
+balanced_states	306	followup/balanced_panel_summary.json	states	structural and coverage analysis; verification
+balanced_coverage	0.9429657794676806	followup/balanced_panel_summary.json	coverage	structural and coverage analysis; verification
+balanced_minimum_genotype_coverage	0.9016393442622951	followup/balanced_panel_summary.json	minimum_genotype_coverage	structural and coverage analysis; verification
+balanced_additional_states	22	followup/balanced_panel_summary.json	additional_states	structural and coverage analysis; verification
+expanded positions	37	followup/interface_positions.tsv	distinct h77_position	structural and coverage analysis; verification
+original positions	20	followup/coverage_summary.json	length(original_interface_positions)	structural and coverage analysis; verification
+unmodeled positions	415,416,417	followup/coverage_summary.json	unmodeled_interface_positions	structural and coverage analysis; verification
+archive original_single_correct	5	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: original_single_correct	structural and coverage analysis; verification
+archive original_single_total	11	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: original_single_total	structural and coverage analysis; verification
+archive external_reduced_correct	1	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: external_reduced_correct	structural and coverage analysis; verification
+archive external_reduced_total	4	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: external_reduced_total	structural and coverage analysis; verification
+archive always_reduced_baseline	10	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: always_reduced_baseline	structural and coverage analysis; verification
+archive wt_vdwrep	93.15	followup/benchmark_summary.tsv	model=archive, mode=fixed_e2, tolerance=0.5: wt_vdwrep	structural and coverage analysis; verification
+bound_ae original_single_correct	8	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: original_single_correct	structural and coverage analysis; verification
+bound_ae original_single_total	11	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: original_single_total	structural and coverage analysis; verification
+bound_ae external_reduced_correct	0	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: external_reduced_correct	structural and coverage analysis; verification
+bound_ae external_reduced_total	4	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: external_reduced_total	structural and coverage analysis; verification
+bound_ae always_reduced_baseline	10	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: always_reduced_baseline	structural and coverage analysis; verification
+bound_ae wt_vdwrep	10.27	followup/benchmark_summary.tsv	model=bound_ae, mode=fixed_e2, tolerance=0.5: wt_vdwrep	structural and coverage analysis; verification
+bound_bh original_single_correct	3	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: original_single_correct	structural and coverage analysis; verification
+bound_bh original_single_total	11	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: original_single_total	structural and coverage analysis; verification
+bound_bh external_reduced_correct	0	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: external_reduced_correct	structural and coverage analysis; verification
+bound_bh external_reduced_total	4	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: external_reduced_total	structural and coverage analysis; verification
+bound_bh always_reduced_baseline	10	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: always_reduced_baseline	structural and coverage analysis; verification
+bound_bh wt_vdwrep	13.89	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: wt_vdwrep	structural and coverage analysis; verification
+minimum contact 163	1.0906006705503302	followup/control_contacts.tsv	model=archive, cd81_position=163: min_distance	structural and coverage analysis; verification
+minimum contact 196	7.699652693345628	followup/control_contacts.tsv	model=archive, cd81_position=196: min_distance	structural and coverage analysis; verification
+T163A delta	-6.160000000000004	followup/benchmark.tsv	model=archive, mode=fixed_e2: delta	structural and coverage analysis; verification
+T163A vdwrep_delta	-9.350000000000009	followup/benchmark.tsv	model=archive, mode=fixed_e2: vdwrep_delta	structural and coverage analysis; verification
+benchmark assay observations	28	followup/ground_truth.tsv	included=true, exclude source-external challenge	structural and coverage analysis; verification
+all included assay rows	34	followup/ground_truth.tsv	included=true	structural and coverage analysis; verification
+models	8	followup/model_audit.tsv	row count	structural and coverage analysis; verification
+figures	5	followup/figures	five PNG/PDF pairs	structural and coverage analysis; verification
+genotype1 global panel coverage	0.7213114754098361	followup/genotype_coverage.tsv	genotype=1 coverage	structural and coverage analysis; verification

@@ -14,19 +14,19 @@ Standard and soluble ProteinMPNN use matched seeds, temperatures and generation 
 
 WT means the unmodified human CD81 sequence. A paired score delta subtracts the WT score under the same viral-state geometry; positive values favor WT within this model. A haplotype is the combination of amino acids at the selected interface positions, and a structural state is its partial coordinate model. These distinctions keep sequence coverage, model performance and experimental evidence separate.
 
-The candidate comparison was frozen before held-out evaluation. The structural diagnostics and enlarged coverage panel were then used to investigate its limitations. These completed stages are reported together, while their different validation roles remain explicit. No candidate was re-ranked using the diagnostic controls or expanded panel. The [frozen protocol](config/design.yml), [diagnostic protocol](followup/protocol.json), [freeze hashes](results/candidate_freeze_manifest.json) and [methods](docs/methods_notes.md) retain the choices and their timing.
+The analysis comprises experimental-control benchmarking, held-out candidate evaluation, structural sensitivity and natural-sequence coverage. Candidate sequences and selection criteria are frozen before held-out evaluation. Structural comparisons use consulted experimental labels and are exploratory; they do not constitute independent blinded validation. Coverage panels are constructed from sequence frequencies without candidate scores. The [design protocol](config/design.yml), [structural protocol](followup/protocol.json), [candidate freeze](results/candidate_freeze_manifest.json) and [methods](docs/methods_notes.md) define these analysis roles.
 
-## Corrected experimental evidence and scoring
+## Experimental evidence and scoring
 
-The current [evidence table](followup/ground_truth.tsv) contains **34 included assay observations**: 28 from the original sources plus six additional source-external observations. It distinguishes soluble-protein binding, cell-surface binding and viral entry; heterogeneous assay values are not pooled or converted into invented affinities.
+The [experimental evidence table](followup/ground_truth.tsv) contains **34 included assay observations**: 28 in the benchmark evidence group and six in the source-external challenge group. It distinguishes soluble-protein binding, cell-surface binding and viral entry; heterogeneous assay values are not pooled or converted into invented affinities.
 
-The source audit corrected two soluble GST-LEL observations previously assigned to individual F186L and E188K mutations. [Higginbottom's Methods and Results](https://pmc.ncbi.nlm.nih.gov/articles/PMC111874/) describe the **F186L+E188K double mutant** for that soluble construct. Valid cell-surface single-mutant observations remain included. This correction leaves the 11 distinct single-mutation directional labels and the 5/11 frozen result unchanged. The [curation audit](followup/curation_audit.tsv) preserves the correction; the earlier table is retained as historical evidence.
+[Higginbottom's Methods and Results](https://pmc.ncbi.nlm.nih.gov/articles/PMC111874/) describe the soluble GST-LEL **F186L+E188K double-mutant construct**. This observation is treated as a double-mutant assay. Cell-surface single-mutant observations are assigned to their reported constructs and assay contexts. The directional benchmark comprises 11 distinct single-mutation labels, of which the reference model recovers 5.
 
 The additional observations come from [Drummer 2005](https://pubmed.ncbi.nlm.nih.gov/15670777/). Four report binding loss; two report retained binding without establishing WT-equivalent affinity. The latter are not labeled neutral or counted in directional accuracy. These consulted labels form an exploratory challenge, not an independent blinded validation set.
 
 Eight structural models assess alternative human receptor conformations, core alignment and both observed 7MWX receptor-binding pairs. Models based on a bound tamarin backbone carry the human sequence, but are not experimentally determined human complexes. Both preparation modes use the declared 0.5 score-unit tolerance: repacking both proteins, or keeping every mutant's E2 coordinates identical to its model's WT E2.
 
-| Model | Clashes below 2 Å | WT repulsive term | Original controls, repacked | Original controls, fixed E2 | Additional loss controls, fixed E2 |
+| Model | Clashes below 2 Å | WT repulsive term | Benchmark controls, repacked | Benchmark controls, fixed E2 | Challenge loss controls, fixed E2 |
 |---|---:|---:|---:|---:|---:|
 | `archive` | 2 | 93.15 | 5/11 | 5/11 | 1/4 |
 | `x0e_b` | 41 | 379.70 | 1/11 | 1/11 | 0/4 |
@@ -61,7 +61,7 @@ The soluble model reduced the hydrophobic SASA fraction relative to the standard
 
 Coverage counts the fraction of eligible sampled accessions represented by exact interface haplotypes. It is conditional on the retrieved cohort, exclusions and interface definition; it is not worldwide prevalence or demonstrated protective efficacy.
 
-| Quantity | Frozen candidate-comparison cohort | Expanded coverage cohort |
+| Quantity | Design and evaluation cohort | Diversity coverage cohort |
 |---|---:|---:|
 | Retrieved accessions | 309 | 878 |
 | Eligible accessions | 226 | 532 |
@@ -70,11 +70,11 @@ Coverage counts the fraction of eligible sampled accessions represented by exact
 | Development structural states | 24 | 306 |
 | Exact development haplotype coverage | 39.44% | 94.30% |
 
-The expanded retrieval contains 444 distinct mapped E2 sequences and 346 excluded accessions. A frequency-based global panel of 284 states covered 90.11%, but left genotype 1 underrepresented. A documented secondary extension to 306 states raised overall coverage to 94.30% and the minimum within each included recorded genotype to 90.16%. The extension used sequence counts, without candidate or assay scores. These panels differ in cohort and interface definition, so the percentages do not estimate the effect of panel size alone.
+The diversity retrieval contains 444 distinct mapped E2 sequences and 346 excluded accessions. A frequency-based global panel of 284 states covers 90.11%, with lower coverage in genotype 1. Exploratory genotype balancing extends the panel to 306 states, with overall coverage of 94.30% and a minimum of 90.16% within each included recorded genotype. Panel construction uses sequence counts, without candidate or assay scores. The two cohorts differ in accession membership and interface definition, so their percentages do not estimate the effect of panel size alone.
 
 ![Eligible accession coverage as states are added](followup/figures/coverage.png)
 
-*Coverage within the archived and expanded development cohorts. The expanded panel was prepared for future work; the frozen candidates were not evaluated against all of its states. [Coverage definitions and counts](followup/coverage_summary.json), [final panel](followup/balanced_development_panel.tsv).*
+*Coverage within the design and diversity development cohorts. Candidate performance is evaluated on the design cohort's held-out states; the diversity panel characterizes sequence coverage rather than additional candidate performance. [Coverage definitions and counts](followup/coverage_summary.json), [final panel](followup/balanced_development_panel.tsv).*
 
 ![Coverage within each recorded genotype](followup/figures/genotype_coverage.png)
 
@@ -82,7 +82,7 @@ The expanded retrieval contains 444 distinct mapped E2 sequences and 346 exclude
 
 The exclusions matter. All four metadata-confirmed genotype 8 records contain interface insertions that this fixed-backbone side-chain model cannot represent. No genotype 8 structural coverage is claimed. There are 22 eligible accessions with unknown genotype. Interface positions 415-417 lack coordinates in the archived E2 chain: haplotypes use 37 positions, while states represent only 34 observed positions. Broader sequence coverage therefore remains incomplete structural coverage.
 
-A reserve of 6 newly retrieved accessions occupies novel connected components separated from previously exposed data. It has not been modeled, scored or used to select the panel. The original held-out data were exposed by the completed candidate evaluation and are development data for the coverage work. This small reserve is not a new validated test of candidate performance; an independently collected future cohort is needed.
+A reserve of 6 accessions occupies novel connected components separated from the analyzed data. It is excluded from modeling, scoring and panel selection. The design cohort's held-out set supports its fixed candidate comparison; it is not independent validation data for the diversity analysis, which includes those accessions in its development cohort. The reserve is too small to establish broad candidate performance, and an independently collected future cohort is needed.
 
 ## Interpretation and next steps
 
@@ -107,14 +107,14 @@ python -m venv .venv
 .\.venv\Scripts\python.exe scripts/verify_publication.py --check-only
 ```
 
-The minimal fixture dependencies above do not constitute the locked scientific environment. The full scientific stages require the pinned software, original downloaded snapshots and model weights, all excluded from Git. [Scientific reproduction](followup/README.md#scientific-reproduction) gives the original and diagnostic stage commands. To rebuild this integrated report from the completed tables, run `python scripts/build_report.py`; this command changes presentation files, not scientific results.
+The minimal fixture dependencies above do not constitute the locked scientific environment. The full scientific stages require the pinned software, downloaded source snapshots and model weights, all excluded from Git. [Scientific reproduction](followup/README.md#scientific-reproduction) gives the design, structural and coverage stage commands. Run `python scripts/build_report.py` to render the study report from its result tables.
 
-The metered original run reached 0.560 GB peak sampled process-tree RSS and 2.401 GB peak measured project footprint. These values do not describe the entire diagnostic workflow: early diagnostic stages lacked continuous peak telemetry, and unmeasured peaks are not claimed. The resource guard protects a 1 GB non-project disk reserve and a 13 GB project ceiling. [Publication verification](publication/README.md) retains the measured checks and limitations.
+The metered design and evaluation workflow reached 0.560 GB peak sampled process-tree RSS and 2.401 GB peak measured project footprint. Complete peak-resource measurements are unavailable for the structural diagnostics, so these values do not describe the whole analysis. The resource guard protects a 1 GB non-project disk reserve and a 13 GB project ceiling. [Publication verification](publication/README.md) defines the measured checks and their scope.
 
-Raw downloads, environments, weights, intermediate coordinate populations and expanded state caches are ignored. Necessary controls, frozen candidates, final tables and expected regeneration hashes are retained. Earlier report bytes and the original scientific snapshot remain in the archive. The 3D coordinate-grid view and discovery scatter are omitted from this report; their historical outputs remain available for provenance. [Figure index](figures/README.md), [original numeric traceability](results/readme_traceability.tsv), [expanded numeric traceability](publication/readme_traceability.tsv) and [integrated report provenance](publication/unified_report_provenance.json) connect claims to source data.
+Raw downloads, environments, weights, intermediate coordinate populations and state caches are ignored. Necessary controls, frozen candidates, final tables and expected regeneration hashes are retained. The [figure index](figures/README.md), [design and evaluation traceability](results/readme_traceability.tsv), [structural and coverage traceability](publication/readme_traceability.tsv) and [report provenance](publication/unified_report_provenance.json) connect claims to source data.
 
 ## Sources and license
 
-Primary sources include [Kumar et al.](https://doi.org/10.1038/s41586-021-03913-5), [Yang et al.](https://doi.org/10.1096/fj.15-272880), [Higginbottom et al.](https://doi.org/10.1128/JVI.74.8.3642-3649.2000), [Drummer et al. 2002](https://doi.org/10.1128/JVI.76.21.11143-11147.2002), [Drummer et al. 2005](https://pubmed.ncbi.nlm.nih.gov/15670777/), [Bertaux and Dragic](https://doi.org/10.1128/JVI.80.10.4940-4948.2006) and [Flint et al.](https://doi.org/10.1128/JVI.00104-06). Assay-specific provenance is retained in the corrected evidence table.
+Primary sources include [Kumar et al.](https://doi.org/10.1038/s41586-021-03913-5), [Yang et al.](https://doi.org/10.1096/fj.15-272880), [Higginbottom et al.](https://doi.org/10.1128/JVI.74.8.3642-3649.2000), [Drummer et al. 2002](https://doi.org/10.1128/JVI.76.21.11143-11147.2002), [Drummer et al. 2005](https://pubmed.ncbi.nlm.nih.gov/15670777/), [Bertaux and Dragic](https://doi.org/10.1128/JVI.80.10.4940-4948.2006) and [Flint et al.](https://doi.org/10.1128/JVI.00104-06). The evidence table retains assay-specific provenance.
 
 Original code uses the [MIT license](LICENSE). Third-party software and weights are retrieved independently. ProteinMPNN's code license and bundled-weight terms are audited separately; a separate weight grant is not assumed. EvoEF2's MIT license file conflicts with its academic-use README language, so its source and binary are not redistributed. [Data and software license reviews](publication/data_licenses.tsv) cover coordinates, sequence records and article copyright. Source article prose and figures are not redistributed.

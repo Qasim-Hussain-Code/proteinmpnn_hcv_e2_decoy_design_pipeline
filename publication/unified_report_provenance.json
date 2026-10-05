@@ -5,11 +5,11 @@
     "balanced_minimum": 0.9016393442622951,
     "balanced_states": 306,
     "baseline_correct": 10,
+    "benchmark_assay_rows": 28,
     "best_bound_correct": 8,
     "ci_high": 0.5420000000000016,
     "ci_low": 0.07600000000000051,
     "control_total": 11,
-    "corrected_rows": 28,
     "development": 526,
     "effect": 0.477999999999998,
     "eligible": 532,
@@ -48,11 +48,11 @@
     "wt_repulsion": 93.15
   },
   "presentation_asset_sha256": {
-    "docs/report.md": "3a478eda94679355f711302608fd680c37703ea5e49f730ffbf6de643f89b2b4",
-    "figures/README.md": "7f1399cb9d517ea83d91407acf5531b9c33026b1c001eec031ba380b51a92949",
-    "followup/README.md": "bd3c76d5ce35dc53e79f391e049a0d6bf410e5d8a96ab93e7b8f2726980f6073"
+    "docs/report.md": "c431b1bb41b2c4c201af280552d13e3e9b4a9d012922bd9b8ce1e39c02a6865b",
+    "figures/README.md": "9e39701029e0fa6dda93e9c17b32c568196c5411aaa68178a8d52d8494ea370a",
+    "followup/README.md": "6efee4386bd873f90410e7528a174992fccccdb46027392e715495689cb9282f"
   },
-  "report_sha256": "d5d2e6a2fff99a640f27e2157e5e79d6cc30a3f407a37894955cc97b078097f6",
+  "report_sha256": "5073f514f474e1dbb0ce414c0760cff2e3ffb000efb61348e63fa8f247a128df",
   "source_sha256": {
     "followup/balanced_panel_summary.json": "f4e8dc3b74c34e965c7f73cfc605a87e5723bdcd47f21b929bfca8f639c411a7",
     "followup/benchmark_summary.tsv": "2a9739e7a29fab3f646904bca1f2010d2534dba6d48c997a2349bd8b06f46623",
@@ -66,5 +66,5 @@
     "results/model_comparison_effects.tsv": "89dd65fb8b0673442e445842766051dda6b514f3a9dd17da253503783c99dab2",
     "results/run_summary.json": "2c82f815c6f7e01872b5de123c1c8f26570872314f911d6873976952cf062ee0"
   },
-  "template_sha256": "f25af0d767e8a73fe70949f1ea159169360a7887885a217096db4bdc696fed28"
+  "template_sha256": "1a65f879babd564adc784a03eb18f37e9390dd8f2cfacc253d373d51c301642c"
 }

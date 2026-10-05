@@ -1,17 +1,35 @@
-# Publication checks
+# Verification and reproducibility
 
-The [integrated study report](../README.md) now presents the corrected evidence, frozen candidate comparison, structural diagnostics and expanded coverage together. The separate report banner and two redundant main-report figures have been removed. Presentation revisions preserve all scientific result bytes and the original freeze. [Report provenance](unified_report_provenance.json) records the source hashes and displayed metrics; run `python scripts/build_report.py` to regenerate the report.
+The [study report](../README.md) presents experimental-control benchmarking, held-out candidate evaluation, structural sensitivity and natural-sequence coverage. [Report provenance](unified_report_provenance.json) records its source hashes and displayed metrics. Run `python scripts/build_report.py` to render the report from the completed result tables.
 
-The original scientific verification and all 4,550 follow-up integrity checks were repeated before preparing this publication branch. Their audit tables and timings are retained here. The score benchmark remains failed; publication does not establish binding improvement.
+## Verification scope
 
-The last research checkpoint's five-word message and regenerable cache tracking did not meet the requested Git rules. This independent publication branch starts at the compliant original history, retains the completed scientific tables and necessary controls, and uses two- or three-word underscore commit messages. The original local research branch is preserved and is not uploaded.
+The offline analytical fixture and all 43 pytest tests pass in a clean clone using the documented CPU environment. Bash syntax and ShellCheck pass for all six shell scripts. The publication audit checks retained files, source and artifact hashes, scientific table consistency, commit format, tracking policy and file-size limits.
 
-The full scientific workflow uses separately downloaded source snapshots, a locked CPU environment and pinned external tools. Large downloads, model weights, virtual environments and intermediate coordinate populations are excluded. The published supplementary tables retain expected hashes for locally regenerated structures. Historical source bytes, including startup records that a new clone regenerates, are preserved in the archive.
+Scientific verification includes 87 design/evaluation checks and 2,075 applicable structural and coverage checks against the published artifacts and locally retained caches. The complete local cache audit covers 4,550 checks. These checks establish computational consistency and provenance; the experimental scoring benchmark fails and does not establish binding improvement.
 
-Run `python scripts/verify_publication.py` to inspect the published tree, history, hashes and scientific table consistency. Run the documented offline smoke fixture and pytest suite in a clean clone. Full scientific verification additionally requires the ignored local source/software and structure caches; regenerate them with the documented stages. Clean-clone testing is performed on Windows with Git Bash and the existing locked CPU environment.
+[Design and evaluation traceability](../results/readme_traceability.tsv), [structural and coverage traceability](readme_traceability.tsv), [report provenance](unified_report_provenance.json) and [data-license review](data_licenses.tsv) connect the reported values and artifacts to their sources. Verification records identify their tested commits and scope.
 
-See [data-license review](data_licenses.tsv), [follow-up numeric traceability](readme_traceability.tsv), [original numeric traceability](../results/readme_traceability.tsv), and the generated publication check report. Initial follow-up stages lacked continuous peak-resource telemetry; those historical peaks cannot be reconstructed and are not claimed. The repeat audits retain observed timing and provenance, not invented historical peaks.
+## Running checks
 
-The publication branch passed a fresh clone check: the offline smoke fixture, all 43 pytest tests, Bash syntax and ShellCheck for all six shell scripts, and 820 publication audit checks. The clone contained no raw downloads, third-party vendor directory, virtual environment or expanded structural-state cache. [The recorded check](clean_clone_verification.json) identifies its exact source commit and code hashes. The retained publication tree also passed all 87 original scientific checks and 2,075 applicable follow-up checks using the separately retained local caches.
+```powershell
+python -m pytest -q
+python scripts/verify_publication.py --check-only
+python scripts/build_report.py
+```
 
-Reverification exposed a long executable-alias path that EvoEF2 could not handle. The follow-up launcher now resolves that alias before execution, and a regression test checks the behavior. This runtime correction does not change the frozen experiment or scoring interpretation. Use `python scripts/verify_publication.py --check-only` for a read-only repeat audit.
+The offline fixture and publication audit require no raw viral downloads or model weights. The full scientific audit additionally requires the pinned source/software and reconstructed structure caches:
+
+```powershell
+python scripts/reverify_science.py
+```
+
+Use the locked CPU environment and the [stage commands](../followup/README.md#scientific-reproduction). Exact downloaded snapshot hashes are required for reproducing the recorded scientific run. Contemporary queries can return different records.
+
+## Files and resources
+
+The repository tracks final scientific tables, necessary controls, frozen candidates, report assets and compact provenance records. Bulk downloads, virtual environments, weights, intermediate coordinate populations and state caches are excluded. All tracked files are below the 50 MB limit. Regenerated structures are checked against their expected hashes.
+
+Git history uses the existing author identity, starts with `.gitignore`, and uses two- or three-word underscore commit messages. Third-party software and weights are downloaded separately under their recorded usage terms. Original implementation code is MIT licensed.
+
+The design/evaluation workflow has measured peak-resource records. Complete peak measurements are unavailable for the structural diagnostics, so measured resource values are scoped to the metered workflow. EvoEF2 uses short input filenames and resolved executable paths; its source and executable hashes are pinned.

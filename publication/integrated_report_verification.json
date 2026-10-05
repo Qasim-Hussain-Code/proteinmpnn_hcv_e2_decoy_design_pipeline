@@ -1,4 +1,5 @@
 {
+  "candidate_freeze": "verified",
   "clean_clone": {
     "no_source_or_weight_caches": true,
     "publication_checks": 820,
@@ -6,34 +7,26 @@
     "report_rebuild": "byte-identical",
     "tested_commit": "8024f5c4d7ebc31ef28fba3323c92b6f8b586add"
   },
+  "design_evaluation_checks": 87,
   "diagnostic_checks": 2075,
   "github_markdown_render": {
     "main_images": 4,
-    "removed_plots_absent": true,
-    "separate_banner": false,
     "tables": 2
   },
-  "historical_figure_files": "retained for provenance",
   "local_links": "all resolved",
   "main_report_figures": 4,
-  "original_scientific_checks": 87,
-  "original_scientific_freeze": "unchanged",
   "passed": true,
   "publication_checks": 820,
   "pytest_passed": 43,
-  "removed_from_main_report": [
-    "figure_1.png",
-    "figure_4.png"
-  ],
   "report_code_sha256": {
-    "scripts/build_report.py": "a0bf3af517f56e44c45e530a4077b2add882a6c4a956d766e5c7b784668ce859",
-    "scripts/report_assets/docs_report.md": "3a478eda94679355f711302608fd680c37703ea5e49f730ffbf6de643f89b2b4",
-    "scripts/report_assets/figures_index.md": "7f1399cb9d517ea83d91407acf5531b9c33026b1c001eec031ba380b51a92949",
-    "scripts/report_assets/supplements.md": "bd3c76d5ce35dc53e79f391e049a0d6bf410e5d8a96ab93e7b8f2726980f6073",
-    "scripts/report_template.md": "f25af0d767e8a73fe70949f1ea159169360a7887885a217096db4bdc696fed28"
+    "scripts/build_report.py": "f35bf9f708676ef5e2f65cb30d48713b4d1dfff5e6f7dc1d3d89a3c7e63612a1",
+    "scripts/report_assets/docs_report.md": "c431b1bb41b2c4c201af280552d13e3e9b4a9d012922bd9b8ce1e39c02a6865b",
+    "scripts/report_assets/figures_index.md": "9e39701029e0fa6dda93e9c17b32c568196c5411aaa68178a8d52d8494ea370a",
+    "scripts/report_assets/supplements.md": "6efee4386bd873f90410e7528a174992fccccdb46027392e715495689cb9282f",
+    "scripts/report_template.md": "1a65f879babd564adc784a03eb18f37e9390dd8f2cfacc253d373d51c301642c"
   },
   "report_rebuild": "byte-identical",
-  "scope": "Integrated reporting and archived document paths; no new scientific analysis or candidate selection",
-  "source_hashes": "all unchanged scientific inputs match",
+  "scope": "Study report numerical traceability, analytical fixtures, source integrity and publication policy",
+  "source_hashes": "verified",
   "timestamp": "2026-10-05T09:28:43.826560+00:00"
 }
