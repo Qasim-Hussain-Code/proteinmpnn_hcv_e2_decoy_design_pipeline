@@ -5,14 +5,10 @@
     "publication_checks": 820,
     "pytest_passed": 43,
     "report_rebuild": "byte-identical",
-    "tested_commit": "8024f5c4d7ebc31ef28fba3323c92b6f8b586add"
+    "tested_commit": "3f43f3c34e592cc4d4f3bcb2c7ca7a3dfee5355e"
   },
   "design_evaluation_checks": 87,
   "diagnostic_checks": 2075,
-  "github_markdown_render": {
-    "main_images": 4,
-    "tables": 2
-  },
   "local_links": "all resolved",
   "main_report_figures": 4,
   "passed": true,
@@ -25,8 +21,12 @@
     "scripts/report_assets/supplements.md": "6efee4386bd873f90410e7528a174992fccccdb46027392e715495689cb9282f",
     "scripts/report_template.md": "1a65f879babd564adc784a03eb18f37e9390dd8f2cfacc253d373d51c301642c"
   },
+  "report_layout": {
+    "main_images": 4,
+    "tables": 2
+  },
   "report_rebuild": "byte-identical",
   "scope": "Study report numerical traceability, analytical fixtures, source integrity and publication policy",
   "source_hashes": "verified",
-  "timestamp": "2026-10-05T09:28:43.826560+00:00"
+  "timestamp": "2026-10-05T12:48:03.984215+00:00"
 }
