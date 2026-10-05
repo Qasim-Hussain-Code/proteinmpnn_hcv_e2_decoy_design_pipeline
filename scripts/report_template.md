@@ -2,13 +2,13 @@
 
 This study combines constrained sequence design, experimental-control benchmarking, structural diagnostics and natural-sequence coverage in one analysis. It asks whether a human CD81 scaffold can support a credible computational receptor-decoy comparison across naturally observed HCV E2 variants.
 
-**Scoring remains unreliable.** EvoEF2 recovered 5/11 directional controls in the frozen experiment, compared with 10/11 from always predicting reduced binding. Across 8 structural models, the strongest bound-template comparison recovered 8/11, but missed all 4 additional binding-loss controls. Broader sampling improved coverage of the eligible development accessions to 94.30%; it did not validate the scorer or demonstrate experimental binding for any generated sequence.
+**Scoring remains unreliable.** EvoEF2 recovered ${original_correct}/${control_total} directional controls in the frozen experiment, compared with ${baseline_correct}/${control_total} from always predicting reduced binding. Across ${model_count} structural models, the strongest bound-template comparison recovered ${best_bound_correct}/${control_total}, but missed all ${external_missed} additional binding-loss controls. Broader sampling improved coverage of the eligible development accessions to ${balanced_coverage}; it did not validate the scorer or demonstrate experimental binding for any generated sequence.
 
 ## Study design
 
 HCV E2 interacts with the large extracellular loop of CD81. Here, ProteinMPNN proposes amino-acid sequences on an experimental human CD81 backbone. This is constrained de novo sequence design; it does not generate a new fold. The designed molecule is the receptor scaffold. E2 remains fixed during sequence generation.
 
-The human complex is a modeled hybrid. [7MWX](https://www.rcsb.org/structure/7MWX) supplies the experimentally bound E2 orientation and **tamarin**, rather than human, CD81. The human scaffold from [3X0E](https://www.rcsb.org/structure/3X0E) is aligned onto that orientation, with a matched C-alpha RMSD of 3.69 Å. Missing coordinates are left missing, glycans and other excluded heteroatoms are audited, and side chains are repaired without docking or large backbone minimization. The modeled protein-only interface does not represent complete-virion accessibility.
+The human complex is a modeled hybrid. [7MWX](https://www.rcsb.org/structure/7MWX) supplies the experimentally bound E2 orientation and **tamarin**, rather than human, CD81. The human scaffold from [3X0E](https://www.rcsb.org/structure/3X0E) is aligned onto that orientation, with a matched C-alpha RMSD of ${rmsd} Å. Missing coordinates are left missing, glycans and other excluded heteroatoms are audited, and side chains are repaired without docking or large backbone minimization. The modeled protein-only interface does not represent complete-virion accessibility.
 
 Standard and soluble ProteinMPNN use matched seeds, temperatures and generation budgets. Arm A preserves the geometric interface and recognition constraints; Arm B permits the remaining reliable contact positions to vary. Both retain native disulfide cysteines. Single-state selection favors the reference score; escape-aware selection favors the worst candidate-minus-WT score across discovery states, then its median. Sequence probability, physical scores, charge and exposure are recorded separately.
 
@@ -18,9 +18,9 @@ The candidate comparison was frozen before held-out evaluation. The structural d
 
 ## Corrected experimental evidence and scoring
 
-The current [evidence table](followup/ground_truth.tsv) contains **34 included assay observations**: 28 from the original sources plus six additional source-external observations. It distinguishes soluble-protein binding, cell-surface binding and viral entry; heterogeneous assay values are not pooled or converted into invented affinities.
+The current [evidence table](followup/ground_truth.tsv) contains **${included_rows} included assay observations**: ${corrected_rows} from the original sources plus six additional source-external observations. It distinguishes soluble-protein binding, cell-surface binding and viral entry; heterogeneous assay values are not pooled or converted into invented affinities.
 
-The source audit corrected two soluble GST-LEL observations previously assigned to individual F186L and E188K mutations. [Higginbottom's Methods and Results](https://pmc.ncbi.nlm.nih.gov/articles/PMC111874/) describe the **F186L+E188K double mutant** for that soluble construct. Valid cell-surface single-mutant observations remain included. This correction leaves the 11 distinct single-mutation directional labels and the 5/11 frozen result unchanged. The [curation audit](followup/curation_audit.tsv) preserves the correction; the earlier table is retained as historical evidence.
+The source audit corrected two soluble GST-LEL observations previously assigned to individual F186L and E188K mutations. [Higginbottom's Methods and Results](https://pmc.ncbi.nlm.nih.gov/articles/PMC111874/) describe the **F186L+E188K double mutant** for that soluble construct. Valid cell-surface single-mutant observations remain included. This correction leaves the ${control_total} distinct single-mutation directional labels and the ${original_correct}/${control_total} frozen result unchanged. The [curation audit](followup/curation_audit.tsv) preserves the correction; the earlier table is retained as historical evidence.
 
 The additional observations come from [Drummer 2005](https://pubmed.ncbi.nlm.nih.gov/15670777/). Four report binding loss; two report retained binding without establishing WT-equivalent affinity. The latter are not labeled neutral or counted in directional accuracy. These consulted labels form an exploratory challenge, not an independent blinded validation set.
 
@@ -28,34 +28,27 @@ Eight structural models assess alternative human receptor conformations, core al
 
 | Model | Clashes below 2 Å | WT repulsive term | Original controls, repacked | Original controls, fixed E2 | Additional loss controls, fixed E2 |
 |---|---:|---:|---:|---:|---:|
-| `archive` | 2 | 93.15 | 5/11 | 5/11 | 1/4 |
-| `x0e_b` | 41 | 379.70 | 1/11 | 1/11 | 0/4 |
-| `x0e_core` | 36 | 441.95 | 1/11 | 4/11 | 1/4 |
-| `g8q_a` | 3 | 112.28 | 1/11 | 5/11 | 1/4 |
-| `g8q_b` | 39 | 368.22 | 1/11 | 7/11 | 4/4 |
-| `tcx_a` | 27 | 378.24 | 1/11 | 6/11 | 0/4 |
-| `bound_ae` | 0 | 10.27 | 8/11 | 8/11 | 0/4 |
-| `bound_bh` | 0 | 13.89 | 3/11 | 3/11 | 0/4 |
+${model_rows}
 
-The first bound-template pose recovers 8/11 controls; the second recovers 3/11. The first misses all four added binding-loss controls. Model-dependent results and missed challenge controls prevent treating the best-looking outcome as validation. No model or threshold was selected to improve the reported benchmark.
+The first bound-template pose recovers ${best_bound_correct}/${control_total} controls; the second recovers ${second_bound_correct}/${control_total}. The first misses all four added binding-loss controls. Model-dependent results and missed challenge controls prevent treating the best-looking outcome as validation. No model or threshold was selected to improve the reported benchmark.
 
 ![Directional-control recovery across structural models](followup/figures/benchmark.png)
 
 *Structural sensitivity of the scoring benchmark. Results depend on receptor geometry and preparation; the diagnostic comparisons do not replace the failed frozen validation gate. [Underlying summaries](followup/benchmark_summary.tsv).*
 
-The frozen WT has a 1.09 Å T163-to-E2 contact and a 93.15 inter-chain repulsive term. This suggests that clash relief can contribute to a favorable mutation score. It does not establish the experimental mechanism. D196 lies 7.70 Å from E2, outside the scorer's 6 Å interaction cutoff. Receptor folding, oligomerization, dynamics, expression and membrane context can affect experimental outcomes without appearing in this interface score. [Contacts](followup/control_contacts.tsv), [energy terms](followup/energy_terms.tsv) and [matched WT repair controls](followup/wt_repair_sensitivity.tsv) make these limitations inspectable.
+The frozen WT has a ${min_contact163} Å T163-to-E2 contact and a ${wt_repulsion} inter-chain repulsive term. This suggests that clash relief can contribute to a favorable mutation score. It does not establish the experimental mechanism. D196 lies ${min_contact196} Å from E2, outside the scorer's 6 Å interaction cutoff. Receptor folding, oligomerization, dynamics, expression and membrane context can affect experimental outcomes without appearing in this interface score. [Contacts](followup/control_contacts.tsv), [energy terms](followup/energy_terms.tsv) and [matched WT repair controls](followup/wt_repair_sensitivity.tsv) make these limitations inspectable.
 
 ## Frozen sequence-design comparison
 
-ProteinMPNN generated 760 sequences; 759 unique sequences passed the sequence constraints. The frozen shortlist contains 7 distinct computational candidates: 5 selections per strategy, with 3 shared selections. Every untested sequence remains a **computational candidate**.
+ProteinMPNN generated ${generated} sequences; ${unique_passed} unique sequences passed the sequence constraints. The frozen shortlist contains ${frozen} distinct computational candidates: ${strategy_candidates} selections per strategy, with ${shared_candidates} shared selections. Every untested sequence remains a **computational candidate**.
 
-Evaluation used 10 structural states from 13 held-out accessions. The escape-aware-minus-single-state difference in mean candidate worst paired score was **+0.48 EvoEF2 units**, with paired state-bootstrap interval **[0.08, 0.54]**. Lower scores are favored within this model, so escape-aware selection did not improve this held-out measure. Correlated haplotype components and the small test set limit the interval's interpretation. The failed experimental benchmark prevents interpreting either strategy's scores as experimental binding improvement.
+Evaluation used ${heldout_states} structural states from ${heldout_accessions} held-out accessions. The escape-aware-minus-single-state difference in mean candidate worst paired score was **+${effect} EvoEF2 units**, with paired state-bootstrap interval **[${ci_low}, ${ci_high}]**. Lower scores are favored within this model, so escape-aware selection did not improve this held-out measure. Correlated haplotype components and the small test set limit the interval's interpretation. The failed experimental benchmark prevents interpreting either strategy's scores as experimental binding improvement.
 
 ![Frozen held-out strategy comparison](figures/figure_6.png)
 
 *The candidate sets and held-out states were fixed before evaluation. This is a comparison of model outputs under a failed experimental scoring gate. [Strategy statistics](results/heldout_strategy_comparison.tsv), [bootstrap summary](results/heldout_summary.json), [candidate table](results/candidate_summary.tsv).*
 
-The soluble model reduced the hydrophobic SASA fraction relative to the standard model by -0.0188 in Arm A, with paired seed-bootstrap interval [-0.0277, -0.0103], and -0.0127 in Arm B, with interval [-0.0212, -0.0043]. Other descriptors were not uniformly favorable: Arm A's hydrophobic patch proxy increased. These geometric descriptors do not establish expression, folding or solubility. [All model comparisons](results/model_comparison_effects.tsv) retain the matched-seed estimates and uncertainty.
+The soluble model reduced the hydrophobic SASA fraction relative to the standard model by ${exposure_A} in Arm A, with paired seed-bootstrap interval ${exposure_ci_A}, and ${exposure_B} in Arm B, with interval ${exposure_ci_B}. Other descriptors were not uniformly favorable: Arm A's hydrophobic patch proxy increased. These geometric descriptors do not establish expression, folding or solubility. [All model comparisons](results/model_comparison_effects.tsv) retain the matched-seed estimates and uncertainty.
 
 ## Natural-sequence coverage
 
@@ -63,14 +56,14 @@ Coverage counts the fraction of eligible sampled accessions represented by exact
 
 | Quantity | Frozen candidate-comparison cohort | Expanded coverage cohort |
 |---|---:|---:|
-| Retrieved accessions | 309 | 878 |
-| Eligible accessions | 226 | 532 |
-| Development accessions | 213 | 526 |
-| Interface positions | 20 | 37 |
-| Development structural states | 24 | 306 |
-| Exact development haplotype coverage | 39.44% | 94.30% |
+| Retrieved accessions | ${original_retrieved} | ${retrieved} |
+| Eligible accessions | ${original_included} | ${eligible} |
+| Development accessions | ${original_development} | ${development} |
+| Interface positions | ${original_positions} | ${expanded_positions} |
+| Development structural states | ${original_states} | ${balanced_states} |
+| Exact development haplotype coverage | ${original_coverage} | ${balanced_coverage} |
 
-The expanded retrieval contains 444 distinct mapped E2 sequences and 346 excluded accessions. A frequency-based global panel of 284 states covered 90.11%, but left genotype 1 underrepresented. A documented secondary extension to 306 states raised overall coverage to 94.30% and the minimum within each included recorded genotype to 90.16%. The extension used sequence counts, without candidate or assay scores. These panels differ in cohort and interface definition, so the percentages do not estimate the effect of panel size alone.
+The expanded retrieval contains ${unique_e2} distinct mapped E2 sequences and ${excluded} excluded accessions. A frequency-based global panel of ${global_states} states covered ${global_coverage}, but left genotype 1 underrepresented. A documented secondary extension to ${balanced_states} states raised overall coverage to ${balanced_coverage} and the minimum within each included recorded genotype to ${balanced_minimum}. The extension used sequence counts, without candidate or assay scores. These panels differ in cohort and interface definition, so the percentages do not estimate the effect of panel size alone.
 
 ![Eligible accession coverage as states are added](followup/figures/coverage.png)
 
@@ -80,9 +73,9 @@ The expanded retrieval contains 444 distinct mapped E2 sequences and 346 exclude
 
 *Genotype coverage is conditional on structural eligibility. Genotype 8 is excluded from the coordinate panel; eligible unknown-genotype accessions remain explicitly unclassified. [Per-genotype counts](followup/balanced_genotype_coverage.tsv).*
 
-The exclusions matter. All four metadata-confirmed genotype 8 records contain interface insertions that this fixed-backbone side-chain model cannot represent. No genotype 8 structural coverage is claimed. There are 22 eligible accessions with unknown genotype. Interface positions 415-417 lack coordinates in the archived E2 chain: haplotypes use 37 positions, while states represent only 34 observed positions. Broader sequence coverage therefore remains incomplete structural coverage.
+The exclusions matter. All four metadata-confirmed genotype 8 records contain interface insertions that this fixed-backbone side-chain model cannot represent. No genotype 8 structural coverage is claimed. There are ${unknown_genotype} eligible accessions with unknown genotype. Interface positions 415-417 lack coordinates in the archived E2 chain: haplotypes use ${expanded_positions} positions, while states represent only ${modeled_positions} observed positions. Broader sequence coverage therefore remains incomplete structural coverage.
 
-A reserve of 6 newly retrieved accessions occupies novel connected components separated from previously exposed data. It has not been modeled, scored or used to select the panel. The original held-out data were exposed by the completed candidate evaluation and are development data for the coverage work. This small reserve is not a new validated test of candidate performance; an independently collected future cohort is needed.
+A reserve of ${future_reserve} newly retrieved accessions occupies novel connected components separated from previously exposed data. It has not been modeled, scored or used to select the panel. The original held-out data were exposed by the completed candidate evaluation and are development data for the coverage work. This small reserve is not a new validated test of candidate performance; an independently collected future cohort is needed.
 
 ## Interpretation and next steps
 
@@ -109,7 +102,7 @@ python -m venv .venv
 
 The minimal fixture dependencies above do not constitute the locked scientific environment. The full scientific stages require the pinned software, original downloaded snapshots and model weights, all excluded from Git. [Scientific reproduction](followup/README.md#scientific-reproduction) gives the original and diagnostic stage commands. To rebuild this integrated report from the completed tables, run `python scripts/build_report.py`; this command changes presentation files, not scientific results.
 
-The metered original run reached 0.560 GB peak sampled process-tree RSS and 2.401 GB peak measured project footprint. These values do not describe the entire diagnostic workflow: early diagnostic stages lacked continuous peak telemetry, and unmeasured peaks are not claimed. The resource guard protects a 1 GB non-project disk reserve and a 13 GB project ceiling. [Publication verification](publication/README.md) retains the measured checks and limitations.
+The metered original run reached ${peak_rss_gb} GB peak sampled process-tree RSS and ${peak_project_gb} GB peak measured project footprint. These values do not describe the entire diagnostic workflow: early diagnostic stages lacked continuous peak telemetry, and unmeasured peaks are not claimed. The resource guard protects a 1 GB non-project disk reserve and a 13 GB project ceiling. [Publication verification](publication/README.md) retains the measured checks and limitations.
 
 Raw downloads, environments, weights, intermediate coordinate populations and expanded state caches are ignored. Necessary controls, frozen candidates, final tables and expected regeneration hashes are retained. Earlier report bytes and the original scientific snapshot remain in the archive. The 3D coordinate-grid view and discovery scatter are omitted from this report; their historical outputs remain available for provenance. [Figure index](figures/README.md), [original numeric traceability](results/readme_traceability.tsv), [expanded numeric traceability](publication/readme_traceability.tsv) and [integrated report provenance](publication/unified_report_provenance.json) connect claims to source data.
 

@@ -35,8 +35,8 @@ bound_bh external_reduced_correct	0	followup/benchmark_summary.tsv	model=bound_b
 bound_bh external_reduced_total	4	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: external_reduced_total	followup and publication audit
 bound_bh always_reduced_baseline	10	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: always_reduced_baseline	followup and publication audit
 bound_bh wt_vdwrep	13.89	followup/benchmark_summary.tsv	model=bound_bh, mode=fixed_e2, tolerance=0.5: wt_vdwrep	followup and publication audit
-minimum contact 163	1.0906006705503302	followup/control_contacts.tsv	model=archive, position=163: min_distance	followup and publication audit
-minimum contact 196	7.699652693345628	followup/control_contacts.tsv	model=archive, position=196: min_distance	followup and publication audit
+minimum contact 163	1.0906006705503302	followup/control_contacts.tsv	model=archive, cd81_position=163: min_distance	followup and publication audit
+minimum contact 196	7.699652693345628	followup/control_contacts.tsv	model=archive, cd81_position=196: min_distance	followup and publication audit
 T163A delta	-6.160000000000004	followup/benchmark.tsv	model=archive, mode=fixed_e2: delta	followup and publication audit
 T163A vdwrep_delta	-9.350000000000009	followup/benchmark.tsv	model=archive, mode=fixed_e2: vdwrep_delta	followup and publication audit
 corrected original assay rows	28	followup/ground_truth.tsv	included=true, exclude source-external challenge	followup and publication audit

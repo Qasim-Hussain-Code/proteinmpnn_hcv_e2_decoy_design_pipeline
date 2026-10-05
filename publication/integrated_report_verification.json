@@ -1,0 +1,19 @@
+{
+  "diagnostic_checks": 2075,
+  "historical_figure_files": "retained for provenance",
+  "local_links": "all resolved",
+  "main_report_figures": 4,
+  "original_scientific_checks": 87,
+  "original_scientific_freeze": "unchanged",
+  "passed": true,
+  "publication_checks": 820,
+  "pytest_passed": 43,
+  "removed_from_main_report": [
+    "figure_1.png",
+    "figure_4.png"
+  ],
+  "report_rebuild": "byte-identical",
+  "scope": "Integrated reporting and archived document paths; no new scientific analysis or candidate selection",
+  "source_hashes": "all unchanged scientific inputs match",
+  "timestamp": "2026-10-05T09:28:43.826560+00:00"
+}

@@ -1,7 +1,5 @@
 # Publication checks
 
-The [integrated study report](../README.md) now presents the corrected evidence, frozen candidate comparison, structural diagnostics and expanded coverage together. The separate report banner and two redundant main-report figures have been removed. Presentation revisions preserve all scientific result bytes and the original freeze. [Report provenance](unified_report_provenance.json) records the source hashes and displayed metrics; run `python scripts/build_report.py` to regenerate the report.
-
 The original scientific verification and all 4,550 follow-up integrity checks were repeated before preparing this publication branch. Their audit tables and timings are retained here. The score benchmark remains failed; publication does not establish binding improvement.
 
 The last research checkpoint's five-word message and regenerable cache tracking did not meet the requested Git rules. This independent publication branch starts at the compliant original history, retains the completed scientific tables and necessary controls, and uses two- or three-word underscore commit messages. The original local research branch is preserved and is not uploaded.
