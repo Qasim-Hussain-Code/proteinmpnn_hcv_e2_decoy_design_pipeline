@@ -6,7 +6,7 @@ This study combines constrained sequence design, experimental-control benchmarki
 
 ## Study design
 
-HCV E2 interacts with the large extracellular loop of CD81. Here, ProteinMPNN proposes amino-acid sequences on an experimental human CD81 backbone. This is constrained de novo sequence design; it does not generate a new fold. The designed molecule is the receptor scaffold. E2 remains fixed during sequence generation.
+HCV E2 interacts with the large extracellular loop of CD81. Here, ProteinMPNN proposes amino-acid sequences on an experimental human CD81 backbone. This is constrained _de novo_ sequence design; it does not generate a new fold. The designed molecule is the receptor scaffold. E2 remains fixed during sequence generation.
 
 The human complex is a modeled hybrid. [7MWX](https://www.rcsb.org/structure/7MWX) supplies the experimentally bound E2 orientation and **tamarin**, rather than human, CD81. The human scaffold from [3X0E](https://www.rcsb.org/structure/3X0E) is aligned onto that orientation, with a matched C-alpha RMSD of 3.69 Å. Missing coordinates are left missing, glycans and other excluded heteroatoms are audited, and side chains are repaired without docking or large backbone minimization. The modeled protein-only interface does not represent complete-virion accessibility.
 
